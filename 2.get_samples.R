@@ -55,7 +55,10 @@ samples <- tbl(db, "part_samples") %>%
   left_join(tbl(db, "part_projects") %>% select(pprojid, default_depthoffset)) %>%
   mutate(depth_offset=ifelse(is.na(acq_depthoffset), default_depthoffset, acq_depthoffset)) %>%
   select(-acq_depthoffset, -default_depthoffset) %>%
-  collect()
+  collect() %>%
+  # add EcoTaxa project id
+  left_join(select(selected_projects, pprojid, projid)) %>%
+  relocate(projid, .before="sampleid")
 
 nrow(samples)
 # 3368 on 2020-12-15 18:37
