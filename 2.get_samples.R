@@ -2,11 +2,10 @@
 # Fetch fully validated UVP5 casts and their metadata
 #
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
-#
+
 # NB: some bits are long, run as a job
 
-
-library("tidyverse")
+source("0.setup.R")
 library("ecotaxar")
 
 # read selected projects
