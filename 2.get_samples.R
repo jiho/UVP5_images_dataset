@@ -57,5 +57,8 @@ samples <- tbl(db, "part_samples") %>%
   select(-acq_depthoffset, -default_depthoffset) %>%
   collect()
 
+nrow(samples)
+# 3368 on 2020-12-15 18:37
+
 # write it to a file
 write_tsv(samples, "data/UVP5_selected_samples.tsv")
