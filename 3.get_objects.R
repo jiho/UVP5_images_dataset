@@ -10,7 +10,7 @@ library("feather")
 library("furrr")
 
 # read selected samples
-selected_samples <- read_tsv("data/UVP5_selected_samples.tsv") %>% select(projid, sampleid)
+samples <- read_tsv("data/UVP5_samples.tsv") %>% select(projid, sampleid)
 
 # work in parallel but do not use too many cores,
 # otherwise the EcoTaxa server will be the bottleneck
@@ -19,7 +19,7 @@ plan(multisession, workers=5)
 # plan(sequential)
 
 # deal with the data project by project, because the mapping is per project
-pids <- selected_samples$projid %>% unique() %>% sort() %>% as.integer()
+pids <- samples$projid %>% unique() %>% sort() %>% as.integer()
 
 # get records for validated objects from selected profiles
 system.time(
@@ -29,7 +29,7 @@ future_walk(pids, function(pid) {
 
   if (!file.exists(out_file)) {
     # get selected samples in the current project
-    sids <- filter(selected_samples, projid == pid) %>% pull(sampleid) %>% as.integer()
+    sids <- filter(samples, projid == pid) %>% pull(sampleid) %>% as.integer()
 
     localdb <- db_connect_ecotaxa()
 
