@@ -5,6 +5,8 @@
 
 # load packages
 suppressMessages(library("tidyverse"))
+library("ecotaxar")
+db <- db_connect_ecotaxa()
 
 # create directories for large data that should live outside the repository
 data_dir <- "~/UVP5_images_dataset/"

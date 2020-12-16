@@ -6,14 +6,11 @@
 # NB: some bits are long, run as a job
 
 source("0.setup.R")
-library("ecotaxar")
 
 # read selected projects
 selected_projects <- read_csv("https://docs.google.com/spreadsheets/d/1J3ldlk5tU2rgb7aav61FsNXOc8DbRPzankByfVr0Xj0/export?format=csv") %>%
   filter(use != "")
 # TODO replace by a static .tsv export when this is stable
-
-db <- db_connect_ecotaxa()
 
 # get sorting status of corresponding samples
 sample_classif <- tbl(db, "part_samples") %>%

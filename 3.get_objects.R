@@ -7,7 +7,6 @@
 
 source("0.setup.R")
 library("feather")
-library("ecotaxar")
 library("furrr")
 
 # read selected samples
@@ -32,16 +31,16 @@ future_walk(pids, function(pid) {
     # get selected samples in the current project
     sids <- filter(selected_samples, projid == pid) %>% pull(sampleid) %>% as.integer()
 
-    db <- db_connect_ecotaxa()
+    localdb <- db_connect_ecotaxa()
 
     # get current project and its mapping
-    prj <- tbl(db, "projects") %>% filter(projid==pid) %>% collect()
+    prj <- tbl(localdb, "projects") %>% filter(projid==pid) %>% collect()
     mapping <- parse_mapping(prj$mappingobj)
     # remove useless or wrong fields
     mapping <- mapping[! names(mapping) %in% c("tag", "esd")]
 
     # extract validated objects from the select samples
-    obj <- tbl(db, "objects") %>%
+    obj <- tbl(localdb, "objects") %>%
       filter(projid == pid, sampleid %in% sids, classif_qual=="V") %>%
       # keep relevant metadata
       select(
@@ -56,7 +55,7 @@ future_walk(pids, function(pid) {
         # TODO do we really need all this since many won't be intercomparable at the scales of the whole dataset because of imaging differences; couldn't we reduce this to area, major, minor?
       ) %>%
       # add path to image within EcoTaxa's vault
-      left_join(tbl(db, "images") %>% select(imgid, file_name), by="imgid") %>%
+      left_join(tbl(localdb, "images") %>% select(imgid, file_name), by="imgid") %>%
       collect()
 
     # write an information message
@@ -69,7 +68,7 @@ future_walk(pids, function(pid) {
     # save as a file
     write_feather(obj, path=dest_file)
 
-    db_disconnect_ecotaxa(db)
+    db_disconnect_ecotaxa(localdb)
   }
 }, .options=furrr_options(seed=NULL))
 )

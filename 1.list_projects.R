@@ -4,9 +4,6 @@
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("ecotaxar")
-
-db <- db_connect_ecotaxa()
 
 # get ids and titles from the database
 projects <- tbl(db, "part_projects") %>%
