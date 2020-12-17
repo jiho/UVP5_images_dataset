@@ -10,9 +10,9 @@ source("0.setup.R")
 ## Compute candidate samples status ----
 
 # read selected projects
-selected_projects <- read_csv("https://docs.google.com/spreadsheets/d/1J3ldlk5tU2rgb7aav61FsNXOc8DbRPzankByfVr0Xj0/export?format=csv") %>%
-  filter(use != "")
-# TODO replace by a static .tsv export when this is stable
+# projects <- read_csv("https://docs.google.com/spreadsheets/d/1J3ldlk5tU2rgb7aav61FsNXOc8DbRPzankByfVr0Xj0/export?format=csv")
+projects <- read_csv("data/UVP5_projects_selected.csv")
+selected_projects <- projects %>% filter(use != "")
 
 # get sorting status of corresponding samples
 samples <- tbl(db, "part_samples") %>%
