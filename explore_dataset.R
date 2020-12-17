@@ -7,8 +7,10 @@ library("tidyverse")
 library("chroma")
 dir.create("figures", showWarnings=FALSE)
 
-s <- read_tsv("data/UVP5_selected_samples.tsv")
+s <- read_tsv("dataset/samples.tsv.gz")
 coast <- read_csv("data/gshhg_world_c.csv.gz")
+
+nrow(s)
 
 ggplot() + coord_quickmap() + scale_xy_map() +
   geom_polygon(aes(lon, lat), data=coast, fill="grey60") +

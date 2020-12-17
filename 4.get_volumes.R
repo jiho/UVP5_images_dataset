@@ -6,7 +6,7 @@
 source("0.setup.R")
 
 # read selected samples
-samples <- read_tsv("data/UVP5_samples.tsv", col_types=cols()) %>%
+samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols()) %>%
   select(sampleid, psampleid)
 
 volumes <- samples %>%

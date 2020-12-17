@@ -8,7 +8,7 @@ library("feather")
 library("data.tree")
 
 # read sample info
-samples <- read_tsv("data/UVP5_samples.tsv", col_types=cols())
+samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols())
 
 # read object-level data from the files saved on disk
 proj_files <- list.files(proj_dir, pattern="feather", full.names=TRUE)
