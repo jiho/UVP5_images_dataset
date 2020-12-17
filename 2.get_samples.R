@@ -66,3 +66,47 @@ selected_samples_info <- tbl(db, "part_samples") %>%
 
 # write it to a file
 write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
+
+## Compare with the original selection by Thelma ----
+
+# read the samples used by Thelma
+thelma_samples <- read_csv("data/list_profiles_ecopart-thelma.csv", col_types=cols()) %>%
+  select(title=ecotaxa, ptitle=ecopart, profile=profiles) %>%
+  separate_rows(profile, sep=",")
+
+# get our current selection of samples
+current_samples <- selected_samples_info %>%
+  select(ends_with("id"), profile) %>%
+  # add projects titles
+  left_join(select(projects, pprojid, projid, ptitle, title), by=c("pprojid", "projid"))
+
+# profiles in Thelma's selection but not in ours
+missing_in_current <- filter(thelma_samples, ! profile %in% current_samples$profile)
+
+missing_in_current %>%
+  left_join(samples_validation_status) %>%
+  select(title, sampleid, profile, percent_validated) %>%
+  arrange(title, profile)
+# NB: the 0 in OPEREX is a match pb because the profile name is not unique
+
+# -> four samples (an1304_l2_002, 4, 5, 6) are missing in EcoPart now...
+#    all other profiles are because sorting is actually not complete
+
+# write those and finish sorting them
+missing_in_current %>% group_by(title) %>% summarise(samples=str_c(profile, collapse=",")) %>% write_tsv("to_finish_sorting.tsv")
+
+# profiles in our selection but not in Thelma's
+extra_in_current <- filter(current_samples, ! profile %in% thelma_samples$profile)
+
+# check the project names to make sure we do not have extra projects
+# NB: this has to be done by eye, since some of the project names have changed...
+unique(extra_in_current$title) %>% sort()
+unique(thelma_samples$title) %>% sort()
+# -> nope, that seems OK
+
+extra_in_current %>%
+  left_join(samples_validation_status) %>%
+  select(title, sampleid, profile, percent_validated) %>%
+  arrange(title, profile)
+# -> some are probably due to the 99% instead of 100% validated criterion.
+#    others probably have been sorted since
