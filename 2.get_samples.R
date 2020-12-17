@@ -31,8 +31,8 @@ selected_samples <- sample_classif %>%
     total=V+D+P+`NA`,
     percent_validated=V/total*100
   ) %>%
-  # keep only samples sorted at more than 98%
-  filter(percent_validated > 98)
+  # keep only samples alsmost fully sorted
+  filter(percent_validated > 99)
 
 # extract sample level information (from EcoPart because this is the most reliable source)
 samples <- tbl(db, "part_samples") %>%
