@@ -1,33 +1,24 @@
 pprojid	ptitle	data_owner	projid	title	use
-153	uvp5_sn205_coastdark_2019	emilia@iopan.pl	2483	Coast Dark 2019	
-161	uvp5_sn008_uvp_azomp	igor.yashayaev@dfo-mpo.gc.ca	2489	DFO AZOMP Labrador Sea 2019 UVP5	
-124	uvp5_sn003_mobydick_2018	enter lguidi@obs-vlfr.fr	1451	Mobydick 2018	
-260	SCOPE/HOT	aewhite@hawaii.edu	3460	SCOPE/HOT	
-246	uvp5_sn011_2016_syTUMSAT1	ytanaka@kaiyodai.ac.jp	3221	syTUMSAT1	
-247	uvp5_sn011_2017_syTUMSAT2	ytanaka@kaiyodai.ac.jp	3222	syTUMSAT2	
-191	UVP5_UofSC		2551	UofSC Bermuda Atlantic Time Series UVP5_FullRep	
-268	uvp5_sn221_algoa_bay_2020	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020 	
-58	uvp5_sn008_an1406	marcel.babin@takuvik.ulaval.ca	618	UVP5 AN 1406	
-56	uvp5_sn008_an1304	marcel.babin@takuvik.ulaval.ca	41	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate	
-59	uvp5_sn008_an1407	marcel.babin@takuvik.ulaval.ca	41	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate	
-57	uvp5_sn008_an1405	marcel.babin@takuvik.ulaval.ca	41	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate	
-52	uvp5_sn005_batman	francois.carlotti@mio.osupytheas.fr	80	UVP5 Batman	
+1	uvp5_sn003_jerico_2017	lars.stemmann@obs-vlfr.fr	578	UVP5 JERICO 2017	
 2	uvp5_sn000_boum2008	lars.stemmann@obs-vlfr.fr	122	UVP5 BOUM 2008	
-41	uvp5_sn003_cassiopee_2015	lars.stemmann@obs-vlfr.fr	38	UVP5 CASSIOPEE 2015	
-5	uvp5_sn000_lter2008	lars.stemmann@obs-vlfr.fr	45	UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014)	
-42	uvp5_sn003_ccelter_2014	lars.stemmann@obs-vlfr.fr	45	UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014)	
 3	uvp5_sn000_ccelter_2012	lars.stemmann@obs-vlfr.fr	45	UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014)	
-43	uvp5_sn003_ccelter_2016	tristan.biard@univ-littoral.fr	156	UVP5 CCELTER 2016	
-144	uvp5_sn003_csiro_iioe	david.antoine@curtin.edu.au	2410	UVP5 CurtinUni IIOE 2019 NEW!	
-44	uvp5_sn003_dewex_spring_2013	lars.stemmann@obs-vlfr.fr	4	UVP5 DEWEX 2013 (spring)	
-53	uvp5_sn005_dewex_2013_winter	lars.stemmann@obs-vlfr.fr	3	UVP5 DEWEX 2013 (winter)	
-54	uvp5_sn005_dy032_2015_filtered	francois.carlotti@mio.osupytheas.fr	40	UVP5 DY032 205	
-11	uvp5_sn002_moose_dyf_2014	lars.stemmann@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
-14	uvp5_sn002_moose_dyf_2017	coppola@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
+4	uvp5_sn000_lohafex2009	lars.stemmann@obs-vlfr.fr	109	UVP5 LOHAFEX 2009	
+5	uvp5_sn000_lter2008	lars.stemmann@obs-vlfr.fr	45	UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014)	
+6	uvp5_sn000_tara2009	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
+7	uvp5_sn000_tara2010	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
+9	uvp5_sn000_tara2012	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
 10	uvp5_sn002_moose_dyf_2013	lars.stemmann@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
-13	uvp5_sn002_moose_dyf_2016	lguidi@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
-166	uvp5_sn002_moose_dyf_2018	coppola@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
+11	uvp5_sn002_moose_dyf_2014	lars.stemmann@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
 12	uvp5_sn002_moose_dyf_2015	lars.stemmann@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
+13	uvp5_sn002_moose_dyf_2016	lguidi@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
+14	uvp5_sn002_moose_dyf_2017	coppola@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
+15	uvp5_sn002_moose_ge_2013	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
+16	uvp5_sn000_malina2009	lars.stemmann@obs-vlfr.fr	28	UVP5 MALINA 2009	
+17	uvp5_sn002_moose_ge_2014	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
+18	uvp5_sn002_moose_ge_2016_filtered	lguidi@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
+19	uvp5_sn000_msm049	stemmann@obs-vlfr.fr	588	UVP5 Geomar 2015 msm049	
+20	uvp5_sn000_operex2008	lars.stemmann@obs-vlfr.fr	110	UVP5 OPEREX 2008	
+21	uvp5_sn001_2012_moose_ge	stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
 22	uvp5_sn001_2012_msm22	stemmann@obs-vlfr.fr	593	UVP5 Geomar 2012 msm22	
 23	uvp5_sn001_2012_msm23	stemmann@obs-vlfr.fr	584	UVP5 Geomar 2012 msm23	
 24	uvp5_sn001_2013_m92	stemmann@obs-vlfr.fr	556	UVP5 Geomar 2013 m92	
@@ -35,180 +26,189 @@ pprojid	ptitle	data_owner	projid	title	use
 26	uvp5_sn001_2013_m96	stemmann@obs-vlfr.fr	585	UVP5 Geomar 2013 m96	
 27	uvp5_sn001_2013_m97	stemmann@obs-vlfr.fr	603	UVP5 Geomar 2013 m97	
 28	uvp5_sn001_2013_m98	stemmann@obs-vlfr.fr	610	UVP5 Geomar 2013 m98	
-109	uvp5_sn010_2014_eddy		881	UVP5 Geomar 2014  eddy	
+29	uvp5_sn001_2014_msm40	stemmann@obs-vlfr.fr	587	UVP5 Geomar 2014 msm40	
+30	uvp5_sn002_iado_2016	irisson@normalesup.org	NA	NA	
+31	uvp5_sn002_moose_ge_2015_filtered	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
+32	uvp5_sn002_somba_ge_2014	lars.stemmann@obs-vlfr.fr	36	UVP5 SOMBA 2014	
+33	uvp5_sn002zd_cascade2011	lars.stemmann@obs-vlfr.fr	NA	NA	
+34	uvp5_sn002zd_ccelter_2011	lars.stemmann@obs-vlfr.fr	50	UVP5zd CCELTER 2011	
+35	uvp5_sn002zd_gatekeeper2010	lars.stemmann@obs-vlfr.fr	51	UVP5zd Gatekeeper	
+36	uvp5_sn002zd_keops2	lars.stemmann@obs-vlfr.fr	56	UVP5zd KEOPS	
+37	uvp5_sn002zd_omer	lars.stemmann@obs-vlfr.fr	63	UVP5zd OMER (omer omer_2)	
+38	uvp5_sn002zd_omer_2	lars.stemmann@obs-vlfr.fr	63	UVP5zd OMER (omer omer_2)	
+39	uvp5_sn002zh_tvarmine2012	marc.picheral@obs-vlfr.fr	58	UVP5zh Tvarmine	
+40	uvp5_sn003_2015_kaxis	lars.stemmann@obs-vlfr.fr	124	UVP5 KAXIS 2015	
+41	uvp5_sn003_cassiopee_2015	lars.stemmann@obs-vlfr.fr	38	UVP5 CASSIOPEE 2015	
+42	uvp5_sn003_ccelter_2014	lars.stemmann@obs-vlfr.fr	45	UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014)	
+43	uvp5_sn003_ccelter_2016	tristan.biard@univ-littoral.fr	156	UVP5 CCELTER 2016	
+44	uvp5_sn003_dewex_spring_2013	lars.stemmann@obs-vlfr.fr	4	UVP5 DEWEX 2013 (spring)	
+45	uvp5_sn003_medsea2013	f.gazeau@obs-vlfr.fr	39	UVP5 MEDSEA 2013 (mesocosm)	
+46	uvp5_sn003_outpace_2015	lguidi@obs-vlfr.fr	37	UVP5 OUTPACE 2015	
+47	uvp5_sn003_sargasso_a	lombard@obs-vlfr.fr	22	UVP5 Sargasso 2014 (sargasso_a sargasso_b)	
+48	uvp5_sn003_sargasso_b	lombard@obs-vlfr.fr	22	UVP5 Sargasso 2014 (sargasso_a sargasso_b)	
+49	uvp5_sn003_tara2013	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
+50	uvp5_sn003zp_pelgas2012	lars.stemmann@obs-vlfr.fr	59	UVP5zd Pelgas	
+51	uvp5_sn003zp_tara2012	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
+52	uvp5_sn005_batman	francois.carlotti@mio.osupytheas.fr	80	UVP5 Batman	
+53	uvp5_sn005_dewex_2013_winter	lars.stemmann@obs-vlfr.fr	3	UVP5 DEWEX 2013 (winter)	
+54	uvp5_sn005_dy032_2015_filtered	francois.carlotti@mio.osupytheas.fr	40	UVP5 DY032 205	
+55	uvp5_sn005_moose_ge_2013	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
+56	uvp5_sn008_an1304	marcel.babin@takuvik.ulaval.ca	41	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate	
+57	uvp5_sn008_an1405	marcel.babin@takuvik.ulaval.ca	41	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate	
+58	uvp5_sn008_an1406	marcel.babin@takuvik.ulaval.ca	618	UVP5 AN 1406	
+59	uvp5_sn008_an1407	marcel.babin@takuvik.ulaval.ca	41	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate	
+60	uvp5_sn008_green_2015_icecamp	marcel.babin@takuvik.ulaval.ca	42	UVP5 GREEN EDGE Ice Camp 2015	
+61	uvp5_sn008_green_2016_icecamp	marcel.babin@takuvik.ulaval.ca	315	UVP5 GREEN EDGE Ice Camp 2016	
+62	uvp5_sn008_subice_2014	stemmann@obs-vlfr.fr	107	UVP5 Subice 2014	
+63	uvp5_sn009_2015_goa	amcdonnell@alaska.edu	1904	uvp5_sn009_2015_goa_oa	
+64	uvp5_sn009_2015_p16n	amcdonnell@alaska.edu	43	uvp5_sn009_2015_p16n	
+65	uvp5_sn009_2015_p16n_goa	amcdonnell@alaska.edu	43	uvp5_sn009_2015_p16n	
+66	uvp5_sn009_sewardline_f2014	amcdonnell@alaska.edu	62	UVP5 Sewardline	
+67	uvp5_sn009_txs14	amcdonnell@alaska.edu	65	uvp5_sn009_2014_nga_spring	
 68	uvp5_sn010_2014_m105	rkiko@geomar.de	602	UVP5 Geomar 2014 m105	
 69	uvp5_sn010_2014_m106	rkiko@geomar.de	595	UVP5 Geomar 2014 m106	
 70	uvp5_sn010_2014_m107	rkiko@geomar.de	559	UVP5 Geomar 2014 m107	
 71	uvp5_sn010_2014_m108	rkiko@geomar.de	586	UVP5 Geomar 2014 m108	
-29	uvp5_sn001_2014_msm40	stemmann@obs-vlfr.fr	587	UVP5 Geomar 2014 msm40	
 72	uvp5_sn010_2014_ps88b	rkiko@geomar.de	558	UVP5 Geomar 2014 ps88b	
 73	uvp5_sn010_2015_m116	rkiko@geomar.de	589	UVP5 Geomar 2015 m116	
 74	uvp5_sn010_2015_m119	rkiko@geomar.de	590	UVP5 Geomar 2015 m119	
 75	uvp5_sn010_2015_m120	rkiko@geomar.de	594	UVP5 Geomar 2015 m120	
 76	uvp5_sn010_2015_m121	rkiko@geomar.de	560	UVP5 Geomar 2015 m121	
-19	uvp5_sn000_msm049	stemmann@obs-vlfr.fr	588	UVP5 Geomar 2015 msm049	
-226	uvp5_sn010_2016_love	hhauss@geomar.de	3117	UVP5 Geomar 2016 love	
 77	uvp5_sn010_2016_m130	rkiko@geomar.de	214	UVP5 Geomar 2016 m130	
-223	uvp5_sn010_2016_m131	rainer.kiko@obs-vlfr.fr	545	UVP5 Geomar 2016 m131	
-110	uvp5_sn010_2017_fluxes1	rainer.kiko@obs-vlfr.fr	507	UVP5 Geomar 2017 fluxes1	
-111	uvp5_sn010_2017_fluxes2	rainer.kiko@obs-vlfr.fr	855	UVP5 Geomar 2017 fluxes2	
+80	uvp5_sn201_2015_naames_01	emmanuel.boss@maine.edu	617	UVP5hd NAAMES 01	
+81	uvp5_sn201_2016_naames_02	lee.karp-boss@maine.edu	146	UVP5hd NAAMES02	
+83	uvp5_sn201_ccelter_2017	tristan.biard@univ-littoral.fr	627	UVP5hd CCELTER 2017	
+85	uvp5_sn202_ps99_21_06_3_filtered	andreas.rogge@awi.de, anya.waite@dal.ca	257	UVP5hd PS 99 20 06 03	
+86	uvp5_sn203_greenedge_2016	lars.stemmann@obs-vlfr.fr	149	UVP5hd GreenEdge 2016	
+87	uvp5_sn203_greenedge_2016_1b	lars.stemmann@obs-vlfr.fr	149	UVP5hd GreenEdge 2016	
+90	uvp5_sn003_iado_2017	irisson@normalesup.org	651	UVP5 IADO 2017	
+92	uvp5_sn201_2017_naames_03	lee.karp-boss@maine.edu	637	UVP5hd NAAMES03	
 95	uvp5_sn010_2017_m135	rkiko@geomar.de	548	UVP5 Geomar 2017 m135	
 96	uvp5_sn010_2017_m136	rkiko@geomar.de	620	UVP5 Geomar 2017 m136	
 97	uvp5_sn010_2017_m137	rkiko@geomar.de	621	UVP5 Geomar 2017 m137	
 98	uvp5_sn010_2017_m138	rkiko@geomar.de	622	UVP5 Geomar 2017 m138	
-172	uvp5_sn010_2018_m145	rainer.kiko@obs-vlfr.fr	2807	UVP5 Geomar 2018 m145	
-171	uvp5_sn010_2018_m147	rainer.kiko@obs-vlfr.fr	2806	UVP5 Geomar 2018 m147	
-173	uvp5_sn010_2018_m148	rainer.kiko@obs-vlfr.fr	2808	UVP5 Geomar 2018 m148	
-60	uvp5_sn008_green_2015_icecamp	marcel.babin@takuvik.ulaval.ca	42	UVP5 GREEN EDGE Ice Camp 2015	
-61	uvp5_sn008_green_2016_icecamp	marcel.babin@takuvik.ulaval.ca	315	UVP5 GREEN EDGE Ice Camp 2016	
-90	uvp5_sn003_iado_2017	irisson@normalesup.org	651	UVP5 IADO 2017	
-121	uvp5_sn002_iado_2018	irisson@normalesup.org	1343	UVP5 IADO 2018	
-105	uvp5_sn008_ips_amundsen_2018	marcel.babin@takuvik.ulaval.ca	1165	UVP5 IPS Amundsen 2018	
-1	uvp5_sn003_jerico_2017	lars.stemmann@obs-vlfr.fr	578	UVP5 JERICO 2017	
-40	uvp5_sn003_2015_kaxis	lars.stemmann@obs-vlfr.fr	124	UVP5 KAXIS 2015	
-4	uvp5_sn000_lohafex2009	lars.stemmann@obs-vlfr.fr	109	UVP5 LOHAFEX 2009	
-16	uvp5_sn000_malina2009	lars.stemmann@obs-vlfr.fr	28	UVP5 MALINA 2009	
-45	uvp5_sn003_medsea2013	f.gazeau@obs-vlfr.fr	39	UVP5 MEDSEA 2013 (mesocosm)	
-18	uvp5_sn002_moose_ge_2016_filtered	lguidi@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
-21	uvp5_sn001_2012_moose_ge	stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
-31	uvp5_sn002_moose_ge_2015_filtered	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
-17	uvp5_sn002_moose_ge_2014	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
-55	uvp5_sn005_moose_ge_2013	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
-15	uvp5_sn002_moose_ge_2013	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	
-100	uvp5_sn002_moose_ge_2017_filtered	laurent.coppola@obs-vlfr.fr	853	UVP5 MooseGE 2017	
-168	uvp5_sn200_moose_ge_2018_filtered	coppola@obs-vlfr.fr	2784	UVP5 MooseGE 2018	
-149	uvp5_sn002_moose_ge_2019	coppola@obs-vlfr.fr	2436	UVP5 MooseGE 2019	
-20	uvp5_sn000_operex2008	lars.stemmann@obs-vlfr.fr	110	UVP5 OPEREX 2008	
-46	uvp5_sn003_outpace_2015	lguidi@obs-vlfr.fr	37	UVP5 OUTPACE 2015	
-235	uvp5_sn200_perle_02_2019_filtered	demadron@univ-perp.fr	2164	UVP5 PERLE 02 2019 (sn200)	
-134	uvp5_sn205_perle_02_2019_filtered	demadron@univ-perp.fr	2163	UVP5 PERLE 02 2019 (sn205)	
-238	uvp5_sn205_perle_03_2020_filtered	demadron@univ-perp.fr	2970	UVP5 PERLE 03 2020 (sn205)	
-48	uvp5_sn003_sargasso_b	lombard@obs-vlfr.fr	22	UVP5 Sargasso 2014 (sargasso_a sargasso_b)	
-47	uvp5_sn003_sargasso_a	lombard@obs-vlfr.fr	22	UVP5 Sargasso 2014 (sargasso_a sargasso_b)	
-66	uvp5_sn009_sewardline_f2014	amcdonnell@alaska.edu	62	UVP5 Sewardline	
-32	uvp5_sn002_somba_ge_2014	lars.stemmann@obs-vlfr.fr	36	UVP5 SOMBA 2014	
-62	uvp5_sn008_subice_2014	stemmann@obs-vlfr.fr	107	UVP5 Subice 2014	
-49	uvp5_sn003_tara2013	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
 99	uvp5_sn000_tara2011	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
-7	uvp5_sn000_tara2010	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
-51	uvp5_sn003zp_tara2012	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
-6	uvp5_sn000_tara2009	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
-9	uvp5_sn000_tara2012	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	
-254	uvp5_sn002_iado_2020	irisson@obs-vlfr.fr	3403	uvp5_sn002_iado_2020	
-67	uvp5_sn009_txs14	amcdonnell@alaska.edu	65	uvp5_sn009_2014_nga_spring	
-148	uvp5_sn009_tb14	amcdonnell@alaska.edu	2453	uvp5_sn009_2014_transboundary	
-63	uvp5_sn009_2015_goa	amcdonnell@alaska.edu	1904	uvp5_sn009_2015_goa_oa	
-65	uvp5_sn009_2015_p16n_goa	amcdonnell@alaska.edu	43	uvp5_sn009_2015_p16n	
-64	uvp5_sn009_2015_p16n	amcdonnell@alaska.edu	43	uvp5_sn009_2015_p16n	
-146	uvp5_sn009_2016_goa_fall	amcdonnell@alaska.edu	2412	uvp5_sn009_2016_nga_fall	
-141	uvp5_sn009_2016_goa_spring	amcdonnell@alaska.edu	2430	uvp5_sn009_2016_nga_spring	
-132	uvp5_sn009_pomz	amcdonnell@alaska.edu	1892	uvp5_sn009_2016_pomz	
-112	uvp5_sn009_2017_asgard	amcdonnell@alaska.edu	1261	uvp5_sn009_2017_asgard	
-142	uvp5_sn009_2017_sewardline_fall	amcdonnell@alaska.edu	2417	uvp5_sn009_2017_nga_fall	
-234	uvp5_sn009_2018_asgard_filtered	amcdonnell@alaska.edu	1446	uvp5_sn009_2018_asgard	
-131	uvp5_sn009_2018_nga_fall_filtered	smcdonnell@alaska.edu	1692	uvp5_sn009_2018_nga_fall	
+100	uvp5_sn002_moose_ge_2017_filtered	laurent.coppola@obs-vlfr.fr	853	UVP5 MooseGE 2017	
 104	uvp5_sn009_2018_nga_spring_filtered	amcdonnell@alaska.edu	964	uvp5_sn009_2018_nga_spring	
+105	uvp5_sn008_ips_amundsen_2018	marcel.babin@takuvik.ulaval.ca	1165	UVP5 IPS Amundsen 2018	
+109	uvp5_sn010_2014_eddy		881	UVP5 Geomar 2014  eddy	
+110	uvp5_sn010_2017_fluxes1	rainer.kiko@obs-vlfr.fr	507	UVP5 Geomar 2017 fluxes1	
+111	uvp5_sn010_2017_fluxes2	rainer.kiko@obs-vlfr.fr	855	UVP5 Geomar 2017 fluxes2	
+112	uvp5_sn009_2017_asgard	amcdonnell@alaska.edu	1261	uvp5_sn009_2017_asgard	
+113	LISST EXPORTS	stuart.halewood@ucsb.edu	NA	NA	
+121	uvp5_sn002_iado_2018	irisson@normalesup.org	1343	UVP5 IADO 2018	
+124	uvp5_sn003_mobydick_2018	enter lguidi@obs-vlfr.fr	1451	Mobydick 2018	
 130	uvp5_sn009_2018_nga_summer_filtered	amcdonnell@alaska.edu	1666	uvp5_sn009_2018_nga_summer	
-151	uvp5_sn009_2019_nga_lter_summer_filtered	amcdonnell@alaska.edu	2464	uvp5_sn009_2019_nga_lter_summer	
-139	uvp5_sn009_2019_nga_lter_spring_filtered	amcdonnell@alaska.edu	2312	uvp5_sn009_2019_nga_spring	
-147	uvp5_sn009_chukchi_borderlands_2016	amcdonnell@alaska.edu	2431	uvp5_sn009_chukchi_borderlands_2016	
-257	uvp5_sn009_en_534_mcdonnell	amcdonnell@alaska.edu	3447	uvp5_sn009_en_534_mcdonnell	
-240	uvp5_sn200_ilhas_2017_filtered	rubens@usp.br	3813	uvp5_sn200_ilhas_2017_filtered_vignettes	
-150	uvp5_sn207_2018_s04p_filtered	amcdonnell@alaska.edu	3373	uvp5_sn207_2018_s04p_filtered	
-239	uvp5_sn204_arctic2018_all_filtered	andreas.rogge@awi.de	2463	UVP5hd ARCTIC2018	
-83	uvp5_sn201_ccelter_2017	tristan.biard@univ-littoral.fr	627	UVP5hd CCELTER 2017	
-154	uvp5_sn201_ccelter_2019_filtered	tristan.biard@univ-littoral.fr	2485	UVP5hd CCELTER 2019	
-228	uvp5_sn201_exports01_filtered	emmanuel.boss@maine.edu	1286	UVP5hd EXPORTS NP R/V Roger Revelle	
-87	uvp5_sn203_greenedge_2016_1b	lars.stemmann@obs-vlfr.fr	149	UVP5hd GreenEdge 2016	
-86	uvp5_sn203_greenedge_2016	lars.stemmann@obs-vlfr.fr	149	UVP5hd GreenEdge 2016	
-231	uvp5_sn202_msm060_filtered	andreas.rogge@awi.de, anya.waite@dal.ca	351	UVP5hd msm060 (2017)	
-232	uvp5_sn202_msm074_filtered	jkarstensen@geomar.de, andreas.rogge@awi.de, anya.waite@dal.ca	1337	UVP5hd MSM074	
-80	uvp5_sn201_2015_naames_01	emmanuel.boss@maine.edu	617	UVP5hd NAAMES 01	
-236	uvp5_sn201_2018_naames_04_filtered	lee.karp-boss@maine.edu	1252	UVP5hd Naames 04	
-81	uvp5_sn201_2016_naames_02	lee.karp-boss@maine.edu	146	UVP5hd NAAMES02	
-92	uvp5_sn201_2017_naames_03	lee.karp-boss@maine.edu	637	UVP5hd NAAMES03	
-237	uvp5_sn202_ps99_20_06_filtered	andreas.rogge@awi.de, anya.waite@awi.de	256	UVP5hd PS 99 20 06	
-85	uvp5_sn202_ps99_21_06_3_filtered	andreas.rogge@awi.de, anya.waite@dal.ca	257	UVP5hd PS 99 20 06 03	
-230	uvp5_sn207_2018_exports_np_sr1812_filtered	amcdonnell@alaska.edu	1591	UVP5hd_sn207_2018_Exports_np_sr1812	
+131	uvp5_sn009_2018_nga_fall_filtered	smcdonnell@alaska.edu	1692	uvp5_sn009_2018_nga_fall	
+132	uvp5_sn009_pomz	amcdonnell@alaska.edu	1892	uvp5_sn009_2016_pomz	
+134	uvp5_sn205_perle_02_2019_filtered	demadron@univ-perp.fr	2163	UVP5 PERLE 02 2019 (sn205)	
 138	uvp5hd_sn207_2019_i06s_tcn322_filtered	amcdonnell@alaska.edu	2289	uvp5hd_sn207_2019_i06s_tcn322	
-34	uvp5_sn002zd_ccelter_2011	lars.stemmann@obs-vlfr.fr	50	UVP5zd CCELTER 2011	
-35	uvp5_sn002zd_gatekeeper2010	lars.stemmann@obs-vlfr.fr	51	UVP5zd Gatekeeper	
-36	uvp5_sn002zd_keops2	lars.stemmann@obs-vlfr.fr	56	UVP5zd KEOPS	
-38	uvp5_sn002zd_omer_2	lars.stemmann@obs-vlfr.fr	63	UVP5zd OMER (omer omer_2)	
-37	uvp5_sn002zd_omer	lars.stemmann@obs-vlfr.fr	63	UVP5zd OMER (omer omer_2)	
-50	uvp5_sn003zp_pelgas2012	lars.stemmann@obs-vlfr.fr	59	UVP5zd Pelgas	
-39	uvp5_sn002zh_tvarmine2012	marc.picheral@obs-vlfr.fr	58	UVP5zh Tvarmine	
-265	uvp6_sn000001lp_20201001_intercalibrage		3505	uvp6_sn000001lp_20201001_intercalibrage	
+139	uvp5_sn009_2019_nga_lter_spring_filtered	amcdonnell@alaska.edu	2312	uvp5_sn009_2019_nga_spring	
+141	uvp5_sn009_2016_goa_spring	amcdonnell@alaska.edu	2430	uvp5_sn009_2016_nga_spring	
+142	uvp5_sn009_2017_sewardline_fall	amcdonnell@alaska.edu	2417	uvp5_sn009_2017_nga_fall	
+143			583	Zooscan BATS	
+144	uvp5_sn003_csiro_iioe	david.antoine@curtin.edu.au	2410	UVP5 CurtinUni IIOE 2019 NEW!	
+146	uvp5_sn009_2016_goa_fall	amcdonnell@alaska.edu	2412	uvp5_sn009_2016_nga_fall	
+147	uvp5_sn009_chukchi_borderlands_2016	amcdonnell@alaska.edu	2431	uvp5_sn009_chukchi_borderlands_2016	
+148	uvp5_sn009_tb14	amcdonnell@alaska.edu	2453	uvp5_sn009_2014_transboundary	
+149	uvp5_sn002_moose_ge_2019	coppola@obs-vlfr.fr	2436	UVP5 MooseGE 2019	
+150	uvp5_sn207_2018_s04p_filtered	amcdonnell@alaska.edu	3373	uvp5_sn207_2018_s04p_filtered	
+151	uvp5_sn009_2019_nga_lter_summer_filtered	amcdonnell@alaska.edu	2464	uvp5_sn009_2019_nga_lter_summer	
+152	UVPsn008_2018_leg02c	marcel.babin@takuvik.ulaval.ca	2469	UVPsn008_2018_leg02c	
+153	uvp5_sn205_coastdark_2019	emilia@iopan.pl	2483	Coast Dark 2019	
+154	uvp5_sn201_ccelter_2019_filtered	tristan.biard@univ-littoral.fr	2485	UVP5hd CCELTER 2019	
+161	uvp5_sn008_uvp_azomp	igor.yashayaev@dfo-mpo.gc.ca	2489	DFO AZOMP Labrador Sea 2019 UVP5	
+163			NA	NA	
+164	uvp5_sn005_moose_antares_2020b		NA	NA	
+165	uvp5_sn005_moose_antares_201718	francois.carlotti@mio.osupytheas.fr	NA	NA	
+166	uvp5_sn002_moose_dyf_2018	coppola@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018	
+167	UEA_SV		NA	NA	
+168	uvp5_sn200_moose_ge_2018_filtered	coppola@obs-vlfr.fr	2784	UVP5 MooseGE 2018	
+169	Test_Heringslarven		NA	NA	
+171	uvp5_sn010_2018_m147	rainer.kiko@obs-vlfr.fr	2806	UVP5 Geomar 2018 m147	
+172	uvp5_sn010_2018_m145	rainer.kiko@obs-vlfr.fr	2807	UVP5 Geomar 2018 m145	
+173	uvp5_sn010_2018_m148	rainer.kiko@obs-vlfr.fr	2808	UVP5 Geomar 2018 m148	
+183	uvp-test		NA	NA	
+186	uvp-test-2	enter op. email	NA	NA	
+191	UVP5_UofSC		2551	UofSC Bermuda Atlantic Time Series UVP5_FullRep	
 192	uvp6_sn000002lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3039	uvp6_sn000002lp_20190724_intercalibrage	
-202	uvp6_sn000002lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3039	uvp6_sn000002lp_20190724_intercalibrage	
-221	uvp6_sn000003lp_2018_awi_mooring	andreas.rogge@awi.de	3081	uvp6_sn000003lp_2018_awi_mooring	
-263	uvp6_sn000003lp_20200924_intercalibrage		3503	uvp6_sn000003lp_20200924_intercalibrage	
-276	uvp6_sn000003lp_20201109_seaexplorer_002		3887	uvp6_sn000003lp_20201109_seaexplorer_002	
-218	uvp6_sn000004lp_20190326_seaexplorer_002	marc.picheral@obs-vlfr.fr	3076	uvp6_sn000004lp_20190326_seaexplorer_002	
-219	uvp6_sn000004lp_20190430_nke_float_down	marc.picheral@obs-vlfr.fr	3077	uvp6_sn000004lp_20190430_nke_float_down	
-225	uvp6_sn000004lp_20190628_nke_float_longue_duree	marc.picheral@obs-vlfr.fr	3115	uvp6_sn000004lp_20190628_nke_float_longue_duree	
 193	uvp6_sn000004lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3040	uvp6_sn000004lp_20190724_intercalibrage	
 194	uvp6_sn000005lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3004	uvp6_sn000005lp_20200130_20200221_intercalibrage	
-250	uvp6_sn000006lp_2020_sc_basintest	marc.picheral@obs-vlfr.fr	3327	uvp6_sn000006lp_2020_sc_basintest	
-224	uvp6_sn000007lp_2019_seaglider_test_cscs	marc.picheral@obs-vlfr.fr	3116	uvp6_sn000007lp_2019_seaglider_test_cscs	
-203	uvp6_sn000007lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3056	uvp6_sn000007lp_20190724_intercalibrage	
 195	uvp6_sn000007lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3005	uvp6_sn000007lp_20200130_20200221_intercalibrage	
-248	uvp6_sn000007lp_20200702_seaexplorer_test	marc.picheral@obs-vlfr.fr	3251	uvp6_sn000007lp_20200702_seaexplorer_test	
-259	uvp6_sn000007lp_20200924_intercalibrage		3458	uvp6_sn000007lp_20200924_intercalibrage	
-222	uvp6_sn000008lp_20190430_nke_float_up	marc.picheral@obs-vlfr.fr	3083	uvp6_sn000008lp_20190430_nke_float_up	
-201	uvp6_sn000008lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3006	uvp6_sn000008lp_20200130_20200221_intercalibrage	
-269	uvp6_sn000009lp_20201022_intercalibrage		3662	uvp6_sn000009lp_20201022_intercalibrage	
 197	uvp6_sn000010lp_2019_11_cts5_usea_trial	marc.picheral@obs-vlfr.fr	3047	uvp6_sn000010lp_2019_11_cts5_usea_trial	
 198	uvp6_sn000010lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3050	uvp6_sn000010lp_20190724_intercalibrage	
 199	uvp6_sn000010lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3007	uvp6_sn000010lp_20200130_20200221_intercalibrage	
+200	uvp6_sn000008lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	
+201	uvp6_sn000008lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3006	uvp6_sn000008lp_20200130_20200221_intercalibrage	
+202	uvp6_sn000002lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3039	uvp6_sn000002lp_20190724_intercalibrage	
+203	uvp6_sn000007lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3056	uvp6_sn000007lp_20190724_intercalibrage	
+204	uvp6_sn000004lp_20190207_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	
+205	uvp6_sn000002lp_20190207_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	
 206	uvp6_sn000100lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3015	uvp6_sn000100lp_20200205_intercalibrage	
 208	uvp6_sn000101lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3008	uvp6_sn000101lp_20200130_20200205_intercalibrage	
 209	uvp6_sn000102lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3009	uvp6_sn000102lp_20200205_intercalibrage	
 210	uvp6_sn000103lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3010	uvp6_sn000103lp_20200130_20200221_intercalibrage	
 211	uvp6_sn000104lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3011	uvp6_sn000104lp_20200130_20200205_intercalibrage	
-264	uvp6_sn000107lp_20200924_intercalibrage		3504	uvp6_sn000107lp_20200924_intercalibrage	
 212	uvp6_sn000108lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3063	uvp6_sn000108lp_20200205_intercalibrage	
-266	uvp6_sn000109lp_20201001_intercalibrage		3506	uvp6_sn000109lp_20201001_intercalibrage	
-249	uvp6_sn000110lp_2020_07_float_recover	marc.picheral@obs-vlfr.fr	3278	uvp6_sn000110lp_2020_07_float_recover	
-233	uvp6_sn000110lp_2020_07_float_remote	marc.picheral@obs-vlfr.fr	3211	uvp6_sn000110lp_2020_07_float_remote	
 213	uvp6_sn000110lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3064	uvp6_sn000110lp_20200205_intercalibrage	
 214	uvp6_sn000111lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3069	uvp6_sn000111lp_20200130_20200205_intercalibrage	
-261	uvp6_sn000111lp_20200924_intercalibrage		3501	uvp6_sn000111lp_20200924_intercalibrage	
 215	uvp6_sn000112lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3016	uvp6_sn000112lp_20200130_20200205_intercalibrage	
-262	uvp6_sn000112lp_20200924_intercalibrage		3502	uvp6_sn000112lp_20200924_intercalibrage	
 216	uvp6_sn000113lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3017	uvp6_sn000113lp_20200130_20200205_intercalibrage	
 217	uvp6_sn000114lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3018	uvp6_sn000114lp_20200130_20200205_intercalibrage	
-267	uvp6_sn000123lp_20201001_intercalibrage		3507	uvp6_sn000123lp_20201001_intercalibrage	
-152	UVPsn008_2018_leg02c	marcel.babin@takuvik.ulaval.ca	2469	UVPsn008_2018_leg02c	
-143			583	Zooscan BATS	
-243	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
-273	uvp5_sn210_2020_msm089	rkiko@geomar.de	NA	NA	
-167	UEA_SV		NA	NA	
-164	uvp5_sn005_moose_antares_2020b		NA	NA	
-274		rkiko@geomar.de	NA	NA	
-169	Test_Heringslarven		NA	NA	
-183	uvp-test		NA	NA	
-272	uvp5_sn210_2019_m157	rainer.kiko@obs-vlfr.fr	NA	NA	
-163			NA	NA	
-244	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
-205	uvp6_sn000002lp_20190207_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	
-200	uvp6_sn000008lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	
-271	uvp5_sn210_2019_m156	rkiko@geomar.de	NA	NA	
-275	uvp5_sn210_2019_m160	rkiko@geomar.de	NA	NA	
-245	syTUMSAT1	ytanaka@kaiyodai.ac.jp	NA	NA	
-204	uvp6_sn000004lp_20190207_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	
-242	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
-229	test0609	enter op. email	NA	NA	
+218	uvp6_sn000004lp_20190326_seaexplorer_002	marc.picheral@obs-vlfr.fr	3076	uvp6_sn000004lp_20190326_seaexplorer_002	
+219	uvp6_sn000004lp_20190430_nke_float_down	marc.picheral@obs-vlfr.fr	3077	uvp6_sn000004lp_20190430_nke_float_down	
 220	uvp6_sn000003lp_20180702_intercalibrage_bassin	marc.picheral@obs-vlfr.fr	NA	NA	
+221	uvp6_sn000003lp_2018_awi_mooring	andreas.rogge@awi.de	3081	uvp6_sn000003lp_2018_awi_mooring	
+222	uvp6_sn000008lp_20190430_nke_float_up	marc.picheral@obs-vlfr.fr	3083	uvp6_sn000008lp_20190430_nke_float_up	
+223	uvp5_sn010_2016_m131	rainer.kiko@obs-vlfr.fr	545	UVP5 Geomar 2016 m131	
+224	uvp6_sn000007lp_2019_seaglider_test_cscs	marc.picheral@obs-vlfr.fr	3116	uvp6_sn000007lp_2019_seaglider_test_cscs	
+225	uvp6_sn000004lp_20190628_nke_float_longue_duree	marc.picheral@obs-vlfr.fr	3115	uvp6_sn000004lp_20190628_nke_float_longue_duree	
+226	uvp5_sn010_2016_love	hhauss@geomar.de	3117	UVP5 Geomar 2016 love	
+228	uvp5_sn201_exports01_filtered	emmanuel.boss@maine.edu	1286	UVP5hd EXPORTS NP R/V Roger Revelle	
+229	test0609	enter op. email	NA	NA	
+230	uvp5_sn207_2018_exports_np_sr1812_filtered	amcdonnell@alaska.edu	1591	UVP5hd_sn207_2018_Exports_np_sr1812	
+231	uvp5_sn202_msm060_filtered	andreas.rogge@awi.de, anya.waite@dal.ca	351	UVP5hd msm060 (2017)	
+232	uvp5_sn202_msm074_filtered	jkarstensen@geomar.de, andreas.rogge@awi.de, anya.waite@dal.ca	1337	UVP5hd MSM074	
+233	uvp6_sn000110lp_2020_07_float_remote	marc.picheral@obs-vlfr.fr	3211	uvp6_sn000110lp_2020_07_float_remote	
+234	uvp5_sn009_2018_asgard_filtered	amcdonnell@alaska.edu	1446	uvp5_sn009_2018_asgard	
+235	uvp5_sn200_perle_02_2019_filtered	demadron@univ-perp.fr	2164	UVP5 PERLE 02 2019 (sn200)	
+236	uvp5_sn201_2018_naames_04_filtered	lee.karp-boss@maine.edu	1252	UVP5hd Naames 04	
+237	uvp5_sn202_ps99_20_06_filtered	andreas.rogge@awi.de, anya.waite@awi.de	256	UVP5hd PS 99 20 06	
+238	uvp5_sn205_perle_03_2020_filtered	demadron@univ-perp.fr	2970	UVP5 PERLE 03 2020 (sn205)	
+239	uvp5_sn204_arctic2018_all_filtered	andreas.rogge@awi.de	2463	UVP5hd ARCTIC2018	
+240	uvp5_sn200_ilhas_2017_filtered	rubens@usp.br	3813	uvp5_sn200_ilhas_2017_filtered_vignettes	
 241	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
-165	uvp5_sn005_moose_antares_201718	francois.carlotti@mio.osupytheas.fr	NA	NA	
-186	uvp-test-2	enter op. email	NA	NA	
-255	uvp5_sn210_2019_m158	rainer.kiko@obs-vlfr.fr	NA	NA	
-252	uvp5_sn002_iado_2015	irisson@normalesup.org	NA	NA	
-256	uvp5_sn210_2019_m159	rainer.kiko@obs-vlfr.fr	NA	NA	
-33	uvp5_sn002zd_cascade2011	lars.stemmann@obs-vlfr.fr	NA	NA	
-113	LISST EXPORTS	stuart.halewood@ucsb.edu	NA	NA	
-270	uvp5_sn210_2018_msm080	rkiko@geomar.de	NA	NA	
-30	uvp5_sn002_iado_2016	irisson@normalesup.org	NA	NA	
+242	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
+243	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
+244	sytumsat1	ytanaka@kaiyodai.ac.jp	NA	NA	
+245	syTUMSAT1	ytanaka@kaiyodai.ac.jp	NA	NA	
+246	uvp5_sn011_2016_syTUMSAT1	ytanaka@kaiyodai.ac.jp	3221	syTUMSAT1	
+247	uvp5_sn011_2017_syTUMSAT2	ytanaka@kaiyodai.ac.jp	3222	syTUMSAT2	
+248	uvp6_sn000007lp_20200702_seaexplorer_test	marc.picheral@obs-vlfr.fr	3251	uvp6_sn000007lp_20200702_seaexplorer_test	
+249	uvp6_sn000110lp_2020_07_float_recover	marc.picheral@obs-vlfr.fr	3278	uvp6_sn000110lp_2020_07_float_recover	
+250	uvp6_sn000006lp_2020_sc_basintest	marc.picheral@obs-vlfr.fr	3327	uvp6_sn000006lp_2020_sc_basintest	
 251	uvp5_sn002_iado_2014	irisson@normalesup.org	NA	NA	
+252	uvp5_sn002_iado_2015	irisson@normalesup.org	NA	NA	
 253	UVP5 Geomar 2017 m136_m138 sediment trap subset		NA	NA	
+254	uvp5_sn002_iado_2020	irisson@obs-vlfr.fr	3403	uvp5_sn002_iado_2020	
+255	uvp5_sn210_2019_m158	rainer.kiko@obs-vlfr.fr	NA	NA	
+256	uvp5_sn210_2019_m159	rainer.kiko@obs-vlfr.fr	NA	NA	
+257	uvp5_sn009_en_534_mcdonnell	amcdonnell@alaska.edu	3447	uvp5_sn009_en_534_mcdonnell	
+259	uvp6_sn000007lp_20200924_intercalibrage		3458	uvp6_sn000007lp_20200924_intercalibrage	
+260	SCOPE/HOT	aewhite@hawaii.edu	3460	SCOPE/HOT	
+261	uvp6_sn000111lp_20200924_intercalibrage		3501	uvp6_sn000111lp_20200924_intercalibrage	
+262	uvp6_sn000112lp_20200924_intercalibrage		3502	uvp6_sn000112lp_20200924_intercalibrage	
+263	uvp6_sn000003lp_20200924_intercalibrage		3503	uvp6_sn000003lp_20200924_intercalibrage	
+264	uvp6_sn000107lp_20200924_intercalibrage		3504	uvp6_sn000107lp_20200924_intercalibrage	
+265	uvp6_sn000001lp_20201001_intercalibrage		3505	uvp6_sn000001lp_20201001_intercalibrage	
+266	uvp6_sn000109lp_20201001_intercalibrage		3506	uvp6_sn000109lp_20201001_intercalibrage	
+267	uvp6_sn000123lp_20201001_intercalibrage		3507	uvp6_sn000123lp_20201001_intercalibrage	
+268	uvp5_sn221_algoa_bay_2020	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020 	
+269	uvp6_sn000009lp_20201022_intercalibrage		3662	uvp6_sn000009lp_20201022_intercalibrage	
+270	uvp5_sn210_2018_msm080	rkiko@geomar.de	NA	NA	
+271	uvp5_sn210_2019_m156	rkiko@geomar.de	NA	NA	
+272	uvp5_sn210_2019_m157	rainer.kiko@obs-vlfr.fr	NA	NA	
+273	uvp5_sn210_2020_msm089	rkiko@geomar.de	NA	NA	
+274		rkiko@geomar.de	NA	NA	
+275	uvp5_sn210_2019_m160	rkiko@geomar.de	NA	NA	
+276	uvp6_sn000003lp_20201109_seaexplorer_002		3887	uvp6_sn000003lp_20201109_seaexplorer_002	

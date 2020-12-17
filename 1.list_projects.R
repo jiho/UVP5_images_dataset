@@ -11,7 +11,7 @@ projects <- tbl(db, "part_projects") %>%
   # add EcoTaxa title
   left_join(tbl(db, "projects") %>% select(projid, title)) %>%
   collect() %>%
-  arrange(title) %>%
+  arrange(pprojid) %>%
   # add empty column
   mutate(use="")
 
