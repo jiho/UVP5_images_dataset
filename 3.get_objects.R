@@ -55,7 +55,8 @@ future_walk(pids, function(pid) {
         all_of(mapping)
       ) %>%
       # add path to image within EcoTaxa's vault
-      left_join(tbl(localdb, "images") %>% select(objid, file_name), by="objid") %>%
+      left_join(tbl(localdb, "images") %>% select(objid, imgrank, file_name), by="objid") %>%
+      filter(imgrank==0L) %>%
       collect()
 
     # write an information message
