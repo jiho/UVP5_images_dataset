@@ -20,7 +20,7 @@ samples <- tbl(db, "part_samples") %>%
   filter(pprojid %in% !!selected_projects$pprojid) %>%
   select(psampleid, sampleid, profile=profileid) %>%
   # get classification status of objects in those
-  left_join(tbl(db, "obj_head") %>% select(sampleid, classif_qual), by="sampleid") %>%
+  left_join(tbl(db, "objects") %>% select(sampleid, classif_qual), by="sampleid") %>%
   count(profile, sampleid, classif_qual) %>%
   ungroup() %>% collect()
 # NB: this takes ~5 min
