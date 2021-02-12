@@ -42,7 +42,7 @@ future_walk(pids, function(pid) {
 
     # extract validated objects from the select samples
     obj <- tbl(localdb, "objects") %>%
-      filter(projid == pid, sampleid %in% sids, classif_qual=="V") %>%
+      filter(projid == pid, sampleid %in% sids, classif_qual %in% c("V", "D")) %>%
       # keep relevant metadata
       select(
         # identifiers
