@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 figures/*
+data/UVP5_volumes.tsv.gz
