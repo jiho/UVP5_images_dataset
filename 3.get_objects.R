@@ -14,9 +14,10 @@ samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols_only(projid
 
 # work in parallel but do not use too many cores,
 # otherwise the EcoTaxa server will be the bottleneck
-plan(multisession, workers=5)
+# plan(multisession, workers=5)
 # fall back on sequential processing
-# plan(sequential)
+plan(sequential)
+# Nb: this actually seems faster!
 
 # deal with the data project by project, because the mapping is per project
 pids <- samples$projid %>% unique() %>% sort() %>% as.integer()
