@@ -10,7 +10,7 @@ library("feather")
 library("furrr")
 
 # read selected samples
-samples <- read_tsv("data/UVP5_samples_selected.tsv") %>% select(projid, sampleid)
+samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols_only(projid="d", sampleid="d"))
 
 # work in parallel but do not use too many cores,
 # otherwise the EcoTaxa server will be the bottleneck
