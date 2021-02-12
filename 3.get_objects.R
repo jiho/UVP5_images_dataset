@@ -37,7 +37,7 @@ future_walk(pids, function(pid) {
     prj <- tbl(localdb, "projects") %>% filter(projid==pid) %>% collect()
     mapping <- parse_mapping(prj$mappingobj)
     # remove useless or wrong fields
-    mapping <- mapping[! names(mapping) %in% c("tag", "esd")]
+    mapping <- mapping[! names(mapping) %in% c("x", "y", "xm", "ym", "xstart", "ystart", "bx", "by", "esd")]
 
     # extract validated objects from the select samples
     obj <- tbl(localdb, "objects") %>%
@@ -52,7 +52,6 @@ future_walk(pids, function(pid) {
         depth=depth_min,
         # zooprocess features (and other imported fields)
         all_of(mapping)
-        # TODO do we really need all this since many won't be intercomparable at the scales of the whole dataset because of imaging differences; couldn't we reduce this to area, major, minor?
       ) %>%
       # add path to image within EcoTaxa's vault
       left_join(tbl(localdb, "images") %>% select(imgid, file_name), by="imgid") %>%
