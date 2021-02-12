@@ -169,7 +169,7 @@ pprojid	ptitle	data_owner	projid	title	use
 230	uvp5_sn207_2018_exports_np_sr1812_filtered	amcdonnell@alaska.edu	1591	UVP5hd_sn207_2018_Exports_np_sr1812	
 231	uvp5_sn202_msm060_filtered	andreas.rogge@awi.de, anya.waite@dal.ca	351	UVP5hd msm060 (2017)	
 232	uvp5_sn202_msm074_filtered	jkarstensen@geomar.de, andreas.rogge@awi.de, anya.waite@dal.ca	1337	UVP5hd MSM074	
-233	uvp6_sn000110lp_2020_07_float_remote	marc.picheral@obs-vlfr.fr	3211	uvp6_sn000110lp_2020_07_float_remote	
+233	uvp6_sn000110lp_2020_07_float_remote	marc.picheral@obs-vlfr.fr	NA	NA	
 234	uvp5_sn009_2018_asgard_filtered	amcdonnell@alaska.edu	1446	uvp5_sn009_2018_asgard	
 235	uvp5_sn200_perle_02_2019_filtered	demadron@univ-perp.fr	2164	UVP5 PERLE 02 2019 (sn200)	
 236	uvp5_sn201_2018_naames_04_filtered	lee.karp-boss@maine.edu	1252	UVP5hd Naames 04	
@@ -193,7 +193,7 @@ pprojid	ptitle	data_owner	projid	title	use
 254	uvp5_sn002_iado_2020	irisson@obs-vlfr.fr	3403	uvp5_sn002_iado_2020	
 255	uvp5_sn210_2019_m158	rainer.kiko@obs-vlfr.fr	NA	NA	
 256	uvp5_sn210_2019_m159	rainer.kiko@obs-vlfr.fr	NA	NA	
-257	uvp5_sn009_en_534_mcdonnell	amcdonnell@alaska.edu	3447	uvp5_sn009_en_534_mcdonnell	
+257	uvp5_sn009_en_534_mcdonnell	amcdonnell@alaska.edu	NA	NA	
 259	uvp6_sn000007lp_20200924_intercalibrage		3458	uvp6_sn000007lp_20200924_intercalibrage	
 260	SCOPE/HOT	aewhite@hawaii.edu	3460	SCOPE/HOT	
 261	uvp6_sn000111lp_20200924_intercalibrage		3501	uvp6_sn000111lp_20200924_intercalibrage	
@@ -203,7 +203,7 @@ pprojid	ptitle	data_owner	projid	title	use
 265	uvp6_sn000001lp_20201001_intercalibrage		3505	uvp6_sn000001lp_20201001_intercalibrage	
 266	uvp6_sn000109lp_20201001_intercalibrage		3506	uvp6_sn000109lp_20201001_intercalibrage	
 267	uvp6_sn000123lp_20201001_intercalibrage		3507	uvp6_sn000123lp_20201001_intercalibrage	
-268	uvp5_sn221_algoa_bay_2020	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020 	
+268	uvp5_sn221_algoa_bay_2020_filtered	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020 	
 269	uvp6_sn000009lp_20201022_intercalibrage		3662	uvp6_sn000009lp_20201022_intercalibrage	
 270	uvp5_sn210_2018_msm080	rkiko@geomar.de	NA	NA	
 271	uvp5_sn210_2019_m156	rkiko@geomar.de	NA	NA	
