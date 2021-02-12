@@ -65,7 +65,7 @@ future_walk(pids, function(pid) {
     )
 
     # save as a file
-    write_feather(obj, path=dest_file)
+    write_feather(obj, path=out_file)
 
     db_disconnect_ecotaxa(localdb)
   }
