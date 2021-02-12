@@ -45,7 +45,7 @@ future_walk(pids, function(pid) {
       # keep relevant metadata
       select(
         # identifiers
-        projid, sampleid, objid, origid=orig_id, imgid=img0id,
+        projid, sampleid, objid, origid=orig_id,
         # classification
         classif_id, classif_who, classif_when,
         # depth
@@ -54,7 +54,7 @@ future_walk(pids, function(pid) {
         all_of(mapping)
       ) %>%
       # add path to image within EcoTaxa's vault
-      left_join(tbl(localdb, "images") %>% select(imgid, file_name), by="imgid") %>%
+      left_join(tbl(localdb, "images") %>% select(objid, file_name), by="objid") %>%
       collect()
 
     # write an information message
