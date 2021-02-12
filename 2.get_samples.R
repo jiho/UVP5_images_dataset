@@ -67,6 +67,7 @@ selected_samples_info <- tbl(db, "part_samples") %>%
 # write it to a file
 write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
 
+
 ## Compare with the original selection by Thelma ----
 
 # read the samples used by Thelma
@@ -87,13 +88,12 @@ missing_in_current %>%
   left_join(samples_validation_status) %>%
   select(title, sampleid, profile, percent_validated) %>%
   arrange(title, profile)
-# NB: the 0 in OPEREX is a match pb because the profile name is not unique
-
 # -> four samples (an1304_l2_002, 4, 5, 6) are missing in EcoPart now...
-#    all other profiles are because sorting is actually not complete
+#    uvp5_sn009_2015_p16n now has no images in it
+#    c_msm22_087 has lots of dubious
 
 # write those and finish sorting them
-missing_in_current %>% group_by(title) %>% summarise(samples=str_c(profile, collapse=",")) %>% write_tsv("to_finish_sorting.tsv")
+# missing_in_current %>% group_by(title) %>% summarise(samples=str_c(profile, collapse=",")) %>% write_tsv("to_finish_sorting.tsv")
 
 # profiles in our selection but not in Thelma's
 extra_in_current <- filter(current_samples, ! profile %in% thelma_samples$profile)
@@ -108,5 +108,6 @@ extra_in_current %>%
   left_join(samples_validation_status) %>%
   select(title, sampleid, profile, percent_validated) %>%
   arrange(title, profile)
-# -> some are probably due to the 99% instead of 100% validated criterion.
+# -> 79 extra profiles
+#    some are probably due to the 99% instead of 100% validated criterion
 #    others probably have been sorted since
