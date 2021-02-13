@@ -51,11 +51,46 @@ o <- left_join(o, select(samples, sampleid, acq_pixel), by="sampleid") %>%
 
 ## Restrict to relevant objects -----
 
+nrow(o)
+# 7820053
+
 # keep only objects for which we have a corresponding water volume
+# indeed, when we have no volume the data is useless and it probably is because of changes between the time particles were counted and objects were extracted
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
-o <- o %>%
+o_wv <- o %>%
   mutate(mid_depth_bin=floor(depth/5)*5 + 2.5) %>%
   inner_join(volume)
+
+nrow(o) - nrow(o_wv)
+# removed 2066 objects
+
+# remove objects with tag == 2 which correspond to faulty lights and/or upward movement during the downcast
+o_t <- filter(o_wv, tag != 2)
+
+nrow(o_wv) - nrow(o_t)
+# removed 0 additional objects
+# TODO tag=2 does not seem set on the projects that need it
+
+# remove objects corresponding to upward movement during the downcast
+# (that were not removed by the tag=2 filter above)
+o_up <- o_t %>%
+  # extract the image number within the cast
+  mutate(img_nb=str_replace(origid, "^.*_", "") %>% as.numeric()) %>%
+  # for each cast
+  group_by(sampleid) %>%
+  # sort objects in increasing order
+  # = in the order they were captured
+  arrange(img_nb) %>%
+  # keep only images that are at or below the maximum depth already experienced
+  # = filter out the upward movements
+  filter(depth >= cummax(depth)) %>%
+  ungroup()
+
+nrow(o_t) - nrow(o_up)
+# removed 94703 additional rows
+
+o <- o_up
+
 
 ## Prepare taxonomic regrouping ----
 
