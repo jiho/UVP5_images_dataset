@@ -16,6 +16,8 @@ o <- map_dfr(proj_files, read_feather)
 
 nrow(o)
 # 7,186,461 on 2020-12-16 00:16
+# 7,820,053 on 2021-02-13 00:31 (added dubious objects and some additional profiles)
+
 
 # add taxonomic names (unique at the level of the whole dataset)
 taxo <- extract_taxo(db, o$classif_id)
