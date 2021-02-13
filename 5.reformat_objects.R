@@ -19,6 +19,8 @@ nrow(o)
 # 7,820,053 on 2021-02-13 00:31 (added dubious objects and some additional profiles)
 
 
+## Enrich data with extra fields ----
+
 # add taxonomic names (unique at the level of the whole dataset)
 taxo <- extract_taxo(db, o$classif_id)
 o$taxon <- taxo_name(o$classif_id, taxo, unique=TRUE)
@@ -46,11 +48,16 @@ o <- left_join(o, select(samples, sampleid, acq_pixel), by="sampleid") %>%
     length_mm = major * acq_pixel
   )
 
+
+## Restrict to relevant objects -----
+
 # keep only objects for which we have a corresponding water volume
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
 o <- o %>%
   mutate(mid_depth_bin=floor(depth/5)*5 + 2.5) %>%
   inner_join(volume)
+
+## Prepare taxonomic regrouping ----
 
 # compute total per taxon
 tc <- count(o, taxon, lineage) %>%
@@ -62,6 +69,9 @@ tcd <- ToDataFrameTree(tc, "taxon", "n") %>% mutate(group="")
 # write the tree as a table
 write_tsv(tcd, "data/UVP5_taxo.tsv", na="")
 
+
+## Write data to disk ----
+
 # remove irrelevant variables and reorder columns
 select(o,
     # identifiers
@@ -70,7 +80,7 @@ select(o,
     taxon, lineage, annotator, annotation_date=classif_when,
     # depth
     depth, mid_depth_bin,
-    # measurements
+    # measurements in human readable units
     contains("_mm"),
     # zooprocess descriptors
     area:skeleton_area,
