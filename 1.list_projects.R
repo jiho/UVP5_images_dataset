@@ -9,7 +9,7 @@ source("0.setup.R")
 projects <- tbl(db, "part_projects") %>%
   select(pprojid, ptitle, data_owner=do_email, projid) %>%
   # add EcoTaxa title
-  left_join(tbl(db, "projects") %>% select(projid, title)) %>%
+  left_join(tbl(db, "projects") %>% select(projid, title, license)) %>%
   collect() %>%
   arrange(pprojid) %>%
   # add empty column
