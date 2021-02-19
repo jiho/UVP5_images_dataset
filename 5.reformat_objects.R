@@ -55,14 +55,18 @@ nrow(o)
 # 7820053
 
 # keep only objects for which we have a corresponding water volume
-# indeed, when we have no volume the data is useless and it probably is because of changes between the time particles were counted and objects were extracted
+# indeed, when we have no volume the data is useless
+# missing volumes can be dues to:
+# - changes (in e.g. firstimgok) between the times when particles were counted and when objects were extracted
+# - different handling of particles and large objects (like it was the case at the beginning)
+# - a volume that spiked and was therefore removed at a previous step
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
 o_wv <- o %>%
   mutate(mid_depth_bin=floor(depth/5)*5 + 2.5) %>%
   inner_join(volume)
 
 nrow(o) - nrow(o_wv)
-# removed 2066 objects
+# removed 137,629 objects
 
 # remove objects with tag == 2 which correspond to faulty lights and/or upward movement during the downcast
 o_t <- filter(o_wv, tag != 2)
@@ -87,7 +91,7 @@ o_up <- o_t %>%
   ungroup()
 
 nrow(o_t) - nrow(o_up)
-# removed 94703 additional rows
+# removed 88,281 additional rows
 
 o <- o_up
 
