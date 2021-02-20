@@ -37,15 +37,16 @@ o_to_copy %>% split(o_to_copy$sampleid) %>% future_walk(~file.copy(.$source, .$d
 # close the parallel workers
 plan(sequential)
 
-# verify that all images have been copied
-copied <- system2("find", args=str_c(img_dir, " -type f"), stdout=TRUE)
-length(copied) == nrow(o)
-
 # remove images that should not be there
+copied <- system2("find", args=str_c(img_dir, " -type f"), stdout=TRUE)
 extra_imgs <- copied[!copied %in% o$dest]
 if (length(extra_imgs) > 0 ) {
   unlink(extra_imgs)
 }
+
+# check that everything has been copied
+missing_imgs <- filter(o, ! dest %in% copied)
+nrow(missing_imgs)
 
 # TODO reformat all images to cut the 31 px at the bottom and keep only the largest object?
 # TODO measure the new images with scikit image?
