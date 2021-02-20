@@ -33,7 +33,7 @@ o_to_copy <- filter(o, ! dest %in% copied)
 
 # copy the remaining images, in parallel
 plan(multisession, workers=5)
-o_to_copy %>% split(o$sampleid) %>% future_walk(~file.copy(.$source, .$dest))
+o_to_copy %>% split(o_to_copy$sampleid) %>% future_walk(~file.copy(.$source, .$dest))
 # close the parallel workers
 plan(sequential)
 
