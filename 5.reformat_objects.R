@@ -109,6 +109,20 @@ tcd <- ToDataFrameTree(tc, "taxon", "n") %>% mutate(group="")
 write_tsv(tcd, "data/UVP5_taxo.tsv", na="")
 
 
+## Extract information to help re-sorting ----
+
+filter(o, str_detect(lineage, "Dinophyceae")) %>% count(projid)
+filter(o, taxon == "Harosa") %>% count(projid)
+filter(o, taxon == "Rhizaria X") %>% count(projid)
+filter(o, taxon == "rhizaria like") %>% count(projid)
+filter(o, taxon == "solitaryblack-like") %>% count(projid)
+filter(o, taxon == "Arthropoda") %>% count(projid)
+filter(o, str_detect(taxon, "Tunicata")) %>% count(projid)
+filter(o, str_detect(taxon, "Enteropneusta")) %>% count(projid)
+filter(o, taxon == "darksphere") %>% count(projid)
+filter(o, str_detect(taxon, "t0")) %>% count(taxon, projid) %>% filter(n>500)
+
+
 ## Write data to disk ----
 
 # remove irrelevant variables and reorder columns
