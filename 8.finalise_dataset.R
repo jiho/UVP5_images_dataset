@@ -28,8 +28,10 @@ samples %>%
   ) %>%
   fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
 
+## Volume table ----
+
 # read water volume
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
 volume %>%
-  # reformat (or not!), to write it to the final file
-  write_tsv(file="data/final/samples_volume.tsv.gz")
+  rename(profile_id=sampleid) %>%
+  fwrite(file="data/final/samples_volume.tsv.gz", sep="\t", na="NA")
