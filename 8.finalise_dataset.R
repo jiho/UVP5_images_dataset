@@ -3,6 +3,7 @@
 #
 # (c) 2021 Jean-Olivier Irisson, GNU General Public License v3
 
+library("data.table") # use fwrite for writing files because it is much faster
 # create an output folder for the final dataset
 dir.create("data/final", showWarnings=FALSE)
 
@@ -18,7 +19,14 @@ samples %>%
     project=ptitle, profile, profile_id=sampleid,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
-  write_tsv(file="data/final/samples.tsv.gz")
+  mutate(
+    uvp_model=case_when(
+      pixel_size < 0.1 ~ "HD",
+      pixel_size > 0.14 ~ "SD",
+      TRUE ~ "ZD"
+    )
+  ) %>%
+  fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
 
 # read water volume
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
