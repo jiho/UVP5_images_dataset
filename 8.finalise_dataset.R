@@ -6,14 +6,16 @@
 # create an output folder for the final dataset
 dir.create("data/final", showWarnings=FALSE)
 
-## Sample level information ----
+## Sample table ----
 
 # read selected samples
 samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols())
+projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
 # reformat to write it to the final file
 samples %>%
+  left_join(select(projects, pprojid, ptitle)) %>%
   select(
-    sampleid, profile,
+    project=ptitle, profile, profile_id=sampleid,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
   write_tsv(file="data/final/samples.tsv.gz")
