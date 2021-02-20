@@ -3,9 +3,13 @@
 #
 # (c) 2021 Jean-Olivier Irisson, GNU General Public License v3
 
+source("0.setup.R")
+library("feather")
 library("data.table") # use fwrite for writing files because it is much faster
+
 # create an output folder for the final dataset
 dir.create("data/final", showWarnings=FALSE)
+
 
 ## Sample table ----
 
@@ -28,6 +32,7 @@ samples %>%
   ) %>%
   fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
 
+
 ## Volume table ----
 
 # read water volume
@@ -35,3 +40,47 @@ volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
 volume %>%
   rename(profile_id=sampleid) %>%
   fwrite(file="data/final/samples_volume.tsv.gz", sep="\t", na="NA")
+
+
+## Object table -----
+
+o <- read_feather(file.path(data_dir, "all.feather"))
+
+# anonymise annotators
+people <- distinct(o, annotator) %>%
+  arrange(annotator) %>%
+  mutate(classification_author=str_c("user_", 1:n()))
+
+o_s <- o %>%
+  # add anonymous user name
+  left_join(people) %>%
+  # select and reorganise columns
+  select(
+    # link with profile
+    profile_id=sampleid,
+    depth, mid_depth_bin,
+    # identifier
+    object=origid, object_id=objid,
+    # taxo
+    taxon, lineage, group, group_lineage,
+    classification_author, classification_date=annotation_date,
+    # features
+    contains("_mm"),
+    area:skeleton_area
+  )
+
+# remove zero variance variables
+vars <- sapply(select(o_s, area:skeleton_area), var, na.rm=T)
+vars_no_change <- names(vars)[vars < 10^-9]
+o_s <- select(o_s, -all_of(vars_no_change))
+
+# remove variables with too many NAs
+nb_NAs <- sapply(o_s, function(x) {sum(is.na(x))}) %>% sort()
+o_s <- select(o_s, -perimareaexc, -feretareaexc, -cdexc)
+# NB: this probably comes from the definition of area_exc in the UVP as the "surface of holes", not the surface excluding holes; see https://sites.google.com/view/piqv/zooprocess
+
+fwrite(o_s, file="data/final/objects.tsv.gz", sep="\t", na="NA")
+
+
+## Concentrations table ----
+# isolate the code in a separate function, that is in the dataset
