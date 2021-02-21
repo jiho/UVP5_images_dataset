@@ -16,6 +16,13 @@ dir.create("data/final", showWarnings=FALSE)
 # read selected samples
 samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols())
 projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
+
+# TODO fix this in the data
+library("lubridate")
+samples$datetime[year(samples$datetime)==1987] <- samples$datetime[year(samples$datetime)==1987] + years(2016-1987)
+filter(samples, projid==149)$datetime
+
+
 # reformat to write it to the final file
 samples %>%
   left_join(select(projects, pprojid, ptitle)) %>%
@@ -31,7 +38,7 @@ samples %>%
     )
   ) %>%
   fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
-
+# TODO go back to sample or call this file differently
 
 ## Volume table ----
 
