@@ -27,28 +27,30 @@ volumes <- volumes %>%
   mutate(water_volume_clean=despike(water_volume_imaged,
                                     # make window size a function of profile length
                                     k=as.integer(sqrt(n())),
-                                    # run it just once
-                                    n.max=2, mult=15)) %>%
+                                    # run it a couple times
+                                    n.max=2, mult=10)) %>%
   ungroup()
 
 # inspect again
 summary(volumes)
 sum(is.na(volumes$water_volume_clean)) / nrow(volumes) * 100
-# [1] 0.5036592
-# = we removed less than 1% of the data bins
-
+# [1] 0.869321
+# = we removed less than 1% of the data bins ;-)
 
 # look at random profiles
 # filter(volumes, sampleid %in% sample(unique(volumes$sampleid), 30)) %>%
-# look at profiles with still some spikes in the volume
+# look at the profiles which still contain high water volumes
 filter(volumes, sampleid %in% unique(filter(volumes, water_volume_clean>400)$sampleid)) %>%
   ggplot() + facet_wrap(~sampleid, scales="free") +
-  geom_path(aes(x=water_volume_imaged, y=-mid_depth_bin), colour="red") +
-  geom_path(aes(x=water_volume_clean, y=-mid_depth_bin), colour="black") +
+  # geom_path(aes(x=water_volume_imaged, y=-mid_depth_bin), colour="red") +
+  # geom_path(aes(x=water_volume_clean, y=-mid_depth_bin), colour="black") +
+  geom_point(aes(x=water_volume_imaged, y=-mid_depth_bin), colour="red", size=0.25) +
   geom_point(aes(x=water_volume_clean, y=-mid_depth_bin), colour="black", size=0.5) +
-  coord_cartesian(xlim=c(0,1000))
-
-# OK, the anomaly detector is quite good, let us drop those volumes
+  coord_cartesian(xlim=c(0,1000)) +
+  scale_x_continuous(breaks=c(0, 500, 1000))
+# the red points were considered as spikes and removed; the black points are kept.
+# -> OK, the spike detector is not perfect but quite good
+#    let us drop th
 volumes <- volumes %>%
   drop_na(water_volume_clean) %>%
   select(-water_volume_clean)
