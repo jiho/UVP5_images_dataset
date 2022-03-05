@@ -7,6 +7,8 @@ source("0.setup.R")
 
 # get project info from EcoPart
 part_projects <- tbl(dbp, "part_projects") %>%
+  # only for UVP5 projects
+  filter(instrumtype=="uvp5") %>%
   select(pprojid, ptitle, data_owner=do_email, projid) %>%
   collect()
 
