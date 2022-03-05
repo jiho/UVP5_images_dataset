@@ -5,8 +5,7 @@
 
 # load packages
 suppressMessages(library("tidyverse"))
-library("ecotaxar")
-library("RPostgreSQL")
+suppressMessages(library("RPostgreSQL"))
 
 # connect to databases
 # ecoTaxa
