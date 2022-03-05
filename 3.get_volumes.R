@@ -12,7 +12,7 @@ samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols()) %>%
   select(sampleid, psampleid)
 
 volumes <- samples %>%
-  left_join(tbl(db, "part_histopart_reduit") %>% select(psampleid, mid_depth_bin=depth, water_volume_imaged=watervolume), copy=TRUE) %>%
+  left_join(tbl(dbp, "part_histopart_reduit") %>% select(psampleid, mid_depth_bin=depth, water_volume_imaged=watervolume), copy=TRUE) %>%
   select(-psampleid) %>%
   arrange(sampleid, mid_depth_bin) %>%
   collect()
