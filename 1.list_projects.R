@@ -1,20 +1,26 @@
 #
-# List EcoPart projects and determine which to use
+# List EcoPart projects to determine which to use
 #
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
 
-# get ids and titles from the database
-projects <- tbl(db, "part_projects") %>%
+# get project info from EcoPart
+part_projects <- tbl(dbp, "part_projects") %>%
   select(pprojid, ptitle, data_owner=do_email, projid) %>%
-  # add EcoTaxa title
-  left_join(tbl(db, "projects") %>% select(projid, title, license)) %>%
-  collect() %>%
+  collect()
+
+# get project info from EcoTaxa
+eco_projects <- tbl(dbt, "projects") %>%
+  select(projid, title, license) %>%
+  collect()
+
+# combine the two
+projects <- left_join(part_projects, eco_projects, by="projid") %>%
   arrange(pprojid) %>%
   # add empty column
   mutate(use="")
 
 # write it into a file
 write_tsv(projects, "data/UVP5_projects.tsv")
-# now select which ones can be used in the global dataset
+# now copy paste this in a Google Sheet and select the ones to use in the global dataset
