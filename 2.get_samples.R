@@ -118,8 +118,7 @@ unique(thelma_samples$title) %>% sort()
 extra_in_current %>%
   left_join(samples_classif_stats) %>%
   select(title, sampleid, profile_name, percent_validated) %>%
-  arrange(title, profile_name) %>%
-  View()
+  arrange(title, profile_name)
 # -> 444 extra profiles
 #    some are probably due to the 99% instead of 100% validated criterion
 #    others have been added by Laetitia and Rainer
