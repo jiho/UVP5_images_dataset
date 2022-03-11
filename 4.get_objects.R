@@ -8,6 +8,7 @@
 source("0.setup.R")
 library("feather")
 library("furrr")
+library("ecotaxar")
 
 # read selected samples
 samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols_only(projid="d", sampleid="d"))
