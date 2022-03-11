@@ -60,6 +60,27 @@ future_walk(pids, function(pid) {
       filter(imgrank==0L) %>%
       collect()
 
+    people <- tbl(localdb, "objects") %>%
+      # redo the original query to get the objids
+      filter(projid == pid, sampleid %in% sids, classif_qual %in% c("V", "D")) %>%
+      select(projid, objid, classif_who) %>%
+      # use them to fetch them from the history table
+      left_join(
+        tbl(localdb, "objectsclassifhisto") %>% select(objid, classif_who),
+        by="objid", suffix=c(".current", ".before")
+      ) %>%
+      collect() %>%
+      # put all user ids in the same column,
+      # no matter if they are the current annotator or a previous one
+      pivot_longer(cols=starts_with("classif"), names_to="where", values_to="userid") %>%
+      # remove classifications from a model (usersid is NA)
+      filter(!is.na(userid)) %>%
+      # add user-understandable identification
+      left_join(tbl(localdb, "users") %>% select(userid=id, email, name), by="userid", copy=TRUE) %>%
+      # compute totals per counter
+      count(projid, userid, email, name)
+    # TODO store this efficiently with the rest
+
     # write an information message
     message(
       "projid = ", format(pid, width=4, justify="right"),
