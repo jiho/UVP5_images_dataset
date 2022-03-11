@@ -18,7 +18,7 @@ samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols_only(projid
 # plan(multisession, workers=5)
 # fall back on sequential processing
 plan(sequential)
-# Nb: this actually seems faster!
+# NB: this actually seems faster!
 
 # deal with the data project by project, because the mapping is per project
 pids <- samples$projid %>% unique() %>% sort() %>% as.integer()
