@@ -12,7 +12,7 @@ suppressMessages(library("RPostgreSQL"))
 # ecoTaxa
 dbt <- dbConnect("PostgreSQL", host="ecotaxa.obs-vlfr.fr", dbname="ecotaxa", user="zoo", password="z004ecot@x@")
 # ecoPart
-dbp <- dbConnect("PostgreSQL", host="ecotaxa.obs-vlfr.fr", dbname="ecopart", user="zoo", password="zoo12", port=5435)
+dbp <- dbConnect("PostgreSQL", host="ecotaxa.obs-vlfr.fr", dbname="ecopart", user="zoo", password="z004ecot@x@", port=5435)
 
 # create directories for large data that should live outside the repository
 # NB: no trailing /
