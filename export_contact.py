@@ -3,7 +3,7 @@ import os
 
 ### GET ALL DATA
 
-path_backup_all = "/home/jiho/datasets/UVP5_images_dataset/all_feb13.feather" #TODO UPDATE
+path_backup_all = "/home/jcoustenoble/datasets/UVP5_images_dataset/all.feather"
 all=pd.read_feather(path_backup_all, columns=["projid", "taxon", "objid"])
 #print(all.columns)
 
@@ -46,7 +46,7 @@ df_projects_ids = df_projects_ids.drop_duplicates()
 df_projects_ids = df_projects_ids.sort_values(by='projid')
 #print(df_projects_ids)
 
-path = "/home/jcoustenoble/datasets/UVP5_images_dataset/projects"
+path = "/home/jcoustenoble/datasets/UVP5_images_dataset_with_annotators/projects"
 #read feathers
 tmp_feathers = []
 for root, dirs, files in os.walk(path):
@@ -57,7 +57,7 @@ df_tmp_feathers = pd.concat(tmp_feathers)
 #print(df_tmp_feathers)
 
 #get anotators with more than 1000 contributions on the project
-df_annotators = df_tmp_feathers[df_tmp_feathers.n>=1000]
+df_annotators = df_tmp_feathers[df_tmp_feathers.n>=10000]
 #get uniques
 df_annotators = df_annotators.drop_duplicates()
 # drop projects that are not in the final dataset
