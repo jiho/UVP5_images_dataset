@@ -22,7 +22,7 @@ df_taxon = df_taxon.sort_values(by=['projid', 'taxon', "nb_obj"], ascending=[Tru
 #print(len(df_taxon.projid.unique()))
 
 
-### DF OWNER : projid ; proj_owner_id ; proj_owner_name ; proj_owner_email
+### DF OWNER : proj_owner_email
 #select needed col
 df_owner = pd.DataFrame({'projid': all["projid"].values})
 #get uniques
@@ -57,7 +57,7 @@ df_tmp_feathers = pd.concat(tmp_feathers)
 #print(df_tmp_feathers)
 
 #get anotators with more than 1000 contributions on the project
-df_annotators = df_tmp_feathers[df_tmp_feathers.n>=10000]
+df_annotators = df_tmp_feathers[df_tmp_feathers.n>=1000]
 #get uniques
 df_annotators = df_annotators.drop_duplicates()
 # drop projects that are not in the final dataset
@@ -71,8 +71,8 @@ df_annotators.rename(columns={'userid': 'annotator_histo_userid', 'email': 'anno
 
 
 ### Concat all df
-df_final = pd.merge(left=df_owner,right=df_taxon, left_on='projid', right_on='projid')
-df_final = pd.merge(left=df_final,right=df_annotators, left_on='projid', right_on='projid')
+df_final = pd.merge(df_owner, df_taxon, on='projid', how="outer")
+df_final = pd.merge(df_final, df_annotators, on='projid', how="outer")
 
 ### Save df
 df_final.to_csv("~/datasets/export_contact.csv", index = False, header=True)
