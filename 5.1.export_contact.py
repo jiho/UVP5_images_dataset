@@ -5,10 +5,18 @@ import os
 path_all_feather = os.path.expanduser("~/datasets/UVP5_images_dataset/all.feather")
 path_dataset_with_annotators = os.path.expanduser("~/datasets/UVP5_images_dataset_with_annotators/projects")
 
-
 ### GET ALL DATA
 all=pd.read_feather(path_all_feather, columns=["projid", "taxon", "objid"])
-# print(all.columns)
+print(all.columns)
+
+# read projid.feathers
+tmp_projid_feathers = []
+for root, dirs, files in os.walk(path_dataset_with_annotators):
+    for filename in files:
+        # read and select needed col
+        tmp_projid_feathers.append(pd.read_feather(path_dataset_with_annotators+'/'+filename, columns=['projid', 'userid', 'email', 'name', 'n']))
+projid_feathers = pd.concat(tmp_projid_feathers)
+print(projid_feathers.columns)
 
 ### DF TAXON : projid ; taxon_to_sort ; nb_obj
 # select t0N and othertocheck classified taxa
@@ -24,7 +32,6 @@ df_taxon = df_taxon.sort_values(by=['projid', 'taxon', "nb_obj"], ascending=[Tru
 # print(df_taxon)
 # print(len(df_taxon.projid.unique()))
 
-
 ### DF OWNER : proj_owner_email
 # select needed col
 df_owner = pd.DataFrame({'projid': all["projid"].values})
@@ -37,7 +44,6 @@ projects_info = pd.read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09
 projects_info = projects_info.dropna(subset=['use'])[["projid", "title", "data_owner"]].astype({'projid':'int'})
 df_owner["title"] = [projects_info[projects_info["projid"]==projid]["title"].values[0]for projid in df_owner["projid"]]
 df_owner["data_owner"] = [projects_info[projects_info["projid"]==projid]["data_owner"].values[0]for projid in df_owner["projid"]]
-
 # print(df_owner)
 # print(len(df_owner.projid.unique()))
 
@@ -51,17 +57,8 @@ df_projects_ids = df_projects_ids.drop_duplicates()
 df_projects_ids = df_projects_ids.sort_values(by='projid')
 # print(df_projects_ids)
 
-# read feathers
-tmp_feathers = []
-for root, dirs, files in os.walk(path_dataset_with_annotators):
-    for filename in files:
-        # read and select needed col
-        tmp_feathers.append(pd.read_feather(path_dataset_with_annotators+'/'+filename, columns=['projid', 'userid', 'email', 'name', 'n']))
-df_tmp_feathers = pd.concat(tmp_feathers)
-# print(df_tmp_feathers)
-
 # get uniques anotators with more than 1000 contributions on the project
-df_annotators = df_tmp_feathers[df_tmp_feathers.n>=1000].drop_duplicates()
+df_annotators = projid_feathers[projid_feathers.n>=1000].drop_duplicates()
 # drop projects that are not in the final dataset
 df_annotators = df_annotators[df_annotators['projid'].isin(df_projects_ids["projid"].values)]
 # sort

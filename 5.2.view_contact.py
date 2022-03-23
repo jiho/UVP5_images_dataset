@@ -1,14 +1,16 @@
 import pandas as pd
 import os
 
-filePath= "/home/jcoustenoble/datasets/view_contact.txt"
+### UTIL
+filePath = os.path.expanduser("~/datasets/datasets/view_contact.txt")
+csvPath = os.path.expanduser("~/datasets/export_contact.csv")
 
 try:
     os.remove(filePath)
 except:
     pass
 
-df_final = pd.read_csv("~/datasets/export_contact.csv")
+df_final = pd.read_csv(csvPath)
 grouped_df = df_final.groupby(by = ["data_owner"])
 
 with open(filePath, "a") as f:
