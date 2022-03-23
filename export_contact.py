@@ -58,7 +58,6 @@ for root, dirs, files in os.walk(path_dataset_with_annotators):
         # read and select needed col
         tmp_feathers.append(pd.read_feather(path_dataset_with_annotators+'/'+filename, columns=['projid', 'userid', 'email', 'name', 'n']))
 df_tmp_feathers = pd.concat(tmp_feathers)
-
 # print(df_tmp_feathers)
 
 # get uniques anotators with more than 1000 contributions on the project
