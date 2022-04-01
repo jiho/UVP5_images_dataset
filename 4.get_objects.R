@@ -80,7 +80,7 @@ future_walk(pids, function(pid) {
       # compute totals per counter
       count(projid, userid, email, name)
     # TODO store this efficiently with the rest
-
+    #obj <- merge(obj, people, by=("projid"))
     # write an information message
     message(
       "projid = ", format(pid, width=4, justify="right"),

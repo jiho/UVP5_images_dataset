@@ -22,13 +22,13 @@ nrow(o)
 ## Enrich data with extra fields ----
 
 # add taxonomic names (unique at the level of the whole dataset)
-taxo <- extract_taxo(db, o$classif_id)
+taxo <- extract_taxo(dbt, o$classif_id)
 o$taxon <- taxo_name(o$classif_id, taxo, unique=TRUE)
 o$lineage <- lineage(o$classif_id, taxo)
 
 # add user names
 userids <- unique(o$classif_who) %>% as.integer()
-users <- tbl(db, "users") %>%
+users <- tbl(dbt, "users") %>%
   select(id, email) %>%
   filter(id %in% !!userids) %>%
   collect()
