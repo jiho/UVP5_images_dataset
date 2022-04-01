@@ -2,5 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+Client_Secret.json
 figures/*
 data/UVP5_volumes.tsv.gz
