@@ -52,6 +52,14 @@ projects_info = projects_info.dropna(subset=['use'])[["projid", "title", "data_o
 df_owner["title"] = [projects_info[projects_info["projid"]==projid]["title"].values[0]for projid in df_owner["projid"]]
 df_owner["url"] = ["https://ecotaxa.obs-vlfr.fr/prj/"+str(projid) for projid in df_owner["projid"]]
 df_owner["data_owner"] = [projects_info[projects_info["projid"]==projid]["data_owner"].values[0]for projid in df_owner["projid"]]
+# add information about the total number of **LIVING** objects  
+df_tmp_ = all.loc[all['taxon'].str.startswith('t0') | all['taxon'].str.startswith("othertocheck")] 
+df_owner["total_nb_objects"] = [len(all.loc[all['projid']==projid]["objid"].unique()) for projid in df_owner["projid"]]
+df_non_living = all.loc[all['taxon'].str.startswith('artefact') | all['taxon'].str.startswith("detritus")]
+df_owner["non_living_nb_objects"] = [len(df_non_living.loc[df_non_living["projid"]==projid]["objid"].unique())for projid in df_owner["projid"]]
+df_owner["living_nb_objects"] = df_owner["total_nb_objects"] - df_owner["non_living_nb_objects"]
+df_tmp = all.loc[all['taxon'].str.startswith('t0') | all['taxon'].str.startswith("othertocheck")] 
+df_owner["to_reclassify_nb_objects"] = [len(df_tmp.loc[df_tmp["projid"]==projid]["objid"].unique())for projid in df_owner["projid"]]
 
 ### Merge df_owner, df_taxon to create RECLASSIFY TAXA DF
 df_reclassify_taxa = pd.merge(df_owner, df_taxon, on='projid', how="outer")
