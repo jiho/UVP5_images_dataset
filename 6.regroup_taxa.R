@@ -8,7 +8,7 @@ source("0.setup.R")
 library("feather")
 
 # read all objects information
-o <- read_feather(file.path(data_dir, "backup_all.feather"))
+o <- read_feather(file.path(data_dir, "all.feather"))
 
 # read the taxonomic grouping
 g <- read_csv("https://docs.google.com/spreadsheets/d/1a-W6dSxm9q-2-ANRsfTu6yXK3BeKDwO16kaw0NMSc9k/export?format=csv", col_types=cols()) %>%
