@@ -95,7 +95,6 @@ pprojid	ptitle	data_owner	projid	title	license	use
 110	uvp5_sn010_2017_fluxes1	rainer.kiko@obs-vlfr.fr	507	UVP5 Geomar 2017 fluxes1		
 111	uvp5_sn010_2017_fluxes2	rainer.kiko@obs-vlfr.fr	855	UVP5 Geomar 2017 fluxes2		
 112	uvp5_sn009_2017_asgard	amcdonnell@alaska.edu	1261	uvp5_sn009_2017_asgard	CC BY 4.0	
-113	LISST EXPORTS	stuart.halewood@ucsb.edu	NA	NA	NA	
 121	uvp5_sn002_iado_2018	irisson@normalesup.org	1343	UVP5 IADO 2018	CC BY 4.0	
 124	uvp5_sn003_mobydick_2018	enter lguidi@obs-vlfr.fr	1451	Mobydick 2018	CC BY 4.0	
 130	uvp5_sn009_2018_nga_summer_filtered	amcdonnell@alaska.edu	1666	uvp5_sn009_2018_nga_summer	CC BY 4.0	
@@ -106,7 +105,6 @@ pprojid	ptitle	data_owner	projid	title	license	use
 139	uvp5_sn009_2019_nga_lter_spring_filtered	amcdonnell@alaska.edu	4019	uvp5_sn009_2019_nga_lter_spring		
 141	uvp5_sn009_2016_goa_spring	amcdonnell@alaska.edu	2430	uvp5_sn009_2016_nga_spring	CC BY 4.0	
 142	uvp5_sn009_2017_sewardline_fall	amcdonnell@alaska.edu	2417	uvp5_sn009_2017_nga_fall	CC BY 4.0	
-143			583	Zooscan BATS	Copyright	
 144	uvp5_sn003_csiro_iioe	david.antoine@curtin.edu.au	2410	UVP5 CurtinUni IIOE 2019 NEW!	CC BY-NC 4.0	
 146	uvp5_sn009_2016_goa_fall	amcdonnell@alaska.edu	2412	uvp5_sn009_2016_nga_fall	CC BY 4.0	
 147	uvp5_sn009_chukchi_borderlands_2016	amcdonnell@alaska.edu	2431	uvp5_sn009_chukchi_borderlands_2016	CC BY 4.0	
@@ -118,57 +116,23 @@ pprojid	ptitle	data_owner	projid	title	license	use
 153	uvp5_sn205_coastdark_2019	emilia@iopan.pl	2483	uvp5_sn205_coastdark_2019	CC BY 4.0	
 154	uvp5_sn201_ccelter_2019_filtered	tristan.biard@univ-littoral.fr	2485	UVP5hd CCELTER 2019	CC BY-NC 4.0	
 161	uvp5_sn008_uvp_azomp	igor.yashayaev@dfo-mpo.gc.ca	2489	DFO AZOMP Labrador Sea 2019 UVP5		
-163			NA	NA	NA	
 164	uvp5_sn005_moose_antares_2020b		NA	NA	NA	
 165	uvp5_sn005_moose_antares_201718	francois.carlotti@mio.osupytheas.fr	NA	NA	NA	
 166	uvp5_sn002_moose_dyf_2018	coppola@obs-vlfr.fr	35	UVP5 Dyfamed 2013 2014 2015 2016 2017 2018		
 167	UEA_SV		NA	NA	NA	
 168	uvp5_sn200_moose_ge_2018_filtered	coppola@obs-vlfr.fr	2784	UVP5 MooseGE 2018		
-169	Test_Heringslarven		NA	NA	NA	
 171	uvp5_sn010_2018_m147	rainer.kiko@obs-vlfr.fr	2806	UVP5 Geomar 2018 m147		
 172	uvp5_sn010_2018_m145	rainer.kiko@obs-vlfr.fr	2807	UVP5 Geomar 2018 m145		
 173	uvp5_sn010_2018_m148	rainer.kiko@obs-vlfr.fr	2808	UVP5 Geomar 2018 m148		
 183	uvp-test		NA	NA	NA	
 186	uvp-test-2	enter op. email	NA	NA	NA	
-192	uvp6_sn000002lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3039	uvp6_sn000002lp_20190724_intercalibrage	CC BY 4.0	
-193	uvp6_sn000004lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3040	uvp6_sn000004lp_20190724_intercalibrage	CC BY 4.0	
-194	uvp6_sn000005lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3004	uvp6_sn000005lp_20200130_20200221_intercalibrage	CC BY 4.0	
-195	uvp6_sn000007lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3005	uvp6_sn000007lp_20200130_20200221_intercalibrage	CC BY 4.0	
-197	uvp6_sn000010lp_2019_11_cts5_usea_trial	marc.picheral@obs-vlfr.fr	3047	uvp6_sn000010lp_2019_11_cts5_usea_trial	CC BY 4.0	
-198	uvp6_sn000010lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3050	uvp6_sn000010lp_20190724_intercalibrage	CC BY 4.0	
-199	uvp6_sn000010lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3007	uvp6_sn000010lp_20200130_20200221_intercalibrage	CC BY 4.0	
-200	uvp6_sn000008lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	NA	
-201	uvp6_sn000008lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3006	uvp6_sn000008lp_20200130_20200221_intercalibrage	CC BY 4.0	
-202	uvp6_sn000002lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3039	uvp6_sn000002lp_20190724_intercalibrage	CC BY 4.0	
-203	uvp6_sn000007lp_20190724_intercalibrage	marc.picheral@obs-vlfr.fr	3056	uvp6_sn000007lp_20190724_intercalibrage	CC BY 4.0	
-204	uvp6_sn000004lp_20190207_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	NA	
-205	uvp6_sn000002lp_20190207_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	NA	
-206	uvp6_sn000100lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3015	uvp6_sn000100lp_20200205_intercalibrage	CC BY 4.0	
-208	uvp6_sn000101lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3008	uvp6_sn000101lp_20200130_20200205_intercalibrage	CC BY 4.0	
-209	uvp6_sn000102lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3009	uvp6_sn000102lp_20200205_intercalibrage	CC BY 4.0	
-210	uvp6_sn000103lp_20200130_20200221_intercalibrage	marc.picheral@obs-vlfr.fr	3010	uvp6_sn000103lp_20200130_20200221_intercalibrage	CC BY 4.0	
-211	uvp6_sn000104lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3011	uvp6_sn000104lp_20200130_20200205_intercalibrage	CC BY 4.0	
-212	uvp6_sn000108lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3063	uvp6_sn000108lp_20200205_intercalibrage	CC BY 4.0	
-213	uvp6_sn000110lp_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3064	uvp6_sn000110lp_20200205_intercalibrage	CC BY 4.0	
-214	uvp6_sn000111lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3069	uvp6_sn000111lp_20200130_20200205_intercalibrage	CC BY 4.0	
-215	uvp6_sn000112lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3016	uvp6_sn000112lp_20200130_20200205_intercalibrage	CC BY 4.0	
-216	uvp6_sn000113lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3017	uvp6_sn000113lp_20200130_20200205_intercalibrage	CC BY 4.0	
-217	uvp6_sn000114lp_20200130_20200205_intercalibrage	marc.picheral@obs-vlfr.fr	3018	uvp6_sn000114lp_20200130_20200205_intercalibrage	CC BY 4.0	
-218	uvp6_sn000004lp_20190326_seaexplorer_002	marc.picheral@obs-vlfr.fr	3076	uvp6_sn000004lp_20190326_seaexplorer_002	CC BY 4.0	
-219	uvp6_sn000004lp_20190430_nke_float_down	marc.picheral@obs-vlfr.fr	3077	uvp6_sn000004lp_20190430_nke_float_down	CC BY 4.0	
-220	uvp6_sn000003lp_20180702_intercalibrage_bassin	marc.picheral@obs-vlfr.fr	NA	NA	NA	
-221	uvp6_sn000003lp_2018_awi_mooring	andreas.rogge@awi.de	3081	uvp6_sn000003lp_2018_awi_mooring	Copyright	
-222	uvp6_sn000008lp_20190430_nke_float_up	marc.picheral@obs-vlfr.fr	3083	uvp6_sn000008lp_20190430_nke_float_up	CC BY 4.0	
 223	uvp5_sn010_2016_m131	rainer.kiko@obs-vlfr.fr	545	UVP5 Geomar 2016 m131		
-224	uvp6_sn000007lp_2019_seaglider_test_cscs	marc.picheral@obs-vlfr.fr	3116	uvp6_sn000007lp_2019_seaglider_test_cscs	CC BY 4.0	
-225	uvp6_sn000004lp_20190628_nke_float_longue_duree	marc.picheral@obs-vlfr.fr	3115	uvp6_sn000004lp_20190628_nke_float_longue_duree	CC BY 4.0	
 226	uvp5_sn010_2016_love	hhauss@geomar.de	3117	UVP5 Geomar 2016 love	CC0 1.0	
 228	uvp5_sn201_exports01_filtered	emmanuel.boss@maine.edu	1286	UVP5hd EXPORTS NP R/V Roger Revelle	CC BY-NC 4.0	
 229	test0609	enter op. email	NA	NA	NA	
 230	uvp5_sn207_2018_exports_np_sr1812_filtered	amcdonnell@alaska.edu	1591	UVP5hd_sn207_2018_Exports_np_sr1812	CC BY 4.0	
 231	uvp5_sn202_msm060_filtered	andreas.rogge@awi.de, anya.waite@dal.ca	351	UVP5hd msm060 (2017)	Copyright	
 232	uvp5_sn202_msm074_filtered	jkarstensen@geomar.de, andreas.rogge@awi.de, anya.waite@dal.ca	1337	UVP5hd MSM074	Copyright	
-233	uvp6_sn000110lp_2020_07_float_remote	marc.picheral@obs-vlfr.fr	NA	NA	NA	
 234	uvp5_sn009_2018_asgard_filtered	amcdonnell@alaska.edu	1446	uvp5_sn009_2018_asgard	CC BY 4.0	
 235	uvp5_sn200_perle_02_2019_filtered	demadron@univ-perp.fr	2164	UVP5 PERLE 02 2019 (sn200)	CC BY 4.0	
 236	uvp5_sn201_2018_naames_04_filtered	lee.karp-boss@maine.edu	1252	UVP5hd Naames 04	CC BY-NC 4.0	
@@ -183,9 +147,6 @@ pprojid	ptitle	data_owner	projid	title	license	use
 245	syTUMSAT1	ytanaka@kaiyodai.ac.jp	NA	NA	NA	
 246	uvp5_sn011_2016_syTUMSAT1	ytanaka@kaiyodai.ac.jp	3221	syTUMSAT1		
 247	uvp5_sn011_2017_syTUMSAT2	ytanaka@kaiyodai.ac.jp	3222	syTUMSAT2	CC BY 4.0	
-248	uvp6_sn000007lp_20200702_seaexplorer_test	marc.picheral@obs-vlfr.fr	3251	uvp6_sn000007lp_20200702_seaexplorer_test	CC BY 4.0	
-249	uvp6_sn000110lp_2020_07_float_recover	marc.picheral@obs-vlfr.fr	3278	uvp6_sn000110lp_2020_07_float_recover	CC BY 4.0	
-250	uvp6_sn000006lp_2020_sc_basintest	marc.picheral@obs-vlfr.fr	3327	uvp6_sn000006lp_2020_sc_basintest	CC BY 4.0	
 251	uvp5_sn002_iado_2014	irisson@normalesup.org	NA	NA	NA	
 252	uvp5_sn002_iado_2015	irisson@normalesup.org	NA	NA	NA	
 253	UVP5 Geomar 2017 m136_m138 sediment trap subset		NA	NA	NA	
@@ -193,196 +154,64 @@ pprojid	ptitle	data_owner	projid	title	license	use
 255	uvp5_sn210_2019_m158	rainer.kiko@obs-vlfr.fr	NA	NA	NA	
 256	uvp5_sn210_2019_m159	rainer.kiko@obs-vlfr.fr	NA	NA	NA	
 257	uvp5_sn009_en_534_mcdonnell	amcdonnell@alaska.edu	4020	uvp5_sn009_2014_en534		
-259	uvp6_sn000007lp_20200924_intercalibrage		3458	uvp6_sn000007lp_20200924_intercalibrage	CC BY 4.0	
-260	SCOPE/HOT	aewhite@hawaii.edu	3460	SCOPE/HOT		
-261	uvp6_sn000111lp_20200924_intercalibrage		3501	uvp6_sn000111lp_20200924_intercalibrage	CC BY 4.0	
-262	uvp6_sn000112lp_20200924_intercalibrage		3502	uvp6_sn000112lp_20200924_intercalibrage	CC BY 4.0	
-263	uvp6_sn000003lp_20200924_intercalibrage		3503	uvp6_sn000003lp_20200924_intercalibrage	CC BY 4.0	
-264	uvp6_sn000107lp_20200924_intercalibrage		3504	uvp6_sn000107lp_20200924_intercalibrage	CC BY 4.0	
-265	uvp6_sn000001lp_20201001_intercalibrage		3505	uvp6_sn000001lp_20201001_intercalibrage	CC BY 4.0	
-266	uvp6_sn000109lp_20201001_intercalibrage		3506	uvp6_sn000109lp_20201001_intercalibrage	CC BY 4.0	
-267	uvp6_sn000123lp_20201001_intercalibrage		3507	uvp6_sn000123lp_20201001_intercalibrage	CC BY 4.0	
+260	SCOPE/HOT	aewhite@hawaii.edu	3460	NA	NA	
 268	uvp5_sn221_algoa_bay_2020_filtered	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020 	CC BY 4.0	
-269	uvp6_sn000009lp_20201022_intercalibrage		3662	uvp6_sn000009lp_20201022_intercalibrage	CC BY 4.0	
 270	uvp5_sn210_2018_msm080	rkiko@geomar.de	NA	NA	NA	
 271	uvp5_sn210_2019_m156	rkiko@geomar.de	NA	NA	NA	
 272	uvp5_sn210_2019_m157	rainer.kiko@obs-vlfr.fr	NA	NA	NA	
 273	uvp5_sn210_2020_msm089	rkiko@geomar.de	NA	NA	NA	
 274		rkiko@geomar.de	NA	NA	NA	
 275	uvp5_sn210_2019_m160	rkiko@geomar.de	NA	NA	NA	
-276	uvp6_sn000003lp_20201109_seaexplorer_002		3887	uvp6_sn000003lp_20201109_seaexplorer_002	CC BY 4.0	
-277	uvp6_sn000104lp_2020_07_float_remote		NA	NA	NA	
-278	uvp6_sn000103lp_2020_07_float_remote		NA	NA	NA	
-279	uvp6_sn000108lp_2020_07_float_remote		NA	NA	NA	
 280	uvp5_sn204_mosaic_primary_filtered	andreas.rogge@awi.de	3903	uvp5hd_sn204_MOSAiC	Copyright	
 281	uvp5_sn008_oden2019	enter op. email	3904	uvp5_sn008_oden2019	CC BY-NC 4.0	
-284	uvp6_sn000125hf_20201022_rade_test_cdt		NA	NA	NA	
-285	uvp6_sn000125hf_2020_solace	philip.boyd@utas.edu.au	3945	uvp6_sn000125hf_2020_solace	Copyright	
-286	uvp6_sn000125hf_20201015_rade_testctd		NA	NA	NA	
 287	uvp5_sn205_solace_2020_2021_filtered	david.antoine@curtin.edu.au	4034	uvp5_sn205_solace_2020_2021_filtered		
 288	uvp5_sn205_intercalibrage_20201001	enter op. email	NA	NA	NA	
 289	uvp5_sn210_intercalibrage_20210107	amanda.elineau@obs-vlfr.fr	NA	NA	NA	
-290	uvp6_sn000005lp_20210107_intercalibrage		NA	NA	NA	
-291	uvp6_sn000008lp_20210107_intercalibrage		NA	NA	NA	
-292	uvp6_sn000010lp_20210107_intercalibrage		NA	NA	NA	
-293	uvp6_sn000005lp_20201001_intercalibrage		NA	NA	NA	
-294	uvp6_sn000008lp_20201001_intercalibrage		NA	NA	NA	
-295	uvp6_sn000010lp_20201001_intercalibrage		NA	NA	NA	
-296	uvp6_sn000125hf_20201001_intercalibrage		NA	NA	NA	
 297	uvp5_sn203_2020_msm93	anya.waite@dal.ca	3990	UVP5HD sn203 MSM93 2020		
-298	uvp6_sn000125hf_20210212_intercalibrage		4008	uvp6_sn000125hf_20210212_intercalibrage		
-299	uvp6_sn000107lp_20210203_rade_sediment		4011	uvp6_sn000107lp_20210203_rade_sediment		
-301	uvp6_sn000003lp_2021_sea002_M486	marc.picheral@obs-vlfr.fr	4028	uvp6_sn000003lp_2021_sea002_M486	Copyright	
 302	UVP5 Algoa Bay 2020_NOTfiltered	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020 	CC BY 4.0	
-303	uvp6_sn000003lp_2021_sea002_m487	marc.picheral@obs-vlfr.fr	4041	uvp6_sn000003lp_2021_sea002_m487		
-304	uvp6_sn000139lp_202103_intercalibrage	marc.picheral@obs-vlfr.fr	4060	uvp6_sn000139lp_202103_intercalibrage	CC BY-NC 4.0	
-305	uvp6_sn000121lp_202103_intercalibrage	marc.picheral@obs-vlfr.fr	4061	uvp6_sn000121lp_202103_intercalibrage	CC BY-NC 4.0	
-306	uvp6_sn000006lp_202103_intercalibrage	marc.picheral@obs-vlfr.fr	4062	uvp6_sn000006lp_202103_intercalibrage	CC BY-NC 4.0	
-307	uvp6_sn000141lp_202103_intercalibrage	marc.picheral@obs-vlfr.fr	4064	uvp6_sn000141lp_202103_intercalibrage	CC BY-NC 4.0	
-308	uvp6_sn000003lp_2021_sea002_m488	marc.picheral@obs-vlfr.fr	4065	uvp6_sn000003lp_2021_sea002_m488		
-309	uvp5_sn204_2021_he570_filtered	enter op. email	4105	uvp5_sn204_2021_he570_filtered	Copyright	
+309	uvp5_sn204_2021_he570_filtered	hhauss@geomar.de	4105	uvp5_sn204_2021_he570_filtered	Copyright	
 310	uvp5_sn210_2019_lima	rainer.kiko@obs-vlfr.fr	2465	UVP5 GEOMAR 2019 Lima		
-311	uvp6_sn000003lp_2021_sea002_m489	marc.picheral@obs-vlfr.fr	4171	uvp6_sn000003lp_2021_sea002_m489		
-312	uvp6_sn000133lp_20210331_intercalibrage		4177	uvp6_sn000133lp_20210331_intercalibrage	CC BY-NC 4.0	
-313	uvp6_sn000139lp_20210331_intercalibrage	marc.picheral@obs-vlfr.fr	NA	NA	NA	
-314	uvp6_sn000132lp_20210331_intercalibrage		4184	uvp6_sn000132lp_20210331_intercalibrage	CC BY-NC 4.0	
-315	uvp6_sn000105lp_20210331_intercalibrage		4186	uvp6_sn000105lp_20210331_intercalibrage	CC BY-NC 4.0	
-316	uvp6_sn000119lp_20210331_intercalibrage		4189	uvp6_sn000119lp_20210331_intercalibrage	CC BY-NC 4.0	
-317	uvp6_sn000136lp_20210331_intercalibrage		4195	uvp6_sn000136lp_20210331_intercalibrage	CC BY-NC 4.0	
-318	uvp6_sn000140lp_20210331_intercalibrage		4196	uvp6_sn000140lp_20210331_intercalibrage	CC BY-NC 4.0	
-319	uvp6_sn000147lp_20210331_intercalibrage		4198	uvp6_sn000147lp_20210331_intercalibrage	CC BY-NC 4.0	
-320	uvp6_sn000135lp_20210331_intercalibrage		4199	uvp6_sn000135lp_20210331_intercalibrage	CC BY-NC 4.0	
-321	uvp6_sn000009lp_20210331_intercalibrage	marc.picheral@obs-vlfr.fr	4201	uvp6_sn000009lp_20210331_intercalibrage	CC BY-NC 4.0	
-322	uvp6_sn000109lp_202103_fjord_experiment_he570	rainer.kiko@obs-vlfr.fr	4205	uvp6_sn000109lp_202103_fjord_experiment_he570	CC BY-NC 4.0	
-323	uvp6_sn000111lp_202103_fjord_experiment_he570	rainer.kiko@obs-vlfr.fr	4206	uvp6_sn000111lp_202103_fjord_experiment_he570	CC BY-NC 4.0	
-324	uvp6_sn000112lp_202103_fjord_experiment_he570	rainer.kiko@obs-vlfr.fr	4207	uvp6_sn000112lp_202103_fjord_experiment_he570	CC BY-NC 4.0	
-325	uvp6_sn000123lp_202103_fjord_experiment_he570	rainer.kiko@obs-vlfr.fr	4208	uvp6_sn000123lp_202103_fjord_experiment_he570	CC BY-NC 4.0	
-326	uvp6_sn000125hf_2021_fjord_experiment_he570	rainer.kiko@obs-vlfr.fr	4515	uvp6_sn000125hf_2021_fjord_experiment_he570	CC BY-NC 4.0	
-328	uvp6_sn000003lp_2021_sea002_m490	marc.picheral@obs-vlfr.fr	4211	uvp6_sn000003lp_2021_sea002_m490		
-329	uvp6_sn000143lp_20210331_intercalibrage		4213	uvp6_sn000143lp_20210331_intercalibrage	CC BY-NC 4.0	
-330	BATS		NA	NA	NA	
-331	uvp6_sn000107lp_20210316_hippo	valentin.siebert@univ-brest.fr	4275	uvp6_sn000107lp_20210316_hippo		
-332	uvp6_sn000003lp_2021_sea002_m491	marc.picheral@obs-vlfr.fr	4282	uvp6_sn000003lp_2021_sea002_m491		
-333	uvp6_sn000009lp_20210421_intercalibrage	marc.picheral@imev-mer.fr	4308	uvp6_sn000009lp_20210421_intercalibrage	CC BY-NC 4.0	
-334	uvp6_sn000109lp_20210421_intercalibrage	marc.picheral@imev-mer.fr	4309	uvp6_sn000109lp_20210421_intercalibrage	CC BY-NC 4.0	
-335	uvp6_sn000123lp_20210421_intercalibrage	marc.picheral@imev-mer.fr	4310	uvp6_sn000123lp_20210421_intercalibrage	CC BY-NC 4.0	
-336	uvp6_sn000125hf_20210421_intercalibrage	marc.picheral@imev-mer.fr	4311	uvp6_sn000125hf_20210421_intercalibrage	CC BY-NC 4.0	
-337	uvp6_sn000143lp_20210421_intercalibrage	marc.picheral@imev-mer.fr	4316	uvp6_sn000143lp_20210421_intercalibrage	CC BY-NC 4.0	
 338	uvp5_sn202_ps124_cosmus_filtered	andreas.rogge@awi.de	4317	uvp5_sn202_ps124_cosmus_filtered	Copyright	
-339	uvp6_sn000007lp_202102_ps124_drifting_traps	andreas.rogge@awi.de	4321	uvp6_sn000007lp_202102_ps124_drifting_traps	Copyright	
-341	uvp6_sn000007lp_2021_ps124_eddy_lander	andreas.rogge@awi.de	4323	uvp6_sn000007lp_2021_ps124_eddy_lander	Copyright	
-342	uvp6_sn000001lp_20210430_basintest		4325	uvp6_sn000001lp_20210430_basintest		
-343	uvp6_sn000003lp_2021_sea002_m493	marc.picheral@obs-vlfr.fr	4360	uvp6_sn000003lp_2021_sea002_m493		
-344	uvp6_sn000125hf_20210519_intercalibrage		4402	uvp6_sn000125hf_20210519_intercalibrage	CC BY-NC 4.0	
-345	uvp6_sn000115lp_20210519_intercalibrage		4403	uvp6_sn000115lp_20210519_intercalibrage		
 346	uvp5_sn200_perle4_2021_filtered	demadron@univ-perp.fr	4412	UVP5 PERLE 04 2021 (sn200_filtered)		
-347	uvp6_sn000003lp_2021_sea002_m494	marc.picheral@obs-vlfr.fr	4448	uvp6_sn000003lp_2021_sea002_m494		
 348	uvp5_sn207_2021_a22	amcdonnell@alaska.edu	4458	uvp5_sn207_2021_a22		
-350	uvp6_sn000111lp_20210602_intercalibrage		NA	NA	NA	
-351	uvp6_sn000112lp_20210602_intercalibrage		NA	NA	NA	
-352	uvp6_sn000126hf_20210602_intercalibrage	marc.picheral@imev-mer.fr	4493	uvp6_sn000126hf_20210602_intercalibrage	CC BY-NC 4.0	
-353	uvp6_sn000127hf_20210602_intercalibrage		4494	uvp6_sn000127hf_20210602_intercalibrage	CC BY-NC 4.0	
-354	uvp6_sn000128hf_20210602_intercalibrage	marc.picheral@imev-mer.fr	4495	uvp6_sn000128hf_20210602_intercalibrage	CC BY-NC 4.0	
-355	uvp6_sn000101lp_2020_float_triatlas	lars.stemmann@obs-vlfr.fr	NA	NA	NA	
-356	uvp6_sn000101lp_2020_float_triatlas_remote	lars.stemmann@obs-vlfr.fr	NA	NA	NA	
-357		lars.stemmann@obs-vlfr.fr	NA	NA	NA	
-358	uvp6_sn000113lp_2020_float_triatlas_remote	lars.stemmann@obs-vlfr.fr	NA	NA	NA	
-361	uvp6_sn000124lp_20210617_intercalibrage		4517	uvp6_sn000124lp_20210617_intercalibrage	CC BY-NC 4.0	
-362	uvp6_sn000148lp_20210617_intercalibrage		4518	uvp6_sn000148lp_20210617_intercalibrage	CC BY-NC 4.0	
-363	uvp5_sn205_export_2021_filtered	rainer.kiko@imev-mer.fr	4521	uvp5_sn205_export_2021_filtered		
-364	uvp6_sn000112lp_2021_export	rainer.kiko@imev-mer.fr	4541	uvp6_sn000112lp_200m_2021_export	CC BY-NC 4.0	
-365	uvp6_sn000111lp_2021_export	rainer.kiko@imev-mer.fr	4543	uvp6_sn000111lp_100m_2021_export	CC BY-NC 4.0	
-366	uvp6_sn000003lp_2021_sea002_m495	marc.picheral@obs-vlfr.fr	4545	uvp6_sn000003lp_2021_sea002_m495		
-367	uvp6_sn000003lp_2021_sea002_m496	marc.picheral@obs-vlfr.fr	4551	uvp6_sn000003lp_2021_sea002_m496		
+363	uvp5_sn205_export_2021_filtered	rainer.kiko@imev-mer.fr	4521	uvp5_sn205_export_2021_filtered	Copyright	
 368	Party	leo.berline@mio.osupytheas.fr	NA	NA	NA	
-369	uvp5_sn009_skq202106s	amcdonnell@alaska.edu	4624	uvp5_sn009_skq202106s		
+369	uvp5_sn009_skq202106s	amcdonnell@alaska.edu	5734	uvp5_sn009_skq202106s		
 370	uvp5_sn009_skq202110s	amcdonnell@alaska.edu	4623	uvp5_sn009_skq202110s		
 371	uvp5_sn203_nasa_exports_north_atlantic_2021	amcdonnell@alaska.edu	4661	uvp5_sn203_nasa_exports_north_atlantic_2021		
 374	M108_aa_exp_test1	rkiko@geomar.de	NA	NA	NA	
-375	uvp6_sn000001lp_20210607_limite_turbidite		4600	uvp6_sn000001lp_20210607_limite_turbidite		
 376	sn203_msm94_calibration_test1	rainer.kiko@obs-vlfr.fr	NA	NA	NA	
 377	sn203_msm94_calibration_test1	rainer.kiko@obs-vlfr.fr	NA	NA	NA	
 378	calibration_test_1_uvp5_sn203_greenedge_2016	lars.stemmann@obs-vlfr.fr	NA	NA	NA	
-379	Planktoscope_2021_export_ctd	laetitia.drago@imev-mer.fr	NA	NA	NA	
-380	uvp6_sn000110lp_2021_float_remote		NA	NA	NA	
-381	uvp6_sn000006lp_2021_SG150_sfi_harvest	sunnje.basedow@uit.no	4791	uvp6_sn000006lp_2021_SG150_sfi_harvest		
-382	uvp6_sn000141lp_202107_ccelter_2021_p2107_c1150_vig	tristan.biard@univ-littoral.fr	4862	uvp6_sn000141lp_202107_ccelter_2021_p2107_c1150_vig		
-383	uvp6_sn000147lp_202107_ccelter_2021_p2107_c1400_vig	tristan.biard@univ-littoral.fr	4842	uvp6_sn000147lp_202107_ccelter_2021_p2107_c1450_vig		
-385	uvp6_sn000141lp_202107_ccelter_2021_p2107_c3150_vig	tristan.biard@univ-littoral.fr	4873	uvp6_sn000141lp_202107_ccelter_2021_p2107_c3150_vig		
-386	uvp6_sn000147lp_202107_ccelter_2021_p2107_c3400_vig	tristan.biard@univ-littoral.fr	4875	uvp6_sn000147lp_202107_ccelter_2021_p2107_c3450_vig		
-387	uvp6_sn000130hf_20210927_intercalibrage		4887	uvp6_sn000130hf_20210927_intercalibrage		
-388	uvp6_sn000150hf_20210927_intercalibrage		4888	/uvp6_sn000150hf_20210927_intercalibrage		
-389	uvp6_sn000008lp_20210927_intercalibrage		4903	uvp6_sn000008lp_20210927_intercalibrage		
-393	uvp6_sn000003lp_20210927_intercalibrage		4932	uvp6_sn000003lp_20210927_intercalibrage	CC0 1.0	
 394	uvp5_sn002_iado_2021	irisson@obs-vlfr.fr	4933	uvp5_sn002_iado_2021	Copyright	
-395	uvp6_sn000106lp_20210927_intercalibrage		4940	uvp6_sn000106lp_20210927_intercalibrage	CC0 1.0	
-396	uvp6_sn000135lp_20210927_intercalibrage		4941	uvp6_sn000135lp_20210927_intercalibrage	CC BY-NC 4.0	
-397	uvp6_sn000144lp_20210927_intercalibrage		4942	uvp6_sn000144lp_20210927_intercalibrage	CC BY-NC 4.0	
-398	uvp6_sn000130hf_20210929_intercalibrage		4943	uvp6_sn000130hf_20210929_intercalibrage	CC BY-NC 4.0	
-400	uvp6_sn000006lp_2021_SG150_PolarFront		4952	uvp6_sn000006lp_2021_SG150_PolarFront	CC BY-NC 4.0	
-401	uvp6_sn000001lp_202108_HE582	moritz.holtappels@awi.de	4978	uvp6_sn000001lp_202108_HE582		
-402	uvp6_sn000126hf/uvp6_sn00126-hf_20210801_sas_21	pauline.snoeijs-leijonmalm@su.se	4993	uvp6_sn00126-hf_20210801_sas_21		
-403	uvp6_sn000102lp_2021_sg2105	kbuesseler@whoi.edu	5011	uvp6_sn000102lp_2021_sg2105	CC BY 4.0	
-406	uvp6_sn000102lp_202107_otz_ar59	kbuesseler@whoi.edu	NA	NA	NA	
-409	uvp6_sn000102lp_2021_whoidock042021	kbuesseler@whoi.edu	NA	NA	NA	
-410	uvp6_sn000102lp_2021_whoidock042021	kbuesseler@whoi.edu	NA	NA	NA	
-411	uvp6_sn000002lp_201909_m158	rainer.kiko@imev-mer.fr	5031	uvp6_sn000002lp_201909_m158		
-412	uvp6_sn000004lp_201909_m158	rainer.kiko@imev-mer.fr	5033	uvp6_sn000004lp_201909_m158		
-413	uvp6_sn00126-hf_20210801_sas_21_time_series	pauline.snoeijs-leijonmalm@su.se	5037	uvp6_sn00126-hf_20210801_sas_21_time_series		
-414	uvp6_sn000130hf_2021_darkedge	marc.picheral@imev-mer.fr	5108	uvp6_sn000130hf_2021_darkedge		
-415	uvp6_sn000129lp_2021_testre	marc.picheral@imev-mer.fr	NA	NA	NA	
-416	uvp6_sn000129lp_2021_testre_remote	marc.picheral@imev-mer.fr	NA	NA	NA	
 417	uvp5_sn008_amundsen_2021	laure.vilgrain@imev-mer.fr	5149	uvp5_sn008_amundsen_2021		
-419	uvp6_sn000141lp_20211028_intercalibrage		5175	uvp6_sn000141lp_20211028_intercalibrage		
-420	/uvp6_sn000002lp_20211028_intercalibrage		5176	uvp6_sn000002lp_20211028_intercalibrage	CC BY-NC 4.0	
-421			NA	NA	NA	
-422	uvp6_sn000150hf_20211028_intercalibrage		5178	uvp6_sn000150hf_20211028_intercalibrage		
-423	uvp6_sn000137lp_20211028_intercalibrage		5177	uvp6_sn000137lp_20211028_intercalibrage		
-424	uvp6_sn000004lp_20211028_intercalibrage		5179	uvp6_sn000004lp_20211028_intercalibrage	CC BY-NC 4.0	
 425	uvp5_sn200_ccelter_2021	tristan.biard@univ-littoral.fr	4663	uvp5_sn200_ccelter_2021	Copyright	
-426	uvp6_sn000100lp_2021_float_remote		NA	NA	NA	
-427	uvp6_sn000100lp_2021_darkedge_remote		NA	NA	NA	
 428	uvp5_sn205_so284_2021_filtered	rainer.kiko@obs-vlfr.fr	5197	uvp5_sn205_so284_2021_filtered		
-429	uvp6_sn000132lp_2021_scotian_shelf_test		5202	uvp6_sn000132lp_2021_scotian_shelf_test		
-430	uvp5_sn205_so285_2021_filtered	rainer.kiko@obs-vlfr.fr	5208	uvp5_sn205_so285_2021_filtered		
-432	uvp6_sn000107lp_20211216_intercalibrage		5231	uvp6_sn000107lp_20211216_intercalibrage	CC BY-NC 4.0	
+430	uvp5_sn205_so285_2021_filtered	rainer.kiko@obs-vlfr.fr	5208	uvp5_sn205_so285_2021_filtered	Copyright	
 433	uvp5_sn003_tara_microbiome_2021	fabien.lombard@imev-mer.fr	5254	uvp5_sn003_tara_microbiome_2021		
-434	uvp6_sn000005lp_20211215_intercalibrage		5287	uvp6_sn000005lp_20211215_intercalibrage		
-435	uvp6_sn000134lp_20211215_intercalibrage		5288	uvp6_sn000134lp_20211215_intercalibrage	CC BY-NC 4.0	
-436	uvp6_sn000147lp_20211215_intercalibrage		5289	uvp6_sn000147lp_20211215_intercalibrage	CC BY-NC 4.0	
-437	UofSC_UVP5_gf_Summer2019	stone@sc.edu	2551	UofSC Bermuda Atlantic Time Series UVP5_2019	CC BY-NC 4.0	
-438	uvp6_sn000130hf_2021_amazomix	marc.picheral@imev-mer.fr	5324	uvp6_sn000130hf_2021_amazomix		
-439	uvp6_sn000129lp_20220106_testre		5325	uvp6_sn000129lp_20220106_testre		
-440	uvp6_sn000129lp_20220106_testre_remote		NA	NA	NA	
-441	UofSC_UVP5_BATS_ae2016	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-442	UofSC_UVP_BATS_AE2017	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-443	UofSC_UVP5_BATS_AE2018	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-444	UofSC_UVP5_AE2021	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-445	UofSC_UVP5_AE2022	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-446	UofSC_UVP5_AE2101	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-447	UofSC_UVP5_AE2102	enter op. email	3900	BATS2020-21 UVP5 UofSC	Copyright	
-448	UofSC_UVP5_AE2103	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-449	UofSC_UVP5_AE2104	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-450	UofSC_UVP5_AE2105	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-451	UofSC_UVP5_AE2106	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-452	UofSC_UVP_AE2110	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
-453	UofSC_UVP5_AE2111		3900	BATS2020-21 UVP5 UofSC	Copyright	
-454	UofSC_UVP5_AE2112	stone@sc.edu	5339	UofSC_UVP5_AE2112		
-455	UofSC_UVP5_AE2115	stone@sc.edu	5340	UofSC_UVP5_AE2115		
-456	UofSC_UVP5_AE2116	stone@sc.edu	5341	UofSC_UVP5_AE2116		
-458	Mission Atlantic South Brazilian Shelf		4369	NA	NA	
-459	uvp6_sn000200lp_20220127_intercalibrage		5402	uvp6_sn000200lp_20220127_intercalibrage		
-460	uvp6_sn000130hf_2021_sr2114_etnp	marc.picheral@imev-mer.fr	5571	uvp6_sn000130hf_2021_sr2114_etnp		
-462	uvp6_sn000125hf_20220127_intercalibrage		5427	uvp6_sn000125hf_20220127_intercalibrage	CC BY-NC 4.0	
-463	uvp6_sn000153hf_20220127_intercalibrage		5428	uvp6_sn000153hf_20220127_intercalibrage	CC BY-NC 4.0	
-464	uvp6_sn000154hf_20220127_intercalibrage		5430	uvp6_sn000154hf_20220127_intercalibrage	CC BY-NC 4.0	
-465	uvp6_sn000156hf_20220127_intercalibrage		5431	uvp6_sn000156hf_20220127_intercalibrage	CC BY-NC 4.0	
-466	uvp6_sn000157hf_20220127_intercalibrage		5432	uvp6_sn000157hf_20220127_intercalibrage	CC BY-NC 4.0	
-467	uvp6_sn000158hf_20220127_intercalibrage		5433	uvp6_sn000158hf_20220127_intercalibrage	CC BY-NC 4.0	
-468	uvp6_sn000159hf_20220127_intercalibrage		5434	uvp6_sn000159hf_20220127_intercalibrage	CC BY-NC 4.0	
-469	uvp6_sn000164hf_20220127_intercalibrage		5435	uvp6_sn000164hf_20220127_intercalibrage	CC BY-NC 4.0	
-470	uvp6_sn000200lp_20220203_intercalibrage		5440	uvp6_sn000200lp_20220203_intercalibrage	CC BY-NC 4.0	
-471	UofSC_UVP5_AE1917	stone@sc.edu	2551	UofSC Bermuda Atlantic Time Series UVP5_2019	CC BY-NC 4.0	
-472	uvp6_sn000155hf_20220222_intercalibrage		5553	uvp6_sn000155hf_20220222_intercalibrage	CC BY-NC 4.0	
-473	uvp5_sn201_exports02_filtered	lee.karp-boss@maine.edu	5565	uvp5_sn201_exports02_filtered		
-474	uvp5_sn210_2022_msm106_filtered	hhauss@geomar.de	5572	uvp5_sn210_2022_msm106_filtered		
+437	uvp5_sn209_ae1912_bats	stone@sc.edu	2551	UofSC Bermuda Atlantic Time Series UVP5_2019	Copyright	
+441	uvp5_sn209_ae2016_bval57	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+442	uvp5_sn209_ae2017_bats374	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+443	uvp5_sn209_ae2018_hs1393	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+445	uvp5_sn209_ae2022_hs1398	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+446	uvp5_sn209_ae2101_bats377	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+447	uvp5_sn209_ae2102_bats378	enter op. email	3900	BATS2020-21 UVP5 UofSC	Copyright	
+448	uvp5_sn209_ae2103_bats379	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+449	uvp5_sn209_ae2104_bats379b	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+450	uvp5_sn209_ae2105_bats380	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+451	uvp5_sn209_ae2106_ofpapril2021	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+452	uvp5_sn209_ae2110_b382	stone@sc.edu	3900	BATS2020-21 UVP5 UofSC	Copyright	
+453	uvp5_sn209_ae2111_hs1409		3900	BATS2020-21 UVP5 UofSC	Copyright	
+471	uvp5_sn209_ae1917_bats_361	stone@sc.edu	2551	UofSC Bermuda Atlantic Time Series UVP5_2019	Copyright	
+473	uvp5_sn201_exports02_filtered	lee.karp-boss@maine.edu	5652	 	 uvp5_sn201_exports02_filtered		
+475	uvp5_sn210_2022_msm106_filtered	hhauss@geomar.de	5569	uvp5_sn210_2022_msm106_filtered		
+476	uvp5_sn002_hircom_2022_winter	lionel.guidi@imev-mer.fr	5623	uvp5_sn002_hircom_2022_winter		
+479	uvp5_sn210_2021_m174_filtered	hhauss@geomar.de	5744	uvp5_sn210_2021_m174_filtered		
+483	uvp5_sn002_moose_ge_2021	enter op. email	5771	UVP5 MooseGE 2021 SN002		
+509	uvp5_sn209_ae2112_bats383_hs1410	stone@sc.edu	6073	uvp5_sn209_ae2112_bats383_hs1410	CC BY-NC 4.0	
+510	uvp5_sn209_ae2124_bats387_hs1418_hs1419	stone@sc.edu	6074	uvp5_sn209_ae2124_bats387_hs1418_hs1419	CC BY-NC 4.0	
+511	uvp5_sn209_ae2117_bats385	stone@sc.edu	6075	uvp5_sn209_ae2117_bats385	CC BY-NC 4.0	
+512	uvp5_sn209_ae2114_biosscope	stone@sc.edu	6076	uvp5_sn209_ae2114_biosscope	CC BY-NC 4.0	
+522	uvp5_sn209_ae2116_bats384_hs1413	stone@sc.edu	6087	uvp5_sn209_ae2116_bats384_hs1413	CC BY-NC 4.0	
+523	uvp5_sn209_ae2120_bats386_hs1416	stone@sc.edu	6088	uvp5_sn209_ae2120_bats386_hs1416	CC BY-NC 4.0	
+525	uvp5_sn209_ae2201_bats389_hs1422_hs1423	stone@sc.edu	6096	uvp5_sn209_ae2201_bats389_hs1422_hs1423	Copyright	

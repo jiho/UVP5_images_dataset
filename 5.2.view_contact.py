@@ -6,9 +6,9 @@ from auth import drive_service
 
 ### UTIL
 
-filePath = os.path.expanduser("~/datasets/view_contact.txt")
-csvPath_reclassify_taxa = os.path.expanduser("~/datasets/export_contact_reclassify_taxa.csv")
-csvPath_annotators_credits = os.path.expanduser("~/datasets/export_contact_annotators_credits.csv")
+filePath = os.path.expanduser("~/UVP5_images_dataset/data/view_contact.txt")
+csvPath_reclassify_taxa = os.path.expanduser("~/UVP5_images_dataset/data/export_contact_reclassify_taxa.csv")
+csvPath_annotators_credits = os.path.expanduser("~/UVP5_images_dataset/data/export_contact_annotators_credits.csv")
 
 def new_google_sheet(data):
     # Create sheet

@@ -3,7 +3,7 @@ import pandas as pd
 
 # paths
 old_path = "https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv"
-new_path = "~/datasets/UVP5_images_dataset/backup_all.feather"
+new_path = "~/datasets/UVP5_images_dataset/all.feather"
 
 # read data
 old = pd.read_csv(old_path)

@@ -27,7 +27,7 @@ filter(samples, projid==149)$datetime
 samples %>%
   left_join(select(projects, pprojid, ptitle)) %>%
   select(
-    project=ptitle, profile, profile_id=sampleid,
+    project=ptitle, profile_name, profile_id=sampleid,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
   mutate(
