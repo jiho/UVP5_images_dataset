@@ -5,7 +5,6 @@
 
 library("tidyverse")
 
-
 ## Read data ----
 
 # coastline
@@ -15,6 +14,9 @@ coast <- read_csv("data/gshhg_world_l.csv.gz", col_types=cols())
 smps <- read_tsv("data/final/samples.tsv.gz")
 vols <- read_tsv("data/final/samples_volume.tsv.gz")
 
+#objects level
+objs_full <- read_tsv("data/final/objects.tsv.gz")
+objs <- objs_full[, c('profile_id', 'object_id', 'depth', 'group', 'group_lineage')]
 
 ## Table of images of consistent categories ----
 # morphological PCA per category and pick something in the middle
@@ -130,7 +132,7 @@ AAAAB
 AAAAB
 CCCCB
 "
-p_map + p_depth + p_ts + plot_layout(design=layout)
+p_map + p_depth + p_ts +plot_layout(design=layout)
 
 # and save
 ggsave(file="data/final/plot_samples.pdf", width=19*1.5, height=9*1.5, unit="cm")
@@ -138,11 +140,128 @@ ggsave(file="data/final/plot_samples.pdf", width=19*1.5, height=9*1.5, unit="cm"
 # God do I love patchwork!
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+## Histogram of the size of the ~five most abundant taxa + detritus separating 0:200m and 200m:bottom ----
+# should use bin=[0, 25, 50, 100, 150, 200, 250, 300, 400, 500, 600, 800, 1000, 2000, 3000, 5000]
+
+# get 0-200m data #layer1
+p_totals_by_groups_l1 <-objs %>%
+  filter(depth<=200) %>%
+  filter(startsWith(group_lineage, 'living')) %>%
+  count(group) %>%
+  arrange(desc(n)) %>%
+  head(15)%>%
+  ggplot(aes(y=reorder(group, n), x=n))+
+  geom_bar(stat="identity")+
+  ggtitle("Fifteen most abundant taxa : 0m to -200m")+
+  xlab("Nb of objects")+
+  ylab("Taxa")#+
+  #scale_x_log10()
+p_totals_by_groups_l1
+
+totals_by_groups_l1 <- objs %>%
+  filter(depth<=200) %>%
+  filter(startsWith(group_lineage, 'living') | startsWith(group, 'detritus')) %>%
+  count(group) %>%
+  arrange(desc(n)) %>%
+  head(6)
+
+p_obj_size_l1 <- objs %>%
+  filter(depth<=200) %>%
+  filter(grepl(paste(totals_by_groups_l1$group, collapse="|"), group))%>%
+  ggplot(aes(y=-depth, fill=group)) +
+  geom_histogram(binwidth = 1 , alpha=1) +
+  ggtitle("Size histogram of the five most abundant taxa and detritus : 0m to -200m")+
+  xlab("Nb of objects")+
+  ylab("Depth [m]")+
+  scale_fill_manual(values=c("#CF90DE", "#FFF393", "#6058DB", "#CBDEAF", "#8EC2DE", '#FD8A6A')) +
+  scale_y_continuous(breaks=c(0, -25, -50, -100, -150, -200))+
+  facet_wrap(~factor(group, levels=c(totals_by_groups_l1$group)), scale="free_x")
+p_obj_size_l1
+
+
+# get 200-bottom data #layer2
+p_totals_by_groups_l2 <-objs %>%
+  filter(depth>200) %>%
+  filter(startsWith(group_lineage, 'living')) %>%
+  count(group) %>%
+  arrange(desc(n)) %>%
+  head(15)%>%
+  ggplot(aes(y=reorder(group, n), x=n))+
+  geom_bar(stat="identity")+
+  ggtitle("Fifteen most abundant taxa : -200m to Bottom")+
+  xlab("Nb of objects")+
+  ylab("Taxa")
+p_totals_by_groups_l2
+
+totals_by_groups_l2 <- objs %>%
+  filter(depth>200) %>%
+  filter(startsWith(group_lineage, 'living') | startsWith(group, 'detritus')) %>%
+  count(group) %>%
+  arrange(desc(n)) %>%
+  head(6)
+
+p_obj_size_l2 <- objs %>%
+  filter(depth>200) %>%
+  filter(grepl(paste(totals_by_groups_l2$group, collapse="|"), group))%>%
+  ggplot(aes(y=-depth, fill=group)) +
+  geom_histogram(binwidth = 1, alpha=1) +
+  ggtitle("Size histogram of the five most abundant taxa and detritus : -200m to Bottom")+
+  xlab("Nb of objects")+
+  ylab("Depth [m]")+
+  scale_fill_manual(values=c("#CF90DE", "#FFF393", "#6058DB", "#CBDEAF", "#8EC2DE", '#FD8A6A')) +
+  scale_y_continuous(
+    # nice breaks
+    trans="neg_sqrt",
+    breaks=c(-200,-250, -300, -400, -500, -600, -800, -1000, -2000, -3000, -5000)
+  )+
+  facet_wrap(~factor(group, levels=c(totals_by_groups_l2$group)), scale="free_x")
+p_obj_size_l2
+
+
 ## Total concentration per taxon for the consistent categories ----
 # ordered by concentration, over the whole dataset
+# Barplot with total concentration per taxon for the consistent categories
+tot_vol_m3=sum(vols$water_volume_imaged)/1000# From L to m3
+p_concentration_by_taxon<-objs %>%
+  filter(startsWith(group_lineage, 'living')) %>%
+  count(group)%>%#go from nb indiv to concentration by dividing with tot_vol_m3
+  mutate(n=n/tot_vol_m3) %>%
+  arrange(desc(n)) %>%
+  head(15)%>%
+  ggplot(aes(y=reorder(group, n), x=n))+
+  geom_bar(stat="identity")+
+  ggtitle("Total concentration per taxon for the consistent categories, \nordered by concentration, over the whole dataset.")+
+  xlab("Concentration (ind/m3)")+
+  ylab("Taxa")
+p_concentration_by_taxon
 
 # over some depth bins
+# layout the plot
+layout_other <- "
+A#B#
+A#B#
+CCDD
+CCDD
+CCDD
+E###
+E###
+"
+p_totals_by_groups_l1 + p_totals_by_groups_l2 + p_obj_size_l1 + p_obj_size_l2 + p_concentration_by_taxon +plot_layout(design=layout_other)
 
+# and save
+ggsave(file="data/final/plot_other.pdf", width=30*1.5, height=30*1.5, unit="cm")
 
 ## Size spectra ----
 # for the most abundant taxa
