@@ -1,7 +1,7 @@
 #
 # Read the final dataset and make some plots
 #
-# (c) 2021 Jean-Olivier Irisson, GNU General Public License v3
+# (c) 2021 Jean-Olivier Irisson, 2022 Julie Coustenoble, GNU General Public License v3
 
 library("tidyverse")
 library("scales")
@@ -222,76 +222,109 @@ map_living + map_detritus + plot_layout(design=layout_maps)
 ggsave(file="data/final/plot_maps_sqrt.pdf", width=40, height=30, unit="cm")
 
 
+
 #### Bar plot concentration per taxon
-prep_concentration_per_taxon_data<-function(){
+prep_profiles_for_pertinent_categories_data<-function(){
+  # select only lineages taxa
+  #"not-living/detritus", "Trichodesmium", "Phaeodaria", "Copepoda"
+  #groups = list("Trichodesmium")
+  groups = unique(  objs %>%
+                      filter(startsWith(group_lineage, 'living') | startsWith(group_lineage, 'not-living/detritus') ) %>%
+                      .$group)
 
+  # add depth label
+  # "0 - 100 m", "100 - 200 m", "200 - 1000 m", "> 1000 m
   # 0,100 / 100,200 / 200,1000 / 1000,6000
-  layers=list(list(0,100), list(100,200), list(200,1000), list(1000,6000))
+  layers=list( list(0,100), list(100,200), list(200,1000),list(1000,6000))
 
-  final_data=	data.frame()
+  merged_data <- unique(objs[c("profile_id", "object_id", "depth", "group", "group_lineage")])%>%
+    filter(startsWith(group_lineage, 'living') | startsWith(group_lineage, 'not-living/detritus') )  %>%
+    merge(
+      x = .,
+      y = unique(smps[c("profile_id", "lat" )]),
+    )
+
+  #### cons_data
+  cons_data <- data.frame()
 
   for(layer in layers){
+
+    data_layer <- data.frame()
+
     start_layer = layer[1]
     end_layer = layer[2]
 
-    tot_vol_m3_layer <- vols %>%
-      filter(between(mid_depth_bin, start_layer, end_layer)) %>%
-      sum(.$water_volume_imaged)/1000
-    print(tot_vol_m3_layer)
+    for(taxo in groups){
+      data_concentration<- merged_data %>%
+        filter(startsWith(group, taxo)) %>%
+        filter(between(depth, start_layer, end_layer)) %>%
+        merge(x=.,
+              y=vols %>%
+                filter(between(mid_depth_bin, start_layer, end_layer)) %>%
+                group_by(profile_id)%>%
+                summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
+        ) %>%
+        group_by(profile_id, tot_vol_m3)%>%
+        count(group)%>%
+        mutate(concentration = n / tot_vol_m3)%>%
+        subset(., select=c("concentration"))%>%
+        summarise(concentration_median = quantile(concentration, 0.5)) %>%
+        mutate(taxo = taxo) %>%
+        mutate(layer = paste(start_layer, "-",end_layer,"m"))
 
-    #browser()
-    data <- unique(objs[c("profile_id", "object_id", "depth", "group", "group_lineage")]) %>%
-      filter(startsWith(group_lineage, 'living') | startsWith(group_lineage, 'not-living/detritus') ) %>%
-      filter(between(depth, start_layer, end_layer)) %>%
-      count(group)%>%#go from nb indiv to concentration by dividing with tot_vol_m3
-      mutate(concentration = n / tot_vol_m3_layer)%>%
-      arrange(desc(concentration)) %>%
-      mutate(layer = paste(start_layer, "-",end_layer,"m")) %>%
+      # set to 0 missing concentration data
+      data_concentration[is.na(data_concentration)] <- 0
+      data_layer<-rbind(data_layer,data_concentration)
+    }
+    data_layer<-data_layer%>%
+      arrange(desc(concentration_median)) %>%
       head(15)
-
-    #final_data_layer<-na.omit(data)
-    final_data<-rbind(final_data,data)
+    cons_data<-rbind(cons_data,data_layer)
   }
-
-  return(final_data)
+  return(cons_data)
 }
 
 plot_concentration_per_taxon_data<- function(df) {
   # reorder groups
-  df <- as.data.table(df)[, concentration, by = .(layer,group)]
+  df <- as.data.table(df)[, concentration_median, by = .(layer,taxo)]
   # create var which reflects order when sorted alphabetically
-  df[, ord := sprintf("%02i", frank(df, concentration, ties.method = "first"))]
+  df[, ord := sprintf("%02i", frank(df, concentration_median, ties.method = "first"))]
 
   # plot
   p_concentration_by_taxon_living<-
     ggplot(df %>%
-            filter(!startsWith(group, 'detritus')),
-           aes(y=ord, x=concentration))+
+             filter(!startsWith(taxo, 'detritus')) ,
+           aes(y=ord, x=concentration_median))+
     geom_bar(stat="identity")+
     ggtitle("Plankton concentration in 4 depth layers")+
     xlab("Concentration (ind/m3)")+
     ylab("Taxa")+
-    scale_y_discrete(labels = df[, setNames(as.character(group), ord)]) +
+    scale_y_discrete(labels = df[, setNames(as.character(taxo), ord)]) +
     facet_wrap(~factor(layer, levels=c(unique(df$layer))), nrow = 1, scales="free", drop = TRUE)
 
   p_concentration_by_taxon_detritus<-
     ggplot(df %>%
-            filter(startsWith(group, 'detritus')),
-           aes(y=ord, x=concentration))+
+             filter(startsWith(taxo, 'detritus')),
+           aes(y=ord, x=concentration_median))+
     geom_bar(stat="identity")+
     ggtitle("Detritus concentration in 4 depth layers")+
     xlab(NULL)+
     ylab(NULL)+
-    scale_y_discrete(labels = df[, setNames(as.character(group), ord)]) +
+    scale_y_discrete(labels = df[, setNames(as.character(taxo), ord)]) +
     facet_wrap(~factor(layer, levels=c(unique(df$layer))), nrow = 1, scales="free_y", drop = TRUE)
 
 
   return(list(p_concentration_by_taxon_living=p_concentration_by_taxon_living, p_concentration_by_taxon_detritus=p_concentration_by_taxon_detritus))
 }
-concentration_per_taxon_data = prep_concentration_per_taxon_data()
+
+
+
+concentration_per_taxon_data = prep_profiles_for_pertinent_categories_data()
+
 ret = plot_concentration_per_taxon_data(concentration_per_taxon_data)
 p_concentration_by_taxon_living <- ret$p_concentration_by_taxon_living
 p_concentration_by_taxon_detritus <- ret$p_concentration_by_taxon_detritus
+
 
 # over some depth bins
 # layout the plot
@@ -310,6 +343,7 @@ p_concentration_by_taxon_living + p_concentration_by_taxon_detritus + plot_layou
 
 # and save
 ggsave(file="data/final/plot_concentration_bar.pdf", width=30*1.5, height=19*1.5, unit="cm")
+
 
 ##### Average size distribution of SD and HD versions
 
