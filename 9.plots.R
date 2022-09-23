@@ -344,85 +344,102 @@ max(detritus %>% filter(startsWith(uvp_model, "SD"))%>%.$esd_mm) #[1] 40.45944
 ######## TEST DATA ########
 ######## TEST DATA ########
 
-prep_size_distribution_per_version_data<-function(lineage){
-
+prep_size_distribution_per_version_data<-function(model){
   # SD or HD
-  versions=list("SD","HD")
+  #versions=list("SD","HD")
 
   tot_vol_0_100_m3=vols %>%
-    filter(mid_depth_bin<=100) %>%
-    group_by(profile_id)%>%
-    summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)%>%
+    filter(mid_depth_bin<=200)%>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id", "lat", "lon", "uvp_model", "project")]),
+      y = unique(smps[c("profile_id", "lat", "lon", "uvp_model", "project")]%>%
+                   filter(startsWith(uvp_model, model))),
+      #%>%filter(stringr::str_detect(project, 'tara') ) ),
       by = "profile_id",
-      all.x = TRUE)%>%
-    filter(str_detect(project, 'ccelter')|str_detect(project, '_lter'))%>%
-    filter(!startsWith(uvp_model, "ZD"))
-  #filter(between(lat, -60,80)&between(lon, -130,30))
-
+      all.y = TRUE)%>%
+    group_by(profile_id)%>%
+    summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
 
   #filter(startsWith(group_lineage, 'living') |
   final_data <- unique(objs[c("profile_id", "object_id", "depth", "esd_mm", "group", "group_lineage")]) %>%
-    filter(startsWith(group_lineage, lineage)) %>%
-    filter(depth<=100)  %>%
+    filter(depth<=200)%>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id","uvp_model", "lat", "lon", "project")]),
+      y = unique(smps[c("profile_id","uvp_model", "lat", "lon", "project")]%>%
+                   filter(startsWith(uvp_model, model))),
+      #%>%filter(stringr::str_detect(project, 'tara') ) ),
       by = "profile_id",
-      all.x = TRUE)%>%
-    filter(str_detect(project, 'ccelter')|str_detect(project, '_lter'))%>%
-    filter(!startsWith(uvp_model, "ZD"))
+      all.y = TRUE)%>%
+    mutate(cat=case_when(startsWith(group_lineage,"living") ~ 'Living',
+                         startsWith(group_lineage,"not-living/detritus") ~ 'Detritus')) %>%
+    #startsWith(group_lineage,"not-living/detritus") ~ 'Detritus')) %>%
+    drop_na()
+
+  # mutate(cat=case_when(startsWith(group_lineage,"living") ~ 'Living')) %>%
+  #startsWith(group_lineage,"not-living/detritus") ~ 'Detritus')) %>%
 
   nbss_data = final_data
   tot_vol = tot_vol_0_100_m3
   # Create a table to keep all the individual ss table (1 table = 1 profile)
-  ss_all <- matrix(ncol = 9,
+  ss_all <- matrix(ncol = 10,
                    dimnames=list(c(), c(
                      "profile_id", "bin_log","bin","binwidth",
-                     "y","norm_y", "norm_y_vol", "bin_min","bin_max")))
+                     "y","norm_y", "norm_y_vol", "bin_min","bin_max", "cat")))
   ss_all=data.frame(ss_all)
+
 
   # for each profile, do the ss table and divide by the volume sampled
   for (i in 1:nrow(tot_vol)) {
+
     # get the organisms from the profile i
     nbss_profile <- nbss_data %>%  filter(profile_id == tot_vol$profile_id[[i]])
-    # If the dataset isn't empty, continue
-    if (plyr::empty(nbss_profile) != TRUE) {
-      # compute the size spectrum
-      ss <- nbss_function(nbss_profile$esd, type="abundance", binwidth=0.05)
-      # divide the normalised number norm_y (= y / binwidth) by the sampled volume
-      ss$norm_y_vol <- ss$norm_y / tot_vol$tot_vol_m3[[i]]
-      # add the profile_id number in the table
-      ss$profile_id <- tot_vol$profile_id[[i]]
-      # add it to the ss_all dataframe
-      ss_all <- rbind(ss_all, ss)
-    } else
-      ss <- data.frame(matrix(ncol = 9,
-                              dimnames=list(c(), c(
-                                "profile_id", "bin_log","bin","binwidth",
-                                "y","norm_y", "norm_y_vol", "bin_min", "bin_max"))))
-    ss$profile_id <- tot_vol$profile_id[[i]]
-    # add it to the ss_all dataframe
-    ss_all <- rbind(ss_all, ss)
-  }
 
+    for(categ in c("living", "not-living/detritus")){
+      # If the dataset isn't empty, continue
+      nbss_profile_categ <- nbss_profile %>%
+        filter(startsWith(group_lineage, categ))
+      if (plyr::empty(nbss_profile_categ) != TRUE) {
+        # compute the size spectrum
+        ss <- nbss_function(nbss_profile_categ$esd_mm, type="abundance", binwidth=0.05)
+        # divide the normalised number norm_y (= y / binwidth) by the sampled volume
+        ss$norm_y_vol <- ss$norm_y / tot_vol$tot_vol_m3[[i]]
+        # add the profile_id number in the table
+        ss$profile_id <- tot_vol$profile_id[[i]]
+        #add categ
+        ss$cat<-categ
+        # add it to the ss_all dataframe
+        ss_all <- rbind(ss_all, ss)
+      } else{
+        ss <- data.frame(matrix(ncol = 10,
+                                dimnames=list(c(), c(
+                                  "profile_id", "bin_log","bin","binwidth",
+                                  "y","norm_y", "norm_y_vol", "bin_min", "bin_max", "cat"))))
+        ss$profile_id <- tot_vol$profile_id[[i]]
+        ss$cat<-categ
+        # add it to the ss_all dataframe
+        ss_all <- rbind(ss_all, ss) %>%
+          drop_na()
+      }
+    }
+  }
   # remove values we don't need
-  ss_all <- ss_all %>%  filter(!is.na(bin_log)) %>%
+  ss_all <- ss_all %>%
+    mutate(cat=case_when(startsWith(cat,"living") ~ 'Living',
+                         startsWith(cat,"not-living/detritus") ~ 'Detritus')) %>%
+    filter(!is.na(bin_log)) %>%
     filter_all(all_vars(!is.infinite(.))) %>%
     filter(norm_y_vol > 0)
 
   ss_all <- ss_all %>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id","uvp_model", "lat", "lon" )]),
+      y = unique(final_data[c("profile_id","cat", "lat", "lon" )]),
       all.x = TRUE)
+  #browser()
 
   # compute the mean of each bin
-  ss_mean <- ss_all %>%  group_by(bin, uvp_model) %>%
+  ss_mean <- ss_all %>%  group_by(bin, cat) %>%
     summarise(mean_bin = mean(norm_y_vol))
-
 
   return(list(ss_all=ss_all, ss_mean=ss_mean))
 }
@@ -433,12 +450,12 @@ plot_size_distribution_per_version_data<- function(data, group) {
   ss_mean<-data$ss_mean
   # Plot on point for each profile
   plot_all <- ggplot() +
-    geom_point(data = ss_all, aes(x=bin, y=norm_y_vol, colour = uvp_model), alpha = 0.2) +
-    geom_smooth(data = ss_mean, aes(x=bin, y=mean_bin, colour = uvp_model)) +
+    geom_point(data = ss_all, aes(x=bin, y=norm_y_vol, colour = cat), alpha = 0.2) +
+    geom_smooth(data = ss_mean, aes(x=bin, y=mean_bin, colour = cat)) +
     # You can use geom_point below to show the mean for each bin
-    #geom_point(data = ss_mean, aes(x=bin, y=mean_bin, color = uvp_model)) +
+    #geom_point(data = ss_mean, aes(x=bin, y=mean_bin, color = cat)) +
     # You can use geom_line to connect these mean values
-    #geom_line(data = ss_mean, aes(x=bin, y=mean_bin, color = uvp_model)) +
+    #geom_line(data = ss_mean, aes(x=bin, y=mean_bin, color = cat)) +
     #scale_shape_manual("Status", values=c(19, 4)) +
     #xlim(c(0,100)) +
     # log transformation
@@ -447,27 +464,27 @@ plot_size_distribution_per_version_data<- function(data, group) {
     labs(y="Normalised abundance (nb m-3 mm-1)",
          x = "ESD (mm)")+
     # use a title according to the latitudinal band
-    ggtitle(paste("Average size distribution of SD and HD versions for ", group))
+    ggtitle(paste("Average size distribution of Living and Detritus for ", group))
 
   plot_smooth <- ggplot() +
-    #geom_point(data = ss_all, aes(x=bin, y=norm_y_vol, colour = uvp_model), alpha = 0.2) +
-    geom_smooth(data = ss_mean, aes(x=bin, y=mean_bin, colour = uvp_model)) +
+    #geom_point(data = ss_all, aes(x=bin, y=norm_y_vol, colour = cat), alpha = 0.2) +
+    geom_smooth(data = ss_mean, aes(x=bin, y=mean_bin, colour = cat)) +
     # log transformation
     scale_x_log10() + scale_y_log10() +
     # change name of axes
     labs(y="Normalised abundance (nb m-3 mm-1)",
          x = "ESD (mm)")+
     # use a title according to the latitudinal band
-    ggtitle(paste("Average size distribution of SD and HD versions for ", group))
+    ggtitle(paste("Average size distribution of Living and Detritus for ", group))
 
   return(list(plot_all=plot_all,plot_smooth=plot_smooth))
 }
 
-size_distribution_per_version_data_detritus = prep_size_distribution_per_version_data("not-living/detritus")
-p_size_distribution_per_version_data_detritus = plot_size_distribution_per_version_data(size_distribution_per_version_data_detritus,"Detritus")
+size_distribution_per_version_data_HD = prep_size_distribution_per_version_data("HD")
+p_size_distribution_per_version_data_HD = plot_size_distribution_per_version_data(size_distribution_per_version_data_HD,"HD")
 
-size_distribution_per_version_data_living = prep_size_distribution_per_version_data("living/")
-p_size_distribution_per_version_data_living = plot_size_distribution_per_version_data(size_distribution_per_version_data_living, "Living")
+size_distribution_per_version_data_SD = prep_size_distribution_per_version_data("SD")
+p_size_distribution_per_version_data_SD = plot_size_distribution_per_version_data(size_distribution_per_version_data_SD, "SD")
 
 # over some depth bins
 # layout the plot
@@ -475,7 +492,7 @@ layout_plot_average_size_distribution <- "
 AABB
 CCDD
 "
-p_size_distribution_per_version_data_detritus$plot_all + p_size_distribution_per_version_data_living$plot_all + p_size_distribution_per_version_data_detritus$plot_smooth + p_size_distribution_per_version_data_living$plot_smooth + plot_layout(design=layout_plot_average_size_distribution)
+p_size_distribution_per_version_data_SD$plot_all + p_size_distribution_per_version_data_HD$plot_all + p_size_distribution_per_version_data_SD$plot_smooth + p_size_distribution_per_version_data_HD$plot_smooth + plot_layout(design=layout_plot_average_size_distribution)
 
 # and save
 ggsave(file="data/final/plot_average_size_distribution.pdf", width=30, height=20, unit="cm")
@@ -646,10 +663,4 @@ uvp_project_data <- merged_data%>%
   ungroup()
 
 uvp_project_data<-unique(uvp_project_data[c("title", "projid", "Profiles", "Objects", "Latitude range", "Longitude range", 'Time period', "data_owner")])
-
-
-
-
-
-
 
