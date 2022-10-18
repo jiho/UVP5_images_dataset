@@ -254,26 +254,31 @@ prep_profiles_for_pertinent_categories_data<-function(){
     start_layer = layer[1]
     end_layer = layer[2]
 
+    vols_layer <- vols %>%
+      filter(between(mid_depth_bin, start_layer, end_layer)) %>%
+      group_by(profile_id)%>%
+      summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
+
     for(taxo in groups){
       data_concentration<- merged_data %>%
-        filter(startsWith(group, taxo)) %>%
         filter(between(depth, start_layer, end_layer)) %>%
+        filter(startsWith(group, taxo)) %>%
         merge(x=.,
-              y=vols %>%
-                filter(between(mid_depth_bin, start_layer, end_layer)) %>%
-                group_by(profile_id)%>%
-                summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
+              y=vols_layer,
+              all.y = TRUE
         ) %>%
         group_by(profile_id, tot_vol_m3)%>%
         count(group)%>%
         mutate(concentration = n / tot_vol_m3)%>%
         subset(., select=c("concentration"))%>%
         summarise(concentration_median = quantile(concentration, 0.5)) %>%
+        #mutate(concentration_median = mean(concentration)) %>%
         mutate(taxo = taxo) %>%
         mutate(layer = paste(start_layer, "-",end_layer,"m"))
 
       # set to 0 missing concentration data
       data_concentration[is.na(data_concentration)] <- 0
+      print(data_concentration)
       data_layer<-rbind(data_layer,data_concentration)
     }
     data_layer<-data_layer%>%
@@ -381,7 +386,6 @@ max(detritus %>% filter(startsWith(uvp_model, "SD"))%>%.$esd_mm) #[1] 40.45944
 prep_size_distribution_per_version_data<-function(model){
   # SD or HD
   #versions=list("SD","HD")
-
   tot_vol_0_100_m3=vols %>%
     filter(mid_depth_bin<=200)%>%
     merge(
@@ -405,7 +409,8 @@ prep_size_distribution_per_version_data<-function(model){
       by = "profile_id",
       all.y = TRUE)%>%
     mutate(cat=case_when(startsWith(group_lineage,"living") ~ 'Living',
-                         startsWith(group_lineage,"not-living/detritus") ~ 'Detritus')) %>%
+                         startsWith(group_lineage,"not-living/detritus") ~ 'Detritus',
+                         startsWith(group_lineage,"not-living/artefact") ~ 'Artefact') ) %>%
     #startsWith(group_lineage,"not-living/detritus") ~ 'Detritus')) %>%
     drop_na()
 
@@ -427,11 +432,11 @@ prep_size_distribution_per_version_data<-function(model){
 
     # get the organisms from the profile i
     nbss_profile <- nbss_data %>%  filter(profile_id == tot_vol$profile_id[[i]])
-
-    for(categ in c("living", "not-living/detritus")){
+    for(categ in c("Living", "Detritus", "Artefact")){
       # If the dataset isn't empty, continue
       nbss_profile_categ <- nbss_profile %>%
-        filter(startsWith(group_lineage, categ))
+        filter(startsWith(cat, categ))
+
       if (plyr::empty(nbss_profile_categ) != TRUE) {
         # compute the size spectrum
         ss <- nbss_function(nbss_profile_categ$esd_mm, type="abundance", binwidth=0.05)
@@ -458,8 +463,6 @@ prep_size_distribution_per_version_data<-function(model){
   }
   # remove values we don't need
   ss_all <- ss_all %>%
-    mutate(cat=case_when(startsWith(cat,"living") ~ 'Living',
-                         startsWith(cat,"not-living/detritus") ~ 'Detritus')) %>%
     filter(!is.na(bin_log)) %>%
     filter_all(all_vars(!is.infinite(.))) %>%
     filter(norm_y_vol > 0)
@@ -698,3 +701,4 @@ uvp_project_data <- merged_data%>%
 
 uvp_project_data<-unique(uvp_project_data[c("title", "projid", "Profiles", "Objects", "Latitude range", "Longitude range", 'Time period', "data_owner")])
 
+write_tsv(uvp_project_data, "data/final/UVP5_project_data.tsv")

@@ -6,6 +6,8 @@
 source("0.setup.R")
 library("feather")
 library("data.tree")
+library("ecotaxar")
+
 
 # read sample info
 samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols())

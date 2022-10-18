@@ -33,8 +33,8 @@ future_walk(pids, function(pid) {
     # get selected samples in the current project
     sids <- filter(samples, projid == pid) %>% pull(sampleid) %>% as.integer()
 
-    localdb <- db_connect_ecotaxa()
-
+    #localdb <- db_connect_ecotaxa()
+    localdb<-dbt
     # get current project and its mapping
     prj <- tbl(localdb, "projects") %>% filter(projid==pid) %>% collect()
     mapping <- parse_mapping(prj$mappingobj)
@@ -90,8 +90,7 @@ future_walk(pids, function(pid) {
 
     # save as a file
     write_feather(obj, path=out_file)
-
-    db_disconnect_ecotaxa(localdb)
+   # db_disconnect_ecotaxa(localdb)
   }
 }, .options=furrr_options(seed=NULL))
 )
