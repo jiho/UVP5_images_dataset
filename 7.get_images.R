@@ -7,6 +7,10 @@ source("0.setup.R")
 library("feather")
 library("furrr")
 
+# avoid scientific notation so that filnames for object_ids which are large ints are printed correctly
+# e.g. 4000000 instead of 4e+06
+options(scipen=999)
+
 # read relevant pieces of the data table
 o <- read_feather(file.path(data_dir, "all.feather"), columns=c("projid", "sampleid", "objid", "file_name"))
 
