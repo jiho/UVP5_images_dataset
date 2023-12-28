@@ -2,6 +2,7 @@
 # Fetch (almost) fully validated UVP5 samples and their metadata
 #
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
+# run on 2023-12-28 12:03
 
 # NB: some bits are long, run as a job in RStudio
 
@@ -11,9 +12,8 @@ source("0.setup.R")
 
 # read selected projects
 # (from Google Sheet or downloaded file)
-# TODO finalise the selection of samples, export and read from the exported file, to stabilise the selection
-projects <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
-# projects <- read_csv("data/UVP5_projects_selected.csv")
+# projects <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
+projects <- read_csv("data/UVP5_projects_selected - UVP5_projects.csv", show_col_types=FALSE)
 selected_projects <- projects %>% filter(use != "")
 
 # get all samples from those projects
@@ -39,7 +39,8 @@ samples_classif_stats <- samples_classif %>%
   rename(N=`NA`) %>%
   mutate(
     total=V+D+P+N,
-    percent_validated=V/total*100
+    percent_validated=(V+D)/total*100
+    # NB: we consider the dubious too, since several stuff was put as dibuous in Tara samples since the initial dataset extraction
   ) %>%
   # add the psampleid and profile_name
   left_join(samples)
@@ -100,6 +101,8 @@ missing_in_current %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
 # -> four samples (an1304_l2_002, 4, 5, 6) are missing in EcoPart now...
+#    moose samples seem to have changed (low validated percentage), for no known reason
+#    some Geomar samples are not selected. possibly because they are close to 99% val but not above (maybe we used 98% in the past?)
 #    uvp5_sn009_2015_p16n now has no images in it
 #    c_msm22_087 has lots of dubious
 
@@ -119,6 +122,6 @@ extra_in_current %>%
   left_join(samples_classif_stats) %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
-# -> 444 extra profiles
+# -> 452 extra profiles
 #    some are probably due to the 99% instead of 100% validated criterion
 #    others have been added by Laetitia and Rainer
