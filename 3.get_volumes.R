@@ -34,7 +34,7 @@ volumes <- volumes %>%
 # inspect again
 summary(volumes)
 sum(is.na(volumes$water_volume_clean)) / nrow(volumes) * 100
-# [1] 0.869321
+# [1] 0.8977931
 # = we removed less than 1% of the data bins ;-)
 
 # look at random profiles
@@ -50,7 +50,7 @@ filter(volumes, sampleid %in% unique(filter(volumes, water_volume_clean>400)$sam
   scale_x_continuous(breaks=c(0, 500, 1000))
 # the red points were considered as spikes and removed; the black points are kept.
 # -> OK, the spike detector is not perfect but quite good
-#    let us drop th
+#    let us drop the problematic volumes
 volumes <- volumes %>%
   drop_na(water_volume_clean) %>%
   select(-water_volume_clean)

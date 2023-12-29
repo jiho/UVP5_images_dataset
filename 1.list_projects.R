@@ -2,7 +2,6 @@
 # List EcoPart projects to determine which to use
 #
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
-# run on 2023-12-28 10:43
 
 source("0.setup.R")
 

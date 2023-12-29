@@ -2,7 +2,6 @@
 # Fetch (almost) fully validated UVP5 samples and their metadata
 #
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
-# run on 2023-12-28 12:03
 
 # NB: some bits are long, run as a job in RStudio
 
