@@ -6,13 +6,11 @@
 # load packages
 suppressMessages(library("tidyverse"))
 suppressMessages(library("DBI"))
-suppressMessages(library("RPostgreSQL"))
+suppressMessages(library("ecotaxar"))
 
 # connect to databases
-# ecoTaxa
-dbt <- dbConnect("PostgreSQL", host="ecotaxa.obs-vlfr.fr", dbname="ecotaxa", user="zoo", password="z004ecot@x@")
-# ecoPart
-dbp <- dbConnect("PostgreSQL", host="ecotaxa.obs-vlfr.fr", dbname="ecopart", user="zoo", password="z004ecot@x@", port=5435)
+dbt <- db_connect_ecotaxa()
+dbp <- db_connect_ecopart()
 
 # create directories for large data that should live outside the repository
 # NB: no trailing /
