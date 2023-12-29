@@ -78,12 +78,15 @@ selected_samples_info <- tbl(dbp, "part_samples") %>%
 write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
 
 
-## Compare with the original selection by Thelma ----
+## Compare with the original selection by Thelma and Laetitia ----
 
-# read the samples used by Thelma
+# read the samples used by Thelma and Laetitia
 thelma_samples <- read_csv("data/list_profiles_ecopart-thelma.csv", col_types=cols()) %>%
   select(title=ecotaxa, ptitle=ecopart, profile_name=profiles) %>%
   separate_rows(profile_name, sep=",")
+
+laeti_samples <- read_csv("data/list_profiles-laetitia.csv") %>%
+  rename(ptitle=pproject, profile_name=profile)
 
 # get our current selection of samples
 current_samples <- selected_samples_info %>%
@@ -92,35 +95,42 @@ current_samples <- selected_samples_info %>%
   left_join(select(projects, pprojid, projid, ptitle, title), by=c("pprojid", "projid"))
 
 # profiles in Thelma's selection but not in ours
-missing_in_current <- filter(thelma_samples, ! profile_name %in% current_samples$profile_name)
+missing_wr_thelma <- filter(thelma_samples, ! profile_name %in% current_samples$profile_name)
 
 # inspect which and why
-missing_in_current %>%
+missing_wr_thelma %>%
   left_join(samples_classif_stats) %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
 # -> four samples (an1304_l2_002, 4, 5, 6) are missing in EcoPart now...
 #    moose samples seem to have changed (low validated percentage), for no known reason
-#    some Geomar samples are not selected. possibly because they are close to 99% val but not above (maybe we used 98% in the past?)
+#    samples from 'UVP5 Geomar 2017 m135' are not selected. possibly because they are close to 99% val but not above (maybe we used 98% in the past?)
 #    uvp5_sn009_2015_p16n now has no images in it
-#    c_msm22_087 has lots of dubious
 
-# write those and finish sorting them
-# missing_in_current %>% group_by(title) %>% summarise(samples=str_c(profile, collapse=",")) %>% write_tsv("to_finish_sorting.tsv")
+# do the same for Laetitia's selection
+missing_wr_laeti <- filter(laeti_samples, ! profile_name %in% current_samples$profile_name)
+missing_wr_laeti %>%
+  left_join(samples_classif_stats) %>%
+  select(ptitle, sampleid, profile_name, percent_validated) %>%
+  arrange(ptitle, profile_name)
+# -> same as above: missing from an1304 and 'UVP5 Geomar 2017 m135'
 
 # profiles in our selection but not in Thelma's
-extra_in_current <- filter(current_samples, ! profile_name %in% thelma_samples$profile_name)
+extra_in_current <- filter(current_samples, ! profile_name %in% c(thelma_samples$profile_name, laeti_samples$profile_name))
+nrow(extra_in_current)
 
 # check the project names to make sure we do not have extra projects
-# NB: this has to be done by eye, since some of the project names have changed...
-unique(extra_in_current$title) %>% sort()
+# NB: this has to be done partly by eye, since some of the project names have changed...
+#     we do not have titles for Laetitia's samples
+setdiff(unique(extra_in_current$title),unique(thelma_samples$title)) %>% sort()
 unique(thelma_samples$title) %>% sort()
-# -> nope, that seems OK
+# -> mostly adding GEOMAR cruises
 
 extra_in_current %>%
   left_join(samples_classif_stats) %>%
   select(title, sampleid, profile_name, percent_validated) %>%
-  arrange(title, profile_name)
-# -> 452 extra profiles
+  arrange(title, profile_name) %>%
+  print(n=500)
+# -> 445 extra profiles
 #    some are probably due to the 99% instead of 100% validated criterion
-#    others have been added by Laetitia and Rainer
+#    others have been added by Laetitia and Rainer (Geomar ones)
