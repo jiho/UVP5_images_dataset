@@ -12,7 +12,7 @@ source("0.setup.R")
 # read selected projects
 # (from Google Sheet or downloaded file)
 # projects <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
-projects <- read_csv("data/UVP5_projects_selected - UVP5_projects.csv", show_col_types=FALSE)
+projects <- read_tsv("data/UVP5_projects_selected.tsv", show_col_types=FALSE)
 selected_projects <- projects %>% filter(use != "")
 
 # get all samples from those projects
