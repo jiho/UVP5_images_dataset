@@ -63,7 +63,7 @@ nrow(selected_samples)
 
 # extract sample level information (from EcoPart because this is the most reliable source)
 selected_samples_info <- tbl(dbp, "part_samples") %>%
-  filter(sampleid %in% local(selected_samples$sampleid)) %>%
+  filter(psampleid %in% local(selected_samples$psampleid)) %>%
   select(
     # identifiers
     pprojid, psampleid, sampleid, profile_name=profileid,
@@ -81,7 +81,8 @@ selected_samples_info <- tbl(dbp, "part_samples") %>%
   collect() %>%
   # add EcoTaxa project id
   left_join(select(selected_projects, pprojid, projid)) %>%
-  relocate(projid, .before="sampleid")
+  relocate(projid, .before="sampleid") %>%
+  arrange(sampleid)
 
 # check for duplicates
 sum(duplicated(selected_samples_info$sampleid))
