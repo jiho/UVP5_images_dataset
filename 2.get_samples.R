@@ -22,6 +22,12 @@ samples <- tbl(dbp, "part_samples") %>%
   select(psampleid, sampleid, profile_name=profileid) %>%
   collect()
 
+# check unicity
+sum(duplicated(samples$sampleid))
+filter(samples, sampleid %in% samples$sampleid[duplicated(samples$sampleid)])
+# some EcoPart samples are not associated with EcoTaxa samples -> remove them
+samples <- drop_na(samples, sampleid)
+
 # get sorting stats of those samples
 samples_classif <- tbl(dbt, "objects") %>%
   # limit to samples of potential interest
@@ -29,7 +35,6 @@ samples_classif <- tbl(dbt, "objects") %>%
   # get classification status of all objects in those
   count(sampleid, classif_qual) %>%
   ungroup() %>% collect()
-# NB: this takes ~5 min
 
 # compute sorting percentage for those
 samples_classif_stats <- samples_classif %>%
@@ -39,11 +44,15 @@ samples_classif_stats <- samples_classif %>%
   mutate(
     total=V+D+P+N,
     percent_validated=(V+D)/total*100
-    # NB: we consider the dubious too, since several stuff was put as dibuous in Tara samples since the initial dataset extraction
+    # NB: we consider the dubious too, since several objects were reassessed as dubious in Tara samples since the initial data set extraction
   ) %>%
   # add the psampleid and profile_name
   left_join(samples)
 
+# check for unicity
+sum(duplicated(samples$sampleid))
+sum(duplicated(samples$psampleid))
+# -> OK
 
 ## Extract a selection of samples ----
 
@@ -73,6 +82,9 @@ selected_samples_info <- tbl(dbp, "part_samples") %>%
   # add EcoTaxa project id
   left_join(select(selected_projects, pprojid, projid)) %>%
   relocate(projid, .before="sampleid")
+
+# check for duplicates
+sum(duplicated(selected_samples_info$sampleid))
 
 # write it to a file
 write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
