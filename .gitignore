@@ -5,3 +5,5 @@
 Client_Secret.json
 figures/*
 data/UVP5_volumes.tsv.gz
+data/final/*
+old/
