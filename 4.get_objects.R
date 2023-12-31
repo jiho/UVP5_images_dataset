@@ -15,9 +15,9 @@ samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols_only(projid
 
 # work in parallel but do not use too many cores,
 # otherwise the EcoTaxa server will be the bottleneck
-# plan(multisession, workers=5)
+plan(multisession, workers=3)
 # fall back on sequential processing
-plan(sequential)
+# plan(sequential)
 # NB: this actually seems faster!
 
 # deal with the data project by project, because the mapping is per project
@@ -33,8 +33,7 @@ future_walk(pids, function(pid) {
     # get selected samples in the current project
     sids <- filter(samples, projid == pid) %>% pull(sampleid) %>% as.integer()
 
-    #localdb <- db_connect_ecotaxa()
-    localdb<-dbt
+    localdb <- db_connect_ecotaxa()
     # get current project and its mapping
     prj <- tbl(localdb, "projects") %>% filter(projid==pid) %>% collect()
     mapping <- parse_mapping(prj$mappingobj)
@@ -89,8 +88,8 @@ future_walk(pids, function(pid) {
     )
 
     # save as a file
-   # db_disconnect_ecotaxa(localdb)
     write_feather(obj, sink=out_file)
+    db_disconnect_ecotaxa(localdb)
   }
 }, .options=furrr_options(seed=NULL))
 )
