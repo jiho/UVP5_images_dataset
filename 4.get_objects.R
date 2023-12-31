@@ -59,27 +59,24 @@ future_walk(pids, function(pid) {
       filter(imgrank==0L) %>%
       collect()
 
+    # get list of people who sorted these objects, including in the history
     people <- tbl(localdb, "objects") %>%
       # redo the original query to get the objids
       filter(projid == pid, sampleid %in% sids, classif_qual %in% c("V", "D")) %>%
       select(projid, objid, classif_who) %>%
-      # use them to fetch them from the history table
+      # use them to fetch previous annotators
       left_join(
-        tbl(localdb, "objectsclassifhisto") %>% select(objid, classif_who),
-        by="objid", suffix=c(".current", ".before")
+        tbl(localdb, "objectsclassifhisto") %>% select(objid, classif_who_previous=classif_who),
+        by="objid"
       ) %>%
       collect() %>%
-      # put all user ids in the same column,
-      # no matter if they are the current annotator or a previous one
-      pivot_longer(cols=starts_with("classif"), names_to="where", values_to="userid") %>%
-      # remove classifications from a model (usersid is NA)
-      filter(!is.na(userid)) %>%
-      # add user-understandable identification
-      left_join(tbl(localdb, "users") %>% select(userid=id, email, name), by="userid", copy=TRUE) %>%
-      # compute totals per counter
-      count(projid, userid, email, name)
-    # TODO store this efficiently with the rest
-    #obj <- merge(obj, people, by=("projid"))
+      # summarise all annotations in a single column
+      group_by(projid, objid) %>%
+      summarise(classif_who_all=list(c(classif_who[1], na.omit(classif_who_previous))), .groups="drop")
+
+    # add list of all anotators in the original data
+    obj <- left_join(obj, people, by=join_by(projid, objid))
+
     # write an information message
     message(
       "projid = ", format(pid, width=4, justify="right"),
