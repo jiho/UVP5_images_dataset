@@ -20,6 +20,11 @@ volumes <- samples %>%
 summary(volumes)
 # -> some very high volumes
 
+# check unicity
+nrow(volumes)
+distinct(volumes, sampleid, mid_depth_bin) %>% nrow()
+# -> OK
+
 # despike the volume imaged
 # = detect large changes in water_volume_imaged and consider those to be either unrealistic or regions of over sampling => set them to NA
 volumes <- volumes %>%
