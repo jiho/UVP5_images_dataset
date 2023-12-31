@@ -6,7 +6,7 @@
 # NB: some bits are long (~20 min), run as a job
 
 source("0.setup.R")
-library("feather")
+library("arrow")
 library("furrr")
 library("ecotaxar")
 
@@ -89,8 +89,8 @@ future_walk(pids, function(pid) {
     )
 
     # save as a file
-    write_feather(obj, path=out_file)
    # db_disconnect_ecotaxa(localdb)
+    write_feather(obj, sink=out_file)
   }
 }, .options=furrr_options(seed=NULL))
 )
