@@ -30,13 +30,6 @@ samples %>%
     project=ptitle, profile_name, profile_id=sampleid,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
-  mutate(
-    uvp_model=case_when(
-      pixel_size < 0.1 ~ "HD",
-      pixel_size > 0.14 ~ "SD",
-      TRUE ~ "ZD"
-    )
-  ) %>%
   fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
 # TODO go back to sample or call this file differently
 

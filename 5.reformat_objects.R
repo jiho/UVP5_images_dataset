@@ -104,6 +104,15 @@ oc <- left_join(oc, select(samples, sampleid, acq_pixel), by="sampleid") %>%
     length_mm = major * acq_pixel
   )
 
+# define UVP model
+oc <- oc %>%
+  mutate(
+    uvp_model=case_when(
+      pixel_size < 0.1 ~ "HD",
+      pixel_size > 0.14 ~ "SD",
+      TRUE ~ "ZD"
+    )
+  )
 
 ## Prepare taxonomic regrouping ----
 
