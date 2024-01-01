@@ -151,4 +151,4 @@ select(oc,
        area:skeleton_area,
   ) %>%
   # add save to disk for now
-  write_feather(path=file.path(data_dir, "all.feather"))
+  write_feather(sink=file.path(data_dir, "all.feather"))
