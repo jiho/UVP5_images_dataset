@@ -136,7 +136,7 @@ count(oc, lineage, taxon) %>%
 # remove irrelevant variables and reorder columns
 select(oc,
        # identifiers
-       projid, sampleid, objid, origid,
+       projid, sampleid, objid, objname=origid, uvp_model,
        # image
        file_name,
        # taxonomy
