@@ -18,7 +18,7 @@ o <- map_dfr(proj_files, read_feather)
 nrow(o)
 # 7,186,461 on 2020-12-16 00:16
 # 7,820,053 on 2021-02-13 00:31 (added dubious objects and some additional profiles)
-# 8,565,863 on 2023-12-29 22:47
+# 8,565,893 on 2024-01-01
 
 
 ## Restrict to relevant data -----
