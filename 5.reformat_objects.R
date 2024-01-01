@@ -110,8 +110,8 @@ oc <- left_join(oc, select(samples, sampleid, acq_pixel), by="sampleid") %>%
   mutate(
     area_mm2 = area * acq_pixel^2,
     esd_mm = 2 * sqrt(area_mm2 / pi),
-    length_mm = major * acq_pixel
     vol_mm3 = 4/3 * pi * ((esd_mm/2)^3),
+    major_mm = major * acq_pixel
   )
 
 # define UVP model
