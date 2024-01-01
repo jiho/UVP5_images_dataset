@@ -31,6 +31,11 @@ o <- o %>%
   # remove imgrank, we only have 0
   select(-imgrank)
 
+# remove 0-variance columns, if
+vars <- o %>% summarise(across(area:skeleton_area, .fns=~var(.x, na.rm=TRUE)))
+zero_variance_vars <- names(vars)[vars ==0]
+o <- select(o, -all_of(zero_variance_vars))
+
 # keep only objects for which we have a corresponding water volume
 # indeed, when we have no volume the data is useless
 # missing volumes can be dues to:
