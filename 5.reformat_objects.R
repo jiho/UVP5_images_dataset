@@ -82,6 +82,8 @@ nrow(o_t) - nrow(o_up)
 
 # save the cleaned version
 oc <- o_up
+# remove unused variables
+rm(o_up, o_t, o_wv)
 
 
 ## Enrich data with extra fields ----
