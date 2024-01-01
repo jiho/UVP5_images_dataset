@@ -94,12 +94,15 @@ oc$taxon <- taxo_name(oc$classif_id, taxo, unique=TRUE)
 oc$lineage <- lineage(oc$classif_id, taxo)
 
 # identify users through names and emails
+# get all possible users
 userids <- oc$classif_who_all %>% unlist() %>% unique() %>% as.integer()
+# extract their identification (as name <email>)
 users <- tbl(dbt, "users") %>%
   select(id, name, email) %>%
   filter(id %in% !!userids) %>%
   collect() %>%
   mutate(user=str_c(str_to_title(name), " <", email, ">"))
+# replace the user ids by the name+email
 oc$annotators <- map(oc$classif_who_all, function(x) {users$user[match(x, users$id)]})
 
 # compute sizes in human understandable units
