@@ -108,15 +108,6 @@ oc <- left_join(oc, select(samples, sampleid, acq_pixel), by="sampleid") %>%
 ## Prepare taxonomic regrouping ----
 
 # compute total per taxon
-tc <- count(o, taxon, lineage) %>%
-  # convert it into a tree
-  rename(pathString=lineage) %>%
-  arrange(pathString) %>%
-  as.Node()
-tcd <- ToDataFrameTree(tc, "taxon", "n") %>% mutate(group="")
-# write the tree as a table
-write_tsv(tcd, "data/UVP5_taxo.tsv", na="")
-
 
 ## Extract information to help re-sorting ----
 
@@ -130,6 +121,8 @@ filter(o, str_detect(taxon, "Tunicata")) %>% count(projid)
 filter(o, str_detect(taxon, "Enteropneusta")) %>% count(projid)
 filter(o, taxon == "darksphere") %>% count(projid)
 filter(o, str_detect(taxon, "t0")) %>% count(taxon, projid) %>% filter(n>500)
+count(oc, lineage, taxon) %>%
+  write_tsv("data/UVP5_taxo.tsv", na="")
 
 
 ## Write data to disk ----
