@@ -118,8 +118,8 @@ oc <- left_join(oc, select(samples, sampleid, acq_pixel), by="sampleid") %>%
 oc <- oc %>%
   mutate(
     uvp_model=case_when(
-      pixel_size < 0.1 ~ "HD",
-      pixel_size > 0.14 ~ "SD",
+      acq_pixel < 0.1 ~ "HD",
+      acq_pixel > 0.14 ~ "SD",
       TRUE ~ "ZD"
     )
   )
