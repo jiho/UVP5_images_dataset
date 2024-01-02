@@ -115,6 +115,7 @@ o <- read_feather(file.path(data_dir, "all.feather")) %>%
   left_join(select(g, taxon, group_lineage, group), by="taxon")
 # check that we have groups for all objects
 sum(is.na(o$group))
+# -> OK
 
 # write to disk
-write_feather(o_g, file.path(data_dir, "all.feather"))
+write_feather(o, file.path(data_dir, "all.feather"))
