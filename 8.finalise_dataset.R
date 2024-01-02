@@ -103,4 +103,37 @@ fwrite(o_s, file="data/final/objects.tsv.gz", sep="\t", na="NA")
 
 
 ## Concentrations table ----
-# isolate the code in a separate function, that is in the dataset
+
+# check data quality
+sum(is.na(o_s$vol_mm3))
+
+all_groups <- unique(o_s$group) %>% sort()
+all <- crossing(select(volume, profile_id, mid_depth_bin), all_groups)
+nrow(volume) * 32
+# tooo many!
+
+# TODO reduce to larger depth bins, like on EcoPart
+
+per_group <- o_s %>%
+  # restrict to the variables of interest
+  select(profile_id, mid_depth_bin, group, vol_mm3) %>%
+  # force the taxonomic group to be a factor,
+  # to ensure that every group is considered at every depth bin of every profile
+  mutate(group=factor(group)) %>%
+  # for each depth bin of each profile,
+  group_by(profile_id, mid_depth_bin, group, .drop=FALSE) %>%
+  summarise(n=n(), vol=sum(vol_mm3), .groups="drop") %>%
+  left_join(volume) %>%
+  mutate(
+    concentration=n/water_volume_imaged,
+    biovolume=vol/water_volume_imaged,
+  ) %>%
+  select(profile_id, depth=mid_depth_bin, group, concentration, biovolume)
+
+
+tibble(a=c(1,2,1), b=c(1,1,2), c=factor(c(1,2,2))) %>%
+  group_by(a, b, c, .drop=FALSE) %>%
+  summarise(n=n(), .groups="drop")
+
+
+# TODO isolate the code in a separate function, that is in the dataset
