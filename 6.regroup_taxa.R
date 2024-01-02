@@ -1,77 +1,120 @@
 #
 # Regroup taxa into consistently sorted and mutually exclusive groups
 #
-# (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
-# (c) 2022 Julie COUSTENOBLE,
+# (c) 2020 Jean-Olivier Irisson, Julie COUSTENOBLE, GNU General Public License v3
 
 source("0.setup.R")
-library("feather")
+library("arrow")
 
-# read all objects information
-o <- read_feather(file.path(data_dir, "all.feather"))
+## Perform regrouping ----
+
+# Manually:
+# - Open data/UVP5_taxo.tsv in a spreadsheet (e.g. Google Sheets)
+# - Add a column which will contain the new category names, regrouped
+# - Regroup categories by assigning them the same name
+# - To highlight changes in taxonomic names between columns D and C:
+#   Conditional formatting > Custom formula > =IF(D1<>B1,1,0)
+# - To compute the final count in the regrouped categories, assuming n is column C and the new groups are in column D
+#   Add a column with the formula: =SUMIF(D:D,D2,$C:$C)
+
+# Alternatively, if the sheet already exists, use it with our new taxonomic counts:
+read_tsv("data/UVP5_taxo.tsv", show_col_types=FALSE) %>%
+  left_join(
+    read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv", col_types=cols()) %>%
+    select(-taxon, -n),
+    by="lineage"
+  ) %>%
+  write_tsv("data/UVP5_taxo_base.tsv")
+# now copy-paste that in the Google Sheet
+
+
+## Apply it to the data ----
 
 # read the taxonomic grouping
-g <- read_csv("https://docs.google.com/spreadsheets/d/1a-W6dSxm9q-2-ANRsfTu6yXK3BeKDwO16kaw0NMSc9k/export?format=csv", col_types=cols()) %>%
-  # TODO replace by a static .csv file once this is stabilised
-  rename(group=group_laeti)
+g <- read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv", col_types=cols()) %>%
+  # TODO replace by a static .csv file once this is stabilized
+  rename(group=group_final)
 
 # Keep only used cols
-g <- subset(g, select = c(lineage, taxon, nb_objects, group))
+g <- subset(g, select = c(lineage, taxon, n, group))
 
 # Inspect the totals
-totals_by_groups <- g %>% group_by(group) %>% summarise(tot=sum(nb_objects)) %>% ungroup() %>% arrange(desc(tot))
-#    group              tot
-#    <chr>            <dbl>
-# 1 detritus            6410233
-# 2 artefact            1297217
-# 3 Copepoda            174404
-# 4 Trichodesmium       98990
-# 5 Phaeodaria          71974
-# 6 to_resort           65707
-# 7 turbid              24964
-# 8 to_rename           18293
-# 9 Acantharea          13430
-# 10 Eumalacostraca     13273
-# 11 bubble             9448
-# 12 Hydrozoa_others    8661
-# 13 Collodaria_others  7953
-# 14 Ostracoda          7880
-# 15 misc               7760
-# -> this is not super satisfying: the third most abundant biological group is ... to_rename + to_resort !
+totals_by_groups <- g %>% group_by(group) %>% summarise(tot=sum(n)) %>% ungroup() %>% arrange(desc(tot)) %>% print()
+# # A tibble: 37 × 2
+#    group                           tot
+#    <chr>                         <dbl>
+#  1 not_plankton                7693152
+#  2 Copepoda                     176916
+#  3 Trichodesmium                100049
+#  4 Phaeodaria                    72507
+#  5 to_check                      67371
+#  6 to_resort                     27279
+#  7 Eumalacostraca                13496
+#  8 Acantharea                    13226
+#  9 bubble                         9318
+# 10 Hydrozoa_others                9227
+# 11 Appendicularia                 9026
+# 12 Collodaria_others              8523
+# 13 Ostracoda                      8037
+# 14 Chaetognatha                   7220
+# 15 tentacle<Cnidaria              6468
+# 16 misc                           5712
+# 17 Crustacea_others               5331
+# -> this is not super satisfying: the third most abundant biological group is ... to_check + to_resort !
+#    many of the "to_check" are Diatoma (44k), others are previous t0* that were renamed but not branched.
+#    among the "misc", the bulk are other<living (4k)
 
-# Try to infer a lineage for the new grouping
-# get all groups
-groups <- distinct(g, group) #36 groups
-# get the available taxonomy
-taxo <- distinct(o, lineage, taxon)
-# start with perfect matches
-group_lineages <- groups %>%
-  mutate(
-    group_for_match=group %>%
-      str_replace("_others", "") %>%
-      str_replace("_cavo_or_creseis", "")
-  ) %>%
-  left_join(taxo, by=c("group_for_match"="taxon"))
-# and fill the rest manually
-group_lineages$lineage[which(group_lineages$group_for_match=="Nostocales")] <- "living/Bacteria/Proteobacteria/Cyanobacteria/Nostocales"
-# filter(taxo, str_detect(lineage, "Nostocales"))
-group_lineages$lineage[which(group_lineages$group_for_match=="Cnidaria")] <- "living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria"
-# filter(taxo, str_detect(lineage, "Cnidaria"))
-group_lineages$lineage[which(group_lineages$group_for_match=="misc")] <- "living"
+# Infer a lineage for the new grouping
+group_lineages <- distinct(g, lineage, group) %>%
+  group_by(group) %>%
+  group_map(function(.x, .y) {
+    # default to an empty lineage
+    lin <- ""
 
-#TODO ask to JO
-group_lineages$lineage[which(group_lineages$group_for_match=="Collodaria_colonial")] <- "??/Collodaria_colonial"
-group_lineages$lineage[which(group_lineages$group_for_match=="to_rename")] <- "??/to_rename"
-group_lineages$lineage[which(group_lineages$group_for_match=="to_resort")] <- "??/to_resort"
+    # if, in the lineages, one ends by the name of the group, use this one
+    matching_leaf <- which(basename(.x$lineage) == .y$group)
+    if (length(matching_leaf) > 0) {
+      lin <- .x$lineage[matching_leaf[1]]
+    }
+
+    # otherwise, try to find a full match for the group name in the lineages
+    if (lin == "") {
+      matches <- str_locate(.x$lineage, .y$group)
+      ends <- matches[,2]
+      idx <- which.max(ends)
+      max_position <- max(ends)
+      if (length(idx) > 0) {
+        lin <- str_sub(.x$lineage[idx], start=1, end=max_position)
+      }
+    }
+
+    # otherwise, pick the longest common path among all lineages in the group
+    if (lin == "") {
+      min_lineage_length <- min(str_length(.x$lineage))
+      common <- map_lgl(1:min_lineage_length, function(i) {
+        n_unique_paths <- str_sub(.x$lineage, start=1, end=i) %>% unique() %>% length()
+        n_unique_paths == 1
+      })
+      idx_common <- which(common)
+      if (length(idx_common) > 0) {
+        lin <- str_sub(.x$lineage[1], start=1, end=max(idx_common)) %>% str_remove("/$")
+      }
+    }
+
+    return(data.frame(group=.y$group, group_lineage=lin))
+  }) %>%
+  bind_rows()
+# correct some manually
+group_lineages$group_lineage <- str_remove(group_lineages$group_lineage, "/t0")
 
 # add lineage to the grouping
-g <- left_join(g, group_lineages, by=c("group"))
+g <- left_join(g, group_lineages, by="group")
 
-# and add to the objects file
-o_g <- o %>%
-  inner_join(select(g, taxon, group, lineage.y))
-
-names(o_g)[names(o_g) == 'lineage.y'] <- 'group_lineage'
+# read info for all objects and add the grouping
+o <- read_feather(file.path(data_dir, "all.feather")) %>%
+  left_join(select(g, taxon, group_lineage, group), by="taxon")
+# check that we have groups for all objects
+sum(is.na(o$group))
 
 # write to disk
 write_feather(o_g, file.path(data_dir, "all.feather"))

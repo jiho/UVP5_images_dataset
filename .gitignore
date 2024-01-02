@@ -5,5 +5,6 @@
 Client_Secret.json
 figures/*
 data/UVP5_volumes.tsv.gz
+data/UVP5_taxo_base.tsv
 data/final/*
 old/
