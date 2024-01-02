@@ -91,7 +91,7 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 100	uvp5_sn002_moose_ge_2017_filtered	laurent.coppola@obs-vlfr.fr	853	UVP5 MooseGE 2017			1	2	
 104	uvp5_sn009_2018_nga_spring_filtered	amcdonnell@alaska.edu	964	uvp5_sn009_2018_nga_spring	CC BY 4.0		1	2	
 105	uvp5_sn008_ips_amundsen_2018	marcel.babin@takuvik.ulaval.ca	1165	UVP5 IPS Amundsen 2018	CC BY 4.0	x	1	1	
-109	uvp5_sn010_2014_eddy		881	UVP5 Geomar 2014  eddy		x	1	1	
+109	uvp5_sn010_2014_eddy	rkiko@geomar.de	881	UVP5 Geomar 2014  eddy		x	1	1	
 110	uvp5_sn010_2017_fluxes1	rainer.kiko@obs-vlfr.fr	507	UVP5 Geomar 2017 fluxes1		x	1	1	
 111	uvp5_sn010_2017_fluxes2	rainer.kiko@obs-vlfr.fr	855	UVP5 Geomar 2017 fluxes2			1	1	
 112	uvp5_sn009_2017_asgard	amcdonnell@alaska.edu	1261	uvp5_sn009_2017_asgard	CC BY 4.0		1	1	
