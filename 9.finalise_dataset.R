@@ -47,25 +47,6 @@ volume %>%
 o <- read_feather(file.path(data_dir, "all.feather"))
 projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
 
-# evaluate contribution of annotators
-# TODO use the new extraction of contributors including history
-head(o)
-contrib <- count(o, projid, annotator) %>%
-  mutate(annotator=str_replace_na(annotator, "N/A")) %>%
-  filter(n>100) %>%
-  left_join(distinct(projects, projid, data_owner, title)) %>%
-  arrange(data_owner, title, desc(n)) %>%
-  select(data_owner, title, projid, annotator, n) %>%
-  write_tsv(file="sorting_contributions.tsv")
-
-contrib_summary <- contrib %>%
-  group_by(data_owner, title, projid) %>%
-  summarise(contrib=str_c(annotator, format(n, trim=TRUE, big.mark=","), sep=": ", collapse="\n  ")) %>%
-  group_by(data_owner) %>%
-  summarise(list=str_c(title, ":\n  ", contrib, collapse="\n\n")) %>%
-  summarise(s=str_c(data_owner, list, sep=":\n",collapse="\n\n--\n\n"))
-cat(contrib_summary$s, file="sorting_contributions_summary.txt")
-
 # anonymise annotators
 people <- distinct(o, annotator) %>%
   arrange(annotator) %>%
