@@ -70,11 +70,6 @@ o_s <- o %>%
     area:skeleton_area
   )
 
-# remove variables with too many NAs
-nb_NAs <- sapply(o_s, function(x) {sum(is.na(x))}) %>% sort()
-o_s <- select(o_s, -perimareaexc, -feretareaexc, -cdexc)
-# NB: this probably comes from the definition of area_exc in the UVP as the "surface of holes", not the surface excluding holes; see https://sites.google.com/view/piqv/zooprocess
-
 fwrite(o_s, file="data/final/objects.tsv.gz", sep="\t", na="NA")
 
 
