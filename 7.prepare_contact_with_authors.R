@@ -11,7 +11,7 @@ library("arrow")
 ## Read data ----
 
 # object level info
-o <- read_feather(file.path(data_dir, "all.feather"))
+o <- arrow::read_feather(file.path(data_dir, "all.feather"), col_select=c("projid", "annotators", "lineage", "taxon", "group_lineage", "group"))
 
 # projects
 proj <- read_tsv("data/UVP5_projects_selected.tsv", show_col_types=FALSE) %>%
