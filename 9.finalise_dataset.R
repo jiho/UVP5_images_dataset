@@ -70,11 +70,6 @@ o_s <- o %>%
     area:skeleton_area
   )
 
-# remove zero variance variables
-vars <- sapply(select(o_s, area:skeleton_area), var, na.rm=T)
-vars_no_change <- names(vars)[vars < 10^-9]
-o_s <- select(o_s, -all_of(vars_no_change))
-
 # remove variables with too many NAs
 nb_NAs <- sapply(o_s, function(x) {sum(is.na(x))}) %>% sort()
 o_s <- select(o_s, -perimareaexc, -feretareaexc, -cdexc)
