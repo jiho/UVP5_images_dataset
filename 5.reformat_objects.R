@@ -127,7 +127,7 @@ oc <- oc %>%
 ## Prepare taxonomic regrouping ----
 
 # compute total per taxon
-count(oc, lineage, taxon) %>%
+count(oc, lineage, taxon, taxo_id=classif_id) %>%
   write_tsv("data/UVP5_taxo.tsv", na="")
 
 
