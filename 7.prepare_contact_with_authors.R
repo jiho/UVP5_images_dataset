@@ -57,6 +57,8 @@ annots <- annot_counts %>%
 
 write_tsv(annots, "data/authors.tsv", na="")
 
+# TODO fill with what Julie already collected
+
 
 ## Extract information to help re-sorting ----
 
