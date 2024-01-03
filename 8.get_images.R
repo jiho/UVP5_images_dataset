@@ -4,7 +4,7 @@
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("feather")
+library("arrow")
 library("furrr")
 
 # avoid scientific notation so that filnames for object_ids which are large ints are printed correctly
@@ -12,7 +12,7 @@ library("furrr")
 options(scipen=999)
 
 # read relevant pieces of the data table
-o <- read_feather(file.path(data_dir, "all.feather"), columns=c("projid", "sampleid", "objid", "file_name"))
+o <- read_feather(file.path(data_dir, "all.feather"), col_select=c("projid", "sampleid", "objid", "file_name"))
 
 
 ## Copy all files to the images directory ----
