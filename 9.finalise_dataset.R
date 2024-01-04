@@ -27,18 +27,17 @@ filter(samples, projid==149)$datetime
 samples %>%
   left_join(select(projects, pprojid, ptitle)) %>%
   select(
-    project=ptitle, profile_name, profile_id=sampleid,
+    project=ptitle, sample_name=profile_name, sample_id=sampleid,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
   fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
-# TODO go back to sample or call this file differently
 
 ## Volume table ----
 
 # read water volume
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
 volume %>%
-  rename(profile_id=sampleid) %>%
+  rename(sample_id=sampleid) %>%
   fwrite(file="data/final/samples_volume.tsv.gz", sep="\t", na="NA")
 
 
@@ -47,24 +46,20 @@ volume %>%
 o <- read_feather(file.path(data_dir, "all.feather"))
 projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
 
-# anonymise annotators
-people <- distinct(o, annotator) %>%
-  arrange(annotator) %>%
-  mutate(classification_author=str_c("user_", 1:n()))
-
 o_s <- o %>%
-  # add anonymous user name
-  left_join(people) %>%
+  # add "anonymized" user names
+  mutate(classification_author=paste0("user_", last_annotator_id)) %>%
+  # NB: user paste0 and not str_c because there are NA users
   # select and reorganise columns
   select(
     # link with profile
-    profile_id=sampleid,
+    sample_id=sampleid,
     depth, mid_depth_bin,
-    # identifier
-    object=origid, object_id=objid,
+    # identifiers
+    object_name=objname, object_id=objid,
     # taxo
     taxon, lineage, group, group_lineage,
-    classification_author, classification_date=annotation_date,
+    classification_author, classification_date=last_annotation_date,
     # features
     contains("_mm"),
     area:skeleton_area
