@@ -27,7 +27,7 @@ filter(samples, projid==149)$datetime
 samples %>%
   left_join(select(projects, pprojid, ptitle)) %>%
   select(
-    project=ptitle, sample_name=profile_name, sample_id=sampleid,
+    sample_id=sampleid, sample_name=profile_name, project=ptitle,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
   # define UVP model
@@ -56,18 +56,19 @@ projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
 
 o_s <- o %>%
   # add "anonymized" user names
-  mutate(classification_author=paste0("user_", last_annotator_id)) %>%
+  mutate(classif_author=paste0("user_", last_annotator_id)) %>%
   # NB: user paste0 and not str_c because there are NA users
   # select and reorganise columns
   select(
+    # identifiers
+    object_id=objid, object_name=objname,
     # link with profile
     sample_id=sampleid,
     depth, mid_depth_bin,
-    # identifiers
-    object_name=objname, object_id=objid,
     # taxo
-    taxon, lineage, group, group_lineage,
-    classification_author, classification_date=last_annotation_date,
+    taxon, lineage,
+    classif_author, classif_datetime=last_annotation_date,
+    group, group_lineage,
     # features
     contains("_mm"),
     area:skeleton_area
