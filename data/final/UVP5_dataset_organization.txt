@@ -1,0 +1,57 @@
+# Data organisation
+
+The data set is organised according to:
+
+- `samples`: Underwater Vision Profiler 5 profiles, taken at a given point in space and time.
+- `objects`: individual UVP images, taken at a given depth along the each profile, on which various morphological features were measured and that where then classified taxonomically in EcoTaxa.
+
+`samples` and `objects` have unique identifiers. The `sample_id` is used to link the different tables of the data set together. All files are Tab separated values, UTF8 encoded, gzip compressed.
+
+## samples.tsv.gz
+
+    sample_id   <int>   unique sample identifier
+    sample_name <text>  original sample identifier
+    project     <text>  EcoPart project title
+    lat, lon    <float> location [decimal degrees]
+    datetime    <text>  date and time of start of profile [ISO 8601: YYYY-MM-DDTHH:MM:SSZ]
+    pixel_size  <float> size of one pixel [mm]
+    uvp_model	<text>  version of the UVP: SD: standard definition, ZD: zoomed, HD: high definition
+
+## samples_volume.tsv.gz
+
+Along a profile, the UVP takes many images, each of a fixed volume. The profiles are cut into 5 m depth bins in which the number of images taken is recorded and hence the imaged volume is known. This is necessary to compute concentrations.
+
+    sample_id           <int>   unique sample identifier
+    mid_depth_bin       <float> middle of the depth bin (2.5 = from 0 to 5 m depth) [m]
+    water_volume_imaged <float> volume imaged = number of full images × unit volume [L]
+
+## objects.tsv.gz
+
+    object_id        <int>   unique object identifier
+    object_name      <text>  original object identifier
+    sample_id        <int>   unique sample identifier
+    depth            <float> depth at which the image was taken [m]
+    mid_depth_bin    <float> corresponding depth bin [m]; to match with samples_volumes
+    taxon            <text>  original taxonomic name as in EcoTaxa; is not consistent across projects
+    lineage          <text>  taxonomic lineage corresponding to that name
+    classif_author   <text>  unique, anonymised identifier of the user who performed this classification
+    classif_datetime <text>  date and time at which the classification was
+    group            <text>  broader taxonomic name, for which the identification is consistent over the whole dataset
+    group_lineage    <text>  taxonomic lineage corresponding to this broader group
+    area_mm2         <float> measurements on the object, in real worl units (i.e. comparable across the whole dataset)
+    ...
+    major_mm         <float>
+    area             <float> measurements on the objet, in [pixels] and therefore not directly comparable among the different UVP models and units
+    mean             <float>
+    ...
+    skeleton_area    <float>
+
+## concentrations_biovolumes.tsv.gz
+
+The information above allows to compute concentrations and biovolumes. The code to do so is in `compute_concentrations_biovolumes.R`.
+
+    sample_id     <int>   unique sample identifier
+    depth_range   <text>  range of depth over which the concentration/biovolume are computed : (start,end], in [m] where `(` means not including, `]` means including
+    group         <text>  broad taxonomic group
+    concentration <float> concentration [ind/L]
+    biovolume     <float> biovolume [mm3/L]
