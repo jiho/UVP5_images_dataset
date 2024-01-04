@@ -30,6 +30,14 @@ samples %>%
     project=ptitle, sample_name=profile_name, sample_id=sampleid,
     lat, lon, datetime, pixel_size=acq_pixel
   ) %>%
+  # define UVP model
+  mutate(
+    uvp_model=case_when(
+      pixel_size < 0.1 ~ "HD",
+      pixel_size > 0.14 ~ "SD",
+      TRUE ~ "ZD"
+    )
+  ) %>%
   fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
 
 ## Volume table ----
