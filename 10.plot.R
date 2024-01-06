@@ -192,6 +192,42 @@ taxa_counts %>%
 ggsave("plots/number_per_taxon.pdf", width=w, height=w*1.5, unit="cm")
 ggsave("plots/number_per_taxon.png", width=w, height=w*1.5, unit="cm")
 
+
+## Fig 4: Concentration for the most abundant taxa along depth ----
+
+# define abundant taxa
+abundant_taxa <- taxa_counts %>%
+  filter(!str_detect(group, "_")) %>%
+  tail(5) %>%
+  pluck("group")
+
+# compute concentrations and biovolume
+source("data/final/compute_concentrations_biovolumes.R")
+concs <- obj %>%
+  filter(group %in% c("not_plankton", abundant_taxa)) %>%
+  compute_conc_biovol(vol, depth_breaks=c(0, 100, 500, 1000, 2000, 4000))
+
+# plot
+concs %>%
+  group_by(depth_bin, group) %>%
+  summarise(concentration=mean(concentration), biovolume=mean(biovolume), .groups="drop") %>%
+  mutate(
+    living=ifelse(group=="not_plankton", "Not plankton (marine snow, ...)", "Plankton"),
+    group=as.character(group),
+    group=ifelse(group=="not_plankton", NA, group),
+    depth_bin=factor(depth_bin, levels=rev(unique(depth_bin)))
+  ) %>%
+  ggplot() +
+    facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
+    geom_bar(aes(y=depth_bin, x=biovolume, fill=group), stat="identity") +
+    labs(x="Biovolume (mm3/L)", y="Depth", fill="Taxon") +
+    theme(legend.position="bottom") +
+    scale_fill_brewer(palette="Set1", na.value="grey40")
+# TODO do we use concentration or biovolume?
+
+ggsave("plots/concentrations_with_depth.pdf", width=w, height=w*1.5, unit="cm")
+ggsave("plots/concentrations_with_depth.png", width=w, height=w*1.5, unit="cm")
+
 ### Concentration map
 
 prep_map_data<-function(lineage){
