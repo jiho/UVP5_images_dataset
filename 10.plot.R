@@ -31,12 +31,12 @@ dir.create("plots", showWarnings=FALSE)
 coast <- read_csv("data/gshhg_world_l.csv.gz", col_types=cols())
 
 # sample level
-smps <- read_tsv("data/final/samples.tsv.gz")
-vols <- read_tsv("data/final/samples_volume.tsv.gz")
+smp <- read_tsv("data/final/samples.tsv.gz")
+vol <- read_tsv("data/final/samples_volume.tsv.gz")
 
-#objects level
-objs_full <- read_tsv("data/final/objects.tsv.gz")
-objs <- objs_full[, c('profile_id', 'object_id', 'depth', 'group', 'group_lineage', 'esd_mm')]
+# objects level (only the relevant variables)
+obj <- read_tsv("data/final/objects.tsv.gz")
+cbv <- read_tsv("data/final/concentrations_biovolumes.tsv.gz")
 
 ## Table of images of consistent categories ----
 # morphological PCA per category and pick something in the middle
@@ -51,7 +51,7 @@ objs <- objs_full[, c('profile_id', 'object_id', 'depth', 'group', 'group_lineag
   coord_quickmap() +
   geom_polygon(data=coast, fill="grey99") +
   # profiles
-  geom_point(aes(shape=uvp_model, colour = uvp_model), data=smps, size=1, alpha=0.5) +
+  geom_point(aes(shape=uvp_model, colour = uvp_model), data=smp, size=1, alpha=0.5) +
   #scale_shape_manual("", values=c(4,1,17)) +
   # nice breaks and labels
   scale_x_continuous(
@@ -81,18 +81,18 @@ objs <- objs_full[, c('profile_id', 'object_id', 'depth', 'group', 'group_lineag
 # library("lubridate")
 #
 # # compute a regular sequence of dates
-# smps$date <- as.Date(smps$datetime)
-# start <- min(smps$date)
-# end   <- max(smps$date) + months(1)
+# smp$date <- as.Date(smp$datetime)
+# start <- min(smp$date)
+# end   <- max(smp$date) + months(1)
 # dates <- seq(start, end, by="1 month")
 # day(dates) <- 15
 #
 # # compute the number of profiles per month
 # # and add zeroes
-# day(smps$date) <- 15
+# day(smp$date) <- 15
 # ts <- left_join(
 #     tibble(date=dates),
-#     count(smps, date)
+#     count(smp, date)
 #   ) %>%
 #   replace_na(list(n=0))
 #
@@ -103,8 +103,8 @@ objs <- objs_full[, c('profile_id', 'object_id', 'depth', 'group', 'group_lineag
 
 # simple time line
 # with some latitude resolution
-(p_ts <- ggplot(smps) +
   geom_point(aes(x=datetime, y=cut(lat, c(-90,-30,30,90))),
+(p_ts <- ggplot(smp) +
              shape="|", alpha=0.1, size=4)+
   labs(x="Date of profile", y="Latitude"))
 
@@ -112,13 +112,13 @@ objs <- objs_full[, c('profile_id', 'object_id', 'depth', 'group', 'group_lineag
 ## Depth distribution ----
 
 # compute maximum depth per profile and add it to the samples table
-smps <- left_join(
-  x = smps,
-  y = vols %>%
-    group_by(profile_id) %>%
+smp <- left_join(
+  x = smp,
+  y = vol %>%
+    group_by(sample_id) %>%
     summarise(max_depth=max(mid_depth_bin)) %>%
     ungroup(),
-  by ="profile_id"
+  by ="sample_id"
 )
 
 # sqrt transform for negative values
@@ -130,7 +130,7 @@ neg_sqrt_trans <- function() {
                     domain = c(0, Inf))
 }
 
-(p_depth <- ggplot(smps) +
+(p_depth <- ggplot(smp) +
   geom_histogram(aes(y=-max_depth), binwidth=1) +
   scale_y_continuous(
     # nice breaks
@@ -170,17 +170,17 @@ prep_map_data<-function(lineage){
   for(layer in layers){
     start_layer = layer[1]
     end_layer = layer[2]
-    data <- unique(objs[c("profile_id", "object_id", "depth", "group", "group_lineage")]) %>%
+    data <- unique(obj[c("profile_id", "object_id", "depth", "group", "group_lineage")]) %>%
       filter(between(depth, start_layer, end_layer)) %>%
       filter(startsWith(group_lineage, lineage)|startsWith(group, lineage)) %>%
       merge(
         x = .,
-        y = unique(smps[c("profile_id", "lat", "lon" )]),
+        y = unique(smp[c("profile_id", "lat", "lon" )]),
         by = "profile_id",
         all.x = TRUE
       ) %>%
       group_by(profile_id)%>% add_tally()
-      final_map_data_layer <- vols %>%
+      final_map_data_layer <- vol %>%
         filter(between(mid_depth_bin, start_layer, end_layer)) %>%
         group_by(profile_id)%>%
         summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)%>%
@@ -240,7 +240,7 @@ prep_profiles_for_pertinent_categories_data<-function(){
   # select only lineages taxa
   #"not-living/detritus", "Trichodesmium", "Phaeodaria", "Copepoda"
   #groups = list("Trichodesmium")
-  groups = unique(  objs %>%
+  groups = unique(  obj %>%
                       filter(startsWith(group_lineage, 'living') | startsWith(group_lineage, 'not-living/detritus') ) %>%
                       .$group)
 
@@ -249,11 +249,11 @@ prep_profiles_for_pertinent_categories_data<-function(){
   # 0,100 / 100,200 / 200,1000 / 1000,6000
   layers=list( list(0,100), list(100,200), list(200,1000),list(1000,6000))
 
-  merged_data <- unique(objs[c("profile_id", "object_id", "depth", "group", "group_lineage")])%>%
+  merged_data <- unique(obj[c("profile_id", "object_id", "depth", "group", "group_lineage")])%>%
     filter(startsWith(group_lineage, 'living') | startsWith(group_lineage, 'not-living/detritus') )  %>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id", "lat" )]),
+      y = unique(smp[c("profile_id", "lat" )]),
     )
 
   #### cons_data
@@ -266,7 +266,7 @@ prep_profiles_for_pertinent_categories_data<-function(){
     start_layer = layer[1]
     end_layer = layer[2]
 
-    vols_layer <- vols %>%
+    vol_layer <- vol %>%
       filter(between(mid_depth_bin, start_layer, end_layer)) %>%
       group_by(profile_id)%>%
       summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
@@ -276,7 +276,7 @@ prep_profiles_for_pertinent_categories_data<-function(){
         filter(between(depth, start_layer, end_layer)) %>%
         filter(startsWith(group, taxo)) %>%
         merge(x=.,
-              y=vols_layer,
+              y=vol_layer,
               all.y = TRUE
         ) %>%
         group_by(profile_id, tot_vol_m3)%>%
@@ -367,11 +367,11 @@ ggsave(file="data/final/plot_concentration_bar.pdf", width=30*1.5, height=19*1.5
 ######## TEST DATA ########
 ######## TEST DATA ########
 
-final_data <- unique(objs[c("profile_id", "object_id",  "depth", "esd_mm", "group_lineage")]) %>%
+final_data <- unique(obj[c("profile_id", "object_id",  "depth", "esd_mm", "group_lineage")]) %>%
   filter(depth<=100)  %>%
   merge(
     x = .,
-    y = unique(smps[c("profile_id","uvp_model", "project")]),
+    y = unique(smp[c("profile_id","uvp_model", "project")]),
     by = "profile_id",
     all.x = TRUE)%>%
   filter(str_detect(project, 'ccelter')|str_detect(project, '_lter'))%>%
@@ -398,11 +398,11 @@ max(detritus %>% filter(startsWith(uvp_model, "SD"))%>%.$esd_mm) #[1] 40.45944
 prep_size_distribution_per_version_data<-function(model){
   # SD or HD
   #versions=list("SD","HD")
-  tot_vol_0_100_m3=vols %>%
+  tot_vol_0_100_m3=vol %>%
     filter(mid_depth_bin<=200)%>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id", "lat", "lon", "uvp_model", "project")]%>%
+      y = unique(smp[c("profile_id", "lat", "lon", "uvp_model", "project")]%>%
                    filter(startsWith(uvp_model, model))),
       #%>%filter(stringr::str_detect(project, 'tara') ) ),
       by = "profile_id",
@@ -411,11 +411,11 @@ prep_size_distribution_per_version_data<-function(model){
     summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
 
   #filter(startsWith(group_lineage, 'living') |
-  final_data <- unique(objs[c("profile_id", "object_id", "depth", "esd_mm", "group", "group_lineage")]) %>%
+  final_data <- unique(obj[c("profile_id", "object_id", "depth", "esd_mm", "group", "group_lineage")]) %>%
     filter(depth<=200)%>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id","uvp_model", "lat", "lon", "project")]%>%
+      y = unique(smp[c("profile_id","uvp_model", "lat", "lon", "project")]%>%
                    filter(startsWith(uvp_model, model))),
       #%>%filter(stringr::str_detect(project, 'tara') ) ),
       by = "profile_id",
@@ -564,10 +564,10 @@ prep_profiles_for_pertinent_categories_data<-function(){
   # 0,100 / 100,200 / 200,1000 / 1000,6000
   layers=list(list(1000,6000), list(200,1000), list(100,200), list(0,100))
 
-  merged_data <- unique(objs[c("profile_id", "object_id", "depth", "esd_mm", "group", "group_lineage")]) %>%
+  merged_data <- unique(obj[c("profile_id", "object_id", "depth", "esd_mm", "group", "group_lineage")]) %>%
     merge(
       x = .,
-      y = unique(smps[c("profile_id", "lat" )]),
+      y = unique(smp[c("profile_id", "lat" )]),
     )
 
   #### esd_data
@@ -604,7 +604,7 @@ prep_profiles_for_pertinent_categories_data<-function(){
           filter(between(lat, start_lat, end_lat))%>%
           filter(between(depth, start_layer, end_layer)) %>%
           merge(x=.,
-                y=vols %>%
+                y=vol %>%
                   filter(between(mid_depth_bin, start_layer, end_layer)) %>%
                   group_by(profile_id)%>%
                   summarise(tot_vol_m3 = sum(water_volume_imaged)/1000)
@@ -690,10 +690,10 @@ ggsave(file="data/final/plot_vertical_profiles.pdf", width=30, height=40, unit="
 # "UVP project name" , EcotaxaID, "Profiles", "Images", "Time periode", "Latitude range", "Longitude range", "UVP manager(s)"
 projects <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
 
-merged_data <- unique(objs[c("profile_id", "object_id")]) %>%
+merged_data <- unique(obj[c("profile_id", "object_id")]) %>%
   merge(
     x = .,
-    y = unique(smps[c("profile_id", "project", "lat", "lon", "datetime" )]),
+    y = unique(smp[c("profile_id", "project", "lat", "lon", "datetime" )]),
   )  %>%
   merge(x=.,
            y=projects[c("ptitle", "data_owner", "projid", "title")],
