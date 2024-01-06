@@ -49,49 +49,22 @@ rep_imgs <- obj %>%
     lim <- 10^5
     if (nrow(x) > lim) { x <- sample_n(x, lim) }
 
-    # perform a PCA on a few variables to organise the iamges
+    # avoid images too wide which would distort the table
+    x <- filter(x, width < 1000)
+
+    # perform a PCA on a few variables to organise the images
     sp <- FactoMineR::PCA(select(x, area_mm2, major_mm, mean, median, fractal, perimmajor, elongation, `circ.`), graph=FALSE)
 
-    # extract coordinates and cos2 in the PC1, PC2 plane
-    coords <- sp$ind$coord[,1:2] %>% as_tibble()
-    coords <- bind_cols(coords, cos2=rowSums(sp$ind$cos2[,1:2]), select(x, sample_id, object_id))
-    # NB: add sample_id and object_id to be able to get to the corresponding image file
+    # get representative images along the first PC
+    # TODO: get some along the second PC too
+    library("FNN")
+    coords <- sp$ind$coord[,1:4] %>% as_tibble()
+    query <- tibble(Dim.1=quantile(coords$Dim.1, probs=c(0.1, 0.3, 0.5, 0.7, 0.9)), Dim.2=0, Dim.3=0, Dim.4=0)
+    nn <- get.knnx(coords, query, k=1)
 
-    # extract 5 representative objects: in the middle, low/high on PC1, low/high on PC2
-    target_quantiles <- tribble(
-      ~pPC1, ~pPC2,
-      0   ,  0    ,
-      0.15,  0    ,
-      0.85,  0    ,
-      0   ,  0.15 ,
-      0   ,  0.85 ,
-    )
-    selected_objects <- target_quantiles %>%
-      rowwise() %>%
-      do({
-        # target finely around the quantiles of interest
-        coord_tol <- 0.05
-        # and along the PC1/PC2 plane
-        cos2_thresh <- 0.8
-        x <- tibble()
-        while (nrow(x) == 0) {
-          qPC1 <- quantile(coords$Dim.1, probs=.$pPC1)
-          qPC2 <- quantile(coords$Dim.2, probs=.$pPC2)
-          x <- filter(coords,
-            between(Dim.1, qPC1-coord_tol, qPC1+coord_tol) &
-            between(Dim.2, qPC2-coord_tol, qPC2+coord_tol) &
-            cos2>cos2_thresh
-          )
-          # widen the criteria if needed
-          coord_tol <- coord_tol * 1.2
-          cos2_thresh <- cos2_thresh * 0.9
-        }
-        # TODO this selects several times the same image; seems like a bad idea. Just use distance from the target quantiles!
-        # once there is at least one row in the selection, extract one at random
-        sample_n(x, 1)
-      })
-    selected_objects %>%
-      mutate(
+    # extract the path to the image
+    x[nn$nn.index,] %>%
+      transmute(
         # compute image path
         img_path=file.path(img_dir, sample_id, str_c(object_id, ".jpg")),
         # add group
@@ -108,11 +81,11 @@ rep_imgs %>%
   select(group, n, img_path) %>%
   pivot_wider(names_from=n, values_from=img_path) %>%
   gt() %>%
-  gt_img_rows(columns=`1`, img_source="local", height = 40) %>%
-  gt_img_rows(columns=`2`, img_source="local", height = 40) %>%
-  gt_img_rows(columns=`3`, img_source="local", height = 40) %>%
-  gt_img_rows(columns=`4`, img_source="local", height = 40) %>%
-  gt_img_rows(columns=`5`, img_source="local", height = 40)
+  gt_img_rows(columns=`1`, img_source="local", height = 100) %>%
+  gt_img_rows(columns=`2`, img_source="local", height = 100) %>%
+  gt_img_rows(columns=`3`, img_source="local", height = 100) %>%
+  gt_img_rows(columns=`4`, img_source="local", height = 100) %>%
+  gt_img_rows(columns=`5`, img_source="local", height = 100)
 
 
 ## Map ----
