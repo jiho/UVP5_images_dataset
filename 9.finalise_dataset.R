@@ -24,7 +24,7 @@ filter(samples, projid==149)$datetime
 
 
 # reformat to write it to the final file
-samples %>%
+smp <- samples %>%
   left_join(select(projects, pprojid, ptitle)) %>%
   select(
     sample_id=sampleid, sample_name=profile_name, project=ptitle,
@@ -37,16 +37,16 @@ samples %>%
       pixel_size > 0.14 ~ "SD",
       TRUE ~ "ZD"
     )
-  ) %>%
-  fwrite(file="data/final/samples.tsv.gz", sep="\t", na="NA")
+  )
+fwrite(smp, file="data/final/samples.tsv.gz", sep="\t", na="NA")
 
 ## Volume table ----
 
 # read water volume
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
-volume %>%
-  rename(sample_id=sampleid) %>%
-  fwrite(file="data/final/samples_volume.tsv.gz", sep="\t", na="NA")
+vol <- volume %>%
+  rename(sample_id=sampleid)
+fwrite(vol, file="data/final/samples_volume.tsv.gz", sep="\t", na="NA")
 
 
 ## Object table -----
@@ -54,7 +54,7 @@ volume %>%
 o <- read_feather(file.path(data_dir, "all.feather"))
 projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
 
-o_s <- o %>%
+obj <- o %>%
   # add "anonymized" user names
   mutate(classif_author=paste0("user_", last_annotator_id)) %>%
   # NB: user paste0 and not str_c because there are NA users
@@ -74,14 +74,14 @@ o_s <- o %>%
     area:skeleton_area
   )
 
-fwrite(o_s, file="data/final/objects.tsv.gz", sep="\t", na="NA")
+fwrite(obj, file="data/final/objects.tsv.gz", sep="\t", na="NA")
 
 
 ## Concentrations/biovolume table ----
 
 # check data quality
-sum(is.na(o_s$vol_mm3))
-sum(is.na(volume$water_volume_imaged))
+sum(is.na(obj$vol_mm3))
+sum(is.na(vol$water_volume_imaged))
 # -> OK
 
 source("data/final/compute_concentrations_biovolumes.R", chdir=TRUE)
