@@ -1,8 +1,10 @@
 #
-# Read the final dataset and make some plots
+# Read the final data set and make some plots
+# Plots will illustrate https://docs.google.com/document/d/1nUb19jq9p106nR3EphhlgrMRpp5PhvGQeblGGSIOBRo/
 #
 # (c) 2021 Jean-Olivier Irisson, 2022 Julie Coustenoble, GNU General Public License v3
 
+source("0.setup.R")
 library("tidyverse")
 library("scales")
 library("nbssr")
@@ -12,6 +14,16 @@ library(data.table)
 source("nbss_function.R")
 
 
+# ESSD:
+# width:  single column = 8.5cm; double column = 17.7 cm
+# height: total page = 23 cm
+# multiplier for ggplot = 2
+w <- 8.5   * 2
+w2 <- 17.7 * 2
+h <- 23    * 2
+
+
+dir.create("plots", showWarnings=FALSE)
 
 ## Read data ----
 
