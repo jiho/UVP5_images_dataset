@@ -86,7 +86,8 @@ rep_imgs %>%
   gt_img_rows(columns=`2`, img_source="local", height = 100) %>%
   gt_img_rows(columns=`3`, img_source="local", height = 100) %>%
   gt_img_rows(columns=`4`, img_source="local", height = 100) %>%
-  gt_img_rows(columns=`5`, img_source="local", height = 100)
+  gt_img_rows(columns=`5`, img_source="local", height = 100) %>%
+  tab_options(column_labels.hidden=TRUE)
 
 
 ## Map ----
