@@ -180,8 +180,9 @@ ggsave(file="plots/map_timeline_depth.png", width=w2, height=8.18*2, unit="cm")
 
 ## Fig 3: Barplot of total number of images per taxon ----
 
-count(obj, group) %>%
-  arrange(n) %>%
+taxa_counts <- count(obj, group) %>%
+  arrange(n)
+taxa_counts %>%
   mutate(group=factor(group, levels=group)) %>%
   ggplot() +
   geom_bar(aes(x=group, y=n), stat="identity") +
