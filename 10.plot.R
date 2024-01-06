@@ -90,8 +90,9 @@ rep_imgs %>%
   tab_options(column_labels.hidden=TRUE)
 
 
-## Map ----
+## Fig 2: Spatio-temporal extent ----
 
+# Piece 1: Map
 (p_map <- ggplot(mapping=aes(lon, lat)) +
   # coastline
   # NB: coord_map does weird things to the polar polygons...
@@ -121,9 +122,7 @@ rep_imgs %>%
   theme (axis.title=element_blank())
 )
 
-## Temporal distribution ----
-
-# simple time line
+# Piece 2: time-line
 # with some latitude resolution
 (p_ts <- ggplot(smp) +
   geom_point(aes(x=datetime, y=cut(lat, c(-90, -30, 30, 90), labels=c("]90°S,30°S]", "]30°S,30°N]", "]30°N,90°N]")), colour=uvp_model),
@@ -132,8 +131,7 @@ rep_imgs %>%
   labs(x="Date of profile", y="Latitude"))
 
 
-## Depth distribution ----
-
+# Piece 3: Depth distribution
 # compute maximum depth per profile and add it to the samples table
 smp <- left_join(
   x = smp,
@@ -164,8 +162,7 @@ neg_sqrt_trans <- function() {
   ) +
   labs(x="Nb of profiles", y="Maximum depth [m]"))
 
-
-## Fig 2: Spatio-temporal extent ----
+# Put everything together
 
 # layout the plot
 layout <- "
@@ -181,7 +178,7 @@ ggsave(file="plots/map_timeline_depth.pdf", width=w2, height=8.18*2, unit="cm")
 ggsave(file="plots/map_timeline_depth.png", width=w2, height=8.18*2, unit="cm")
 
 
-## Barplot of total number of images per taxon ----
+## Fig 3: Barplot of total number of images per taxon ----
 
 count(obj, group) %>%
   arrange(n) %>%
