@@ -38,10 +38,83 @@ vol <- read_tsv("data/final/samples_volume.tsv.gz")
 obj <- read_tsv("data/final/objects.tsv.gz")
 cbv <- read_tsv("data/final/concentrations_biovolumes.tsv.gz")
 
-## Table of images of consistent categories ----
-# morphological PCA per category and pick something in the middle
+## Fig 1. Table of images of consistent categories ----
 
-### FIGURE 1 :
+# extract representative images
+rep_imgs <- obj %>%
+  group_by(group) %>%
+  do({
+    x <- .
+
+    # limit number of objects (for not_plankton)
+    lim <- 10^5
+    if (nrow(x) > lim) { x <- sample_n(x, lim) }
+
+    # perform a PCA on a few variables to organise the iamges
+    sp <- FactoMineR::PCA(select(x, area_mm2, major_mm, mean, median, fractal, perimmajor, elongation, `circ.`), graph=FALSE)
+
+    # extract coordinates and cos2 in the PC1, PC2 plane
+    coords <- sp$ind$coord[,1:2] %>% as_tibble()
+    coords <- bind_cols(coords, cos2=rowSums(sp$ind$cos2[,1:2]), select(x, sample_id, object_id))
+    # NB: add sample_id and object_id to be able to get to the corresponding image file
+
+    # extract 5 representative objects: in the middle, low/high on PC1, low/high on PC2
+    target_quantiles <- tribble(
+      ~pPC1, ~pPC2,
+      0   ,  0    ,
+      0.15,  0    ,
+      0.85,  0    ,
+      0   ,  0.15 ,
+      0   ,  0.85 ,
+    )
+    selected_objects <- target_quantiles %>%
+      rowwise() %>%
+      do({
+        # target finely around the quantiles of interest
+        coord_tol <- 0.05
+        # and along the PC1/PC2 plane
+        cos2_thresh <- 0.8
+        x <- tibble()
+        while (nrow(x) == 0) {
+          qPC1 <- quantile(coords$Dim.1, probs=.$pPC1)
+          qPC2 <- quantile(coords$Dim.2, probs=.$pPC2)
+          x <- filter(coords,
+            between(Dim.1, qPC1-coord_tol, qPC1+coord_tol) &
+            between(Dim.2, qPC2-coord_tol, qPC2+coord_tol) &
+            cos2>cos2_thresh
+          )
+          # widen the criteria if needed
+          coord_tol <- coord_tol * 1.2
+          cos2_thresh <- cos2_thresh * 0.9
+        }
+        # TODO this selects several times the same image; seems like a bad idea. Just use distance from the target quantiles!
+        # once there is at least one row in the selection, extract one at random
+        sample_n(x, 1)
+      })
+    selected_objects %>%
+      mutate(
+        # compute image path
+        img_path=file.path(img_dir, sample_id, str_c(object_id, ".jpg")),
+        # add group
+        group=x$group[1]
+      )
+  }) %>%
+  ungroup()
+
+# plot them
+library("gt")
+library("gtExtras")
+rep_imgs %>%
+  mutate(n=rep(1:5, times=length(unique(group)))) %>%
+  select(group, n, img_path) %>%
+  pivot_wider(names_from=n, values_from=img_path) %>%
+  gt() %>%
+  gt_img_rows(columns=`1`, img_source="local", height = 40) %>%
+  gt_img_rows(columns=`2`, img_source="local", height = 40) %>%
+  gt_img_rows(columns=`3`, img_source="local", height = 40) %>%
+  gt_img_rows(columns=`4`, img_source="local", height = 40) %>%
+  gt_img_rows(columns=`5`, img_source="local", height = 40)
+
 
 ## Map ----
 
