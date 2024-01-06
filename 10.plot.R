@@ -228,6 +228,50 @@ concs %>%
 ggsave("plots/concentrations_with_depth.pdf", width=w, height=w*1.5, unit="cm")
 ggsave("plots/concentrations_with_depth.png", width=w, height=w*1.5, unit="cm")
 
+## Fig 5: Size spectrum ----
+# Histogram/spectrum of the size of the ~five most abundant taxa + detritus separating 0:200m and 200m:bottom
+
+# compute volume sampled in each depth bin
+vol_per_bin <- vol %>%
+  mutate(depth_bin=cut(mid_depth_bin, breaks=c(0,200,4000), include.lowest=TRUE)) %>%
+  group_by(sample_id, depth_bin) %>%
+  summarise(water_volume_imaged=sum(water_volume_imaged), .groups="drop")
+
+obj_s <- obj %>%
+  select(sample_id, object_id, depth, group, esd_mm, vol_mm3) %>%
+  # keep only abundant taxa
+  filter(group %in% c(abundant_taxa, "not_plankton")) %>%
+  # add UVP model and keep only HD and SD
+  left_join(select(smp, sample_id, uvp_model)) %>%
+  filter(uvp_model!="ZD") %>%
+  # separate in two depth bins
+  mutate(depth_bin=cut(depth, breaks=c(0,200,4000), include.lowest=TRUE)) %>%
+  drop_na(depth_bin) %>%
+  # compute "unitary" concentrations (to serve as weights in the NBSS computation)
+  left_join(vol_per_bin) %>%
+  mutate(conc=1/water_volume_imaged)
+
+# check
+sum(is.na(obj_s$conc))
+# -> OK
+
+library("nbssr")
+NBSS <- obj_s %>%
+  group_by(group, depth_bin, uvp_model) %>%
+  do({
+    nbss(.$vol_mm3, w=.$conc, binwidth=0.2)
+  }) %>%
+  ungroup()
+
+NBSS %>%
+  filter(bin <= 10000) %>%
+  ggplot() +
+    facet_grid(depth_bin~group) +
+    geom_point(aes(x=bin, y=norm_y, colour=uvp_model), size=0.5, alpha=0.5) +
+    scale_x_log10() + scale_y_log10() +
+    theme(panel.grid.minor=element_blank()) +
+    labs(x="Object volume (mm3)", y="Normalised volume (mm3/L/mm3)")
+
 ### Concentration map
 
 prep_map_data<-function(lineage){
