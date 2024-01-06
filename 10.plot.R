@@ -232,6 +232,20 @@ ggsave(file="plots/map_timeline_depth.pdf", width=w2, height=8.18*2, unit="cm")
 ggsave(file="plots/map_timeline_depth.png", width=w2, height=8.18*2, unit="cm")
 
 
+## Barplot of total number of images per taxon ----
+
+count(obj, group) %>%
+  arrange(n) %>%
+  mutate(group=factor(group, levels=group)) %>%
+  ggplot() +
+  geom_bar(aes(x=group, y=n), stat="identity") +
+  scale_y_continuous(trans="sqrt") +
+  labs(y="Nb of objects in data set", x=NULL) +
+  coord_flip()
+ggsave("plots/barplot_per_taxon.pdf", width=w, height=w*1.5, unit="cm")
+ggsave("plots/barplot_per_taxon.png", width=w, height=w*1.5, unit="cm")
+# TODO give nicer names (no _, blabla_others -> other Blabla, etc.)
+
 ### Concentration map
 
 prep_map_data<-function(lineage){
