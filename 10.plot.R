@@ -176,9 +176,10 @@ rep_imgs %>%
 
 # simple time line
 # with some latitude resolution
-  geom_point(aes(x=datetime, y=cut(lat, c(-90,-30,30,90))),
 (p_ts <- ggplot(smp) +
+  geom_point(aes(x=datetime, y=cut(lat, c(-90, -30, 30, 90), labels=c("]90°S,30°S]", "]30°S,30°N]", "]30°N,90°N]")), colour=uvp_model),
              shape="|", alpha=0.1, size=4)+
+  scale_colour_discrete(guide="none") +
   labs(x="Date of profile", y="Latitude"))
 
 
