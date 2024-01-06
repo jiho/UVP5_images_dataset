@@ -216,7 +216,7 @@ neg_sqrt_trans <- function() {
   labs(x="Nb of profiles", y="Maximum depth [m]"))
 
 
-## Combine the three plots ----
+## Fig 2: Spatio-temporal extent ----
 
 # layout the plot
 layout <- "
@@ -225,12 +225,12 @@ AAAAB
 AAAAB
 CCCCB
 "
-p_map + p_depth + p_ts +plot_layout(design=layout)
+p_map + p_depth + p_ts + plot_layout(design=layout)
 
 # and save
-ggsave(file="data/final/plot_samples.pdf", width=19*1.5, height=9*1.5, unit="cm")
+ggsave(file="plots/map_timeline_depth.pdf", width=w2, height=8.18*2, unit="cm")
+ggsave(file="plots/map_timeline_depth.png", width=w2, height=8.18*2, unit="cm")
 
-# God do I love patchwork!
 
 ### Concentration map
 
