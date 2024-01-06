@@ -189,9 +189,8 @@ taxa_counts %>%
   scale_y_continuous(trans="sqrt") +
   labs(y="Nb of objects in data set", x=NULL) +
   coord_flip()
-ggsave("plots/barplot_per_taxon.pdf", width=w, height=w*1.5, unit="cm")
-ggsave("plots/barplot_per_taxon.png", width=w, height=w*1.5, unit="cm")
-# TODO give nicer names (no _, blabla_others -> other Blabla, etc.)
+ggsave("plots/number_per_taxon.pdf", width=w, height=w*1.5, unit="cm")
+ggsave("plots/number_per_taxon.png", width=w, height=w*1.5, unit="cm")
 
 ### Concentration map
 
