@@ -123,31 +123,6 @@ rep_imgs %>%
 
 ## Temporal distribution ----
 
-# time series of number of profiles per month
-
-# library("lubridate")
-#
-# # compute a regular sequence of dates
-# smp$date <- as.Date(smp$datetime)
-# start <- min(smp$date)
-# end   <- max(smp$date) + months(1)
-# dates <- seq(start, end, by="1 month")
-# day(dates) <- 15
-#
-# # compute the number of profiles per month
-# # and add zeroes
-# day(smp$date) <- 15
-# ts <- left_join(
-#     tibble(date=dates),
-#     count(smp, date)
-#   ) %>%
-#   replace_na(list(n=0))
-#
-# # plot
-# ts %>%
-#   ggplot() +
-#   geom_line(aes(x=date, y=n))
-
 # simple time line
 # with some latitude resolution
 (p_ts <- ggplot(smp) +
