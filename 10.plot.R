@@ -52,14 +52,15 @@ rep_imgs <- obj %>%
     # avoid images too wide which would distort the table
     x <- filter(x, width < 1000)
 
-    # perform a PCA on a few variables to organise the images
+    # perform a PCA, based on a few variables, to organise the images
     sp <- FactoMineR::PCA(select(x, area_mm2, major_mm, mean, median, fractal, perimmajor, elongation, `circ.`), graph=FALSE)
 
     # get representative images along the first PC
-    # TODO: get some along the second PC too
     library("FNN")
     coords <- sp$ind$coord[,1:4] %>% as_tibble()
-    query <- tibble(Dim.1=quantile(coords$Dim.1, probs=c(0.1, 0.3, 0.5, 0.7, 0.9)), Dim.2=0, Dim.3=0, Dim.4=0)
+    qPC1 <- quantile(coords$Dim.1, probs=c(0.15, 0.85))
+    qPC2 <- quantile(coords$Dim.2, probs=c(0.15, 0.85))
+    query <- tibble(Dim.1=c(0, qPC1[1], qPC1[2], 0, 0), Dim.2=c(0, 0, 0, qPC2[1], qPC2[2]), Dim.3=0, Dim.4=0)
     nn <- get.knnx(coords, query, k=1)
 
     # extract the path to the image
