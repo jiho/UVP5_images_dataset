@@ -84,4 +84,14 @@ sum(is.na(obj$vol_mm3))
 sum(is.na(vol$water_volume_imaged))
 # -> OK
 
-source("data/final/compute_concentrations_biovolumes.R", chdir=TRUE)
+# get the function to compute the concentrations/biovolumes
+source("data/final/compute_concentrations_biovolumes.R")
+
+# define broad depth bins (as in EcoPart)
+ecopart_bins <- c(0, 25, 50, 75, 100, 125, 150, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800, 900, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3250, 3500, 3750, 4000, 4250, 4500, 4750, 5000, 5250, 5500, 5750, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000)
+
+res <- compute_conc_biovol(obj, vol, depth_breaks=ecopart_bins)
+
+# write the final data set to disk
+write_tsv(res, file="data/final/concentrations_biovolumes.tsv.gz")
+
