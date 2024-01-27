@@ -1,13 +1,13 @@
 # (c) 2024 Jean-Olivier Irisson, GNU General Public License v3
 
-#' Compute concentrations and biovolume per profile, taxonomic group and depth bin
+#' Compute concentration, biovolume, and average grey level per profile, taxonomic group and depth bin
 #'
-#' @param obj data.frame with sample_id, group, depth and vol_mm3
+#' @param obj data.frame with sample_id, group, depth, vol_mm3, and mean (mean grey)
 #' @param vol data.frame with sample_id, mid_depth_bin, water_volume_imaged
 #' @param depth_breaks vector of depth values delimiting bins
 #'
 #' @returns A data.frame with sample_id, depth_bin, group, concentration, biovolume.
-compute_conc_biovol <- function(obj, vol, depth_breaks=c(0,100)) {
+properties_per_bin <- function(obj, vol, depth_breaks=c(0,100)) {
   if (length(depth_breaks) < 2) {
     stop("Need at least two depths to define a bin")
   }
@@ -34,7 +34,7 @@ compute_conc_biovol <- function(obj, vol, depth_breaks=c(0,100)) {
     # for each depth bin of each profile, for each group (including those absent)
     dplyr::group_by(sample_id, depth_bin, group, .drop=FALSE) %>%
     # compute abundance and total volume
-    dplyr::summarise(n=n(), vol=sum(vol_mm3), .groups="drop") %>%
+    dplyr::summarise(n=n(), vol=sum(vol_mm3), avg_grey=mean(mean), .groups="drop") %>%
     # add water volume sampled
     dplyr::inner_join(vol_per_bin) %>% # NB: using inner_join reduces to completely sampled bins
     # and compute concentrations and biovolumes
@@ -43,7 +43,7 @@ compute_conc_biovol <- function(obj, vol, depth_breaks=c(0,100)) {
       biovolume=vol/water_volume_imaged,
     ) %>%
     # re-order, subset and rename columns
-    dplyr::select(sample_id, depth_bin, group, concentration, biovolume)
+    dplyr::select(sample_id, depth_bin, group, concentration, biovolume, avg_grey)
 
   return(res)
 }

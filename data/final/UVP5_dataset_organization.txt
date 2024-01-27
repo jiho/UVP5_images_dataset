@@ -48,10 +48,11 @@ Along a profile, the UVP takes many images, each of a fixed volume. The profiles
 
 ## concentrations_biovolumes.tsv.gz
 
-The information above allows to compute concentrations and biovolumes. The code to do so is in `compute_concentrations_biovolumes.R`.
+The information above allows to compute concentrations, biovolumes, and average grey level within a given depth bin. The code to do so is in `summarise_objects_properties.R`.
 
     sample_id     <int>   unique sample identifier
     depth_range   <text>  range of depth over which the concentration/biovolume are computed : (start,end], in [m] where `(` means not including, `]` means including
     group         <text>  broad taxonomic group
     concentration <float> concentration [ind/L]
     biovolume     <float> biovolume [mm3/L]
+    avg_grey      <float> average grey level of particles [no unit; 0 is black, 255 is white]

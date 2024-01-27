@@ -205,7 +205,7 @@ abundant_taxa <- taxa_counts %>%
 source("data/final/compute_concentrations_biovolumes.R")
 concs <- obj %>%
   filter(group %in% c("not_plankton", abundant_taxa)) %>%
-  compute_conc_biovol(vol, depth_breaks=c(0, 100, 500, 1000, 2000, 4000))
+  properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000, 2000, 4000))
 
 # plot
 concs %>%
