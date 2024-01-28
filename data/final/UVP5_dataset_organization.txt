@@ -46,7 +46,7 @@ Along a profile, the UVP takes many images, each of a fixed volume. The profiles
     ...
     skeleton_area    <float>
 
-## concentrations_biovolumes.tsv.gz
+## properties_per_bin.tsv.gz
 
 The information above allows to compute concentrations, biovolumes, and average grey level within a given depth bin. The code to do so is in `summarise_objects_properties.R`.
 
@@ -56,3 +56,7 @@ The information above allows to compute concentrations, biovolumes, and average 
     concentration <float> concentration [ind/L]
     biovolume     <float> biovolume [mm3/L]
     avg_grey      <float> average grey level of particles [no unit; 0 is black, 255 is white]
+
+## ODV_biovolumes.txt, ODV_concentrations.txt, ODV_grey_levels.txt
+
+This is the same information as above, formatted in a way that Ocean Data View https://odv.awi.de can read. In ODV, go to Import > ODV Spreadsheet and accept all default choices.

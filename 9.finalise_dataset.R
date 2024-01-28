@@ -71,7 +71,7 @@ obj <- o %>%
 fwrite(obj, file="data/final/objects.tsv.gz", sep="\t", na="NA")
 
 
-## Concentrations/biovolume table ----
+## Concentrations/biovolume/grey level table ----
 
 # check data quality
 sum(is.na(obj$vol_mm3))
@@ -89,3 +89,56 @@ res <- properties_per_bin(obj, vol, depth_breaks=ecopart_bins)
 # write the final data set to disk
 write_tsv(res, file="data/final/properties_per_bin.tsv.gz")
 
+# Reformat as ODV
+# reformat depth bin into a single depth = the middle
+bins <- distinct(res, depth_bin) %>%
+  mutate(depth=depth_bin %>% as.character() %>% str_remove_all("[\\[\\]\\(]")) %>%
+  separate(depth, into=c("depth_min","depth_max"), sep=",", convert=TRUE) %>%
+  mutate(`Depth [m]:PRIMARYVAR:DOUBLE`=(depth_min + depth_max)/2) %>%
+  select(-depth_min, -depth_max)
+
+# add relevant metadata for ODV
+meta <- samples %>%
+  select(pprojid, sample_id=sampleid, `Station:METAVAR:TEXT`=profile_name, `Latitude [degrees_north]:METAVAR:DOUBLE`=lat, `Longitude [degrees_east]:METAVAR:DOUBLE`=lon) %>%
+  left_join(select(projects, pprojid, `Cruise:METAVAR:TEXT`=ptitle)) %>%
+  relocate(`Cruise:METAVAR:TEXT`, .after="sample_id") %>%
+  select(-pprojid)
+
+# add metadata and depth bins
+res_odv <- res %>%
+  left_join(meta) %>%
+  left_join(bins) %>%
+  # keep only relevant columns
+  select(`Cruise:METAVAR:TEXT`:`Depth [m]:PRIMARYVAR:DOUBLE`, group, concentration:avg_grey) %>%
+  # replace NaNs by NA
+  replace_na(list(avg_grey=NA))
+
+# reshape in wide format, for ODV to be able to draw profiles
+odv_conc <- res_odv %>%
+  select(-biovolume, -avg_grey) %>%
+  mutate(group=str_c(group, " [# l-1]")) %>%
+  pivot_wider(names_from="group", values_from="concentration")
+
+odv_biov <- res_odv %>%
+  select(-concentration, -avg_grey) %>%
+  mutate(group=str_c(group, " [mm3 l-1]")) %>%
+  pivot_wider(names_from="group", values_from="biovolume")
+
+odv_grey <- res_odv %>%
+  select(-concentration, -biovolume) %>%
+  mutate(group=str_c(group, " [int8]")) %>%
+  pivot_wider(names_from="group", values_from="avg_grey")
+
+# write to disk (with minimal metadata)
+write_odv <- function(x, file) {
+  cat("//<Creator>Jean-Olivier Irisson (jean-olivier.irisson@imev-mer.fr)</Creator>
+//<CreateTime>", Sys.time() %>% format("%Y-%m-%dT%H:%M:%S"), "</CreateTime>
+//<DataField>Ocean</DataField>
+//<DataType>Profiles</DataType>
+//<Method>Data from the Underwater Vision Profiler. The UVP is designed for the quantification of particles and large plankton in the water column. Light reflected by undisturbed target objects forms a dark-field image.</Method>
+", file=file, sep="")
+  fwrite(x, file=file, sep="\t", append=TRUE, col.names=TRUE, na="")
+}
+write_odv(odv_conc, "data/final/ODV_concentrations.txt")
+write_odv(odv_biov, "data/final/ODV_biovolumes.txt")
+write_odv(odv_grey, "data/final/ODV_grey_levels.txt")
