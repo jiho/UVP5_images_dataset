@@ -37,7 +37,7 @@ zero_variance_vars <- names(vars)[vars ==0]
 o <- select(o, -all_of(zero_variance_vars))
 
 # remove variables with too many NAs
-nb_NAs <- sapply(o_s, function(x) {sum(is.na(x))}) %>% sort()
+nb_NAs <- sapply(o, function(x) {sum(is.na(x))}) %>% sort()
 o <- select(o, -perimareaexc, -feretareaexc, -cdexc)
 # NB: this probably comes from the definition of area_exc in the UVP as the "surface of holes", not the surface excluding holes; see https://sites.google.com/view/piqv/zooprocess
 
@@ -132,7 +132,7 @@ count(oc, lineage, taxon, taxo_id=classif_id) %>%
 # remove irrelevant variables and reorder columns
 select(oc,
        # identifiers
-       projid, sampleid, objid, objname=origid, uvp_model,
+       projid, sampleid, objid, objname=origid,
        # image
        file_name,
        # taxonomy
