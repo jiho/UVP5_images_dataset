@@ -8,5 +8,6 @@ data/UVP5_volumes.tsv.gz
 data/UVP5_taxo_base.tsv
 data/final/*.tsv.gz
 data/final/ODV_*
+data/final/*.zip
 old/
 plots/

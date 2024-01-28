@@ -142,3 +142,12 @@ write_odv <- function(x, file) {
 write_odv(odv_conc, "data/final/ODV_concentrations.txt")
 write_odv(odv_biov, "data/final/ODV_biovolumes.txt")
 write_odv(odv_grey, "data/final/ODV_grey_levels.txt")
+
+
+## Zip the final folder, for distribution ----
+
+wd <- getwd()
+setwd("data/final/")
+files <- list.files(".")
+zip(zipfile="UVP5.zip", files=files)
+setwd(wd)
