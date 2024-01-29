@@ -24,8 +24,8 @@ samples <- tbl(dbp, "part_samples") %>%
 
 # check unicity
 sum(duplicated(samples$sampleid))
-filter(samples, sampleid %in% samples$sampleid[duplicated(samples$sampleid)])
-# some EcoPart samples are not associated with EcoTaxa samples -> remove them
+(dup_samples <- samples$sampleid[duplicated(samples$sampleid)])
+# the "duplicated" ones are NA = EcoPart samples not associated with EcoTaxa samples => remove them
 samples <- drop_na(samples, sampleid)
 
 # get sorting stats of those samples
@@ -47,7 +47,7 @@ samples_classif_stats <- samples_classif %>%
     # NB: we consider the dubious too, since several objects were reassessed as dubious in Tara samples since the initial data set extraction
   ) %>%
   # add the psampleid and profile_name
-  left_join(samples)
+  left_join(samples, by="sampleid")
 
 # check for unicity
 sum(duplicated(samples$sampleid))
@@ -75,12 +75,12 @@ selected_samples_info <- tbl(dbp, "part_samples") %>%
     comment
   ) %>%
   # compute depth offset from project level default and sample level one
-  left_join(tbl(dbp, "part_projects") %>% select(pprojid, default_depthoffset)) %>%
+  left_join(tbl(dbp, "part_projects") %>% select(pprojid, default_depthoffset), by="pprojid") %>%
   mutate(depth_offset=ifelse(is.na(acq_depthoffset), default_depthoffset, acq_depthoffset)) %>%
   select(-acq_depthoffset, -default_depthoffset) %>%
   collect() %>%
   # add EcoTaxa project id
-  left_join(select(selected_projects, pprojid, projid)) %>%
+  left_join(select(selected_projects, pprojid, projid), by="pprojid") %>%
   relocate(projid, .before="sampleid") %>%
   arrange(sampleid)
 
@@ -94,11 +94,11 @@ write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
 ## Compare with the original selection by Thelma and Laetitia ----
 
 # read the samples used by Thelma and Laetitia
-thelma_samples <- read_csv("data/list_profiles_ecopart-thelma.csv", col_types=cols()) %>%
+thelma_samples <- read_csv("data/list_profiles_ecopart-thelma.csv", show_col_types=FALSE) %>%
   select(title=ecotaxa, ptitle=ecopart, profile_name=profiles) %>%
   separate_rows(profile_name, sep=",")
 
-laeti_samples <- read_csv("data/list_profiles-laetitia.csv") %>%
+laeti_samples <- read_csv("data/list_profiles-laetitia.csv", show_col_types=FALSE) %>%
   rename(ptitle=pproject, profile_name=profile)
 
 # get our current selection of samples
@@ -109,7 +109,7 @@ current_samples <- selected_samples_info %>%
 
 # profiles in Thelma's selection but not in ours
 missing_wr_thelma <- filter(thelma_samples, ! profile_name %in% current_samples$profile_name) %>%
-  left_join(samples_classif_stats) %>%
+  left_join(samples_classif_stats, by="profile_name") %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
 # print(missing_wr_thelma, n=200)
@@ -120,7 +120,7 @@ missing_wr_thelma <- filter(thelma_samples, ! profile_name %in% current_samples$
 
 # do the same for Laetitia's selection
 missing_wr_laeti <- filter(laeti_samples, ! profile_name %in% current_samples$profile_name) %>%
-  left_join(samples_classif_stats) %>%
+  left_join(samples_classif_stats, by=c("psampleid", "profile_name", "sampleid")) %>%
   select(ptitle, sampleid, profile_name, percent_validated) %>%
   arrange(ptitle, profile_name)
 # print(missing_wr_laeti, n=200)
@@ -139,7 +139,7 @@ unique(thelma_samples$title) %>% sort()
 
 # show the profiles
 extra_in_current <- extra_in_current %>%
-  left_join(samples_classif_stats) %>%
+  left_join(samples_classif_stats, by=c("psampleid", "profile_name", "sampleid")) %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
 # print(extra_in_current, n=500)
