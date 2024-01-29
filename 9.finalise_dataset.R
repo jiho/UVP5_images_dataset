@@ -149,5 +149,6 @@ write_odv(odv_grey, "data/final/ODV_grey_levels.txt")
 wd <- getwd()
 setwd("data/final/")
 files <- list.files(".")
-zip(zipfile="UVP5.zip", files=files)
+# zip(zipfile="UVP5.zip", files=files)
+# TODO add images! put in the the large data section
 setwd(wd)
