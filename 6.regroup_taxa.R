@@ -21,10 +21,10 @@ library("arrow")
 read_tsv("data/UVP5_taxo.tsv", show_col_types=FALSE) %>%
   left_join(
     read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv", col_types=cols()) %>%
-    select(-taxon, -n),
+    select(-taxon, -taxo_id, -n),
     by="lineage"
   ) %>%
-  write_tsv("data/UVP5_taxo_base.tsv")
+  write_tsv("data/UVP5_taxo_base.tsv", na="")
 # now copy-paste that in the Google Sheet
 
 
