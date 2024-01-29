@@ -139,11 +139,11 @@ setdiff(unique(extra_in_current$title),unique(thelma_samples$title)) %>% sort()
 unique(thelma_samples$title) %>% sort()
 # -> mostly adding GEOMAR cruises
 
-extra_in_current %>%
-  left_join(samples_classif_stats) %>%
-  select(title, sampleid, profile_name, percent_validated) %>%
-  arrange(title, profile_name) %>%
-  print(n=500)
-# -> 445 extra profiles
-#    some are probably due to the 99% instead of 100% validated criterion
-#    others have been added by Laetitia and Rainer (Geomar ones)
+# extra_in_current %>%
+#   left_join(samples_classif_stats) %>%
+#   select(title, sampleid, profile_name, percent_validated) %>%
+#   arrange(title, profile_name) %>%
+#   print(n=500)
+# # -> 445 extra profiles
+# #    some are probably due to the 99% instead of 100% validated criterion
+# #    others have been added by Laetitia and Rainer (Geomar ones)
