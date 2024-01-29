@@ -108,24 +108,22 @@ current_samples <- selected_samples_info %>%
   left_join(select(projects, pprojid, projid, ptitle, title), by=c("pprojid", "projid"))
 
 # profiles in Thelma's selection but not in ours
-missing_wr_thelma <- filter(thelma_samples, ! profile_name %in% current_samples$profile_name)
-
-# inspect which and why
-missing_wr_thelma %>%
+missing_wr_thelma <- filter(thelma_samples, ! profile_name %in% current_samples$profile_name) %>%
   left_join(samples_classif_stats) %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
+# print(missing_wr_thelma, n=200)
 # -> four samples (an1304_l2_002, 4, 5, 6) are missing in EcoPart now...
 #    moose samples seem to have changed (low validated percentage), for no known reason
-#    samples from 'UVP5 Geomar 2017 m135' are not selected. possibly because they are close to 99% val but not above (maybe we used 98% in the past?)
+#    samples from 'UVP5 Geomar 2017 m135' are not selected anymore because othertocheck have been predicted and the validation percentage is <99 now.
 #    uvp5_sn009_2015_p16n now has no images in it
 
 # do the same for Laetitia's selection
-missing_wr_laeti <- filter(laeti_samples, ! profile_name %in% current_samples$profile_name)
-missing_wr_laeti %>%
+missing_wr_laeti <- filter(laeti_samples, ! profile_name %in% current_samples$profile_name) %>%
   left_join(samples_classif_stats) %>%
   select(ptitle, sampleid, profile_name, percent_validated) %>%
   arrange(ptitle, profile_name)
+# print(missing_wr_laeti, n=200)
 # -> same as above: missing from an1304 and 'UVP5 Geomar 2017 m135'
 
 # profiles in our selection but not in Thelma's
@@ -139,11 +137,13 @@ setdiff(unique(extra_in_current$title),unique(thelma_samples$title)) %>% sort()
 unique(thelma_samples$title) %>% sort()
 # -> mostly adding GEOMAR cruises
 
-# extra_in_current %>%
-#   left_join(samples_classif_stats) %>%
-#   select(title, sampleid, profile_name, percent_validated) %>%
-#   arrange(title, profile_name) %>%
-#   print(n=500)
-# # -> 445 extra profiles
-# #    some are probably due to the 99% instead of 100% validated criterion
-# #    others have been added by Laetitia and Rainer (Geomar ones)
+# show the profiles
+extra_in_current <- extra_in_current %>%
+  left_join(samples_classif_stats) %>%
+  select(title, sampleid, profile_name, percent_validated) %>%
+  arrange(title, profile_name)
+# print(extra_in_current, n=500)
+# -> 445 extra profiles
+#    some are probably due to the 99% instead of 100% validated criterion
+#    new profiles in AN Arctique possibly balancing the "lost" ones
+#    others have been added by Laetitia and Rainer (Geomar ones)
