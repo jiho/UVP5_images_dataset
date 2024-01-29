@@ -66,51 +66,46 @@ g <- read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2
 
 # compute some stats to get an idea how important resorting would be
 stats <- count(o, group) %>%
-  mutate(perc=n/sum(n)*100) %>%
   arrange(desc(n))
-
-not_liv_groups <- c("not_plankton", "bubble")
-unsure_groups <- c("to_check", "to_resort", "to_rename")
-
-# various totals
-tot <- sum(stats$n)
-tot_not_liv <- stats %>%
-  filter(group %in% not_liv_groups) %>%
+# compute percentage of total and among living groups
+not_liv_groups <- c("Not plankton")
+tot_liv <- stats %>%
+  filter(!group %in% not_liv_groups) %>%
   pluck("n") %>% sum()
-tot_liv <- tot - tot_not_liv
-
+stats <- stats %>%
+  mutate(
+    perc=n/sum(n)*100,
+    perc_liv=n/tot_liv * 100
+  )
+# print(stats, n=100)
 
 # relevant stats
-tot_not_liv / tot * 100
-# [1] 91.93313
+filter(stats, group=="Not plankton")
 # -> 92% of not living
 
-tot_unsure <- stats %>%
-  filter(group %in% unsure_groups) %>%
-  pluck("n") %>% sum()
-tot_unsure / tot_liv * 100
-# [1] 7.779978
-# -> 8% of unsure stuff among the living
+stats %>%
+  filter(group %in% str_subset(stats$group, "to_")) %>%
+  pluck("perc_liv") %>% sum()
+# -> ~5% of living stuff that still need some actions
 
-g %>% filter(group_final=="to_decide_lov")
-(stats %>% filter(group=="to_decide_lov") %>% pluck("n")) / tot_liv * 100
-# [1] 21.528
-# -> 21.5% to decide where to place -> mostly Tichodesmium (not puff and tuff) + Diatoma
+filter(stats, group=="possibly plankton")
+# -> <1% of the living is in a group we're not sure about
 
-(stats %>% filter(group=="misc") %>% pluck("n")) / tot_liv * 100
-# [1] 0.8561318
-# -> 1% of the living is in a group we're not sure about
+# prepare emails regarding what to do
+taxa_to_review <- filter(g, !is.na(comment_final))$taxon %>% unique()
 
+# extract count of objects to review per project
 to_review <- o %>%
   select(projid, lineage, taxon, group_lineage, group) %>%
-  filter(group %in% unsure_groups) %>%
+  filter(taxon %in% taxa_to_review) %>%
   count(projid, taxon)
 
 # add other relevant info
 to_review <- to_review %>%
-  left_join(select(g, taxon, taxo_id, comment=comment_final)) %>%
-  left_join(select(proj, projid, title, data_owner))
+  left_join(select(g, taxon, taxo_id, comment=comment_final), by="taxon") %>%
+  left_join(select(proj, projid, title, data_owner), by="projid")
 
+# prepare emails
 cat("", file="data/emails.txt")
 to_review %>%
   group_by(data_owner) %>% group_walk(function(.x, .y) {

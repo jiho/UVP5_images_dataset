@@ -3,6 +3,12 @@
 
 ## Project uvp5_sn009_2015_p16n : https://ecotaxa.obs-vlfr.fr/prj/43
 
+review 'ball with spines' [n=48], https://ecotaxa.obs-vlfr.fr/prj/43?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=222], https://ecotaxa.obs-vlfr.fr/prj/43?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/43?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=70], https://ecotaxa.obs-vlfr.fr/prj/43?taxo=85069
 ↳  could some of the content be classified in some categories now?
 review 't001' [n=1], https://ecotaxa.obs-vlfr.fr/prj/43?taxo=85012
@@ -27,7 +33,7 @@ review 't008' [n=1], https://ecotaxa.obs-vlfr.fr/prj/43?taxo=85019
 
 ## Project UVP5hd msm060 (2017) : https://ecotaxa.obs-vlfr.fr/prj/351
 
-review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/351?taxo=11758
+review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/351?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 
 ----
@@ -37,6 +43,8 @@ review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/351?taxo=11758
 
 ## Project UVP5 DY032 205 : https://ecotaxa.obs-vlfr.fr/prj/40
 
+review 'ball with spines' [n=5], https://ecotaxa.obs-vlfr.fr/prj/40?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=68], https://ecotaxa.obs-vlfr.fr/prj/40?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
@@ -53,13 +61,15 @@ review 'othertocheck' [n=3], https://ecotaxa.obs-vlfr.fr/prj/3?taxo=85069
 
 ## Project UVP5 DEWEX 2013 (spring) : https://ecotaxa.obs-vlfr.fr/prj/4
 
+review 'ball with spines' [n=20], https://ecotaxa.obs-vlfr.fr/prj/4?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=27], https://ecotaxa.obs-vlfr.fr/prj/4?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
 
 ## Project UVP5 MALINA 2009 : https://ecotaxa.obs-vlfr.fr/prj/28
 
-review 'Chattonella' [n=1], https://ecotaxa.obs-vlfr.fr/prj/28?taxo=2367
+review 'Chattonella' [n=1], https://ecotaxa.obs-vlfr.fr/prj/28?taxo=13760
 ↳  typo for Chaetognatha?
 review 'othertocheck' [n=81], https://ecotaxa.obs-vlfr.fr/prj/28?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -67,43 +77,73 @@ review 'othertocheck' [n=81], https://ecotaxa.obs-vlfr.fr/prj/28?taxo=85069
 
 ## Project UVP5 MooseGE 2012 2013 2014 2015 2016 : https://ecotaxa.obs-vlfr.fr/prj/30
 
-review 'Copelatus' [n=1], https://ecotaxa.obs-vlfr.fr/prj/30?taxo=50141
+review 'Copelatus' [n=1], https://ecotaxa.obs-vlfr.fr/prj/30?taxo=50328
 ↳  typo for Copepoda?
-review 'Ctenophora pulchella' [n=2], https://ecotaxa.obs-vlfr.fr/prj/30?taxo=28280
+review 'Ctenophora pulchella' [n=2], https://ecotaxa.obs-vlfr.fr/prj/30?taxo=28092
 ↳  typo for Ctenophora in Metazoa?
+review 'ball with spines' [n=17], https://ecotaxa.obs-vlfr.fr/prj/30?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=8], https://ecotaxa.obs-vlfr.fr/prj/30?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
 
 ## Project UVP5 SOMBA 2014 : https://ecotaxa.obs-vlfr.fr/prj/36
 
-review 'duplicate' [n=1], https://ecotaxa.obs-vlfr.fr/prj/36?taxo=2
+review 'ball with spines' [n=4], https://ecotaxa.obs-vlfr.fr/prj/36?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=1], https://ecotaxa.obs-vlfr.fr/prj/36?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'helix' [n=1], https://ecotaxa.obs-vlfr.fr/prj/36?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=4], https://ecotaxa.obs-vlfr.fr/prj/36?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
 
 ## Project UVP5 CASSIOPEE 2015 : https://ecotaxa.obs-vlfr.fr/prj/38
 
+review 'ball with spines' [n=7], https://ecotaxa.obs-vlfr.fr/prj/38?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/38?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=42], https://ecotaxa.obs-vlfr.fr/prj/38?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
 
 ## Project UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014) : https://ecotaxa.obs-vlfr.fr/prj/45
 
-review 'duplicate' [n=147], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=2
+review 'ball with spines' [n=4], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=20], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=62], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=147], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=10], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=11758
+review 'helix' [n=2], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=10], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=671], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'spiky caps' [n=195], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=94156
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'star with ball' [n=4], https://ecotaxa.obs-vlfr.fr/prj/45?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5zd CCELTER 2011 : https://ecotaxa.obs-vlfr.fr/prj/50
 
-review 'duplicate' [n=102], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=2
+review 'ball with spines' [n=15], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=53], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=29], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=102], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=155], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=11758
+review 'like<Acantharea' [n=155], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=539], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -111,8 +151,18 @@ review 'othertocheck' [n=539], https://ecotaxa.obs-vlfr.fr/prj/50?taxo=85069
 
 ## Project UVP5zd KEOPS : https://ecotaxa.obs-vlfr.fr/prj/56
 
+review 'ball with spines' [n=2], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=4], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=7], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'fiber spring' [n=944], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=94158
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'gelatinous' [n=11], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=85070
 ↳  could this be placed in Cnidaria at least, or not even?
+review 'helix' [n=1], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=56], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=85069
 ↳  could some of the content be classified in some categories now?
 review 'tentacle<gelatinous' [n=1], https://ecotaxa.obs-vlfr.fr/prj/56?taxo=94129
@@ -129,6 +179,8 @@ review 'tentacle<gelatinous' [n=1], https://ecotaxa.obs-vlfr.fr/prj/107?taxo=941
 
 ## Project UVP5 LOHAFEX 2009 : https://ecotaxa.obs-vlfr.fr/prj/109
 
+review 'beanlike' [n=2], https://ecotaxa.obs-vlfr.fr/prj/109?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'gelatinous' [n=135], https://ecotaxa.obs-vlfr.fr/prj/109?taxo=85070
 ↳  could this be placed in Cnidaria at least, or not even?
 review 'othertocheck' [n=228], https://ecotaxa.obs-vlfr.fr/prj/109?taxo=85069
@@ -137,10 +189,16 @@ review 'othertocheck' [n=228], https://ecotaxa.obs-vlfr.fr/prj/109?taxo=85069
 
 ## Project UVP5 OPEREX 2008 : https://ecotaxa.obs-vlfr.fr/prj/110
 
-review 'Enteropneusta<Hemichordata XX' [n=2], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=11498
+review 'Enteropneusta<Hemichordata XX' [n=2], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=26274
 ↳  typo for Enteropneusta<Hemichordata (rather than Enteropneusta<Hemichordata XX)?
-review 'duplicate' [n=21], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=2
+review 'beanlike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=21], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'helix' [n=1], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'multiple organisms' [n=1], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=93952
 ↳  rename as multiple<living
 review 'othertocheck' [n=93], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=85069
@@ -151,18 +209,30 @@ review 't002' [n=1], https://ecotaxa.obs-vlfr.fr/prj/110?taxo=85013
 
 ## Project UVP5 BOUM 2008 : https://ecotaxa.obs-vlfr.fr/prj/122
 
-review 'duplicate' [n=25], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=2
+review 'ball with spines' [n=51], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=6], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=25], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
 review 'gelatinous' [n=1169], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=85070
 ↳  could this be placed in Cnidaria at least, or not even?
-review 'like<Acantharea' [n=19], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=11758
+review 'hairy capsule' [n=101], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=94159
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'helix' [n=6], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=19], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=111], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=29], https://ecotaxa.obs-vlfr.fr/prj/122?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5hd GreenEdge 2016 : https://ecotaxa.obs-vlfr.fr/prj/149
 
+review 'nucleus with four arms' [n=21], https://ecotaxa.obs-vlfr.fr/prj/149?taxo=94160
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=354], https://ecotaxa.obs-vlfr.fr/prj/149?taxo=85069
 ↳  could some of the content be classified in some categories now?
 review 'tentacle<gelatinous' [n=1], https://ecotaxa.obs-vlfr.fr/prj/149?taxo=94129
@@ -171,16 +241,30 @@ review 'tentacle<gelatinous' [n=1], https://ecotaxa.obs-vlfr.fr/prj/149?taxo=941
 
 ## Project UVP5 Geomar 2013 m92 : https://ecotaxa.obs-vlfr.fr/prj/556
 
+review 'ball with spines' [n=2], https://ecotaxa.obs-vlfr.fr/prj/556?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=7], https://ecotaxa.obs-vlfr.fr/prj/556?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'helix' [n=1], https://ecotaxa.obs-vlfr.fr/prj/556?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=222], https://ecotaxa.obs-vlfr.fr/prj/556?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
 
 ## Project UVP5 Geomar 2013 m93 : https://ecotaxa.obs-vlfr.fr/prj/563
 
-review 'duplicate' [n=28], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=2
+review 'ball with spines' [n=2], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=42], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=13], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=28], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=11758
+review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
+review 'nucleus with four arms' [n=10], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=94160
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=1359], https://ecotaxa.obs-vlfr.fr/prj/563?taxo=85069
 ↳  could some of the content be classified in some categories now?
 
@@ -199,14 +283,26 @@ review 't006' [n=77], https://ecotaxa.obs-vlfr.fr/prj/578?taxo=85017
 
 ## Project UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013) : https://ecotaxa.obs-vlfr.fr/prj/579
 
-review 'Chattonella' [n=2], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=2367
+review 'Chattonella' [n=2], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=13760
 ↳  typo for Chaetognatha?
-review 'duplicate' [n=18], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=2
+review 'ball with spines' [n=20], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=31], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=7], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=18], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=83], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=11758
+review 'helix' [n=2], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'lightsphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=93388
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=83], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=1599], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'sphere<othertocheck' [n=4], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=94147
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 't001' [n=16], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=85012
 ↳  should be given a descriptive name (e.g ball with spines, thin and dark rod, etc.) and be branched as deep as possible (even if this is not very deep) in the tree of life.
 review 't003' [n=20], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=85014
@@ -223,28 +319,52 @@ review 'tentacle<gelatinous' [n=19], https://ecotaxa.obs-vlfr.fr/prj/579?taxo=94
 
 ## Project UVP5 Geomar 2012 msm23 : https://ecotaxa.obs-vlfr.fr/prj/584
 
-review 'Chaetachme' [n=3], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=18378
+review 'Chaetachme' [n=3], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=85886
 ↳  typo for Chaethognata?
-review 'Solanales' [n=1], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=11921
+review 'Solanales' [n=1], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=18378
 ↳  typo for something else?
-review 'duplicate' [n=33], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=2
+review 'ball with spines' [n=24], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=133], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=33], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'elongated star with ball' [n=8], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'lightsphere' [n=10], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=93388
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=343], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'spiky caps' [n=110], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=94156
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'star with ball' [n=29], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 't018' [n=1], https://ecotaxa.obs-vlfr.fr/prj/584?taxo=85143
 ↳  should be given a descriptive name (e.g ball with spines, thin and dark rod, etc.) and be branched as deep as possible (even if this is not very deep) in the tree of life.
 
 
 ## Project UVP5 Geomar 2014 msm40 : https://ecotaxa.obs-vlfr.fr/prj/587
 
+review 'beanlike' [n=2], https://ecotaxa.obs-vlfr.fr/prj/587?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/587?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 't006' [n=2], https://ecotaxa.obs-vlfr.fr/prj/587?taxo=85017
 ↳  should be given a descriptive name (e.g ball with spines, thin and dark rod, etc.) and be branched as deep as possible (even if this is not very deep) in the tree of life.
 
 
 ## Project UVP5 Geomar 2015 msm049 : https://ecotaxa.obs-vlfr.fr/prj/588
 
-review 'duplicate' [n=4], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=2
+review 'ball with spines' [n=4], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=21], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=4], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'elongated star with ball' [n=2], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=196], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=85069
 ↳  could some of the content be classified in some categories now?
 review 't001' [n=1], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=85012
@@ -253,10 +373,24 @@ review 't001' [n=1], https://ecotaxa.obs-vlfr.fr/prj/588?taxo=85012
 
 ## Project UVP5 Geomar 2012 msm22 : https://ecotaxa.obs-vlfr.fr/prj/593
 
-review 'duplicate' [n=70], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=2
+review 'ball with spines' [n=98], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=164], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=5], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=70], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'elongated star with ball' [n=14], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'hairy capsule' [n=32], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=94159
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=438], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'protist with spike' [n=4], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=94162
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'star with ball' [n=24], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 ----
 
@@ -265,8 +399,16 @@ review 'othertocheck' [n=438], https://ecotaxa.obs-vlfr.fr/prj/593?taxo=85069
 
 ## Project UVP5hd NAAMES02 : https://ecotaxa.obs-vlfr.fr/prj/146
 
+review 'ball with spines' [n=16], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'caps with filament' [n=2], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=94136
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'gelatinous' [n=76], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=85070
 ↳  could this be placed in Cnidaria at least, or not even?
+review 'lightsphere' [n=3], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=93388
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=132], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=85069
 ↳  could some of the content be classified in some categories now?
 review 'part<other' [n=57], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=85068
@@ -286,11 +428,23 @@ review 't003' [n=83], https://ecotaxa.obs-vlfr.fr/prj/146?taxo=85014
 ## Project UVP5 OUTPACE 2015 : https://ecotaxa.obs-vlfr.fr/prj/37
 
 review 'Actinoallomurus' [n=1], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=486
-↳  typo for something else?
-review 'duplicate' [n=50], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=2
+↳  typo for Actinopterygii?
+review 'ball with spines' [n=28], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=12], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=2], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=50], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'elongated star with ball' [n=4], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'helix' [n=4], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=238], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=13], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 ----
 
@@ -299,12 +453,18 @@ review 'othertocheck' [n=238], https://ecotaxa.obs-vlfr.fr/prj/37?taxo=85069
 
 ## Project UVP5 Sargasso 2014 (sargasso_a sargasso_b) : https://ecotaxa.obs-vlfr.fr/prj/22
 
-review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=2
+review 'ball with spines' [n=1], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=11758
+review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=112], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=1], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 ----
 
@@ -313,7 +473,7 @@ review 'othertocheck' [n=112], https://ecotaxa.obs-vlfr.fr/prj/22?taxo=85069
 
 ## Project UVP5 AN Arctique (an1304 an1405 an1407) part A to validate : https://ecotaxa.obs-vlfr.fr/prj/41
 
-review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/41?taxo=2
+review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/41?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
 review 'othertocheck' [n=378], https://ecotaxa.obs-vlfr.fr/prj/41?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -323,7 +483,7 @@ review 'part<other' [n=1710], https://ecotaxa.obs-vlfr.fr/prj/41?taxo=85068
 
 ## Project UVP5 GREEN EDGE Ice Camp 2015 : https://ecotaxa.obs-vlfr.fr/prj/42
 
-review 'duplicate' [n=378], https://ecotaxa.obs-vlfr.fr/prj/42?taxo=2
+review 'duplicate' [n=378], https://ecotaxa.obs-vlfr.fr/prj/42?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
 review 'othertocheck' [n=6397], https://ecotaxa.obs-vlfr.fr/prj/42?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -331,7 +491,9 @@ review 'othertocheck' [n=6397], https://ecotaxa.obs-vlfr.fr/prj/42?taxo=85069
 
 ## Project UVP5 IPS Amundsen 2018 : https://ecotaxa.obs-vlfr.fr/prj/1165
 
-review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/1165?taxo=2
+review 'darkrods' [n=14], https://ecotaxa.obs-vlfr.fr/prj/1165?taxo=94072
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/1165?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
 review 'othertocheck' [n=42], https://ecotaxa.obs-vlfr.fr/prj/1165?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -343,60 +505,112 @@ review 'othertocheck' [n=42], https://ecotaxa.obs-vlfr.fr/prj/1165?taxo=85069
 
 ## Project UVP5 Geomar 2017 fluxes1 : https://ecotaxa.obs-vlfr.fr/prj/507
 
-review 'Ctenoides' [n=6], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=12906
+review 'Ctenoides' [n=6], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=52166
 ↳  typo for Ctenophora?
-review 'Thecocodium' [n=2], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=51380
+review 'Thecocodium' [n=2], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=93092
 ↳  typo for Thecosomata?
-review 'duplicate' [n=99], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=2
+review 'ball with spines' [n=62], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=106], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=91], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=99], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=11758
+review 'elongated star with ball' [n=20], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'helix' [n=2], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=867], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'protist with spike' [n=3], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=94162
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'star with ball' [n=1], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 't002' [n=75], https://ecotaxa.obs-vlfr.fr/prj/507?taxo=85013
 ↳  should be given a descriptive name (e.g ball with spines, thin and dark rod, etc.) and be branched as deep as possible (even if this is not very deep) in the tree of life.
 
 
 ## Project UVP5 Geomar 2017 m135 : https://ecotaxa.obs-vlfr.fr/prj/548
 
-review 'Ctenophora XX' [n=4], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=16695
+review 'Ctenophora XX' [n=4], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=16691
 ↳  typo for Ctenophora?
+review 'ball with spines' [n=9], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=156], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'gelatinous' [n=1], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=85070
 ↳  could this be placed in Cnidaria at least, or not even?
+review 'nucleus with four arms' [n=3], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=94160
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=46], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=2], https://ecotaxa.obs-vlfr.fr/prj/548?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2014 ps88b : https://ecotaxa.obs-vlfr.fr/prj/558
 
-review 'duplicate' [n=22], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=2
+review 'ball with spines' [n=66], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=180], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=5], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=22], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=5], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=11758
+review 'like<Acantharea' [n=5], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'multiple organisms' [n=3], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=93952
 ↳  rename as multiple<living
 review 'othertocheck' [n=582], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=25], https://ecotaxa.obs-vlfr.fr/prj/558?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2014 m107 : https://ecotaxa.obs-vlfr.fr/prj/559
 
-review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=2
+review 'ball with spines' [n=5], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=91], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=6], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=15], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=16], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=11758
+review 'helix' [n=3], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=16], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=434], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=6], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 't019' [n=1], https://ecotaxa.obs-vlfr.fr/prj/559?taxo=85144
 ↳  should be given a descriptive name (e.g ball with spines, thin and dark rod, etc.) and be branched as deep as possible (even if this is not very deep) in the tree of life.
 
 
 ## Project UVP5 Geomar 2015 m121 : https://ecotaxa.obs-vlfr.fr/prj/560
 
-review 'Echidnophaga' [n=1], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=11514
+review 'Echidnophaga' [n=1], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=50141
 ↳  typo for Echinodermata?
-review 'duplicate' [n=13], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=2
+review 'ball with spines' [n=54], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=66], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=13], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'elongated star with ball' [n=1], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'multiple organisms' [n=1], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=93952
 ↳  rename as multiple<living
 review 'othertocheck' [n=192], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=85069
@@ -409,23 +623,45 @@ review 't019' [n=4], https://ecotaxa.obs-vlfr.fr/prj/560?taxo=85144
 
 ## Project UVP5 Geomar 2014 m108 : https://ecotaxa.obs-vlfr.fr/prj/586
 
+review 'ball with spines' [n=3], https://ecotaxa.obs-vlfr.fr/prj/586?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=4], https://ecotaxa.obs-vlfr.fr/prj/586?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=19], https://ecotaxa.obs-vlfr.fr/prj/586?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=2], https://ecotaxa.obs-vlfr.fr/prj/586?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2015 m116 : https://ecotaxa.obs-vlfr.fr/prj/589
 
-review 'Chaeteessa' [n=1], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=50328
+review 'Chaeteessa' [n=1], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=50757
 ↳  typo for Chaethognatha?
-review 'duplicate' [n=24], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=2
+review 'ball with spines' [n=74], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=173], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=2], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=2], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=24], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
+review 'elongated star with ball' [n=11], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=399], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=31], https://ecotaxa.obs-vlfr.fr/prj/589?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2015 m120 : https://ecotaxa.obs-vlfr.fr/prj/594
 
-review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/594?taxo=11758
+review 'ball with spines' [n=1], https://ecotaxa.obs-vlfr.fr/prj/594?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'hairy capsule' [n=1], https://ecotaxa.obs-vlfr.fr/prj/594?taxo=94159
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/594?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=23], https://ecotaxa.obs-vlfr.fr/prj/594?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -435,12 +671,26 @@ review 't011' [n=1], https://ecotaxa.obs-vlfr.fr/prj/594?taxo=85136
 
 ## Project UVP5 Geomar 2014 m106 : https://ecotaxa.obs-vlfr.fr/prj/595
 
-review 'duplicate' [n=21], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=2
+review 'ball with spines' [n=83], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=228], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=8], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=4], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=21], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=9], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=11758
+review 'elongated star with ball' [n=15], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'helix' [n=1], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=94135
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=9], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=528], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=24], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 't001' [n=1], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=85012
 ↳  should be given a descriptive name (e.g ball with spines, thin and dark rod, etc.) and be branched as deep as possible (even if this is not very deep) in the tree of life.
 review 't011' [n=14], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=85136
@@ -455,35 +705,65 @@ review 'tentacle<gelatinous' [n=2], https://ecotaxa.obs-vlfr.fr/prj/595?taxo=941
 
 ## Project UVP5 Geomar 2014 m105 : https://ecotaxa.obs-vlfr.fr/prj/602
 
-review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=11758
+review 'ball with spines' [n=21], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=11], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'elongated star with ball' [n=2], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=94155
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=2], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=44], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'protist with spike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=94162
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'star with ball' [n=3], https://ecotaxa.obs-vlfr.fr/prj/602?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2013 m98 : https://ecotaxa.obs-vlfr.fr/prj/610
 
-review 'duplicate' [n=13], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=2
+review 'ball with spines' [n=97], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=94134
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'beanlike' [n=78], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double spike' [n=1], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=94157
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=13], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=4], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=11758
+review 'like<Acantharea' [n=4], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
+review 'nucleus with four arms' [n=1], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=94160
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 review 'othertocheck' [n=664], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=3], https://ecotaxa.obs-vlfr.fr/prj/610?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2017 m138 : https://ecotaxa.obs-vlfr.fr/prj/622
 
-review 'duplicate' [n=1], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=2
+review 'beanlike' [n=9], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=93682
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'double sphere' [n=1], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=1], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=11758
+review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=152], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=85069
 ↳  could some of the content be classified in some categories now?
+review 'star with ball' [n=10], https://ecotaxa.obs-vlfr.fr/prj/622?taxo=94154
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
 
 
 ## Project UVP5 Geomar 2014  eddy : https://ecotaxa.obs-vlfr.fr/prj/881
 
-review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/881?taxo=11758
+review 'like<Acantharea' [n=1], https://ecotaxa.obs-vlfr.fr/prj/881?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=48], https://ecotaxa.obs-vlfr.fr/prj/881?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -499,9 +779,11 @@ review 't003' [n=1], https://ecotaxa.obs-vlfr.fr/prj/881?taxo=85014
 
 ## Project UVP5 CCELTER 2016 : https://ecotaxa.obs-vlfr.fr/prj/156
 
-review 'duplicate' [n=1043], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=2
+review 'double sphere' [n=13], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=1043], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=50], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=11758
+review 'like<Acantharea' [n=50], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=242], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=85069
 ↳  could some of the content be classified in some categories now?
@@ -509,9 +791,13 @@ review 'othertocheck' [n=242], https://ecotaxa.obs-vlfr.fr/prj/156?taxo=85069
 
 ## Project UVP5hd CCELTER 2017 : https://ecotaxa.obs-vlfr.fr/prj/627
 
-review 'duplicate' [n=3346], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=2
+review 'double sphere' [n=448], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=93679
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'duplicate' [n=3346], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=84961
 ↳  if these are small objects, they should be classified in the category they belong to; otherwise this biases the concentration. If this is a large object seen possibly outside the UVP beam of light, it should stay as duplicate.
-review 'like<Acantharea' [n=31], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=11758
+review 'elongated stick' [n=19], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=93680
+↳  could it be branched somewhere in the tree of life? If yes, tell us where.
+review 'like<Acantharea' [n=31], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=92053
 ↳  could they be renamed into something descriptive and be placed somewhere in the tree of life? Still in Rhizaria?
 review 'othertocheck' [n=1890], https://ecotaxa.obs-vlfr.fr/prj/627?taxo=85069
 ↳  could some of the content be classified in some categories now?
