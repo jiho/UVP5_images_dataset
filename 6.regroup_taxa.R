@@ -40,29 +40,20 @@ g <- subset(g, select = c(lineage, taxon, n, group))
 
 # Inspect the totals
 totals_by_groups <- g %>% group_by(group) %>% summarise(tot=sum(n)) %>% ungroup() %>% arrange(desc(tot)) %>% print()
-# # A tibble: 37 × 2
-#    group                           tot
-#    <chr>                         <dbl>
-#  1 not_plankton                7693152
-#  2 Copepoda                     176916
-#  3 Trichodesmium                100049
-#  4 Phaeodaria                    72507
-#  5 to_check                      67371
-#  6 to_resort                     27279
-#  7 Eumalacostraca                13496
-#  8 Acantharea                    13226
-#  9 bubble                         9318
-# 10 Hydrozoa_others                9227
-# 11 Appendicularia                 9026
-# 12 Collodaria_others              8523
-# 13 Ostracoda                      8037
-# 14 Chaetognatha                   7220
-# 15 tentacle<Cnidaria              6468
-# 16 misc                           5712
-# 17 Crustacea_others               5331
-# -> this is not super satisfying: the third most abundant biological group is ... to_check + to_resort !
-#    many of the "to_check" are Diatoma (44k), others are previous t0* that were renamed but not branched.
-#    among the "misc", the bulk are other<living (4k)
+# # A tibble: 39 × 2
+#    group                                  tot
+#    <chr>                                <dbl>
+#  1 Not plankton                       7619196
+#  2 Copepoda                            176916
+#  3 Trichodesmium                       100049
+#  4 Trichodesmium (contextual)           98956
+#  5 Phaeodaria                           72507
+#  6 Bacillariophyta (contextual)         44676
+#  7 to_resort                            21760
+#  8 Eumalacostraca                       13496
+#  9 Acantharea                           13226
+# 10 other Hydrozoa                        9227
+# -> this is not super satisfying: many are to_resort still...
 
 # Infer a lineage for the new grouping
 group_lineages <- distinct(g, lineage, group) %>%
