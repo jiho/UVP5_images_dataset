@@ -61,11 +61,12 @@ nrow(o) - nrow(o_wv)
 # removed 210,451 objects
 
 # remove objects with tag == 2 which correspond to faulty lights and/or upward movement during the downcast
-o_t <- filter(o_wv, tag != 2)
+o_t <- filter(o_wv, tag != 2) %>%
+  select(-tag)
 
 nrow(o_wv) - nrow(o_t)
 # removed 0 additional objects
-# TODO tag=2 does not seem set on the projects that need it
+# TODO tag=2 does not seem set on all projects that need it
 
 # remove objects corresponding to upward movement during the downcast
 # (that were not removed by the tag=2 filter above)
