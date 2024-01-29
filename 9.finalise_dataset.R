@@ -148,9 +148,17 @@ write_odv(odv_grey, "data/final/ODV_grey_levels.txt")
 
 ## Zip the final folder, for distribution ----
 
+# copy data to where the images are
+system(str_c("cp -R data/final ", data_dir, "/data"))
+
+# go there (to avoid long absolute paths)
 wd <- getwd()
-setwd("data/final/")
-files <- list.files(".")
-# zip(zipfile="UVP5.zip", files=files)
-# TODO add images! put in the the large data section
+setwd(data_dir)
+
+# create a tar achive of the content
+files <- list.files(c("final", "images"))
+tar_file <- str_c(data_dir, "/UVP5.tar")
+unlink(tar_file)
+tar(tar_file, files=files)
+
 setwd(wd)
