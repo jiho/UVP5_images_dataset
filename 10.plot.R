@@ -31,7 +31,6 @@ vol <- read_tsv("data/final/samples_volume.tsv.gz")
 
 # objects level (only the relevant variables)
 obj <- read_tsv("data/final/objects.tsv.gz")
-cbv <- read_tsv("data/final/concentrations_biovolumes.tsv.gz")
 
 ## Fig 1. Table of images of consistent categories ----
 
