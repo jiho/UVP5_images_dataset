@@ -72,7 +72,7 @@ rep_imgs <- obj %>%
 # plot them
 library("gt")
 library("gtExtras")
-rep_imgs %>%
+pic_tbl <- rep_imgs %>%
   mutate(n=rep(1:5, times=length(unique(group)))) %>%
   select(group, n, img_path) %>%
   pivot_wider(names_from=n, values_from=img_path) %>%
@@ -83,6 +83,8 @@ rep_imgs %>%
   gt_img_rows(columns=`4`, img_source="local", height = 100) %>%
   gt_img_rows(columns=`5`, img_source="local", height = 100) %>%
   tab_options(column_labels.hidden=TRUE)
+pic_tbl
+gtsave(pic_tbl, "plots/example_images.html")
 
 
 ## Fig 2: Spatio-temporal extent ----
