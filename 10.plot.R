@@ -203,32 +203,56 @@ abundant_taxa <- taxa_counts %>%
   head(5) %>%
   pluck("group")
 
-# compute concentrations and biovolume
+# compute concentrations, biovolume and grey level per profile
 source("data/final/compute_properties_per_bin.R")
-concs <- obj %>%
+props <- obj %>%
   filter(group %in% c("not_plankton", abundant_taxa)) %>%
-  properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000, 2000, 4000))
+  properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000, 2000, 4000)) %>%
+  mutate(depth_bin=ordered(depth_bin))
 
-# plot
-concs %>%
+# average across all profiles
+props_sum <- props %>%
   group_by(depth_bin, group) %>%
-  summarise(concentration=mean(concentration), biovolume=mean(biovolume), .groups="drop") %>%
+  summarise(
+    conc=mean(concentration),
+    biovol=mean(biovolume),
+    avg_grey=mean(avg_grey, na.rm=TRUE),
+    .groups="drop") %>%
   mutate(
     living=ifelse(group=="not_plankton", "Not plankton (marine snow, ...)", "Plankton"),
     group=as.character(group),
     group=ifelse(group=="not_plankton", NA, group),
     depth_bin=factor(depth_bin, levels=rev(unique(depth_bin)))
-  ) %>%
+  )
+
+# plot each variable
+bar_conc <- props_sum %>%
   ggplot() +
     facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
-    geom_bar(aes(y=depth_bin, x=biovolume, fill=group), stat="identity") +
-    labs(x="Biovolume (mm3/L)", y="Depth", fill="Taxon") +
-    theme(legend.position="bottom") +
+    geom_bar(aes(y=depth_bin, x=conc, fill=group), stat="identity") +
+    labs(x="Concentration (#/L)", y="Depth", fill="Taxon") +
     scale_fill_brewer(palette="Set1", na.value="grey40")
-# TODO do we use concentration or biovolume?
+bar_biov <- props_sum %>%
+  ggplot() +
+  facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
+  geom_bar(aes(y=depth_bin, x=biovol, fill=group), stat="identity") +
+  labs(x="Biovolume (mm3/L)", y="Depth", fill="Taxon") +
+  scale_fill_brewer(palette="Set1", na.value="grey40") +
+  theme(axis.text.y=element_blank(), axis.title.y=element_blank(), axis.ticks.y=element_blank())
+path_grey <- props_sum %>%
+  ggplot() +
+  facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
+  geom_path(aes(y=depth_bin, x=avg_grey, colour=group, group=group)) +
+  geom_point(aes(y=depth_bin, x=avg_grey, colour=group)) +
+  scale_x_continuous(limits=c(181,229)) +
+  labs(x="Average grey level (~ opacity)", y="Depth", fill="Taxon") +
+  scale_colour_brewer(palette="Set1", na.value="grey40", guide="none")+
+  theme(axis.text.y=element_blank(), axis.title.y=element_blank(), axis.ticks.y=element_blank())
 
-ggsave("plots/concentrations_with_depth.pdf", width=w, height=w*1.5, unit="cm")
-ggsave("plots/concentrations_with_depth.png", width=w, height=w*1.5, unit="cm")
+# combine the plots
+bar_conc + bar_biov + path_grey + plot_layout(guides = "collect") & theme(legend.position="bottom")
+ggsave("plots/conc_biovol_grey_with_depth.pdf", width=w2, height=w*1.2, unit="cm")
+
 
 ## Fig 5: Size spectrum ----
 # Histogram/spectrum of the size of the ~five most abundant taxa + detritus separating 0:200m and 200m:bottom
