@@ -4,8 +4,6 @@
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("ecotaxar")
-
 
 # read sample info
 samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols())
@@ -54,7 +52,7 @@ o <- o %>%
 # match with water volume imaged by depth bin
 o_wv <- o %>%
   mutate(mid_depth_bin=floor(depth/5)*5 + 2.5) %>%
-  inner_join(volume)
+  inner_join(volume, by=c("sampleid", "mid_depth_bin"))
 
 nrow(o) - nrow(o_wv)
 # removed 210,451 objects

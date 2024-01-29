@@ -30,7 +30,7 @@ read_tsv("data/UVP5_taxo.tsv", show_col_types=FALSE) %>%
 ## Apply it to the data ----
 
 # read the taxonomic grouping
-g <- read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv", col_types=cols()) %>%
+g <- read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv", show_col_types=FALSE) %>%
   # TODO replace by a static .csv file once this is stabilized
   rename(group=group_final)
 
@@ -38,7 +38,8 @@ g <- read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2
 g <- subset(g, select = c(lineage, taxon, n, group))
 
 # Inspect the totals
-totals_by_groups <- g %>% group_by(group) %>% summarise(tot=sum(n)) %>% ungroup() %>% arrange(desc(tot)) %>% print()
+totals_by_groups <- g %>% group_by(group) %>% summarise(tot=sum(n)) %>% ungroup() %>% arrange(desc(tot))
+# print(totals_by_groups)
 # # A tibble: 39 × 2
 #    group                                  tot
 #    <chr>                                <dbl>

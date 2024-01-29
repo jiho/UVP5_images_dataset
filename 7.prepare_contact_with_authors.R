@@ -10,7 +10,7 @@ source("0.setup.R")
 ## Read data ----
 
 # object level info
-o <- arrow::read_feather(file.path(data_dir, "all.feather"), col_select=c("projid", "annotators", "lineage", "taxon", "group_lineage", "group"))
+o <- read_feather(file.path(data_dir, "all.feather"), col_select=c("projid", "annotators", "lineage", "taxon", "group_lineage", "group"))
 
 # projects
 proj <- read_tsv("data/UVP5_projects_selected.tsv", show_col_types=FALSE) %>%
@@ -37,7 +37,7 @@ proj$data_owner %>% unique() %>% sort()
 # count annotation effort per person and project
 annot_counts <- o %>%
   select(projid, annotators) %>%
-  left_join(select(proj, projid, data_owner)) %>%
+  left_join(select(proj, projid, data_owner), by="projid") %>%
   unnest(cols=annotators) %>%
   count(data_owner, annotators)
 
@@ -46,7 +46,8 @@ annots <- annot_counts %>%
   left_join(
     proj %>%
       group_by(data_owner) %>%
-      summarise(projects = str_c(str_c(title, " <http://ecotaxa.obs-vlfr.fr/prj/", projid, ">"), collapse=" ; "))
+      summarise(projects = str_c(str_c(title, " <http://ecotaxa.obs-vlfr.fr/prj/", projid, ">"), collapse=" ; ")),
+    by="data_owner"
   ) %>%
   # reorganise data
   select(data_owner, projects, annotators, n) %>%

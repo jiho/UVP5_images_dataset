@@ -4,7 +4,8 @@
 # (c) 2021 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("data.table") # use fwrite for writing files because it is much faster
+suppressPackageStartupMessages(library("data.table"))
+# NB: use fwrite for writing files because it is much faster
 
 # create an output folder for the final data set (if it does not exist already)
 dir.create("data/final", showWarnings=FALSE)
@@ -18,7 +19,7 @@ projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
 
 # reformat to write it to the final file
 smp <- samples %>%
-  left_join(select(projects, pprojid, ptitle)) %>%
+  left_join(select(projects, pprojid, ptitle), by="pprojid") %>%
   select(
     sample_id=sampleid, sample_name=profile_name, project=ptitle,
     lat, lon, datetime, pixel_size=acq_pixel

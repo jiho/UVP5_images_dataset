@@ -5,14 +5,14 @@
 
 source("0.setup.R")
 # remotes::install_github("jiho/castr")
-library("castr")
+suppressPackageStartupMessages(library("castr"))
 
 # read selected samples
-samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols()) %>%
+samples <- read_tsv("data/UVP5_samples_selected.tsv", show_col_types=FALSE) %>%
   select(sampleid, psampleid)
 
 volumes <- samples %>%
-  left_join(tbl(dbp, "part_histopart_reduit") %>% select(psampleid, mid_depth_bin=depth, water_volume_imaged=watervolume), copy=TRUE) %>%
+  left_join(tbl(dbp, "part_histopart_reduit") %>% select(psampleid, mid_depth_bin=depth, water_volume_imaged=watervolume), copy=TRUE, by="psampleid") %>%
   select(-psampleid) %>%
   arrange(sampleid, mid_depth_bin) %>%
   collect()
