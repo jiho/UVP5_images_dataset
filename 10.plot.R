@@ -184,14 +184,14 @@ ggsave(file="plots/map_timeline_depth.pdf", width=w2, height=8.18*1.5, unit="cm"
 ## Fig 3: Barplot of total number of images per taxon ----
 
 taxa_counts <- count(obj, group) %>%
-  arrange(n)
+  arrange(desc(n))
 taxa_counts %>%
   mutate(group=factor(group, levels=group)) %>%
   ggplot() +
   geom_bar(aes(x=group, y=n), stat="identity") +
   scale_y_continuous(trans="sqrt") +
   labs(y="Nb of objects in data set", x=NULL) +
-  coord_flip()
+  theme(axis.text.x=element_text(angle=45, hjust=1))
 ggsave("plots/number_per_taxon.pdf", width=w2, height=w*0.8, unit="cm")
 
 
@@ -200,7 +200,7 @@ ggsave("plots/number_per_taxon.pdf", width=w2, height=w*0.8, unit="cm")
 # define abundant taxa
 abundant_taxa <- taxa_counts %>%
   filter(!str_detect(group, "_")) %>%
-  tail(5) %>%
+  head(5) %>%
   pluck("group")
 
 # compute concentrations and biovolume
