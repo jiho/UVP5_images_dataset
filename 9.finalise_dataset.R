@@ -33,6 +33,8 @@ smp <- samples %>%
     )
   )
 fwrite(smp, file="data/final/samples.tsv.gz", sep="\t", na="NA")
+# TODO: add data owner email?
+
 
 ## Volume table ----
 
