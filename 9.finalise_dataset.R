@@ -4,7 +4,6 @@
 # (c) 2021 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("arrow")
 library("data.table") # use fwrite for writing files because it is much faster
 
 # create an output folder for the final data set (if it does not exist already)

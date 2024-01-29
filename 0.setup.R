@@ -7,6 +7,7 @@
 suppressMessages(library("tidyverse"))
 suppressMessages(library("DBI"))
 suppressMessages(library("ecotaxar"))
+suppressMessages(library("arrow"))
 
 # connect to databases
 dbt <- db_connect_ecotaxa()

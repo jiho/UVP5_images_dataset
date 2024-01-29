@@ -6,7 +6,6 @@
 # (c) 2024 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("arrow")
 
 ## Read data ----
 

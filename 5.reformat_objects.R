@@ -4,7 +4,6 @@
 # (c) 2020 Jean-Olivier Irisson, GNU General Public License v3
 
 source("0.setup.R")
-library("arrow")
 library("ecotaxar")
 
 

@@ -6,7 +6,6 @@
 # NB: some bits are long (~20 min), run as a job
 
 source("0.setup.R")
-library("arrow")
 library("furrr")
 library("ecotaxar")
 

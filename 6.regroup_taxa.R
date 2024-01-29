@@ -4,7 +4,6 @@
 # (c) 2020 Jean-Olivier Irisson, Julie COUSTENOBLE, GNU General Public License v3
 
 source("0.setup.R")
-library("arrow")
 
 ## Perform regrouping ----
 
