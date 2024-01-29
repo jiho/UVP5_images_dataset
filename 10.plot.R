@@ -281,22 +281,19 @@ obj_s <- obj %>%
 sum(is.na(obj_s$conc))
 # -> OK
 
+# compute NBSS per taxon, depth bin and profile
 library("nbssr")
 NBSS <- obj_s %>%
-  group_by(group, depth_bin, uvp_model) %>%
+  group_by(sample_id, group, depth_bin, uvp_model) %>%
   do({
     nbss(.$vol_mm3, w=.$conc, binwidth=0.2)
   }) %>%
   ungroup()
 
-NBSS %>%
-  filter(bin <= 10000) %>%
-  ggplot() +
-    facet_grid(depth_bin~group) +
-    geom_point(aes(x=bin, y=norm_y, colour=uvp_model), size=0.5, alpha=0.5) +
-    scale_x_log10() + scale_y_log10() +
-    theme(panel.grid.minor=element_blank()) +
-    labs(x="Object volume (mm3)", y="Normalised volume (mm3/L/mm3)")
+ggplot(NBSS) +
+  facet_grid(depth_bin~group) +
+  geom_path(aes(x=bin, y=norm_y, group=sample_id), alpha=0.01) +
+  scale_x_log10(limits=c(0.1, 10000)) + scale_y_log10()
 
 ### Concentration map
 
@@ -824,8 +821,33 @@ plot_esd_data + plot_cons_data  + plot_layout(design=layout_plot_vertical_profil
 # and save
 ggsave(file="data/final/plot_vertical_profiles.pdf", width=30, height=40, unit="cm")
 
+# now compute the average NBSS across all profiles
+NBSSm <- NBSS %>%
+  group_by(group, depth_bin, uvp_model, bin_log, bin, binwidth) %>%
+  summarise(
+    q25  =  quantile(norm_y, probs=0.25),
+    q50  =  quantile(norm_y, probs=0.5),
+    q75  =  quantile(norm_y, probs=0.75),
+    mad  =  mad(norm_y),
+    mean = mean(norm_y),
+    sd   =  sd(norm_y),
+    n = n()
+    , .groups="drop"
+  )
 
 ##### Geospacial informations for uvp projects
+blues <- c("#81b1db", "#3971a3", "#063763")
+NBSSm %>%
+  filter(bin <= 10000, n>20) %>%
+  ggplot() +
+    facet_grid(uvp_model~group) +
+    geom_ribbon(aes(x=bin, ymin=q25, ymax=q75, fill=depth_bin), alpha=0.3) +
+    geom_path(aes(x=bin, y=q50, colour=depth_bin), size=0.5) +
+    scale_x_log10(limits=c(0.1, 10000), sec.axis=sec_axis(trans=~2*(./pi*3/4)^(1/3) , name="Object ESD (mm)")) +
+    scale_y_log10() +
+    scale_colour_manual(values=blues) + scale_fill_manual(values=blues) +
+    labs(x="Object volume (mm3)", y="Normalised volume (mm3/L/mm3)", colour="Depth layer", fill="Depth layer") +
+    theme(panel.grid.minor=element_blank(), legend.position=c(0.95, 0.5))
 
 # "UVP project name" , EcotaxaID, "Profiles", "Images", "Time periode", "Latitude range", "Longitude range", "UVP manager(s)"
 projects <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
@@ -840,6 +862,7 @@ merged_data <- unique(obj[c("profile_id", "object_id")]) %>%
            by.x = "project",
            by.y = "ptitle"
   )
+ggsave("plots/size_spectra.pdf", width=w2, height=w, unit="cm")
 
 #"lat", "lon", "datetime"
 uvp_project_data <- merged_data%>%
