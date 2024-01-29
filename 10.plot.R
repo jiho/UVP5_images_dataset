@@ -351,3 +351,8 @@ map_plank <- map_det %+% filter(props, group=="plankton")
 # and save the result
 ggsave("plots/map_concentrations.pdf", width=w2, height=w, unit="cm")
 
+
+## Convert plots into png images for Google Docs ----
+
+pdfs <- list.files("plots", pattern="pdf", full.names=TRUE)
+walk(pdfs, function(f) { system(str_c("convert -density 300 ", f, " ", str_replace(f, "pdf", "png"))) } )
