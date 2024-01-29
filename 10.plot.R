@@ -259,7 +259,7 @@ ggsave("plots/conc_biovol_grey_with_depth.pdf", width=w2, height=w*1.2, unit="cm
 
 # compute volume sampled in each depth bin
 vol_per_bin <- vol %>%
-  mutate(depth_bin=cut(mid_depth_bin, breaks=c(0,200,4000), include.lowest=TRUE)) %>%
+  mutate(depth_bin=cut(mid_depth_bin, breaks=c(0,100,500,1000), include.lowest=TRUE, dig.lab=5)) %>%
   group_by(sample_id, depth_bin) %>%
   summarise(water_volume_imaged=sum(water_volume_imaged), .groups="drop")
 
@@ -270,8 +270,8 @@ obj_s <- obj %>%
   # add UVP model and keep only HD and SD
   left_join(select(smp, sample_id, uvp_model)) %>%
   filter(uvp_model!="ZD") %>%
-  # separate in two depth bins
-  mutate(depth_bin=cut(depth, breaks=c(0,200,4000), include.lowest=TRUE)) %>%
+  # separate in various depth bins
+  mutate(depth_bin=cut(depth, breaks=c(0,100,500,1000), include.lowest=TRUE, dig.lab=5)) %>%
   drop_na(depth_bin) %>%
   # compute "unitary" concentrations (to serve as weights in the NBSS computation)
   left_join(vol_per_bin) %>%
