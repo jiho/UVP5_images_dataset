@@ -875,5 +875,30 @@ uvp_project_data <- merged_data%>%
   ungroup()
 
 uvp_project_data<-unique(uvp_project_data[c("title", "projid", "Profiles", "Objects", "Latitude range", "Longitude range", 'Time period', "data_owner")])
+## Fig: Concentration map ----
+
+# compute concentrations, biovolumes, etc. in consistent depth levels
+props <- obj %>%
+  filter(!group %in% c("bubble")) %>%
+  mutate(group=ifelse(group %in% c("not_plankton"), "not_plankton", "plankton")) %>%
+  properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000)) %>%
+  left_join(select(smp, sample_id, lon, lat))
+
+# read the coastline of the world
+coast <- read_csv("data/gshhg_world_c.csv.gz", show_col_types=FALSE)
+
+# plot not plankton (detritus) and plankton separately, to get different concentrations scales
+map_det <- ggplot(filter(props, group=="not_plankton")) +
+  geom_polygon(aes(lon, lat), data=coast, fill="white") +
+  chroma::scale_xy_map() + coord_quickmap() +
+  facet_grid(depth_bin~.) +
+  geom_point(aes(lon, lat, size=concentration), shape=1, alpha=0.5) +
+  scale_size(range=c(0.2, 10))
+map_plank <- map_det %+% filter(props, group=="plankton")
+
+# combine the two
+(map_det + labs(size="Concentration\nof detritus (#/L)")) + (map_plank + labs(size="Concentration\nof plankton (#/L)"))
+# and save the result
+ggsave("plots/map_concentrations.pdf", width=w2, height=w, unit="cm")
 
 write_tsv(uvp_project_data, "data/final/UVP5_project_data.tsv")
