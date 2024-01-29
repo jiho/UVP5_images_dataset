@@ -8,6 +8,10 @@ source("0.setup.R")
 library("tidyverse")
 library("patchwork")
 
+# define colour scales
+tab_colors <- c("#1F77B5", "#FF800E", "#2CA12D", "#D72727", "#9567BE", "#8E554A", "#E477C4", "#7F7F7F", "#BDBE21", "#16C0D0")
+new_tab_colors <- c("#4D79A8", "#F38F2C", "#E25758", "#76B9B3", "#59A34E", "#EECA48", "#B07AA2", "#FF9FA9", "#9D745F", "#BBB1AC")
+
 # ESSD:
 # width:  single column = 8.5cm; double column = 17.7 cm
 # height: total page = 23 cm
@@ -32,7 +36,8 @@ vol <- read_tsv("data/final/samples_volume.tsv.gz")
 # objects level (only the relevant variables)
 obj <- read_tsv("data/final/objects.tsv.gz")
 
-## Fig 1. Table of images of consistent categories ----
+
+## Fig 1: Table of images of consistent categories ----
 
 # extract representative images
 rep_imgs <- obj %>%
@@ -107,6 +112,7 @@ gtsave(pic_tbl, "plots/example_images.html")
     breaks=c(-60, -30, 0, 30, 60), minor_breaks=NULL, expand=c(0,0),
     labels=function(x) {paste0(abs(x), "°", c("S", "", "N")[sign(x) + 2])}
   ) +
+  scale_color_manual(values=tab_colors[c(2,1,3)]) +
   # shape legend
   theme(
     legend.position=c(0.72,0.79),
@@ -124,7 +130,7 @@ gtsave(pic_tbl, "plots/example_images.html")
 (p_ts <- ggplot(smp) +
   geom_point(aes(x=datetime, y=cut(lat, c(-90, -30, 30, 90), labels=c("]90°S,30°S]", "]30°S,30°N]", "]30°N,90°N]")), colour=uvp_model),
              shape="|", alpha=0.1, size=4)+
-  scale_colour_discrete(guide="none") +
+  scale_color_manual(values=tab_colors[c(2,1,3)], guide="none") +
   labs(x="Date of profile", y="Latitude"))
 
 
@@ -149,7 +155,7 @@ neg_sqrt_trans <- function() {
 }
 
 (p_depth <- ggplot(smp) +
-  geom_histogram(aes(y=-max_depth), binwidth=1) +
+  geom_histogram(aes(y=-max_depth, fill=uvp_model), binwidth=1) +
   scale_y_continuous(
     # nice breaks
     trans="neg_sqrt",
@@ -157,6 +163,7 @@ neg_sqrt_trans <- function() {
     # put the legend on the right for better composition
     position="right"
   ) +
+  scale_fill_manual(values=tab_colors[c(2,1,3)], guide="none") +
   labs(x="Nb of profiles", y="Maximum depth [m]"))
 
 # Put everything together
