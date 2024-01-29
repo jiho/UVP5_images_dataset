@@ -11,11 +11,12 @@ library("patchwork")
 # ESSD:
 # width:  single column = 8.5cm; double column = 17.7 cm
 # height: total page = 23 cm
-# multiplier for ggplot = 2
-w <- 8.5   * 2
-w2 <- 17.7 * 2
-h <- 23    * 2
+# multiplier for ggplot = 1.5
+w <- 8.5   * 1.5
+w2 <- 17.7 * 1.5
+h <- 23    * 1.5
 
+theme_set(theme_gray(10))
 
 dir.create("plots", showWarnings=FALSE)
 
@@ -169,8 +170,7 @@ CCCCB
 p_map + p_depth + p_ts + plot_layout(design=layout)
 
 # and save
-ggsave(file="plots/map_timeline_depth.pdf", width=w2, height=8.18*2, unit="cm")
-ggsave(file="plots/map_timeline_depth.png", width=w2, height=8.18*2, unit="cm")
+ggsave(file="plots/map_timeline_depth.pdf", width=w2, height=8.18*1.5, unit="cm")
 
 
 ## Fig 3: Barplot of total number of images per taxon ----
@@ -184,8 +184,7 @@ taxa_counts %>%
   scale_y_continuous(trans="sqrt") +
   labs(y="Nb of objects in data set", x=NULL) +
   coord_flip()
-ggsave("plots/number_per_taxon.pdf", width=w, height=w*1.5, unit="cm")
-ggsave("plots/number_per_taxon.png", width=w, height=w*1.5, unit="cm")
+ggsave("plots/number_per_taxon.pdf", width=w2, height=w*0.8, unit="cm")
 
 
 ## Fig 4: Concentration for the most abundant taxa along depth ----
