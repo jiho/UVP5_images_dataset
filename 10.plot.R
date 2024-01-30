@@ -200,7 +200,7 @@ ggsave("plots/number_per_taxon.pdf", width=w2, height=w*0.8, unit="cm")
 # define abundant taxa
 abundant_taxa <- taxa_counts %>%
   filter(!str_detect(group, "_")) %>%
-  head(5) %>%
+  head(7) %>%
   pluck("group")
 
 # compute concentrations, biovolume and grey level per profile
@@ -216,12 +216,13 @@ props_sum <- props %>%
   summarise(
     conc=mean(concentration),
     biovol=mean(biovolume),
+    n_grey=sum(!is.na(avg_grey)),
     avg_grey=mean(avg_grey, na.rm=TRUE),
     .groups="drop") %>%
   mutate(
-    living=ifelse(group=="not_plankton", "Not plankton (marine snow, ...)", "Plankton"),
+    living=ifelse(group=="Not plankton", "Not plankton (marine snow, ...)", "Plankton"),
     group=as.character(group),
-    group=ifelse(group=="not_plankton", NA, group),
+    group=ifelse(group=="Not plankton", NA, group),
     depth_bin=factor(depth_bin, levels=rev(unique(depth_bin)))
   )
 
@@ -240,6 +241,7 @@ bar_biov <- props_sum %>%
   scale_fill_brewer(palette="Set1", na.value="grey40") +
   theme(axis.text.y=element_blank(), axis.title.y=element_blank(), axis.ticks.y=element_blank())
 path_grey <- props_sum %>%
+  filter(n_grey > 50) %>%
   ggplot() +
   facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
   geom_path(aes(y=depth_bin, x=avg_grey, colour=group, group=group)) +
@@ -330,7 +332,7 @@ ggsave("plots/size_spectra.pdf", width=w2, height=w, unit="cm")
 # compute concentrations, biovolumes, etc. in consistent depth levels
 props <- obj %>%
   filter(!group %in% c("bubble")) %>%
-  mutate(group=ifelse(group %in% c("not_plankton"), "not_plankton", "plankton")) %>%
+  mutate(group=ifelse(group %in% c("Not plankton"), "not_plankton", "plankton")) %>%
   properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000)) %>%
   left_join(select(smp, sample_id, lon, lat), by="sample_id")
 
@@ -347,7 +349,7 @@ map_det <- ggplot(filter(props, group=="not_plankton")) +
 map_plank <- map_det %+% filter(props, group=="plankton")
 
 # combine the two
-(map_det + labs(size="Concentration\nof detritus (#/L)")) + (map_plank + labs(size="Concentration\nof plankton (#/L)"))
+(map_det + labs(size="Concentration\nof not plankton\n(mostly detritus) [#/L]")) + (map_plank + labs(size="Concentration\nof plankton [#/L]"))
 # and save the result
 ggsave("plots/map_concentrations.pdf", width=w2, height=w, unit="cm")
 
