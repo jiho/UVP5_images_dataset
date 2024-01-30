@@ -232,13 +232,15 @@ bar_conc <- props_sum %>%
     facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
     geom_bar(aes(y=depth_bin, x=conc, fill=group), stat="identity") +
     labs(x="Concentration (#/L)", y="Depth", fill="Taxon") +
-    scale_fill_brewer(palette="Set1", na.value="grey40")
+    # scale_fill_brewer(palette="Set1", na.value="grey40") +
+    scale_fill_manual(values=new_tab_colors, na.value="grey40")
 bar_biov <- props_sum %>%
   ggplot() +
   facet_wrap(~living, ncol=1, scales="free_x", strip.position="right") +
   geom_bar(aes(y=depth_bin, x=biovol, fill=group), stat="identity") +
   labs(x="Biovolume (mm3/L)", y="Depth", fill="Taxon") +
-  scale_fill_brewer(palette="Set1", na.value="grey40") +
+  # scale_fill_brewer(palette="Set1", na.value="grey40") +
+  scale_fill_manual(values=new_tab_colors, na.value="grey40") +
   theme(axis.text.y=element_blank(), axis.title.y=element_blank(), axis.ticks.y=element_blank())
 path_grey <- props_sum %>%
   filter(n_grey > 50) %>%
@@ -247,8 +249,9 @@ path_grey <- props_sum %>%
   geom_path(aes(y=depth_bin, x=avg_grey, colour=group, group=group)) +
   geom_point(aes(y=depth_bin, x=avg_grey, colour=group)) +
   scale_x_continuous(limits=c(181,229)) +
-  labs(x="Average grey level (~ opacity)", y="Depth", fill="Taxon") +
-  scale_colour_brewer(palette="Set1", na.value="grey40", guide="none")+
+  labs(x="Average grey level (~ opacity)", y="Depth", colour="Taxon") +
+  # scale_colour_brewer(palette="Set1", na.value="grey40", guide="none") +
+  scale_colour_manual(values=new_tab_colors, na.value="grey40", guide="none") +
   theme(axis.text.y=element_blank(), axis.title.y=element_blank(), axis.ticks.y=element_blank())
 
 # combine the plots
