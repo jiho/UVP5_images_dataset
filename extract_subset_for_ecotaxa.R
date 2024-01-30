@@ -1,27 +1,32 @@
 #
-# Extract a subset of images to check on EcoTaxa
+# Extract a subset of images to check on EcoTaxa and to train on
 #
 # (c) 2024 Jean-Olivier Irisson, GNU General Public License v3
 
-o <- read_tsv("data/final/objects.tsv.gz") %>%
+source("0.setup.R")
+
+obj <- read_tsv("data/final/objects.tsv.gz") %>%
   select(-mid_depth_bin, -taxon, -lineage, -group_lineage)
+smp <- read_tsv("data/final/samples.tsv.gz", show_col_types=FALSE)
+
+
+## Prepare data for EcoTaxa ----
 
 # sub-sample some images randomly
 set.seed(1)
-o_liv <- o %>%
+o_liv <- obj %>%
   filter(group != "Not plankton" & ! str_detect(group, "to_")) %>%
   group_by(group) %>%
   sample_n(size=min(200, n())) %>%
   ungroup()
 
-o_not <- o %>%
+o_not <- obj %>%
   filter(group=="Not plankton") %>%
   sample_n(size=10000)
 
 os <- bind_rows(o_liv, o_not)
 
 # add sample information
-smp <- read_tsv("data/final/samples.tsv.gz", show_col_types=FALSE)
 os <- os %>%
   left_join(select(smp, sample_id, sample_uvp_model=uvp_model, object_lat=lat, object_lon=lon, datetime), by="sample_id") %>%
   mutate(object_date=format(datetime, "%Y%m%d"), object_time=format(datetime, "%H%M%S")) %>%
@@ -124,4 +129,28 @@ unlink(file.path(data_dir, "ecotaxa_import.zip"))
 system(str_c("cd ", data_dir, "; zip -rq ecotaxa_import.zip ecotaxa_import"))
 
 # import on EcoTaxa and add the categories
-#
+# living, detritus, artefact, bubbles, turbid
+
+
+## Prepare data for ML models ----
+
+# sub-sample some images randomly
+set.seed(1)
+os <- obj %>%
+  left_join(select(smp, sample_id, uvp_model), by="sample_id") %>%
+  mutate(img_path=str_c("/home/jiho/datasets/UVP5_images_dataset/images/", sample_id, "/", object_id, ".jpg")) %>%
+  select(id=object_id, img_path, label=group, uvp_model) %>%
+  filter(uvp_model %in% c("SD", "HD")) %>%
+  group_by(uvp_model, label) %>%
+  sample_n(size=min(n(), ifelse(label=="Not plankton", 5000, 1000))) %>%
+  ungroup()
+
+os %>%
+  group_by(uvp_model) %>%
+  group_walk(function(x, y) {
+    dir <- str_c("io_uvp5", y$uvp_model)
+    dir.create(dir, showWarnings=FALSE)
+    cat(31, file=file.path(dir, "crop.txt"))
+    write_csv(x, file.path(dir, "training_labels.csv"))
+  })
+
