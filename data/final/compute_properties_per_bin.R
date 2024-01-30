@@ -36,7 +36,7 @@ properties_per_bin <- function(obj, vol, depth_breaks=c(0,100)) {
     # compute abundance and total volume
     dplyr::summarise(n=n(), vol=sum(vol_mm3), avg_grey=mean(mean), .groups="drop") %>%
     # add water volume sampled
-    dplyr::inner_join(vol_per_bin) %>% # NB: using inner_join reduces to completely sampled bins
+    dplyr::inner_join(vol_per_bin, by=c("sample_id", "depth_bin")) %>% # NB: using inner_join reduces to completely sampled bins
     # and compute concentrations and biovolumes
     dplyr::mutate(
       concentration=n/water_volume_imaged,

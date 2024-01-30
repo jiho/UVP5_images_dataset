@@ -27,14 +27,14 @@ dir.create("plots", showWarnings=FALSE)
 ## Read data ----
 
 # coastline
-coast <- read_csv("data/gshhg_world_l.csv.gz", col_types=cols())
+coast <- read_csv("data/gshhg_world_l.csv.gz", show_col_types=FALSE)
 
 # sample level
-smp <- read_tsv("data/final/samples.tsv.gz")
-vol <- read_tsv("data/final/samples_volume.tsv.gz")
+smp <- read_tsv("data/final/samples.tsv.gz", show_col_types=FALSE)
+vol <- read_tsv("data/final/samples_volume.tsv.gz", show_col_types=FALSE)
 
 # objects level (only the relevant variables)
-obj <- read_tsv("data/final/objects.tsv.gz")
+obj <- read_tsv("data/final/objects.tsv.gz", show_col_types=FALSE)
 
 
 ## Fig 1: Table of images of consistent categories ----
@@ -268,13 +268,13 @@ obj_s <- obj %>%
   # keep only abundant taxa
   filter(group %in% c(abundant_taxa, "not_plankton")) %>%
   # add UVP model and keep only HD and SD
-  left_join(select(smp, sample_id, uvp_model)) %>%
+  left_join(select(smp, sample_id, uvp_model), by="sample_id") %>%
   filter(uvp_model!="ZD") %>%
   # separate in various depth bins
   mutate(depth_bin=cut(depth, breaks=c(0,100,500,1000), include.lowest=TRUE, dig.lab=5)) %>%
   drop_na(depth_bin) %>%
   # compute "unitary" concentrations (to serve as weights in the NBSS computation)
-  left_join(vol_per_bin) %>%
+  left_join(vol_per_bin, by=c("sample_id", "depth_bin")) %>%
   mutate(conc=1/water_volume_imaged)
 
 # check
@@ -289,11 +289,11 @@ NBSS <- obj_s %>%
     nbss(.$vol_mm3, w=.$conc, binwidth=0.2)
   }) %>%
   ungroup()
-
-ggplot(NBSS) +
-  facet_grid(depth_bin~group) +
-  geom_path(aes(x=bin, y=norm_y, group=sample_id), alpha=0.01) +
-  scale_x_log10(limits=c(0.1, 10000)) + scale_y_log10()
+# plot the invidual ones to check
+# ggplot(NBSS) +
+#   facet_grid(depth_bin~group) +
+#   geom_path(aes(x=bin, y=norm_y, group=sample_id), alpha=0.01) +
+#   scale_x_log10(limits=c(0.1, 10000)) + scale_y_log10()
 
 # now compute the average NBSS across all profiles
 NBSSm <- NBSS %>%
@@ -315,7 +315,7 @@ NBSSm %>%
   ggplot() +
     facet_grid(uvp_model~group) +
     geom_ribbon(aes(x=bin, ymin=q25, ymax=q75, fill=depth_bin), alpha=0.3) +
-    geom_path(aes(x=bin, y=q50, colour=depth_bin), size=0.5) +
+    geom_path(aes(x=bin, y=q50, colour=depth_bin), linewidth=0.5) +
     scale_x_log10(limits=c(0.1, 10000), sec.axis=sec_axis(trans=~2*(./pi*3/4)^(1/3) , name="Object ESD (mm)")) +
     scale_y_log10() +
     scale_colour_manual(values=blues) + scale_fill_manual(values=blues) +
@@ -332,7 +332,7 @@ props <- obj %>%
   filter(!group %in% c("bubble")) %>%
   mutate(group=ifelse(group %in% c("not_plankton"), "not_plankton", "plankton")) %>%
   properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000)) %>%
-  left_join(select(smp, sample_id, lon, lat))
+  left_join(select(smp, sample_id, lon, lat), by="sample_id")
 
 # read the coastline of the world
 coast <- read_csv("data/gshhg_world_c.csv.gz", show_col_types=FALSE)

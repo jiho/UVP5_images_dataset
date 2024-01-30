@@ -102,14 +102,14 @@ bins <- distinct(res, depth_bin) %>%
 # add relevant metadata for ODV
 meta <- samples %>%
   select(pprojid, sample_id=sampleid, `Station:METAVAR:TEXT`=profile_name, `Latitude [degrees_north]:METAVAR:DOUBLE`=lat, `Longitude [degrees_east]:METAVAR:DOUBLE`=lon) %>%
-  left_join(select(projects, pprojid, `Cruise:METAVAR:TEXT`=ptitle)) %>%
+  left_join(select(projects, pprojid, `Cruise:METAVAR:TEXT`=ptitle), by="pprojid") %>%
   relocate(`Cruise:METAVAR:TEXT`, .after="sample_id") %>%
   select(-pprojid)
 
 # add metadata and depth bins
 res_odv <- res %>%
-  left_join(meta) %>%
-  left_join(bins) %>%
+  left_join(meta, by="sample_id") %>%
+  left_join(bins, by="depth_bin") %>%
   # keep only relevant columns
   select(`Cruise:METAVAR:TEXT`:`Depth [m]:PRIMARYVAR:DOUBLE`, group, concentration:avg_grey) %>%
   # replace NaNs by NA
