@@ -54,9 +54,14 @@ future_walk(pids, function(pid) {
         all_of(mapping)
       ) %>%
       # add path to image within EcoTaxa's vault
-      left_join(tbl(localdb, "images") %>% select(objid, imgrank, file_name), by="objid") %>%
+      left_join(tbl(localdb, "images") %>% select(objid, imgrank, imgid, orig_file_name), by="objid") %>%
       filter(imgrank==0L) %>%
       collect()
+
+    # compute path to image based on imgid
+    obj <- obj %>%
+      mutate(file_name=sprintf("%04i/%04i.%s", as.integer(imgid %/% 10000), as.integer(imgid %% 10000), tools::file_ext(orig_file_name))) %>%
+      select(-imgid, -orig_file_name)
 
     # get list of people who sorted these objects, including in the history
     people <- tbl(localdb, "objects") %>%
