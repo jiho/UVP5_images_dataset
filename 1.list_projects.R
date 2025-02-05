@@ -19,10 +19,18 @@ eco_projects <- tbl(dbt, "projects") %>%
 
 # combine the two
 projects <- left_join(part_projects, eco_projects, by="projid") %>%
-  arrange(pprojid) %>%
-  # add empty column
-  mutate(use="")
+  arrange(pprojid)
+
+# read the list of currently selected projects
+current_projects_list <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
+
+# check that no currently selected project disappeared
+disappeared <- filter(current_projects_list, use != "" & ! pprojid %in% projects$pprojid) %>% print()
+# -> None OK
+
+# get the ones that are used and add them to the current list
+projects <- left_join(projects, select(current_projects_list, pprojid, use), by="pprojid")
 
 # write it into a file
-write_tsv(projects, "data/UVP5_projects.tsv")
-# now copy paste this in a Google Sheet and select the ones to use in the global dataset
+write_tsv(projects, "data/UVP5_projects.tsv", na="")
+# now copy paste this in https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/ and possibly select additional projects to use in the global dataset
