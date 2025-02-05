@@ -16,17 +16,17 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 16	uvp5_sn000_malina2009	lars.stemmann@obs-vlfr.fr	28	UVP5 MALINA 2009	CC BY 4.0	x	1	1	
 17	uvp5_sn002_moose_ge_2014	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	CC BY-NC 4.0	x	1	1	
 18	uvp5_sn002_moose_ge_2016_filtered	lguidi@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	CC BY-NC 4.0		1	2	
-19	uvp5_sn000_msm049	rkiko@geomar.de	588	UVP5 Geomar 2015 msm049		x	1	1	
+19	uvp5_sn000_msm049	rkiko@geomar.de	588	UVP5 Geomar 2015 msm049			1	1	
 20	uvp5_sn000_operex2008	lars.stemmann@obs-vlfr.fr	110	UVP5 OPEREX 2008	CC BY 4.0	x	1	1	
 21	uvp5_sn001_2012_moose_ge	stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	CC BY-NC 4.0	x	1	1	
 22	uvp5_sn001_2012_msm22	rkiko@geomar.de	593	UVP5 Geomar 2012 msm22		x	1	1	
 23	uvp5_sn001_2012_msm23	rkiko@geomar.de	584	UVP5 Geomar 2012 msm23		x	1	1	
-24	uvp5_sn001_2013_m92	rkiko@geomar.de	556	UVP5 Geomar 2013 m92		x	1	1	
-25	uvp5_sn001_2013_m93	rkiko@geomar.de	563	UVP5 Geomar 2013 m93		x	1	1	
+24	uvp5_sn001_2013_m92	rkiko@geomar.de	556	UVP5 Geomar 2013 m92			1	1	
+25	uvp5_sn001_2013_m93	rkiko@geomar.de	563	UVP5 Geomar 2013 m93			1	1	
 26	uvp5_sn001_2013_m96	stemmann@obs-vlfr.fr	585	UVP5 Geomar 2013 m96			1	1	
 27	uvp5_sn001_2013_m97	stemmann@obs-vlfr.fr	603	UVP5 Geomar 2013 m97			1	1	
-28	uvp5_sn001_2013_m98	rainer.kiko@obs-vlfr.fr	610	UVP5 Geomar 2013 m98		x	1	1	
-29	uvp5_sn001_2014_msm40	rkiko@geomar.de	587	UVP5 Geomar 2014 msm40		x	1	1	
+28	uvp5_sn001_2013_m98	rainer.kiko@obs-vlfr.fr	610	UVP5 Geomar 2013 m98			1	1	
+29	uvp5_sn001_2014_msm40	rkiko@geomar.de	587	UVP5 Geomar 2014 msm40			1	1	
 30	uvp5_sn002_iado_2016	irisson@normalesup.org	6732	uvp5_sn002_iado_2016			1	1	
 31	uvp5_sn002_moose_ge_2015_filtered	lars.stemmann@obs-vlfr.fr	30	UVP5 MooseGE 2012 2013 2014 2015 2016	CC BY-NC 4.0	x	1	2	
 32	uvp5_sn002_somba_ge_2014	lars.stemmann@obs-vlfr.fr	36	UVP5 SOMBA 2014	CC BY 4.0	x	1	1	
@@ -72,7 +72,7 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 72	uvp5_sn010_2014_ps88b	rkiko@geomar.de	558	UVP5 Geomar 2014 ps88b		x	1	1	
 73	uvp5_sn010_2015_m116	rkiko@geomar.de	589	UVP5 Geomar 2015 m116		x	1	1	
 74	uvp5_sn010_2015_m119	rkiko@geomar.de	590	UVP5 Geomar 2015 m119			1	1	
-75	uvp5_sn010_2015_m120	rkiko@geomar.de	594	UVP5 Geomar 2015 m120		x	1	1	
+75	uvp5_sn010_2015_m120	rkiko@geomar.de	594	UVP5 Geomar 2015 m120			1	1	
 76	uvp5_sn010_2015_m121	rkiko@geomar.de	560	UVP5 Geomar 2015 m121		x	1	1	
 77	uvp5_sn010_2016_m130	rkiko@geomar.de	214	UVP5 Geomar 2016 m130			1	1	
 80	uvp5_sn201_2015_naames_01	emmanuel.boss@maine.edu	617	UVP5hd NAAMES 01			1	1	
@@ -86,13 +86,13 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 95	uvp5_sn010_2017_m135	rkiko@geomar.de	548	UVP5 Geomar 2017 m135		x	1	1	
 96	uvp5_sn010_2017_m136	rkiko@geomar.de	620	UVP5 Geomar 2017 m136			1	1	
 97	uvp5_sn010_2017_m137	rkiko@geomar.de	621	UVP5 Geomar 2017 m137			1	1	
-98	uvp5_sn010_2017_m138	rkiko@geomar.de	622	UVP5 Geomar 2017 m138		x	1	1	
+98	uvp5_sn010_2017_m138	rkiko@geomar.de	622	UVP5 Geomar 2017 m138			1	1	
 99	uvp5_sn000_tara2011	lars.stemmann@obs-vlfr.fr	579	UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013)	CC BY 4.0	x	1	1	
 100	uvp5_sn002_moose_ge_2017_filtered	laurent.coppola@obs-vlfr.fr	853	UVP5 MooseGE 2017	CC BY 4.0		1	2	
 104	uvp5_sn009_2018_nga_spring_filtered	amcdonnell@alaska.edu	964	uvp5_sn009_2018_nga_spring	CC BY 4.0		1	2	
 105	uvp5_sn008_ips_amundsen_2018	marcel.babin@takuvik.ulaval.ca	1165	UVP5 IPS Amundsen 2018	CC BY 4.0	x	1	1	
 109	uvp5_sn010_2014_eddy	rkiko@geomar.de	881	UVP5 Geomar 2014  eddy		x	1	1	
-110	uvp5_sn010_2017_fluxes1	rainer.kiko@obs-vlfr.fr	507	UVP5 Geomar 2017 fluxes1		x	1	1	
+110	uvp5_sn010_2017_fluxes1	rainer.kiko@obs-vlfr.fr	507	UVP5 Geomar 2017 fluxes1			1	1	
 111	uvp5_sn010_2017_fluxes2	rainer.kiko@obs-vlfr.fr	855	UVP5 Geomar 2017 fluxes2			1	1	
 112	uvp5_sn009_2017_asgard	amcdonnell@alaska.edu	1261	uvp5_sn009_2017_asgard	CC BY 4.0		1	1	
 121	uvp5_sn002_iado_2018	irisson@normalesup.org	1343	UVP5 IADO 2018	CC BY 4.0		1	1	
@@ -164,17 +164,17 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 287	uvp5_sn205_solace_2020_2021_filtered	david.antoine@curtin.edu.au	4034	uvp5_sn205_solace_2020_2021_filtered			#N/A	#N/A	
 288	uvp5_sn205_intercalibrage_20201001	enter op. email					#N/A	#N/A	
 289	uvp5_sn210_intercalibrage_20210107	amanda.elineau@obs-vlfr.fr					#N/A	#N/A	
-297	uvp5_sn203_2020_msm93	anya.waite@dal.ca	3990	uvp5_sn203_2020_msm93			#N/A	#N/A	yes
+297	uvp5_sn203_2020_msm93	anya.waite@dal.ca	3990	uvp5_sn203_2020_msm93			#N/A	#N/A	
 302	UVP5 Algoa Bay 2020_NOTfiltered	margauxnoyon@gmail.com	3581	UVP5 Algoa Bay 2020	CC BY 4.0		#N/A	#N/A	
-309	uvp5_sn204_2021_he570_filtered	hhauss@geomar.de	4105	uvp5_sn204_2021_he570_filtered	Copyright		#N/A	#N/A	yes
+309	uvp5_sn204_2021_he570_filtered	hhauss@geomar.de	4105	uvp5_sn204_2021_he570_filtered	Copyright		#N/A	#N/A	
 310	uvp5_sn210_2019_lima	rainer.kiko@obs-vlfr.fr	2465	UVP5 GEOMAR 2019 Lima			#N/A	#N/A	
 338	uvp5_sn202_ps124_cosmus_filtered	andreas.rogge@awi.de	4317	uvp5_sn202_ps124_cosmus_filtered	Copyright		#N/A	#N/A	
 346	uvp5_sn200_perle4_2021_filtered	demadron@univ-perp.fr	4412	UVP5 PERLE 04 2021 (sn200_filtered)			#N/A	#N/A	
 348	uvp5_sn207_2021_a22	amcdonnell@alaska.edu	4458	uvp5_sn207_2021_a22			#N/A	#N/A	
 363	uvp5_sn205_export_2021_filtered	rainer.kiko@imev-mer.fr	4521	uvp5_sn205_export_2021_filtered	Copyright		#N/A	#N/A	
-368	Party	leo.berline@mio.osupytheas.fr					#N/A	#N/A	yes
+368	Party	leo.berline@mio.osupytheas.fr					#N/A	#N/A	
 369	uvp5_sn009_skq202106s	amcdonnell@alaska.edu	5734	uvp5_sn009_skq202106s			#N/A	#N/A	
-370	uvp5_sn009_skq202110s	amcdonnell@alaska.edu	4623	uvp5_sn009_skq202110s			#N/A	#N/A	yes
+370	uvp5_sn009_skq202110s	amcdonnell@alaska.edu	4623	uvp5_sn009_skq202110s			#N/A	#N/A	
 371	uvp5_sn203_nasa_exports_north_atlantic_2021	amcdonnell@alaska.edu	4661	uvp5_sn203_nasa_exports_north_atlantic_2021			#N/A	#N/A	
 374	M108_aa_exp_test1	rkiko@geomar.de					#N/A	#N/A	
 376	sn203_msm94_calibration_test1	rainer.kiko@obs-vlfr.fr					#N/A	#N/A	
@@ -191,8 +191,8 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 442	uvp5_sn209_ae2017_bats374	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
 443	uvp5_sn209_ae2018_hs1393	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
 445	uvp5_sn209_ae2022_bats376_hs1398	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
-446	uvp5_sn209_ae2101_bats377	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	yes
-447	uvp5_sn209_ae2102_bats378	enter op. email	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	yes
+446	uvp5_sn209_ae2101_bats377	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+447	uvp5_sn209_ae2102_bats378	enter op. email	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
 448	uvp5_sn209_ae2103_bats379	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
 449	uvp5_sn209_ae2104_bats379b	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
 450	uvp5_sn209_ae2105_bats380	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
@@ -205,90 +205,90 @@ pprojid	ptitle	data_owner	projid	title	license	use	lat,lon OK in ecopart (0=no, 
 476	uvp5_sn002_hircom_2022_winter	lionel.guidi@imev-mer.fr	5623	uvp5_sn002_hircom_2022_winter			#N/A	#N/A	
 479	uvp5_sn210_2021_m174_filtered	hhauss@geomar.de	5744	uvp5_sn210_2021_m174_filtered			#N/A	#N/A	
 483	uvp5_sn002_moose_ge_2021	enter op. email	5771	UVP5 MooseGE 2021 SN002			#N/A	#N/A	
-509	uvp5_sn209_ae2112_bats383_hs1410	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	yes
-510	uvp5_sn209_ae2124_bats387_hs1418_hs1419	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	yes
-511	uvp5_sn209_ae2117_bats385	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	yes
-512	uvp5_sn209_ae2114_biosscope	stone@sc.edu	6076				#N/A	#N/A	yes
+509	uvp5_sn209_ae2112_bats383_hs1410	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+510	uvp5_sn209_ae2124_bats387_hs1418_hs1419	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+511	uvp5_sn209_ae2117_bats385	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+512	uvp5_sn209_ae2114_biosscope	stone@sc.edu	6076				#N/A	#N/A	
 522	uvp5_sn209_ae2116_bats384_hs1413	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
-523	uvp5_sn209_ae2120_bats386_hs1416	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	yes
+523	uvp5_sn209_ae2120_bats386_hs1416	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
 525	uvp5_sn209_ae2201_bats389_hs1422_hs1423	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
-527	uvp5_sn209_ae2126_bats388_hs1421	stone@sc.edu	10421	USC_BATS2019-2022	Copyright				
-539	uvp5_sn209_se2204	stone@sc.edu	10738	USC_BET_SE2204	Copyright				
-543	uvp5_sn201_2022_p2	emmanuel.boss@maine.edu	6397	uvp5_sn201_2022_p2					
-547	uvp5_sn010_2015_m121_pssdb_test	rkiko@geomar.de	560	UVP5 Geomar 2015 m121					
-548	uvp5_sn010_2015_m121_pssdb_test	rkiko@geomar.de	560	UVP5 Geomar 2015 m121					
-555	ecopart_test_JCE	lars.stemmann@obs-vlfr.fr	6676	ecopart_test_JCE					
-558	uvp5_sn203_2022_so287	rkiko@geomar.de	6702	uvp5_sn203_2022_so287					
-559	uvp5_sn203_2022_so288	rkiko@geomar.de	6703	uvp5_sn203_2022_so288					
-560	uvp5_sn203_2022_so289	rkiko@geomar.de	6704	uvp5_sn203_2022_so289					
-561	Paragon 2021	aewhite@hawaii.edu	5713	Paragon 2021					
-572	uvp5_sn205_hircom_2022_autumn	marc.picheral@imev-mer.fr	6763	uvp5_sn205_hircom_2022_autumn					
-573	ecopart_test_JCE_2	lars.stemmann@obs-vlfr.fr	6764	ecopart_test_JCE_2					
-575	uvp5_sn210_2021_m176_filtered	hhauss@geomar.de	6846	uvp5_sn210_2021_m176_filtered					
-576	uvp5_sn002_moose_ge_2022	laurent.coppola@imev-mer.fr	6851	uvp5_sn002_moose_ge_2022					
-577	uvp5_sn221_resilience_2022_filtered	margauxnoyon@gmail.com	6853	uvp5_sn221_resilience_2022_filtered - MASTER COPY					
-591	HOT 321	aewhite@hawaii.edu	6103	HOT 321					
-592	HOT 322	aewhite@hawaii.edu	6099	HOT 322					
-593	HOT 323	aewhite@hawaii.edu	6104	HOT 323					
-594	HOT 324	aewhite@hawaii.edu	6105	HOT 324					
-595	HOT 325	aewhite@hawaii.edu	6106	HOT 325					
-596	HOT 326	aewhite@hawaii.edu	6107	HOT 326					
-597	HOT 327	aewhite@hawaii.edu	6108	HOT 327					
-598	HOT 335	aewhite@hawaii.edu	6888	HOT 335					
-599	NCDC	aewhite@hawaii.edu	6449	NCDC					
-600	Paragon 2022	aewhite@hawaii.edu	6642	Paragon 2022					
-604	uvp5_sn221_io_2022_filtered	margaux.noyon@mandela.ac.za	8982	uvp5_sn221_io_2022_filtered					
-608	uvp5_sn205_m181_2022_filtered	rainer:kiko@imev-mer.fr	7156	uvp5_sn205_m181_2022_filtered					
-648	uvp5_sn209_ae1921_b362_hs1365	stone@uc.edu	10421	USC_BATS2019-2022	Copyright				
-649	uvp5_sn210_2023_m186_filtered	hhauss@geomar.de	7647	uvp5_sn210_2023_m186_filtered					
-650	uvp5_sn209_ae1923_bats363	stone@sc.edu	10421	USC_BATS2019-2022	Copyright				
-651	uvp5_sn209_ae2021_bats376	stone@sc.edu	10421	USC_BATS2019-2022	Copyright				
-657	uvp5_sn002_20230120_intercalibrage	marc.picheral@imev-mer.fr	7693	uvp5_sn002_20230120_intercalibrage	CC BY-NC 4.0				
-659	uvp5_sn005_20230120_intercalibrage	nagib.bery@osu.pytheas.fr	7699	uvp5_sn005_20230120_intercalibrage	CC BY-NC 4.0				
-660	uvp5_sn002_moose_dyf_2023	laurent.coppola@imev-mer.fr	7705	uvp5_sn002_moose_dyf_2023	CC BY-NC 4.0				
-662	uvp5_sn002_moose_dyf_2022	laurent.coppola@imev-mer.fr	7709	uvp5_sn002_moose_dyf_2022	CC BY-NC 4.0				
-666	uvp5_sn200_20230120_intercalibrage	marc.picheral@imev-mer.fr	7767	uvp5_sn200_20230120_intercalibrage	CC BY-NC 4.0				
-668	uvp5_sn210_2023_m187_filtered	hhauss@geomar.de	7868	uvp5_sn210_2023_m187_filtered					
-672	uvp5_sn209_ae_1913	stone@sc.edu	10421	USC_BATS2019-2022	Copyright				
-678	uvp5_sn002_20230216_intercalibrage	marie.grisel@imev-mer.fr	8042	uvp5_sn002_20230216_intercalibrage	CC BY-NC 4.0				
-684	uvp5_sn202_ps133_1	andreas.rogge@awi.de	8378	uvp5_sn202_ps133_1	Copyright				
-685	uvp5_sn204_ps133_1	andreas.rogge@awi.de	8379	uvp5_sn204_ps133_1	Copyright				
-686	uvp5_sn203_20230216_intercalibrage	marc.picheral@imev-mer.fr	8409	uvp5_sn203_20230216_intercalibrage	CC BY-NC 4.0				
-687	uvp5_sn205_20230216_intercalibrage	marie.grisel@imev-mer.fr	8432	uvp5_sn205_20230216_intercalibrage	CC BY-NC 4.0				
-688	uvp5_sn208_20230216_intercalibrage	marie.grisel@imev-mer.fr	8440	uvp5_sn208_20230216_intercalibrage	CC BY-NC 4.0				
-689	uvp5_sn205_scopes_2022_filtered	mathilde.cadier@ifremer.fr	8473	uvp5_sn205_scopes_2022_filtered					
-690	uvp5_sn002_20230321_intercalibrage	marie.grisel@imev-mer.fr	8617	uvp5_sn002_20230321_intercalibrage	CC BY-NC 4.0				
-704	uvp5_sn002_moose_dyf_2020	enter op. email	8865	uvp5_sn002_moose_dyf_2020	CC BY-NC 4.0				
-705	uvp5_sn201_20230321_intercalibrage	marie.grisel@imev-mer.fr	8884	uvp5_sn201_20230321_intercalibrage	CC BY-NC 4.0				
-706	uvp5_sn002_20230505_intercalibrage	marie.grisel@imev-mer.fr	8979	uvp5_sn002_20230505_intercalibrage	CC BY-NC 4.0				
-707	uvp5_sn204_20230505_intercalibrage	marie.grisel@imev-mer.fr	8998	uvp5_sn204_20230505_intercalibrage	CC BY-NC 4.0				
-708	uvp5_sn202_20230505_intercalibrage	marie.grisel@imev-mer.fr	9012	uvp5_sn202_20230505_intercalibrage	CC BY-NC 4.0				
-709	uvp5_sn203_20230321_intercalibrage	marie.grisel@imev-mer.fr	9013	uvp5_sn203_20230321_intercalibrage	CC BY-NC 4.0				
-710	BIOSWOT_MED	leo.berline@univ-amu.fr	9071	UVP BIOSWOT_MED	CC BY-NC 4.0				
-711	BIOSWOTMED	leo.berline@univ-amu.fr	9072						
-722	uvp5_sn210_2019_m158_no_calibration	rkiko@geomar.de	5693	UVP5 GEOMAR 2019 m158					
-723	UVP5_SN210_2019_M158_ncalibration	rkiko@geomar.de	9319	UVP5_SN210_2019_M158_ncalibration					
-724	uvp5_sn205_m181_2022_ncalibration	rainer:kiko@imev-mer.fr	9423						
-752	uvp5_sn205_so298_filtered	rkiko@geomar.de	9898	uvp5_sn205_so298					
-757	uvp_sn201_2022_p2_part2	emmanuel.boss@maine.edu	9922	uvp_sn201_2022_p2_part2					
-764	uvp5_sn203_2022_eimpact_1	javier.aristegui@ulpgc.es	10079	uvp5_sn203_2022_eimpact_1					
-766	uvp5_sn203_2022_eimpact_2	javier.aristegui@ulpgc.es	10107	uvp5_sn203_2022_eimpact_2					
-777	uvp5_sn205_m182_2022_filtered	rainer:kiko@imev-mer.fr	10280	uvp5_sn205_m182_2022_filtered					
-783	uvp5_sn002_moose_ge_2023	laurent.coppola@imev-mer>_fr	10367	uvp5_sn002_moose_ge_2023					
-784	uvp5_sn203_apero_2023	lionel.guidi@imev-mer.fr	10450	uvp5_sn203_apero_2023					
-800	uvp5_sn002_20231019_intercalibrage	marie.grisel@imev-mer.fr	10615	uvp5_sn002_20231019_intercalibrage	CC BY-NC 4.0				
-805	uvp5_sn210_20231019_intercalibrage	marie.grisel@imev.mer.fr	10679	uvp5_sn210_20231019_intercalibrage	CC BY-NC 4.0				
-835	uvp5_sn203_20231019_intercalibrage	marie.grisel@imev-mer.fr	10946	uvp5_sn203_20231019_intercalibrage	CC BY-NC 4.0				
-836	uvp5_sn205_20231019_intercalibrage	marie.grisel@imev-mer.fr	10947	uvp5_sn205_20231019_intercalibrage	CC BY-NC 4.0				
-844	uvp5_sn204_ps131	andreas.rogge@awi.de	11062	uvp5_sn204_ps131	Copyright				
-893	uvp_sn201_2022_p2_part2_test	emmanuel.boss@maine.edu	11972	uvp_sn201_2022_p2_part2_test					
-905	uvp_sn201_2022_p2_updated_calibration	emmanuel.boss@maine.edu	12200	uvp_sn201_2022_p2_updated_calibration					
-906	uvp_sn201_2022_p2_updated_calibration	emmanuel.boss@maine.edu	12201	uvp_sn201_2022_p2_updated_calibration					
-917	uvp5_sn209_intercalibrage_2024	juliette.maury@imev-mer.fr	12448	uvp5_sn209_intercalibrage_2024	CC BY-NC 4.0				
-999	UVP_BATS2023-2026	stone@sc.edu	13729	USC_BATS2023-2026	Copyright				
-1041	uvp5_sn002_moose_ge_2024	laurent.coppola@imev-mer.fr	14620	uvp5_sn002_moose_ge_2024					
-1051	uvp5_sn200_tara_2022	enter op. email	14826	uvp5_sn200_tara_2022	CC BY 4.0				
-1065	UVP5hd PS143 filtered	barbara.niehoff@awi.de	14948	UVP5hd PS143 filtered	Copyright				
-1066	UVP5hd PS144 filtered	hauke.flores@awi.de	14949	UVP5hd PS144 filtered	Copyright				
-1096	uvp5_sn002_moose_dyf_2024	laurent.coppola@imev-mer.fr	15227	uvp5_sn002_moose_dyf_2024	CC BY-NC 4.0				
-1098	uvp5_sn002_moose_dyf_2025	laurent.coppola@imev-mer.fr	15316	uvp5_sn002_moose_dyf_2025	CC BY-NC 4.0				
+527	uvp5_sn209_ae2126_bats388_hs1421	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+539	uvp5_sn209_se2204	stone@sc.edu	10738	USC_BET_SE2204	Copyright		#N/A	#N/A	
+543	uvp5_sn201_2022_p2	emmanuel.boss@maine.edu	6397	uvp5_sn201_2022_p2			#N/A	#N/A	
+547	uvp5_sn010_2015_m121_pssdb_test	rkiko@geomar.de	560	UVP5 Geomar 2015 m121			#N/A	#N/A	
+548	uvp5_sn010_2015_m121_pssdb_test	rkiko@geomar.de	560	UVP5 Geomar 2015 m121			#N/A	#N/A	
+555	ecopart_test_JCE	lars.stemmann@obs-vlfr.fr	6676	ecopart_test_JCE			#N/A	#N/A	
+558	uvp5_sn203_2022_so287	rkiko@geomar.de	6702	uvp5_sn203_2022_so287			#N/A	#N/A	
+559	uvp5_sn203_2022_so288	rkiko@geomar.de	6703	uvp5_sn203_2022_so288			#N/A	#N/A	
+560	uvp5_sn203_2022_so289	rkiko@geomar.de	6704	uvp5_sn203_2022_so289			#N/A	#N/A	
+561	Paragon 2021	aewhite@hawaii.edu	5713	Paragon 2021			#N/A	#N/A	
+572	uvp5_sn205_hircom_2022_autumn	marc.picheral@imev-mer.fr	6763	uvp5_sn205_hircom_2022_autumn			#N/A	#N/A	
+573	ecopart_test_JCE_2	lars.stemmann@obs-vlfr.fr	6764	ecopart_test_JCE_2			#N/A	#N/A	
+575	uvp5_sn210_2021_m176_filtered	hhauss@geomar.de	6846	uvp5_sn210_2021_m176_filtered			#N/A	#N/A	
+576	uvp5_sn002_moose_ge_2022	laurent.coppola@imev-mer.fr	6851	uvp5_sn002_moose_ge_2022			#N/A	#N/A	
+577	uvp5_sn221_resilience_2022_filtered	margauxnoyon@gmail.com	6853	uvp5_sn221_resilience_2022_filtered - MASTER COPY			#N/A	#N/A	
+591	HOT 321	aewhite@hawaii.edu	6103	HOT 321			#N/A	#N/A	
+592	HOT 322	aewhite@hawaii.edu	6099	HOT 322			#N/A	#N/A	
+593	HOT 323	aewhite@hawaii.edu	6104	HOT 323			#N/A	#N/A	
+594	HOT 324	aewhite@hawaii.edu	6105	HOT 324			#N/A	#N/A	
+595	HOT 325	aewhite@hawaii.edu	6106	HOT 325			#N/A	#N/A	
+596	HOT 326	aewhite@hawaii.edu	6107	HOT 326			#N/A	#N/A	
+597	HOT 327	aewhite@hawaii.edu	6108	HOT 327			#N/A	#N/A	
+598	HOT 335	aewhite@hawaii.edu	6888	HOT 335			#N/A	#N/A	
+599	NCDC	aewhite@hawaii.edu	6449	NCDC			#N/A	#N/A	
+600	Paragon 2022	aewhite@hawaii.edu	6642	Paragon 2022			#N/A	#N/A	
+604	uvp5_sn221_io_2022_filtered	margaux.noyon@mandela.ac.za	8982	uvp5_sn221_io_2022_filtered			#N/A	#N/A	
+608	uvp5_sn205_m181_2022_filtered	rainer:kiko@imev-mer.fr	7156	uvp5_sn205_m181_2022_filtered			#N/A	#N/A	
+648	uvp5_sn209_ae1921_b362_hs1365	stone@uc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+649	uvp5_sn210_2023_m186_filtered	hhauss@geomar.de	7647	uvp5_sn210_2023_m186_filtered			#N/A	#N/A	
+650	uvp5_sn209_ae1923_bats363	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+651	uvp5_sn209_ae2021_bats376	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+657	uvp5_sn002_20230120_intercalibrage	marc.picheral@imev-mer.fr	7693	uvp5_sn002_20230120_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+659	uvp5_sn005_20230120_intercalibrage	nagib.bery@osu.pytheas.fr	7699	uvp5_sn005_20230120_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+660	uvp5_sn002_moose_dyf_2023	laurent.coppola@imev-mer.fr	7705	uvp5_sn002_moose_dyf_2023	CC BY-NC 4.0		#N/A	#N/A	
+662	uvp5_sn002_moose_dyf_2022	laurent.coppola@imev-mer.fr	7709	uvp5_sn002_moose_dyf_2022	CC BY-NC 4.0		#N/A	#N/A	
+666	uvp5_sn200_20230120_intercalibrage	marc.picheral@imev-mer.fr	7767	uvp5_sn200_20230120_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+668	uvp5_sn210_2023_m187_filtered	hhauss@geomar.de	7868	uvp5_sn210_2023_m187_filtered			#N/A	#N/A	
+672	uvp5_sn209_ae_1913	stone@sc.edu	10421	USC_BATS2019-2022	Copyright		#N/A	#N/A	
+678	uvp5_sn002_20230216_intercalibrage	marie.grisel@imev-mer.fr	8042	uvp5_sn002_20230216_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+684	uvp5_sn202_ps133_1	andreas.rogge@awi.de	8378	uvp5_sn202_ps133_1	Copyright		#N/A	#N/A	
+685	uvp5_sn204_ps133_1	andreas.rogge@awi.de	8379	uvp5_sn204_ps133_1	Copyright		#N/A	#N/A	
+686	uvp5_sn203_20230216_intercalibrage	marc.picheral@imev-mer.fr	8409	uvp5_sn203_20230216_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+687	uvp5_sn205_20230216_intercalibrage	marie.grisel@imev-mer.fr	8432	uvp5_sn205_20230216_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+688	uvp5_sn208_20230216_intercalibrage	marie.grisel@imev-mer.fr	8440	uvp5_sn208_20230216_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+689	uvp5_sn205_scopes_2022_filtered	mathilde.cadier@ifremer.fr	8473	uvp5_sn205_scopes_2022_filtered			#N/A	#N/A	
+690	uvp5_sn002_20230321_intercalibrage	marie.grisel@imev-mer.fr	8617	uvp5_sn002_20230321_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+704	uvp5_sn002_moose_dyf_2020	enter op. email	8865	uvp5_sn002_moose_dyf_2020	CC BY-NC 4.0		#N/A	#N/A	
+705	uvp5_sn201_20230321_intercalibrage	marie.grisel@imev-mer.fr	8884	uvp5_sn201_20230321_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+706	uvp5_sn002_20230505_intercalibrage	marie.grisel@imev-mer.fr	8979	uvp5_sn002_20230505_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+707	uvp5_sn204_20230505_intercalibrage	marie.grisel@imev-mer.fr	8998	uvp5_sn204_20230505_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+708	uvp5_sn202_20230505_intercalibrage	marie.grisel@imev-mer.fr	9012	uvp5_sn202_20230505_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+709	uvp5_sn203_20230321_intercalibrage	marie.grisel@imev-mer.fr	9013	uvp5_sn203_20230321_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+710	BIOSWOT_MED	leo.berline@univ-amu.fr	9071	UVP BIOSWOT_MED	CC BY-NC 4.0		#N/A	#N/A	
+711	BIOSWOTMED	leo.berline@univ-amu.fr	9072				#N/A	#N/A	
+722	uvp5_sn210_2019_m158_no_calibration	rkiko@geomar.de	5693	UVP5 GEOMAR 2019 m158			#N/A	#N/A	
+723	UVP5_SN210_2019_M158_ncalibration	rkiko@geomar.de	9319	UVP5_SN210_2019_M158_ncalibration			#N/A	#N/A	
+724	uvp5_sn205_m181_2022_ncalibration	rainer:kiko@imev-mer.fr	9423				#N/A	#N/A	
+752	uvp5_sn205_so298_filtered	rkiko@geomar.de	9898	uvp5_sn205_so298			#N/A	#N/A	
+757	uvp_sn201_2022_p2_part2	emmanuel.boss@maine.edu	9922	uvp_sn201_2022_p2_part2			#N/A	#N/A	
+764	uvp5_sn203_2022_eimpact_1	javier.aristegui@ulpgc.es	10079	uvp5_sn203_2022_eimpact_1			#N/A	#N/A	
+766	uvp5_sn203_2022_eimpact_2	javier.aristegui@ulpgc.es	10107	uvp5_sn203_2022_eimpact_2			#N/A	#N/A	
+777	uvp5_sn205_m182_2022_filtered	rainer:kiko@imev-mer.fr	10280	uvp5_sn205_m182_2022_filtered			#N/A	#N/A	
+783	uvp5_sn002_moose_ge_2023	laurent.coppola@imev-mer>_fr	10367	uvp5_sn002_moose_ge_2023			#N/A	#N/A	
+784	uvp5_sn203_apero_2023	lionel.guidi@imev-mer.fr	10450	uvp5_sn203_apero_2023			#N/A	#N/A	
+800	uvp5_sn002_20231019_intercalibrage	marie.grisel@imev-mer.fr	10615	uvp5_sn002_20231019_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+805	uvp5_sn210_20231019_intercalibrage	marie.grisel@imev.mer.fr	10679	uvp5_sn210_20231019_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+835	uvp5_sn203_20231019_intercalibrage	marie.grisel@imev-mer.fr	10946	uvp5_sn203_20231019_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+836	uvp5_sn205_20231019_intercalibrage	marie.grisel@imev-mer.fr	10947	uvp5_sn205_20231019_intercalibrage	CC BY-NC 4.0		#N/A	#N/A	
+844	uvp5_sn204_ps131	andreas.rogge@awi.de	11062	uvp5_sn204_ps131	Copyright		#N/A	#N/A	
+893	uvp_sn201_2022_p2_part2_test	emmanuel.boss@maine.edu	11972	uvp_sn201_2022_p2_part2_test			#N/A	#N/A	
+905	uvp_sn201_2022_p2_updated_calibration	emmanuel.boss@maine.edu	12200	uvp_sn201_2022_p2_updated_calibration			#N/A	#N/A	
+906	uvp_sn201_2022_p2_updated_calibration	emmanuel.boss@maine.edu	12201	uvp_sn201_2022_p2_updated_calibration			#N/A	#N/A	
+917	uvp5_sn209_intercalibrage_2024	juliette.maury@imev-mer.fr	12448	uvp5_sn209_intercalibrage_2024	CC BY-NC 4.0		#N/A	#N/A	
+999	UVP_BATS2023-2026	stone@sc.edu	13729	USC_BATS2023-2026	Copyright		#N/A	#N/A	
+1041	uvp5_sn002_moose_ge_2024	laurent.coppola@imev-mer.fr	14620	uvp5_sn002_moose_ge_2024			#N/A	#N/A	
+1051	uvp5_sn200_tara_2022	enter op. email	14826	uvp5_sn200_tara_2022	CC BY 4.0		#N/A	#N/A	
+1065	UVP5hd PS143 filtered	barbara.niehoff@awi.de	14948	UVP5hd PS143 filtered	Copyright		#N/A	#N/A	
+1066	UVP5hd PS144 filtered	hauke.flores@awi.de	14949	UVP5hd PS144 filtered	Copyright		#N/A	#N/A	
+1096	uvp5_sn002_moose_dyf_2024	laurent.coppola@imev-mer.fr	15227	uvp5_sn002_moose_dyf_2024	CC BY-NC 4.0		#N/A	#N/A	
+1098	uvp5_sn002_moose_dyf_2025	laurent.coppola@imev-mer.fr	15316	uvp5_sn002_moose_dyf_2025	CC BY-NC 4.0		#N/A	#N/A	
