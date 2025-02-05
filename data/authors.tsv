@@ -1,67 +1,55 @@
 data_owner	projects	annotators	n
-amcdonnell@alaska.edu	uvp5_sn009_2015_p16n <http://ecotaxa.obs-vlfr.fr/prj/43>	Jess Pretty <jessica.pretty18@gmail.com>	249006
-		Rachel Lekanoff <rmlekanoff@alaska.edu>	23774
+amcdonnell@alaska.edu	uvp5_sn009_2015_p16n <http://ecotaxa.obs-vlfr.fr/prj/43>	Jess Pretty <jessica.pretty18@gmail.com>	249021
+		Rachel Lekanoff <rmlekanoff@alaska.edu>	23776
 		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	21698
-		Tristan Biard <tbiard@sb-roscoff.fr>	16251
-		Thelma Panaiotis <thelma.panaiotis@imev-mer.fr>	566
+		Tristan Biard <tbiard@sb-roscoff.fr>	16254
+		Thelma Panaïotis <thelma.panaiotis@imev-mer.fr>	566
 		Lucas Courchet <lucas.courchet@imev-mer.fr>	335
 		Marc Picheral <marc.picheral@obs-vlfr.fr>	203
 		Andrew M. P. Mcdonnell <amcdonnell@alaska.edu>	180
-		Lars Stemmann <lars.stemmann@imev-mer.fr>	105
+		Lars Stemmann <lars.stemmann@imev-mer.fr>	146
 		Jean-Olivier Irisson <irisson@normalesup.org>	18
 		Jacob Cram <jcram@umces.edu>	14
-andreas.rogge@awi.de, anya.waite@dal.ca	UVP5hd msm060 (2017) <http://ecotaxa.obs-vlfr.fr/prj/351>	Andreas Rogge <andreas.rogge@awi.de>	251618
-		Alannah Paulina Prondzinsky <aprondzi@mpi-bremen.de>	216073
-		Tristan Biard <tbiard@sb-roscoff.fr>	15097
+andreas.rogge@awi.de, anya.waite@dal.ca	UVP5hd msm060 (2017) <http://ecotaxa.obs-vlfr.fr/prj/351>	Andreas Rogge <andreas.rogge@awi.de>	244033
+		Alannah Paulina Prondzinsky <aprondzi@mpi-bremen.de>	215711
+		Tristan Biard <tbiard@sb-roscoff.fr>	15096
 		Lucas Courchet <lucas.courchet@imev-mer.fr>	3758
 		Lars Stemmann <lars.stemmann@imev-mer.fr>	154
 		Susanne Spahic <susanne.spahic@awi.de>	19
 		Rainer Kiko <rkiko@geomar.de>	1
 francois.carlotti@mio.osupytheas.fr	UVP5 DY032 205 <http://ecotaxa.obs-vlfr.fr/prj/40>	Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	78341
-		Thelma Panaiotis <thelma.panaiotis@imev-mer.fr>	1112
+		Thelma Panaïotis <thelma.panaiotis@imev-mer.fr>	1112
 		Tristan Biard <tbiard@sb-roscoff.fr>	561
 		Marc Picheral <marc.picheral@obs-vlfr.fr>	101
 		Léo Berline <leo.berline@mio.osupytheas.fr>	60
 		Lucas Courchet <lucas.courchet@imev-mer.fr>	51
-lars.stemmann@obs-vlfr.fr	UVP5 DEWEX 2013 (winter) <http://ecotaxa.obs-vlfr.fr/prj/3> ; UVP5 DEWEX 2013 (spring) <http://ecotaxa.obs-vlfr.fr/prj/4> ; UVP5 MALINA 2009 <http://ecotaxa.obs-vlfr.fr/prj/28> ; UVP5 MooseGE 2012 2013 2014 2015 2016 <http://ecotaxa.obs-vlfr.fr/prj/30> ; UVP5 SOMBA 2014 <http://ecotaxa.obs-vlfr.fr/prj/36> ; UVP5 CASSIOPEE 2015 <http://ecotaxa.obs-vlfr.fr/prj/38> ; UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014) <http://ecotaxa.obs-vlfr.fr/prj/45> ; UVP5zd CCELTER 2011 <http://ecotaxa.obs-vlfr.fr/prj/50> ; UVP5zd Gatekeeper <http://ecotaxa.obs-vlfr.fr/prj/51> ; UVP5zd KEOPS <http://ecotaxa.obs-vlfr.fr/prj/56> ; UVP5 Subice 2014 <http://ecotaxa.obs-vlfr.fr/prj/107> ; UVP5 LOHAFEX 2009 <http://ecotaxa.obs-vlfr.fr/prj/109> ; UVP5 OPEREX 2008 <http://ecotaxa.obs-vlfr.fr/prj/110> ; UVP5 BOUM 2008 <http://ecotaxa.obs-vlfr.fr/prj/122> ; UVP5hd GreenEdge 2016 <http://ecotaxa.obs-vlfr.fr/prj/149> ; UVP5 Geomar 2013 m92 <http://ecotaxa.obs-vlfr.fr/prj/556> ; UVP5 Geomar 2013 m93 <http://ecotaxa.obs-vlfr.fr/prj/563> ; UVP5 JERICO 2017 <http://ecotaxa.obs-vlfr.fr/prj/578> ; UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013) <http://ecotaxa.obs-vlfr.fr/prj/579> ; UVP5 Geomar 2012 msm23 <http://ecotaxa.obs-vlfr.fr/prj/584> ; UVP5 Geomar 2014 msm40 <http://ecotaxa.obs-vlfr.fr/prj/587> ; UVP5 Geomar 2015 msm049 <http://ecotaxa.obs-vlfr.fr/prj/588> ; UVP5 Geomar 2012 msm22 <http://ecotaxa.obs-vlfr.fr/prj/593>	Marc Picheral <marc.picheral@obs-vlfr.fr>	2028777
-		Rainer Kiko <rkiko@geomar.de>	1017677
-		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	1000012
-		Thelma Panaiotis <thelma.panaiotis@imev-mer.fr>	294337
-		Kim Donggyun  <kdk921219@gmail.com>	285682
-		Frauke Blunck <faba161@aol.com>	223772
-		Lars Stemmann <lars.stemmann@imev-mer.fr>	220472
-		Tristan Biard <tbiard@sb-roscoff.fr>	158874
+lars.stemmann@obs-vlfr.fr	UVP5 DEWEX 2013 (winter) <http://ecotaxa.obs-vlfr.fr/prj/3> ; UVP5 DEWEX 2013 (spring) <http://ecotaxa.obs-vlfr.fr/prj/4> ; UVP5 MALINA 2009 <http://ecotaxa.obs-vlfr.fr/prj/28> ; UVP5 MooseGE 2012 2013 2014 2015 2016 <http://ecotaxa.obs-vlfr.fr/prj/30> ; UVP5 SOMBA 2014 <http://ecotaxa.obs-vlfr.fr/prj/36> ; UVP5 CASSIOPEE 2015 <http://ecotaxa.obs-vlfr.fr/prj/38> ; UVP5zd Gatekeeper <http://ecotaxa.obs-vlfr.fr/prj/51> ; UVP5zd KEOPS <http://ecotaxa.obs-vlfr.fr/prj/56> ; UVP5 Subice 2014 <http://ecotaxa.obs-vlfr.fr/prj/107> ; UVP5 LOHAFEX 2009 <http://ecotaxa.obs-vlfr.fr/prj/109> ; UVP5 OPEREX 2008 <http://ecotaxa.obs-vlfr.fr/prj/110> ; UVP5 BOUM 2008 <http://ecotaxa.obs-vlfr.fr/prj/122> ; UVP5hd GreenEdge 2016 <http://ecotaxa.obs-vlfr.fr/prj/149> ; UVP5 JERICO 2017 <http://ecotaxa.obs-vlfr.fr/prj/578> ; UVP5 Tara Oceans (tara2009, tara2010, tara2011, tara2012, tara2013) <http://ecotaxa.obs-vlfr.fr/prj/579>	Marc Picheral <marc.picheral@obs-vlfr.fr>	1249984
+		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	960897
+		Thelma Panaïotis <thelma.panaiotis@imev-mer.fr>	293983
+		Lars Stemmann <lars.stemmann@imev-mer.fr>	230224
+		Hugo Berrenger <hugo.berrenger@imev-mer.fr>	113698
+		Tristan Biard <tbiard@sb-roscoff.fr>	72723
 		Augustin Lafond <augustin.lafond@gmail.com>	71763
-		Lucas Courchet <lucas.courchet@imev-mer.fr>	63576
-		Laure Vilgrain  <laure.vilgrain@laposte.net>	59836
-		Aakash Panchal <aakashpanchal100@gmail.com>	43464
+		Lucas Courchet <lucas.courchet@imev-mer.fr>	68578
+		Laure Vilgrain  <laure.vilgrain@laposte.net>	60482
+		Solène Motreuil <solene.motreuil@imev-mer.fr>	55277
 		Katty Denoso Ferez <kattydonosoferez@gmail.com>	34535
-		Bruna Letícia Oliveira <brunaleticianogueira@hotmail.com>	23444
-		Helena Hauss <hhauss@geomar.de>	20478
-		Svenja Christiansen <svenja.christiansen@ibv.uio.no>	15129
-		Emilia Trudnowska <emilia@iopan.pl>	7771
-		Fabien Lombard <lombard@obs-vlfr.fr>	6016
-		Jean-Olivier Irisson <irisson@normalesup.org>	4647
-		Noemie Pelletier <noemie.pelletier2@uqar.ca>	3212
-		Bruna Oliveira <brunaleticia@usp.br>	2586
+		Laetitia Jalabert <laetitia.jalabert@imev-mer.fr>	11596
+		Emilia Trudnowska <emilia@iopan.pl>	7672
+		Fabien Lombard <lombard@obs-vlfr.fr>	6118
+		Jean-Olivier Irisson <irisson@normalesup.org>	4648
+		Noemie Pelletier <noemie.pelletier2@uqar.ca>	3342
 		Louis Caray--Counil <louis.caray--counil@imev-mer.fr>	2119
-		Guillaume Leguen <ghe.leguen@gmail.com>	1567
+		Guillaume Leguen <ghe.leguen@gmail.com>	1661
+		Jordan Toullec <jordan.toullec@univ-brest.fr>	889
+		Sophie Renaut <Sophie.Renaut@takuvik.ulaval.ca>	448
 		Riwan Leroux <riwan.leroux@mio.osupytheas.fr>	262
-		Laetitia Drago <drago.laetitia@gmail.com>	259
-		Alvaro Migotto <aemigott@usp.br>	216
-		Jordan Toullec <jordan.toullec@univ-brest.fr>	153
-		Sophie Renaut <Sophie.Renaut@takuvik.ulaval.ca>	138
-		Amanda Elineau <amanda.elineau@obs-vlfr.fr>	105
-		Caroline Suwaki <csuwaki@gmail.com>	93
-		Rubens Lopes <rubens@usp.br>	43
-		Christine Gawinski <chrissiegawinski@googlemail.com>	19
-		Laetitia Jalabert <laetitia.jalabert@imev-mer.fr>	19
-		Jannik Faustmann <jfaustmann@geomar.de>	13
-		Renato Nagata <renatonagata@gmail.com>	6
-lee.karp-boss@maine.edu	UVP5hd NAAMES02 <http://ecotaxa.obs-vlfr.fr/prj/146> ; UVP5hd NAAMES03 <http://ecotaxa.obs-vlfr.fr/prj/637> ; UVP5hd Naames 04 <http://ecotaxa.obs-vlfr.fr/prj/1252>	Lars Stemmann <lars.stemmann@imev-mer.fr>	109604
+		Margaux Perhirin <margaux.perhirin@gmail.com>	118
+		Frédéric Maps <frederic.maps@bio.ulaval.ca>	1
+lee.karp-boss@maine.edu	UVP5hd NAAMES02 <http://ecotaxa.obs-vlfr.fr/prj/146> ; UVP5hd NAAMES03 <http://ecotaxa.obs-vlfr.fr/prj/637> ; UVP5hd Naames 04 <http://ecotaxa.obs-vlfr.fr/prj/1252>	Lars Stemmann <lars.stemmann@imev-mer.fr>	109740
 		Emma Dullaert <emma.dullaert@maine.edu>	22414
 		Lee Karp Boss <lee.karp-boss@maine.edu>	15596
-		Guillaume Bourdin <guillaume.bourdin@outlook.com>	10950
+		Guillaume Bourdin <guillaume.bourdin@outlook.com>	10942
 		Lucas Courchet <lucas.courchet@imev-mer.fr>	2117
 		Tristan Biard <tbiard@sb-roscoff.fr>	1476
 lguidi@obs-vlfr.fr	UVP5 OUTPACE 2015 <http://ecotaxa.obs-vlfr.fr/prj/37>	Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	202344
@@ -70,65 +58,69 @@ lguidi@obs-vlfr.fr	UVP5 OUTPACE 2015 <http://ecotaxa.obs-vlfr.fr/prj/37>	Benjami
 		Lucas Courchet <lucas.courchet@imev-mer.fr>	838
 		Augustin Lafond <augustin.lafond@gmail.com>	17
 		Fabien Lombard <lombard@obs-vlfr.fr>	1
+		Lars Stemmann <lars.stemmann@imev-mer.fr>	1
 lombard@obs-vlfr.fr	UVP5 Sargasso 2014 (sargasso_a sargasso_b) <http://ecotaxa.obs-vlfr.fr/prj/22>	Fabien Lombard <lombard@obs-vlfr.fr>	43026
 		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	3312
 		Lucas Courchet <lucas.courchet@imev-mer.fr>	1834
 		Tristan Biard <tbiard@sb-roscoff.fr>	906
 		Marc Picheral <marc.picheral@obs-vlfr.fr>	355
-marcel.babin@takuvik.ulaval.ca	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate <http://ecotaxa.obs-vlfr.fr/prj/41> ; UVP5 GREEN EDGE Ice Camp 2015 <http://ecotaxa.obs-vlfr.fr/prj/42> ; UVP5 GREEN EDGE Ice Camp 2016 <http://ecotaxa.obs-vlfr.fr/prj/315> ; UVP5 AN 1406 <http://ecotaxa.obs-vlfr.fr/prj/618> ; UVP5 IPS Amundsen 2018 <http://ecotaxa.obs-vlfr.fr/prj/1165>	Sophie Renaut <Sophie.Renaut@takuvik.ulaval.ca>	123813
-		Emilia Trudnowska <emilia@iopan.pl>	89491
-		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	51470
+marcel.babin@takuvik.ulaval.ca	UVP5 AN Arctique (an1304 an1405 an1407) part A to validate <http://ecotaxa.obs-vlfr.fr/prj/41> ; UVP5 GREEN EDGE Ice Camp 2015 <http://ecotaxa.obs-vlfr.fr/prj/42> ; UVP5 GREEN EDGE Ice Camp 2016 <http://ecotaxa.obs-vlfr.fr/prj/315> ; UVP5 AN 1406 <http://ecotaxa.obs-vlfr.fr/prj/618> ; UVP5 IPS Amundsen 2018 <http://ecotaxa.obs-vlfr.fr/prj/1165>	Sophie Renaut <Sophie.Renaut@takuvik.ulaval.ca>	123811
+		Emilia Trudnowska <emilia@iopan.pl>	88871
+		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	51442
 		Marc Picheral <marc.picheral@obs-vlfr.fr>	40351
+		Sarah Hasnain <sarah.hasnain@imev-mer.fr>	16046
 		Marc-Antoine Bansept <marc-antoine.bansept.1@ulaval.ca>	13773
-		Thelma Panaiotis <thelma.panaiotis@imev-mer.fr>	11314
-		Julek Chawarski <julek.chawarski@mi.mun.ca>	4398
+		Thelma Panaïotis <thelma.panaiotis@imev-mer.fr>	11314
+		Lars Stemmann <lars.stemmann@imev-mer.fr>	4494
 		Tristan Biard <tbiard@sb-roscoff.fr>	4318
 		Sébastien Guérin <sebastien.guerin@takuvik.ulaval.ca>	3875
+		Julek Chawarski <julian.chawarski@gmail.com>	3388
 		Yasmine Alikacem <yasmine.alikacem.1@ulaval.ca>	2917
 		Claudie Marec <claudie.marec@univ-brest.fr>	2671
 		Philipp Anhaus <philipp.anhaus@awi.de>	2061
-		Victoria Fowler <vicwle19@bas.ac.uk>	1327
 		Maxime Benoît-Gagné <maxime.benoit-gagne@takuvik.ulaval.ca>	1079
 		Maxime Wauthy <maxime.wauthy1@uqac.ca>	1076
 		Juan Li <juan.li@takuvik.ulaval.ca>	956
 		Gwenaelle Gremion <gwenaelle.gremion@gmail.com>	912
+		Victoria Fowler <vicwle19@bas.ac.uk>	904
 		Bjoern Andersson <bjorn.andersson@marine.gu.se>	750
 		Felix Levesque-Desrosiers <felix.levesque-desrosiers.1@ulaval.ca>	390
 		Cyril Aubry <cyril.aubry@qo.ulaval.ca>	265
-		Lars Stemmann <lars.stemmann@imev-mer.fr>	212
 		Genevieve Arboit <genevieve.arboit@gmail.com>	51
 		Fabien Lombard <lombard@obs-vlfr.fr>	27
 		Christophe Perron <christophe.perron.1@ulaval.ca>	7
-		Jean-Olivier Irisson <irisson@normalesup.org>	1
+		Jean-Olivier Irisson <irisson@normalesup.org>	4
 		Jody Reimer <jrreimer@ualberta.ca>	1
-rkiko@geomar.de	UVP5 Geomar 2017 fluxes1 <http://ecotaxa.obs-vlfr.fr/prj/507> ; UVP5 Geomar 2017 m135 <http://ecotaxa.obs-vlfr.fr/prj/548> ; UVP5 Geomar 2014 ps88b <http://ecotaxa.obs-vlfr.fr/prj/558> ; UVP5 Geomar 2014 m107 <http://ecotaxa.obs-vlfr.fr/prj/559> ; UVP5 Geomar 2015 m121 <http://ecotaxa.obs-vlfr.fr/prj/560> ; UVP5 Geomar 2014 m108 <http://ecotaxa.obs-vlfr.fr/prj/586> ; UVP5 Geomar 2015 m116 <http://ecotaxa.obs-vlfr.fr/prj/589> ; UVP5 Geomar 2015 m120 <http://ecotaxa.obs-vlfr.fr/prj/594> ; UVP5 Geomar 2014 m106 <http://ecotaxa.obs-vlfr.fr/prj/595> ; UVP5 Geomar 2014 m105 <http://ecotaxa.obs-vlfr.fr/prj/602> ; UVP5 Geomar 2013 m98 <http://ecotaxa.obs-vlfr.fr/prj/610> ; UVP5 Geomar 2017 m138 <http://ecotaxa.obs-vlfr.fr/prj/622> ; UVP5 Geomar 2014  eddy <http://ecotaxa.obs-vlfr.fr/prj/881>	Rainer Kiko <rkiko@geomar.de>	1230300
-		Frauke Blunck <faba161@aol.com>	763272
-		Christine Gawinski <chrissiegawinski@googlemail.com>	229381
+rkiko@geomar.de	UVP5 Geomar 2017 m135 <http://ecotaxa.obs-vlfr.fr/prj/548> ; UVP5 Geomar 2014 ps88b <http://ecotaxa.obs-vlfr.fr/prj/558> ; UVP5 Geomar 2014 m107 <http://ecotaxa.obs-vlfr.fr/prj/559> ; UVP5 Geomar 2015 m121 <http://ecotaxa.obs-vlfr.fr/prj/560> ; UVP5 Geomar 2012 msm23 <http://ecotaxa.obs-vlfr.fr/prj/584> ; UVP5 Geomar 2014 m108 <http://ecotaxa.obs-vlfr.fr/prj/586> ; UVP5 Geomar 2015 m116 <http://ecotaxa.obs-vlfr.fr/prj/589> ; UVP5 Geomar 2012 msm22 <http://ecotaxa.obs-vlfr.fr/prj/593> ; UVP5 Geomar 2014 m106 <http://ecotaxa.obs-vlfr.fr/prj/595> ; UVP5 Geomar 2014 m105 <http://ecotaxa.obs-vlfr.fr/prj/602> ; UVP5 Geomar 2014  eddy <http://ecotaxa.obs-vlfr.fr/prj/881>	Rainer Kiko <rkiko@geomar.de>	1440970
+		Frauke Blunck <faba161@aol.com>	693881
+		Christine Gawinski <chrissiegawinski@googlemail.com>	165289
+		Marc Picheral <marc.picheral@obs-vlfr.fr>	118831
 		Jannik Faustmann <jfaustmann@geomar.de>	115823
 		Augustin Lafond <augustin.lafond@gmail.com>	110527
-		Charlotte Eich <eich.charlotte@gmx.de>	92489
-		Tristan Biard <tbiard@sb-roscoff.fr>	47707
-		Aakash Panchal <aakashpanchal100@gmail.com>	30558
-		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	25650
-		Bruna Oliveira <brunaleticia@usp.br>	19012
-		Svenja Christiansen <svenja.christiansen@ibv.uio.no>	18167
-		Lucas Courchet <lucas.courchet@imev-mer.fr>	15814
-		Thelma Panaiotis <thelma.panaiotis@imev-mer.fr>	13649
-		Akanksha Singh <akanksha.deva@gmail.com>	8849
-		Helena Hauss <hhauss@geomar.de>	6804
-			6780
-		Lars Stemmann <lars.stemmann@imev-mer.fr>	4167
-		Bruna Letícia Oliveira <brunaleticianogueira@hotmail.com>	3099
-		Laetitia Drago <drago.laetitia@gmail.com>	1774
-		Fabien Lombard <lombard@obs-vlfr.fr>	732
-		Alvaro Migotto <aemigott@usp.br>	598
-		Caroline Suwaki <csuwaki@gmail.com>	222
+		Aakash Panchal <aakashpanchal100@gmail.com>	73484
+		Tristan Biard <tbiard@sb-roscoff.fr>	50374
+		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	28831
+		Bruna Letícia Oliveira <brunaleticianogueira@hotmail.com>	23925
+		Svenja Christiansen <svenja.christiansen@ibv.uio.no>	18839
+		Thelma Panaïotis <thelma.panaiotis@imev-mer.fr>	13743
+		Bruna Oliveira <brunaleticia@usp.br>	13674
+		Lucas Courchet <lucas.courchet@imev-mer.fr>	12458
+		Helena Hauss <hhauss@geomar.de>	5166
+		Lars Stemmann <lars.stemmann@imev-mer.fr>	4108
+		Anonymous_recovered <nobody@nowhere.org>	3221
+		Laetitia Drago <drago.laetitia@gmail.com>	1155
+		Akanksha Singh <akanksha.deva@gmail.com>	1064
+		Alvaro Migotto <aemigott@usp.br>	754
+		Fabien Lombard <lombard@obs-vlfr.fr>	736
+		Caroline Suwaki <csuwaki@gmail.com>	266
 		Kim Donggyun  <kdk921219@gmail.com>	183
-		Marc Picheral <marc.picheral@obs-vlfr.fr>	19
-		Renato Nagata <renatonagata@gmail.com>	15
-		Amanda Elineau <amanda.elineau@obs-vlfr.fr>	3
+		Amanda Elineau <amanda.elineau@obs-vlfr.fr>	108
+		Rubens Lopes <rubens@usp.br>	43
+		Moritz Hintringer <stu224486@mail.uni-kiel.de>	26
+		Renato Nagata <renatonagata@gmail.com>	21
 		Arvind Singh <av.arvind@gmail.com>	1
-		Justine Courboulès <justine.courboules@hotmail.fr>	1
-tristan.biard@univ-littoral.fr	UVP5 CCELTER 2016 <http://ecotaxa.obs-vlfr.fr/prj/156> ; UVP5hd CCELTER 2017 <http://ecotaxa.obs-vlfr.fr/prj/627>	Tristan Biard <tbiard@sb-roscoff.fr>	1385000
-		Marc Picheral <marc.picheral@obs-vlfr.fr>	110
-		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	68
+tristan.biard@univ-littoral.fr	UVP5 CCELTER (Iter2008 ccelter_2012 ccelter_2014) <http://ecotaxa.obs-vlfr.fr/prj/45> ; UVP5zd CCELTER 2011 <http://ecotaxa.obs-vlfr.fr/prj/50> ; UVP5 CCELTER 2016 <http://ecotaxa.obs-vlfr.fr/prj/156> ; UVP5hd CCELTER 2017 <http://ecotaxa.obs-vlfr.fr/prj/627>	Tristan Biard <tbiard@sb-roscoff.fr>	1448455
+		Marc Picheral <marc.picheral@obs-vlfr.fr>	738220
+		Benjamin Blanc <benjamin.blanc@obs-vlfr.fr>	37406
+		Lucas Courchet <lucas.courchet@imev-mer.fr>	17778
+		Jean-Olivier Irisson <irisson@normalesup.org>	2
