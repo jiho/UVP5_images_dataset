@@ -39,7 +39,7 @@ volumes <- volumes %>%
 # inspect again
 summary(volumes)
 sum(is.na(volumes$water_volume_clean)) / nrow(volumes) * 100
-# [1] 0.8977931
+# [1] 0.9481326
 # = we removed less than 1% of the data bins ;-)
 
 # look at random profiles
