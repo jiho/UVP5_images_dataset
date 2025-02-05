@@ -28,7 +28,7 @@ o <- o %>%
   # remove imgrank, we only have 0
   select(-imgrank)
 
-# remove 0-variance columns, if
+# remove 0-variance columns, if any
 vars <- o %>% summarise(across(area:skeleton_area, .fns=~var(.x, na.rm=TRUE)))
 zero_variance_vars <- names(vars)[vars ==0]
 o <- select(o, -all_of(zero_variance_vars))
@@ -36,7 +36,7 @@ o <- select(o, -all_of(zero_variance_vars))
 # remove variables with too many NAs
 nb_NAs <- sapply(o, function(x) {sum(is.na(x))}) %>% sort()
 o <- select(o, -perimareaexc, -feretareaexc, -cdexc)
-# NB: this probably comes from the definition of area_exc in the UVP as the "surface of holes", not the surface excluding holes; see https://sites.google.com/view/piqv/zooprocess
+# NB: this possibly comes from the definition of area_exc in the UVP as the "surface of holes", not the surface excluding holes; see https://sites.google.com/view/piqv/zooprocess
 
 # keep only objects for which we have a corresponding water volume
 # indeed, when we have no volume the data is useless
