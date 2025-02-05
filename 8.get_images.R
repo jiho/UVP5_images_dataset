@@ -28,12 +28,15 @@ o <- mutate(o,
   source=file.path("/remote/ecotaxa/vault", file_name),
   dest  =file.path(img_dir, sampleid, str_c(objid, ".jpg"))
 )
+message(nrow(o), " objects")
 
 # list images already copied
 copied <- system2("find", args=str_c(img_dir, " -type f"), stdout=TRUE)
-length(copied)
+message(length(copied), " images files already present")
 # and remove them from the list
 o_to_copy <- filter(o, ! dest %in% copied)
+message(length(o_to_copy), " images to copy")
+
 
 # copy the remaining images, in parallel
 plan(multisession, workers=5)
@@ -44,13 +47,14 @@ plan(sequential)
 # remove images that should not be there
 copied <- system2("find", args=str_c(img_dir, " -type f"), stdout=TRUE)
 extra_imgs <- copied[!copied %in% o$dest]
+message(length(extra_imgs), " extra images to remove")
 if (length(extra_imgs) > 0 ) {
   unlink(extra_imgs)
 }
 
 # check that everything has been copied
 missing_imgs <- filter(o, ! dest %in% copied)
-nrow(missing_imgs)
+message(nrow(missing_imgs), " missing images")
 
 # TODO reformat all images to cut the 31 px at the bottom and keep only the largest object?
 # TODO measure the new images with scikit image?

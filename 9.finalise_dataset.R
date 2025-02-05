@@ -12,6 +12,7 @@ dir.create("data/final", showWarnings=FALSE)
 
 
 ## Sample table ----
+message("Write samples table")
 
 # read selected samples
 samples <- read_tsv("data/UVP5_samples_selected.tsv", col_types=cols())
@@ -37,6 +38,7 @@ fwrite(smp, file="data/final/samples.tsv.gz", sep="\t", na="NA")
 
 
 ## Volume table ----
+message("Write volumes table")
 
 # read water volume
 volume <- read_tsv("data/UVP5_volumes.tsv.gz", col_types=cols())
@@ -46,6 +48,7 @@ fwrite(vol, file="data/final/samples_volume.tsv.gz", sep="\t", na="NA")
 
 
 ## Object table -----
+message("Write objects table")
 
 o <- read_feather(file.path(data_dir, "all.feather"))
 projects <- read_tsv("data/UVP5_projects_selected.tsv", col_types=cols())
@@ -74,6 +77,7 @@ fwrite(obj, file="data/final/objects.tsv.gz", sep="\t", na="NA")
 
 
 ## Concentrations/biovolume/grey level table ----
+message("Compute concentration and biovolume in bins and write it")
 
 # check data quality
 sum(is.na(obj$vol_mm3))
@@ -146,7 +150,8 @@ write_odv(odv_biov, "data/final/ODV_biovolumes.txt")
 write_odv(odv_grey, "data/final/ODV_grey_levels.txt")
 
 
-## Zip the final folder, for distribution ----
+## Create an archive of the final folder, for distribution ----
+message("Create an archive of the final folder")
 
 # copy data to where the images are
 system(str_c("cp -R data/final ", data_dir, "/data"))
@@ -155,7 +160,7 @@ system(str_c("cp -R data/final ", data_dir, "/data"))
 wd <- getwd()
 setwd(data_dir)
 
-# create a tar achive of the content
+# create a tar archive of the content
 files <- list.files(c("final", "images"))
 tar_file <- str_c(data_dir, "/UVP5.tar")
 unlink(tar_file)
