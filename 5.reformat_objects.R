@@ -114,7 +114,9 @@ oc <- left_join(oc, select(samples, sampleid, acq_pixel), by="sampleid") %>%
     area_mm2 = area * acq_pixel^2,
     esd_mm = 2 * sqrt(area_mm2 / pi),
     vol_mm3 = 4/3 * pi * ((esd_mm/2)^3),
-    major_mm = major * acq_pixel
+    major_mm = major * acq_pixel,
+    minor_mm = minor * acq_pixel,
+    feret_mm = feret * acq_pixel
   )
 
 
