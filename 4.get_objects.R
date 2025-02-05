@@ -85,7 +85,7 @@ future_walk(pids, function(pid) {
     message(
       "projid = ", format(pid, width=4, justify="right"),
       " contains ", format(length(sids), width=3, justify="right"), " samples",
-      " and ", format(nrow(obj), width=8, justify="right", big.mark=","), " objects"
+      " and ", format(nrow(obj), width=10, justify="right", big.mark=","), " objects"
     )
 
     # save as a file
