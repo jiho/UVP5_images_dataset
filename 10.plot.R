@@ -201,13 +201,14 @@ ggsave("plots/number_per_taxon.pdf", width=w2, height=w*0.8, unit="cm")
 # define abundant taxa
 abundant_taxa <- taxa_counts %>%
   filter(!str_detect(group, "_")) %>%
-  head(7) %>%
+  filter(!group %in% c("Not plankton", "Artefact")) %>%
+  head(6) %>%
   pluck("group")
 
 # compute concentrations, biovolume and grey level per profile
 source("data/final/compute_properties_per_bin.R")
 props <- obj %>%
-  filter(group %in% c("not_plankton", abundant_taxa)) %>%
+  filter(group %in% c("Not plankton", "Artefact", abundant_taxa)) %>%
   properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000, 2000, 4000)) %>%
   mutate(depth_bin=ordered(depth_bin))
 
@@ -221,9 +222,9 @@ props_sum <- props %>%
     avg_grey=mean(avg_grey, na.rm=TRUE),
     .groups="drop") %>%
   mutate(
-    living=ifelse(group=="Not plankton", "Not plankton (marine snow, ...)", "Plankton"),
+    living=ifelse(group %in% c("Not plankton", "Artefact"), "Not plankton (marine snow, ...)", "Plankton"),
     group=as.character(group),
-    group=ifelse(group=="Not plankton", NA, group),
+    # group=ifelse(group=="Not plankton", NA, group),
     depth_bin=factor(depth_bin, levels=rev(unique(depth_bin)))
   )
 
@@ -272,7 +273,7 @@ vol_per_bin <- vol %>%
 obj_s <- obj %>%
   select(sample_id, object_id, depth, group, esd_mm, vol_mm3) %>%
   # keep only abundant taxa
-  filter(group %in% c(abundant_taxa, "not_plankton")) %>%
+  filter(group %in% c(abundant_taxa, "Not plankton", "Artefact")) %>%
   # add UVP model and keep only HD and SD
   left_join(select(smp, sample_id, uvp_model), by="sample_id") %>%
   filter(uvp_model!="ZD") %>%
@@ -336,7 +337,7 @@ ggsave("plots/size_spectra.pdf", width=w2, height=w, unit="cm")
 # compute concentrations, biovolumes, etc. in consistent depth levels
 props <- obj %>%
   filter(!group %in% c("bubble")) %>%
-  mutate(group=ifelse(group %in% c("Not plankton"), "not_plankton", "plankton")) %>%
+  mutate(group=ifelse(group %in% c("Not plankton", "Artefact"), "not_plankton", "plankton")) %>%
   properties_per_bin(vol, depth_breaks=c(0, 100, 500, 1000)) %>%
   left_join(select(smp, sample_id, lon, lat), by="sample_id")
 
