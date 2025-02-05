@@ -9,10 +9,12 @@ source("0.setup.R")
 
 ## Compute candidate samples status ----
 
-# read selected projects
-# (from Google Sheet or downloaded file)
+# read selected projects, from the previous step
 # projects <- read_csv("https://docs.google.com/spreadsheets/d/1CrR-5PdhQ09JSTU482HOkTjtCvXRmpngYDuYSwaGQAo/export?format=csv", col_types=cols())
+# NB: read from the tsv now that the selection is stabilised
+#     those correspond roughly to the data in Drago et al + Panaiotis et al
 projects <- read_tsv("data/UVP5_projects_selected.tsv", show_col_types=FALSE)
+
 selected_projects <- projects %>% filter(use != "")
 
 # get all samples from those projects
@@ -60,6 +62,7 @@ sum(duplicated(samples$psampleid))
 selected_samples <- samples_classif_stats %>%
   filter(percent_validated > 99)
 nrow(selected_samples)
+# 2025-02-05 3553
 
 # extract sample level information (from EcoPart because this is the most reliable source)
 selected_samples_info <- tbl(dbp, "part_samples") %>%
