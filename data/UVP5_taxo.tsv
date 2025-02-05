@@ -2,267 +2,257 @@ lineage	taxon	taxo_id	n
 living	living	1	16
 living/Bacteria/Cyanobacteria/Cyanophyceae/Trichodesmium	Trichodesmium	8976	97524
 living/Bacteria/Cyanobacteria/Cyanophyceae/Trichodesmium/like	like<Trichodesmium	85120	1432
-living/Bacteria/Cyanobacteria/Cyanophyceae/Trichodesmium/puff	puff	85024	47018
-living/Bacteria/Cyanobacteria/Cyanophyceae/Trichodesmium/tuff	tuff	85025	53031
+living/Bacteria/Cyanobacteria/Cyanophyceae/Trichodesmium/puff	puff	85024	41936
+living/Bacteria/Cyanobacteria/Cyanophyceae/Trichodesmium/tuff	tuff	85025	46740
 living/Bacteria/Proteobacteria/Cyanobacteria/Nostocales/Nostocaceae/Aphanizomenon	Aphanizomenon	92242	689
 living/Bacteria/Proteobacteria/Cyanobacteria/Nostocales/Nostocaceae/Dolichospermum	Dolichospermum	92243	179
 living/Bacteria/Proteobacteria/Cyanobacteria/Nostocales/Nostocaceae/Nodularia	Nodularia	92244	501
-living/Bacteria/Thermomonosporaceae/Actinoallomurus	Actinoallomurus	486	1
 living/Eukaryota	Eukaryota	2	1
-living/Eukaryota/Archaeplastida/Viridiplantae/Streptophyta/Embryophyta/Tracheophyta/Rosales/Chaetachme	Chaetachme	85886	3
-living/Eukaryota/Archaeplastida/Viridiplantae/Streptophyta/Embryophyta/Tracheophyta/Solanales	Solanales	18378	1
 living/Eukaryota/Harosa/Alveolata/Myzozoa/Holodinophyta/Dinophyceae	Dinophyceae	11921	164
 living/Eukaryota/Harosa/Alveolata/Myzozoa/Holodinophyta/Noctiluca lineage/Noctiluca/Noctiluca sp.	Noctiluca sp.	19325	1
-living/Eukaryota/Harosa/Rhizaria	Rhizaria	342	4
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Castanellidae	Castanellidae	92776	2467
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Circoporidae	Circoporidae	93846	346
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocalpida/Tuscaroridae	Tuscaroridae	92050	75
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocystida/Aulacanthidae	Aulacanthidae	27642	258
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocystida/Aulacanthidae/Aulacantha	Aulacantha	54879	21793
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocystida/Aulacanthidae/Aulographis	Aulographis	85360	1009
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae/Coelodendrum	Coelodendrum	54880	337
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae/Coelographis	Coelographis	92044	2495
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae/leg	leg<Coelodendridae	92059	1731
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeogromida/Medusettidae	Medusettidae	27645	448
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae	Aulosphaeridae	27647	34287
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae/Aulatractus	Aulatractus	92989	238
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae/colonial	colonial<Aulosphaeridae	92056	843
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae/colonial/like	like<colonial	92063	1388
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Cannosphaeridae	Cannosphaeridae	92043	1115
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Cannosphaeridae/colonial	colonial<Cannosphaeridae	92057	76
+living/Eukaryota/Harosa/Rhizaria	Rhizaria	342	10
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria	Phaeodaria	13333	4
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Castanellidae	Castanellidae	92776	2405
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Circoporidae	Circoporidae	93846	271
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocalpida/Tuscaroridae	Tuscaroridae	92050	85
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocystida/Aulacanthidae	Aulacanthidae	27642	236
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocystida/Aulacanthidae/Aulacantha	Aulacantha	54879	18572
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeocystida/Aulacanthidae/Aulographis	Aulographis	85360	827
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae	Coelodendridae	27643	1
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae/Coelodendrum	Coelodendrum	54880	283
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae/Coelographis	Coelographis	92044	2474
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeodendrida/Coelodendridae/leg	leg<Coelodendridae	92059	1513
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeogromida/Medusettidae	Medusettidae	27645	459
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae	Aulosphaeridae	27647	31616
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae/Aulatractus	Aulatractus	92989	217
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae/colonial	colonial<Aulosphaeridae	92056	906
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Aulosphaeridae/colonial/like	like<colonial	92063	1381
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Cannosphaeridae	Cannosphaeridae	92043	1416
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/Phaeosphaerida/Cannosphaeridae/colonial	colonial<Cannosphaeridae	92057	84
 living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/like	like<Phaeodaria	84969	1
-living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/unknown	unknown	93006	3600
-living/Eukaryota/Harosa/Rhizaria/Retaria/Acantharea	Acantharea	11762	13226
-living/Eukaryota/Harosa/Rhizaria/Retaria/Acantharea/like	like<Acantharea	92053	394
-living/Eukaryota/Harosa/Rhizaria/Retaria/Foraminifera	Foraminifera	11758	3228
-living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria/colonial	colonial<Collodaria	85040	2538
-living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria/solitaryblack	solitaryblack	85036	6572
-living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria/solitaryglobule	solitaryglobule	85039	1951
-living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Orodaria	Orodaria	94104	30
-living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Orodaria/Cytocladus	Cytocladus	94105	10
-living/Eukaryota/Harosa/Rhizaria/rhizaria like	rhizaria like	93379	3852
-living/Eukaryota/Harosa/Rhizaria/rhizaria temporary	rhizaria temporary	92986	40860
-living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Bacillariophyta/Bacillariophytina/Bacillariophyceae/Diatoma	Diatoma	28189	44640
+living/Eukaryota/Harosa/Rhizaria/Cercozoa/Thecofilosea/Phaeodaria/unknown	unknown	93006	2280
+living/Eukaryota/Harosa/Rhizaria/Retaria/Acantharea	Acantharea	11762	12616
+living/Eukaryota/Harosa/Rhizaria/Retaria/Acantharea/like	like<Acantharea	92053	383
+living/Eukaryota/Harosa/Rhizaria/Retaria/Foraminifera	Foraminifera	11758	3014
+living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria	Collodaria	13381	1
+living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria/colonial	colonial<Collodaria	85040	2329
+living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria/solitaryblack	solitaryblack	85036	5905
+living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Collodaria/solitaryglobule	solitaryglobule	85039	1738
+living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Orodaria	Orodaria	94104	24
+living/Eukaryota/Harosa/Rhizaria/Retaria/Polycystinea/Orodaria/Cytocladus	Cytocladus	94105	8
+living/Eukaryota/Harosa/Rhizaria/like/ball with spines	ball with spines	94134	680
+living/Eukaryota/Harosa/Rhizaria/like/ball with spines/nucleus with four arms	nucleus with four arms	94160	24
+living/Eukaryota/Harosa/Rhizaria/like/double sphere	double sphere	93679	586
+living/Eukaryota/Harosa/Rhizaria/like/double spike	double spike	94157	23
+living/Eukaryota/Harosa/Rhizaria/like/elongated star with ball	elongated star with ball	94155	55
+living/Eukaryota/Harosa/Rhizaria/like/hairy capsule	hairy capsule	94159	133
+living/Eukaryota/Harosa/Rhizaria/like/helix	helix	94135	21
+living/Eukaryota/Harosa/Rhizaria/like/protist with spike	protist with spike	94162	5
+living/Eukaryota/Harosa/Rhizaria/like/spiky caps	spiky caps	94156	312
+living/Eukaryota/Harosa/Rhizaria/like/star with ball	star with ball	94154	204
+living/Eukaryota/Harosa/Rhizaria/rhizaria like	rhizaria like	93379	7826
+living/Eukaryota/Harosa/Rhizaria/rhizaria temporary	rhizaria temporary	92986	29620
+living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Bacillariophyta/Bacillariophytina/Bacillariophyceae/Diatoma	Diatoma	28189	44637
 living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Bacillariophyta/Coscinodiscophytina/Coscinodiscids/Coscinodiscus	Coscinodiscus	28280	23
-living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Bacillariophyta/Coscinodiscophytina/Melosirids/Melosira	Melosira	28288	13
-living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Bacillariophyta/araphid pennates/Ctenophora/Ctenophora pulchella	Ctenophora pulchella	28092	2
-living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Raphidophyceae/Chattonella	Chattonella	13760	3
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa	Metazoa	2367	26
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida	Annelida	11518	2182
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Alciopidae	Alciopidae	25632	75
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Phyllodocida	Phyllodocida	94045	26
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Phyllodocidae	Phyllodocidae	25634	31
+living/Eukaryota/Harosa/Stramenopiles/Ochrophyta/Bacillariophyta/Coscinodiscophytina/Melosirids/Melosira	Melosira	28288	24
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa	Metazoa	2367	28
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida	Annelida	11518	2197
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Alciopidae	Alciopidae	25632	74
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Phyllodocida	Phyllodocida	94045	23
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Phyllodocidae	Phyllodocidae	25634	30
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Tomopteridae	Tomopteridae	25631	13
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Errantia/Tomopteridae/Tomopteris	Tomopteris	56545	224
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Acrocirridae	Acrocirridae	60235	118
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Flota	Flota	60223	369
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Flota/Flota sp.	Flota sp.	79631	10
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Poeobius	Poeobius	60211	641
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Swima	Swima	60237	56
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Flota	Flota	60223	179
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Flota/Flota sp.	Flota sp.	79631	9
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Poeobius	Poeobius	60211	358
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/Sedentaria/Canalipalpata/Terebellida/Swima	Swima	60237	21
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/Polychaeta/trocophora	trocophora	93593	12
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Annelida/larvae	larvae<Annelida	84965	3
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea	Crustacea	12846	4545
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea	Crustacea	12846	4337
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Branchiopoda/Diplostraca/Cladocera	Cladocera	45036	13
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca	Eumalacostraca	25824	10247
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Amphipoda	Amphipoda	45054	425
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca	Eumalacostraca	25824	9838
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Amphipoda	Amphipoda	45054	433
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Amphipoda/Gammaridea/Stegocephalidae/Stegocephalus/Stegocephalus inflatus	Stegocephalus inflatus	84652	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda	Decapoda	45043	21
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda	Decapoda	45043	22
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda/Dendrobranchiata/Sergestoidea/Luciferidae	Luciferidae	92094	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda/Pleocyemata/Anomura/Galatheidae	Galatheidae	83502	4
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda/Pleocyemata/Anomura/Munididae/Pleuroncodes	Pleuroncodes	84803	319
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda/Pleocyemata/Anomura/Munididae/Pleuroncodes	Pleuroncodes	84803	258
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda/Pleocyemata/Brachyura/megalopa	megalopa	84991	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Decapoda/shrimp-molt	shrimp-molt	93432	121
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Euphausiacea	Euphausiacea	45041	2264
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Euphausiacea	Euphausiacea	45041	531
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Isopoda/Asellota/Munnopsinae	Munnopsinae	78213	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Isopoda/Asellota/Munnopsis	Munnopsis	78212	71
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/shrimp-like/shrimp w ectoparasites	shrimp w ectoparasites	93613	19
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/shrimp-tail	shrimp-tail	93609	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda	Copepoda	25828	88090
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Malacostraca/Eumalacostraca/Isopoda/Asellota/Munnopsis	Munnopsis	78212	70
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda	Copepoda	25828	96475
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Calanoida/Clausocalanidae/Ctenocalanus	Ctenocalanus	92771	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Calanoida/Clausocalanidae/Pseudocalanus	Pseudocalanus	80135	1303
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Calanoida/Clausocalanidae/Pseudocalanus	Pseudocalanus	80135	99
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Calanoida/Eucalanidae	Eucalanidae	61987	782
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Calanoida/Temoridae/like	like<Temoridae	84984	280
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Calanoida/with-eggs	with-eggs	93413	9
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Copepoda X	Copepoda X	45073	36
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Copepoda X	Copepoda X	45073	35
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Cyclopoida/Oithonidae/Oithona	Oithona	81950	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Harpacticoida	Harpacticoida	45071	128
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/Harpacticoida	Harpacticoida	45071	65
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/badfocus	badfocus<Copepoda	92042	5
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/like	like<Copepoda	85042	86235
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/nauplii	nauplii	92767	7
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/ovigerous	ovigerous	93384	38
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/copepod	copepod	25827	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Oligostraca/Ostracoda	Ostracoda	30815	8026
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/copepoda eggs	copepoda eggs	93757	22
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/like	like<Copepoda	85042	72284
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/nauplii	nauplii	92767	5
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/ovigerous	ovigerous	93384	117
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/with visible lipid sac/side	side	94900	3484
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Maxillopoda/Copepoda/with visible lipid sac/top-bottom	top-bottom	94928	267
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Oligostraca/Ostracoda	Ostracoda	30815	8427
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/Oligostraca/Ostracoda/like	like<Ostracoda	94163	11
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/head	head<Crustacea	92105	42
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/head	head<Crustacea	92105	5
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/larvae	larvae<Crustacea	85114	58
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/leg	leg<Crustacea	92103	3
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/part	part<Crustacea	85115	56
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/tail	tail<Crustacea	92106	614
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/part	part<Crustacea	85115	31
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Crustacea/tail	tail<Crustacea	92106	122
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Hexapoda/Insecta/Pterygota/Chaeteessa	Chaeteessa	50757	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Hexapoda/Insecta/Pterygota/Copelatus	Copelatus	50328	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Arthropoda/Hexapoda/Insecta/Pterygota/Echidnophaga	Echidnophaga	50141	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha	Chaetognatha	11514	7036
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha	Chaetognatha	11514	6660
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha/Phragmophora/Eukrohniidae/Eukrohnia	Eukrohnia	25922	7
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha/head	head<Chaetognatha	92068	74
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha/tail	tail<Chaetognatha	84968	103
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata	Gnathostomata	25928	513
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii	Actinopterygii	56693	35
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Clupeiformes temp/Clupeidae temp/Sardina temp/egg unkn temp	egg unkn temp<Sardina temp	85351	26
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha/head	head<Chaetognatha	92068	62
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chaetognatha/tail	tail<Chaetognatha	84968	64
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata	Gnathostomata	25928	448
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii	Actinopterygii	56693	34
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Clupeiformes temp/Clupeidae temp/Sardina temp/egg unkn temp	egg unkn temp<Sardina temp	85351	30
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Clupeiformes temp/Engraulidae temp/egg 1 temp	egg 1 temp	85340	5
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Clupeiformes temp/Engraulidae temp/egg unkn temp	egg unkn temp<Engraulidae temp	85345	856
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Clupeiformes temp/Engraulidae temp/egg unkn temp	egg unkn temp<Engraulidae temp	85345	1053
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Teleostei	Teleostei	92790	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Craniata/Vertebrata/Gnathostomata/Actinopterygii/Teleostei/Elopomorpha/Anguilliformes/Eurypharynx pelecanoides	Eurypharynx pelecanoides	94143	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata	Tunicata	12860	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia	Appendicularia	85123	530
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia	Appendicularia	85123	564
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia/Fritillariidae/Fritillaria	Fritillaria	56544	13
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia/body	body	85030	476
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia/house	house	85031	8006
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia/body	body	85030	540
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia/house	house	85031	8236
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Appendicularia/tail	tail<Appendicularia	85004	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea	Thaliacea	16659	46
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea	Thaliacea	16659	45
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Doliolida	Doliolida	25944	1304
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Pyrosomatida	Pyrosomatida	25943	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Pyrosomatida/Pyrosoma	Pyrosoma	51232	335
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Salpida	Salpida	25942	395
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Pyrosomatida/Pyrosoma	Pyrosoma	51232	333
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Salpida	Salpida	25942	387
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Salpida/Salpidae	Salpidae	51236	1
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Salpida/chain	chain	85006	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Salpida/juvenile	juvenile	85005	192
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Chordata/Tunicata/Thaliacea/Salpida/like	like<Salpida	85043	11
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria	Cnidaria<Metazoa	11512	2170
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Anthozoa/Ceriantharia	Ceriantharia	87818	75
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Anthozoa/Hexacorallia/Zoantharia	Zoantharia	25946	4
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Cnidaria X	Cnidaria X	12867	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Cnidaria X/Cnidaria XX	Cnidaria XX	16665	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Cubozoa	Cubozoa	12866	4
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa	Hydrozoa	12865	9001
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Cnidaria	Cnidaria<Hydrozoa	16680	11
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata	Anthoathecata	25992	33
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria	Cnidaria<Metazoa	11512	1862
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Anthozoa/Ceriantharia	Ceriantharia	87818	74
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Anthozoa/Hexacorallia/Zoantharia	Zoantharia	25946	2
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Cubozoa	Cubozoa	12866	1
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa	Hydrozoa	12865	8444
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Cnidaria	Cnidaria<Hydrozoa	16680	4
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata	Anthoathecata	25992	32
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata/Corynidae	Corynidae	51352	27
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata/Corynidae/Sarsia	Sarsia	72275	13
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata/Corynidae/Sarsia	Sarsia	72275	16
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata/Filifera/Bythotiaridae	Bythotiaridae	93095	6
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Anthoathecata/Ptilocodiidae/Thecocodium	Thecocodium	93092	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Leptothecata	Leptothecata	25991	102
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Leptothecata	Leptothecata	25991	96
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Leptothecata/Aequoreidae	Aequoreidae	51380	15
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Leptothecata/Aequoreidae/Aequorea	Aequorea	72334	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Siphonophorae	Siphonophorae	25990	2047
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Siphonophorae	Siphonophorae	25990	2168
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Siphonophorae/Calycophorae/Abylidae/Bassia/Bassia bassensis	Bassia bassensis	90386	9
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Siphonophorae/part	part<Siphonophorae	92039	1683
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Siphonophorae/part	part<Siphonophorae	92039	380
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Hydroidolina/Siphonophorae/tentacle	tentacle<Siphonophorae	95260	1381
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Limnomedusae/Olindiidae	Olindiidae	51384	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae	Narcomedusae	25999	992
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae	Narcomedusae	25999	922
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Aeginidae/Aegina	Aegina	72418	3
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Aeginidae/Aegina/Aegina citrea	Aegina citrea	81855	15
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Aeginidae/Solmundella/Solmundella bitentaculata	Solmundella bitentaculata	81856	218
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Cuninidae	Cuninidae	51388	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Solmaris	Solmaris	93080	1790
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Aeginidae/Aegina/Aegina citrea	Aegina citrea	81855	13
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Aeginidae/Solmundella/Solmundella bitentaculata	Solmundella bitentaculata	81856	203
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Solmaris	Solmaris	93080	1791
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Narcomedusae/Solmarisidae	Solmarisidae	93104	6
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae	Trachymedusae	25998	159
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae	Trachymedusae	25998	129
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Geryoniidae/Liriope	Liriope	72423	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Halicreatidae	Halicreatidae	51391	143
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Halicreatidae	Halicreatidae	51391	184
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Halicreatidae/Botrynema/Botrynema brucei	Botrynema brucei	81863	8
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Halicreatidae/Halicreas	Halicreas	72426	5
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Halicreatidae/Halicreas/Halicreas minimum	Halicreas minimum	81864	23
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Halicreatidae/Halicreas/Halicreas minimum	Halicreas minimum	81864	17
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae	Rhopalonematidae	51390	5
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae/Aglantha	Aglantha	72432	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae/Aglantha/Aglantha digitale	Aglantha digitale	81866	60
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae/Aglantha/Aglantha digitale	Aglantha digitale	81866	100
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae/Rhopalonema	Rhopalonema	72428	5
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae/Rhopalonema/Rhopalonema velatum	Rhopalonema velatum	81871	2
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/Trachylinae/Trachymedusae/Rhopalonematidae/Sminthea	Sminthea	92763	3
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Hydrozoa/actinula	actinula	85190	17
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa	Scyphozoa	12863	265
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa/Coronatae	Coronatae	16690	9
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa	Scyphozoa	12863	253
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa/Coronatae	Coronatae	16690	6
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa/Coronatae/Atollidae/Atolla	Atolla	51454	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa/Coronatae/Paraphyllinidae/Paraphyllina	Paraphyllina	51459	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa/Rhizostomeae	Rhizostomeae	16689	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/Scyphozoa/Semaeostomeae	Semaeostomeae	16687	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/part	part<Cnidaria	84970	186
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/tentacle	tentacle<Cnidaria	93662	6468
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora	Ctenophora	11511	2205
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/part	part<Cnidaria	84970	56
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Cnidaria/tentacle	tentacle<Cnidaria	93662	6627
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora	Ctenophora	11511	2263
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Ctenophora X/Ctenophora XX	Ctenophora XX	16691	4
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Beroida	Beroida	16695	42
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Beroida/Beroidae/Beroe	Beroe	51498	198
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Cestida/Cestidae	Cestidae	26051	67
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Lobata	Lobata	16693	116
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/part	part<Ctenophora	85187	53
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/tentacle	tentacle<Ctenophora	94051	35
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Echinodermata	Echinodermata	11509	120
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Beroida	Beroida	16695	36
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Beroida/Beroidae/Beroe	Beroe	51498	202
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Cestida/Cestidae	Cestidae	26051	66
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/Cyclocoela/Lobata	Lobata	16693	111
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Ctenophora/tentacle	tentacle<Ctenophora	94051	65
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Echinodermata	Echinodermata	11509	118
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Echinodermata/pluteus	pluteus	93470	14
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Hemichordata/Enteropneusta	Enteropneusta<Hemichordata	12892	151
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Hemichordata/Enteropneusta	Enteropneusta	12892	127
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Hemichordata/Enteropneusta/tornaria larvae	tornaria larvae	92754	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Hemichordata/Hemichordata X/Hemichordata XX/Enteropneusta	Enteropneusta<Hemichordata XX	26274	2
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca	Mollusca	11498	797
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Bivalvia/Pteriomorphia/Limoida/Ctenoides	Ctenoides	52166	6
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Cephalopoda	Cephalopoda	12906	55
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca	Mollusca	11498	737
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Cephalopoda	Cephalopoda	12906	49
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Caenogastropoda/Littorinimorpha/Pterotracheoidea	Pterotracheoidea	93223	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Gymnosomata	Gymnosomata	26427	84
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata	Thecosomata	91704	217
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Gymnosomata	Gymnosomata	26427	87
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata	Thecosomata	91704	198
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Cavoliniidae	Cavoliniidae	26480	17
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Creseidae	Creseidae	26525	120
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Limacinidae	Limacinidae	26524	928
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Limacinidae	Limacinidae	26524	1015
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Limacinidae/Limacina	Limacina	56318	1
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Limacinidae/Limacina/Limacina helicina	Limacina helicina	92809	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Limacinidae/like	like<Limacinidae	94161	326
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Panpulmonata/Helicidae/Helix/Helix aspersa	Helix aspersa	74261	3
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Euopisthobranchia/Thecosomata/Limacinidae/like	like<Limacinidae	94161	57
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Heterobranchia/Euthyneura/Panpulmonata/Helicidae/Helix/Helix aspersa	Helix aspersa	74261	2
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/Gastropoda/Nudibranchia	Nudibranchia	16797	1
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/veliger	veliger	85128	3162
-living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Nematoda/Chromadorea/Spirurida/Gnathostomatoidea/Gnathostoma	Gnathostoma	53147	6
+living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Mollusca/veliger	veliger	85128	3092
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Platyhelminthes	Platyhelminthes	11489	2
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/Platyhelminthes/Trematoda/Digenea/Opisthorchiida/Siphodera	Siphodera	54079	2
 living/Eukaryota/Opisthokonta/Holozoa/Metazoa/trochozoa/Trochophora	Trochophora	92887	7
-living/duplicate	duplicate	84961	5519
-living/multiple organisms	multiple organisms	93952	5
-living/other	other<living	85011	4056
-living/other/egg	egg	85078	82
+living/duplicate	duplicate	84961	5330
+living/multiple organisms	multiple organisms	93952	4
+living/other	other<living	85011	4033
+living/other/egg	egg	85078	54
 living/other/egg/like	like<egg	85090	127
-living/other/gelatinous	gelatinous	85070	1392
-living/other/gelatinous/tentacle	tentacle<gelatinous	94129	24
-living/other/othertocheck	othertocheck	85069	19993
-living/other/othertocheck/ball with spines	ball with spines	94134	843
-living/other/othertocheck/beanlike	beanlike	93682	1825
+living/other/gelatinous	gelatinous	85070	1
+living/other/gelatinous/tentacle	tentacle<gelatinous	94129	3
+living/other/othertocheck	othertocheck	85069	14423
+living/other/othertocheck/beanlike	beanlike	93682	1586
 living/other/othertocheck/caps with filament	caps with filament	94136	2
 living/other/othertocheck/darkrods	darkrods	94072	14
-living/other/othertocheck/darksphere	darksphere	85217	15682
-living/other/othertocheck/double sphere	double sphere	93679	681
-living/other/othertocheck/double spike	double spike	94157	35
-living/other/othertocheck/elongated star with ball	elongated star with ball	94155	77
 living/other/othertocheck/elongated stick	elongated stick	93680	19
 living/other/othertocheck/fiber spring	fiber spring	94158	944
-living/other/othertocheck/hairy capsule	hairy capsule	94159	134
-living/other/othertocheck/helix	helix	94135	24
-living/other/othertocheck/lightsphere	lightsphere	93388	14
-living/other/othertocheck/nucleus with four arms	nucleus with four arms	94160	35
-living/other/othertocheck/protist with spike	protist with spike	94162	8
 living/other/othertocheck/sphere	sphere<othertocheck	94147	4
-living/other/othertocheck/spiky caps	spiky caps	94156	305
-living/other/othertocheck/star with ball	star with ball	94154	207
-living/other/part	part<other	85068	1767
-not-living/artefact	artefact	85008	49528
-not-living/artefact/badfocus	badfocus<artefact	85061	1250782
-not-living/artefact/bubble	bubble	85060	9318
-not-living/artefact/double	double	93402	10
-not-living/artefact/turbid	turbid	85129	25018
-not-living/detritus	detritus	84963	3612425
-not-living/detritus/compact	compact	85130	409117
+living/other/othertocheck/sphere/dark	dark<sphere	85217	17182
+living/other/othertocheck/sphere/light	light<sphere	93388	45
+living/other/part	part<other	85068	1710
+not-living/artefact	artefact	85008	49636
+not-living/artefact/badfocus	badfocus<artefact	85061	1281230
+not-living/artefact/bubble	bubble	85060	8332
+not-living/artefact/double	double	93402	9
+not-living/artefact/turbid	turbid	85129	9507
+not-living/detritus	detritus	84963	3787647
+not-living/detritus/compact	compact	85130	346629
 not-living/detritus/dark	dark<detritus	85054	31239
 not-living/detritus/fecal pellets	fecal pellets	93970	4
-not-living/detritus/fiber	fiber	85076	465915
-not-living/detritus/fiber/fluffy	fluffy<fiber	85133	13930
-not-living/detritus/fluffy	fluffy<detritus	85131	47398
-not-living/detritus/fluffy/dark	dark<fluffy	85134	923404
-not-living/detritus/fluffy/light	light<fluffy	85135	492683
+not-living/detritus/fiber	fiber	85076	453130
+not-living/detritus/fiber/fluffy	fluffy<fiber	85133	9835
+not-living/detritus/filament	filament	93724	29
+not-living/detritus/fluffy	fluffy<detritus	85131	38279
+not-living/detritus/fluffy/dark	dark<fluffy	85134	605750
+not-living/detritus/fluffy/light	light<fluffy	85135	302625
 not-living/detritus/light	light<detritus	85055	17210
 not-living/detritus/light aggregates	light aggregates	93721	1
-not-living/detritus/ovoid	ovoid	85132	9289
+not-living/detritus/ovoid	ovoid	85132	8451
 not-living/detritus/sphere	sphere<detritus	85056	10
 not-living/detritus/temp cross	temp cross	93623	88
-not-living/feces	feces	85026	204903
-not-living/molt	molt	92833	343
+not-living/feces	feces	85026	172672
+not-living/molt	molt	92833	270
 not-living/plastic/other	other<plastic	85058	39
-temporary/t001	t001	85012	362
-temporary/t002	t002	85013	894
-temporary/t003	t003	85014	115
-temporary/t004	t004	85015	158
-temporary/t005	t005	85016	2
-temporary/t006	t006	85017	81
+temporary/t001	t001	85012	344
+temporary/t002	t002	85013	816
+temporary/t003	t003	85014	109
+temporary/t004	t004	85015	147
+temporary/t006	t006	85017	77
 temporary/t007	t007	85018	279
-temporary/t008	t008	85019	1
-temporary/t011	t011	85136	23
+temporary/t010	t010	85124	5
+temporary/t011	t011	85136	342
+temporary/t013	t013	85138	808
 temporary/t018	t018	85143	2
-temporary/t019	t019	85144	16
+temporary/t019	t019	85144	13

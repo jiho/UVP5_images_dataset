@@ -24,15 +24,15 @@ read_tsv("data/UVP5_taxo.tsv", show_col_types=FALSE) %>%
     by="lineage"
   ) %>%
   write_tsv("data/UVP5_taxo_base.tsv", na="")
-# now copy-paste that in the Google Sheet
-
+# now copy-paste that in the Google Sheet at https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/
 
 ## Apply it to the data ----
 
 # read the taxonomic grouping
 g <- read_csv("https://docs.google.com/spreadsheets/d/1NFgpzkFXVBEuobaggmApIYgQ2HE837zwsStu7WTU5hQ/export?format=csv", show_col_types=FALSE) %>%
-  # TODO replace by a static .csv file once this is stabilized
-  rename(group=group_final)
+# TODO replace by a static .tsv file once this is stabilized
+# g <- read_tsv('data/UVP5_taxo_regrouped.tsv', show_col_types=FALSE)
+    rename(group=group_final)
 
 # Keep only used cols
 g <- subset(g, select = c(lineage, taxon, n, group))
@@ -40,20 +40,19 @@ g <- subset(g, select = c(lineage, taxon, n, group))
 # Inspect the totals
 totals_by_groups <- g %>% group_by(group) %>% summarise(tot=sum(n)) %>% ungroup() %>% arrange(desc(tot))
 # print(totals_by_groups)
-# # A tibble: 39 × 2
-#    group                                  tot
-#    <chr>                                <dbl>
-#  1 Not plankton                       7619196
-#  2 Copepoda                            176916
-#  3 Trichodesmium                       100049
-#  4 Trichodesmium (contextual)           98956
-#  5 Phaeodaria                           72507
-#  6 Bacillariophyta (contextual)         44676
-#  7 to_resort                            21760
-#  8 Eumalacostraca                       13496
-#  9 Acantharea                           13226
-# 10 other Hydrozoa                        9227
-# -> this is not super satisfying: many are to_resort still...
+# A tibble: 41 × 2
+#   group                                  tot
+#   <chr>                                <dbl>
+# 1 Not plankton                       7055138
+# 2 Copepoda                            173909
+# 3 Trichodesmium (contextual)           98956
+# 4 Trichodesmium                        88676
+# 5 Artefact                             67484
+# 6 Phaeodaria                           65030
+# 7 Bacillariophyta (contextual)         44637
+# 8 to_check                             35348
+# 9 possibly plankton                    19796
+# -> Quite a few to be checked still...
 
 # Infer a lineage for the new grouping
 group_lineages <- distinct(g, lineage, group) %>%
