@@ -62,7 +62,7 @@ sum(duplicated(samples$psampleid))
 selected_samples <- samples_classif_stats %>%
   filter(percent_validated > 99)
 nrow(selected_samples)
-# 2025-02-05 3553
+# 2025-02-05 3185
 
 # extract sample level information (from EcoPart because this is the most reliable source)
 selected_samples_info <- tbl(dbp, "part_samples") %>%
@@ -90,9 +90,6 @@ selected_samples_info <- tbl(dbp, "part_samples") %>%
 # check for duplicates
 sum(duplicated(selected_samples_info$sampleid))
 
-# write it to a file
-write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
-
 
 ## Compare with the original selection by Thelma and Laetitia ----
 
@@ -117,8 +114,7 @@ missing_wr_thelma <- filter(thelma_samples, ! profile_name %in% current_samples$
   arrange(title, profile_name)
 # print(missing_wr_thelma, n=200)
 # -> four samples (an1304_l2_002, 4, 5, 6) are missing in EcoPart now...
-#    moose samples seem to have changed (low validated percentage), for no known reason
-#    samples from 'UVP5 Geomar 2017 m135' are not selected anymore because othertocheck have been predicted and the validation percentage is <99 now.
+#    5 moose samples seem to have changed (low validated percentage), for no known reason
 #    uvp5_sn009_2015_p16n now has no images in it
 
 # do the same for Laetitia's selection
@@ -127,7 +123,7 @@ missing_wr_laeti <- filter(laeti_samples, ! profile_name %in% current_samples$pr
   select(ptitle, sampleid, profile_name, percent_validated) %>%
   arrange(ptitle, profile_name)
 # print(missing_wr_laeti, n=200)
-# -> same as above: missing from an1304 and 'UVP5 Geomar 2017 m135'
+# -> same as above: missing from an1304
 
 # profiles in our selection but not in Thelma's
 extra_in_current <- filter(current_samples, ! profile_name %in% c(thelma_samples$profile_name, laeti_samples$profile_name))
@@ -146,7 +142,15 @@ extra_in_current <- extra_in_current %>%
   select(title, sampleid, profile_name, percent_validated) %>%
   arrange(title, profile_name)
 # print(extra_in_current, n=500)
-# -> 445 extra profiles
-#    some are probably due to the 99% instead of 100% validated criterion
+# -> 111 extra profiles
 #    new profiles in AN Arctique possibly balancing the "lost" ones
-#    others have been added by Laetitia and Rainer (Geomar ones)
+#    most are probably due to the 99% instead of 100% validated criterion
+
+# remove the extra ones, to publish ~ exactly what Laeti and Thelma worked with
+# but keep the AN Arctique ones since thos probably correspond to the missing ones above
+to_remove <- filter(extra_in_current, !str_detect(title, "AN Arctique"))
+selected_samples <- filter(selected_samples, ! sampleid %in% to_remove$sampleid)
+nrow(selected_samples)
+
+# write the final selection to a file
+write_tsv(selected_samples_info, "data/UVP5_samples_selected.tsv")
