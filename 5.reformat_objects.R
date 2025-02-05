@@ -16,7 +16,7 @@ nrow(o)
 # 7,186,461 on 2020-12-16 00:16
 # 7,820,053 on 2021-02-13 00:31 (added dubious objects and some additional profiles)
 # 8,565,893 on 2024-01-01
-
+# 8,092,919 on 2025-02-05 13:30 (some new profiles removed to fit with Laeti/Thelma)
 
 ## Restrict to relevant data -----
 
@@ -55,7 +55,7 @@ o_wv <- o %>%
   inner_join(volume, by=c("sampleid", "mid_depth_bin"))
 
 nrow(o) - nrow(o_wv)
-# removed 210,451 objects
+# removed 218,041 objects
 
 # remove objects with tag == 2 which correspond to faulty lights and/or upward movement during the downcast
 o_t <- filter(o_wv, tag != 2) %>%
@@ -81,7 +81,7 @@ o_up <- o_t %>%
   ungroup()
 
 nrow(o_t) - nrow(o_up)
-# removed 84,741 additional rows
+# removed 84,755 additional rows
 
 # save the cleaned version
 oc <- o_up
