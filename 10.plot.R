@@ -115,7 +115,8 @@ gtsave(pic_tbl, "plots/example_images.html")
   scale_color_manual(values=tab_colors[c(2,1,3)]) +
   # shape legend
   theme(
-    legend.position=c(0.72,0.79),
+    legend.position="inside",
+    legend.position.inside=c(0.72,0.79),
     legend.direction="horizontal",
     legend.background=element_blank(),
     legend.title=element_blank()
@@ -325,7 +326,7 @@ NBSSm %>%
     scale_y_log10() +
     scale_colour_manual(values=blues) + scale_fill_manual(values=blues) +
     labs(x="Object volume (mm3)", y="Normalised volume (mm3/L/mm3)", colour="Depth layer", fill="Depth layer") +
-    theme(panel.grid.minor=element_blank(), legend.position=c(0.95, 0.5))
+    theme(panel.grid.minor=element_blank(), legend.position="inside", legend.position.inside=c(0.95, 0.5))
 
 ggsave("plots/size_spectra.pdf", width=w2, height=w, unit="cm")
 
